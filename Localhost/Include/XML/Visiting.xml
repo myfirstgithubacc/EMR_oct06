@@ -1,0 +1,14 @@
+﻿<root>
+
+  <tools name="MainToolbar" dockable="true" enabled="true">
+    <!--<tool name="AjaxSpellCheck"/>-->   
+    <!--<tool name="Cut"  shortcut="CTRL+x" />-->
+    <tool name="Copy" shortcut="CTRL+c"  />
+    <tool name="Paste" shortcut="CTRL+v"/>
+  </tools>
+
+  
+ 
+ 
+  
+</root>

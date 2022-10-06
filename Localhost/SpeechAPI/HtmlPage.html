@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script src="lib/Augnito/AugnitoCMDs.js?v=3"></script>
+    <script src="lib/Augnito/AugnitoCMDStatic.js?v=3"></script>
+    <script src="lib/Augnito/AugnitoCMDRegex.js?v=3"></script>
+    <script src="lib/Augnito/TextWordToInteger.js?v=3"></script>
+    <script src="lib/Augnito/RecordRTC.js"></script>
+    <script src="lib/Augnito/AugnitoSDK.js?v=3"></script>
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/MobileMic/GetSetCookie.js"></script>
+    <script src="lib/MobileMic/ProcessNotification.js"></script>
+    <script src="lib/MobileMic/qrcode.min.js"></script>
+
+    <script src="lib/PhilipsMicHandler.js?v=3"></script>
+    <script src="lib/jquery-ui/jquery-ui.js?v=1"></script>
+    <script src="DemoJS/InitializeAugnito.js?v=3"></script>
+    <script src="lib/HtmlFormEditorProcess.js?v=3"></script>
+    <script src="DemoJS/HtmlFormLogic.js?v=3"></script>
+
+
+    <link href="lib/jquery-ui/jquery-ui.css?v=1" type="text/css" rel="stylesheet" />
+    <link href="DemoCSS/AugnitoStyle.css?v=3" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="DemoCSS/bootstrap.min.css?v=1">
+    <link href="DemoCSS/menu.css?v=1" type="text/css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-12">
+            <label id="lblDiag" for="txtDiag" class="control-label">Diagnosis:</label>
+            <textarea id="txtDiag" class="form-control textareaCss report-input" rows="5"></textarea>
+        </div>
+    </div>
+    <div id="augnitoMicBar" class="floatingWindow">
+        <div class="augnitoFloatingParentElementStyle">
+            <div class="FloatingHyperText" id="FloatingHyperText"></div>
+            <button id="btnAugnitoMic" class="AugnitoStopButtonStyle"></button>
+            <div class="MenuWrapper popup" onclick="openMenu()">
+                <div class="popuptext" id="menuOptions">
+                    <ul class="popupSubMenu">
+                        <li onclick="openMacro()">Macros</li>
+                        <li onclick="openPairMic()">Pair Mic</li>
+                        <li onclick="openCommandHelp()">Command Help</li>
+                    </ul>
+                </div>
+                <span class="MenuIcon">...</span>
+            </div>
+        </div>
+
+    </div>
+   
+</body>
+
+</html>
+<script type="text/javascript">
+
+        function openMenu() {
+            var popup = document.getElementById("menuOptions");
+            popup.classList.toggle("show");
+        }
+        var MicCloseInSec = 10;
+        var stopInterval;
+        function HandleMicOff() {
+            $("#MicOffDialog").dialog("open");
+            $("#lblTimer").html(MicCloseInSec);
+            stopInterval = setInterval(() => {
+                if (MicCloseInSec > 0) {
+                    MicCloseInSec--;
+                    $("#lblTimer").html(MicCloseInSec);
+                } else {
+                    clearInterval(stopInterval);
+                    MicCloseInSec = 10;
+                    $("#btnAugnitoMic").click();
+                    $("#MicOffDialog").dialog("close");
+                }
+            }, 1000)
+        }
+
+</script>

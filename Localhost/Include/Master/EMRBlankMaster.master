@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="EMRBlankMaster.master.cs"
+    Inherits="Include_Master_EMRBlankMaster" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register TagPrefix="aspl" TagName="Header" Src="~/Include/Components/TopPanel.ascx" %>
+<%@ Register TagPrefix="aspl1" TagName="UserDetail" Src="~/Include/Components/MasterComponent/TopPanel.ascx" %>
+<%@ Register TagPrefix="AsplFindPatient" TagName="FindPatient" Src="~/Include/Components/MasterComponent/FindPatient.ascx" %>
+<%@ Register TagPrefix="FindPatient" TagName="FindPatient" Src="~/Include/Components/MasterComponent/FindPatient.ascx" %>
+<%@ Register TagPrefix="uc" TagName="Task" Src="~/Tasks/Component/Tasks.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+     <link rel="shortcut icon" type="image/ico" href="~/Images/Logo/HealthHub.ico" />
+    <link href="../../Dashboard/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Include/EMRStyle.css" rel="stylesheet" type="text/css" />
+    <link href="/Include/Style.css" rel="stylesheet" type="text/css" />
+    <link href="/Include/css/chosen.css" rel="stylesheet" type="text/css" />
+
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.2)"/>
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0.2)"/>
+    <title></title>
+    <script src="/Include/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript" src="/Include/JS/Common1.js"></script>
+
+    <script src="/Include/jquery.min.js" type="text/javascript"></script>
+
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <style type="text/css">
+            .taborderbutton
+            {
+                background-image: url(/Images/orders.jpg);
+                background-repeat: repeat-x;
+                height: 22px;
+                text-align: center;
+            }
+            .tabmidbuttonactive
+            {
+                background-image: url(/Images/Butt.png);
+                background-repeat: no-repeat;
+                color: Black;
+                height: 22px;
+                text-align: center;
+            }
+        </style>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="_ScriptManager" runat="server" EnablePageMethods="true">
+        </asp:ScriptManager>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="height: 25px;
+            background-image: url('/Images/back.gif');" class="hidden">
+            <tr align="left" valign="top" style="text-align: right;">
+                <td>
+                    <asp:ImageButton ID="imgMedicalAlert" runat="server" ImageUrl="~/Icons/MedicalAlert.gif"
+                        OnClick="imgMedicalAlert_OnClick" Width="23px" Height="23px" Visible="false"
+                        ToolTip="Patient Alert" />
+                    <asp:ImageButton ID="imgAllergyAlert" runat="server" ImageUrl="~/Icons/allergy.gif"
+                        OnClick="imgAllergyAlert_OnClick" Width="23px" Height="23px" Visible="false"
+                        ToolTip="Allergy Alert" />
+                    <asp:ImageButton ID="imgPatientAlert" runat="server" ImageUrl="~/Icons/PatientAlert.gif"
+                        Width="23px" Height="23px" Visible="false" ToolTip="Patient Alert" />
+                    <%--OnClick="imgPatientAlert_OnClick"--%>
+                    <asp:ImageButton ID="imgCaseSheet" runat="server" ImageUrl="~/Icons/CaseSheet.jpg"
+                        Width="23px" Height="23px" OnClick="imgCaseSheet_OnClick" Visible="false" ToolTip="Case Sheet" />
+                    <asp:ImageButton ID="imgPastClinicalNote" runat="server" ImageUrl="~/Icons/notes.gif"
+                        OnClick="imgPastClinicalNote_OnClick" Width="23px" Height="23px" Visible="false"
+                        ToolTip="Past Clinical Notes" />
+                    <asp:ImageButton ID="imgVisitHistory" runat="server" ImageUrl="~/Icons/VisitHistory.jpg"
+                        Width="23px" Height="23px" OnClick="imgVisitHistory_OnClick" Visible="false"
+                        ToolTip="Visit History" />
+                    <asp:ImageButton ID="imgVitalHistory" runat="server" ImageUrl="~/Icons/PatientVitals.jpg"
+                        Width="23px" Height="23px" OnClick="imgVitalHistory_OnClick" Visible="false"
+                        ToolTip="Vital History" />
+                    <asp:ImageButton ID="imgDiagnosticHistory" runat="server" ImageUrl="~/Icons/Investigation.jpg"
+                        Width="23px" Height="23px" OnClick="imgDiagnosticHistory_OnClick" Visible="false"
+                        ToolTip="Lab Results" />
+                    <asp:ImageButton ID="imgXray" runat="server" ImageUrl="~/Icons/xray.jpg" Width="23px"
+                        Height="23px" OnClick="imgXray_OnClick" Visible="false" ToolTip="Radiology Results" />
+                    <asp:ImageButton ID="imgImmunization" runat="server" ImageUrl="~/Icons/Immunization.jpg"
+                        Width="23px" Height="23px" OnClick="imgImmunization_OnClick" Visible="false"
+                        ToolTip="Patient Immunization" />
+                    <asp:ImageButton ID="imgGrowthChart" runat="server" ImageUrl="~/Icons/GrowthChart.jpg"
+                        Width="23px" Height="23px" OnClick="imgGrowthChart_OnClick" Visible="false" ToolTip="Growth Chart" />
+                    <asp:ImageButton ID="imgAttachment" runat="server" ImageUrl="~/Icons/Attachment.jpg"
+                        Width="23px" Height="23px" OnClick="imgAttachment_OnClick" Visible="false" ToolTip="Attachment" />
+                    <asp:ImageButton ID="imgOTScheduler" runat="server" ImageUrl="~/Icons/OTScheduler.jpg"
+                        Width="23px" Height="23px" OnClick="imgOTScheduler_OnClick" Visible="false" ToolTip="OT Scheduler" />
+                    <asp:ImageButton ID="imgFollowUpAppointment" runat="server" ImageUrl="~/Icons/FollowUpAppointment2.jpg"
+                        Width="23px" Height="23px" OnClick="imgFollowUpAppointment_OnClick" Visible="false"
+                        ToolTip="Follow-up Appointment" />
+                    <asp:ImageButton ID="imgReferal" runat="server" ImageUrl="~/Images/icon_medical.jpg"
+                        Width="23px" Height="23px" OnClick="imgReferal_OnClick" Visible="false" ToolTip="New Referal" />
+                    <asp:ImageButton ID="imgRefrealHistory" runat="server" ImageUrl="~/Images/jcb.jpg"
+                        Width="23px" Height="23px" OnClick="imgRefrealHistory_OnClick" Visible="false"
+                        ToolTip="Referal History" />
+                    <asp:TextBox ID="txtUptodateSearch" runat="server" Visible="false" Style="text-align: top;"
+                        Width="80px" AutoComplete="off" />
+                    <asp:ImageButton ID="imgUTD" runat="server" ImageUrl="~/Icons/UpToDate.jpg" Visible="false"
+                        Width="23px" Height="23px" ToolTip="Type in Textbox and Click here to Search on UpToDate"
+                        OnClick="imgUTD_OnClick" />
+                    <asp:HiddenField ID="hdnNewUploadSite" runat="server" Value="" />
+                    <asp:LinkButton ID="lbkBtnSpouse" runat="server" CausesValidation="false" Text="Switch-Partner"
+                        ForeColor="White" Font-Underline="false" ToolTip="Switch to patient partner"
+                        OnClick="lbkBtnSpouse_OnClick" />
+                </td>
+                <td style="width: 30px">
+                    <telerik:RadWindowManager ID="RadWindowManager" EnableViewState="false" runat="server">
+                        <Windows>
+                            <telerik:RadWindow ID="RadWindowForNew" runat="server" Behaviors="Maximize, Pin, Move, Reload, Close" />
+                        </Windows>
+                    </telerik:RadWindowManager>
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

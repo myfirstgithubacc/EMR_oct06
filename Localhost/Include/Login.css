@@ -1,0 +1,54 @@
+﻿BODY
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    border-right: medium none;
+    border-top: medium none;
+    margin: 0px;
+    border-left: medium none;
+    border-bottom: medium none;
+    /*background-image: url(/Images/bg.gif);*/
+    background-color:#005a9f;
+    height:auto ;
+}
+*{ margin:0px; padding:0px;}
+.clr{ clear:both}
+#wrapper{ background:#005a9f;}
+#container{ width:1005px; height:auto; margin:auto}
+#logo{ height: 98px;}
+#logo_Akhil{ float:left}
+#logo_Paras{ width:159px; height:95px; float:right; vertical-align:top;  background:#fff;}
+#logo_Paras img{ margin:10px 16px}
+
+#left_side{height:410px; float:left; margin:60px 0 0 80px;}
+
+#left_side1{height:300px; float:left;  margin:60px 0 0 80px;}
+
+#main_image{ height:300px; width:400px; background:#4e90fe;}
+#main_image img{ margin:5px 30px 30px 30px;
+	width: 352px;
+	height: 239px;
+}
+
+#Com_name{ height:100px; width:400px; margin:10px 0 0 0; background:#4e90fe;}
+#Com_name p{ font-size:58px; font-family:Agency FB; color:#fff; font-weight:normal; margin: 10px 0 0 10px}
+#Com_name span{ font-size:14px; color:#ee41d0; font-family:Arial, Helvetica, sans-serif}
+#right_side{ height:410px; float:right; margin:60px 80px 0 0}
+#text_box{ height:300px; width:400px; background: #E9EDF8;}
+
+#text_box1{ height:170px; width:400px; background: #E9EDF8;  margin:50px 200px 200px 200px;}
+
+
+#box{margin:2px 2px 2px 55px; width:282px; height:250; padding:20px 2 2 2}
+.box{ width:278px; height:34px; color:#bbbcbd; font-family:Arial, Helvetica, sans-serif; font-size:14px; margin:5px 0 0px 0; padding:0 0 0 10px}
+.box1{width:293px; height:37px; color:#bbbcbd; font-family:Arial, Helvetica, sans-serif; font-size:14px; margin:5px 0 0px 0; padding:0 0 0 8px}
+.button{margin:20px 45px 0 0px; float:right;}
+.button img{ margin:0px 7px 0 0px;}
+
+#latest_update{ height:100px; background:#4e90fe; margin:10px 0 0 0;}
+#latest_update span{ font-size:18px; color:#a4c3f7; font-family:Arial, Helvetica, sans-serif; padding:0px 0 0 10px; line-height:30px}
+#latest_update p{ font-size:13px; color: #fff; border:1px solid #333; font-family:Arial, Helvetica, sans-serif;  padding:0px 0 0 10px;}
+
+#ComName{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#013963; line-height:36px; margin:0 0 0 80px;height:30px; clear:both}
+

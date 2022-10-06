@@ -1,0 +1,465 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableViewState="true" CodeFile="EMRMasterWithTopDetails_1.master.cs"
+    Inherits="Include_Master_EMRMasterWithTopDetails_1" %>
+
+<%@ Register TagPrefix="asplNew" TagName="UserDetailsHeader" Src="~/Include/Components/TopPanelNew.ascx" %>
+
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register TagPrefix="aspl1" TagName="UserDetail" Src="~/Include/Components/MasterComponent/TopPanel.ascx" %>
+<%@ Register TagPrefix="FindPatient" TagName="FindPatient" Src="~/Include/Components/MasterComponent/FindPatient.ascx" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+<%--<%@ Import Namespace="System.Web.Optimization.BundleModule" %>--%>
+<%--<add name="BundleModule" type="System.Web.Optimization.BundleModule" />--%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+    <asp:PlaceHolder runat="server">
+        <%: Styles.Render("~/bundles/EMRMasterWithTopDetailsCss") %>
+    </asp:PlaceHolder>
+    <meta charset="utf-8" />
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.2)">
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0.2)">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        .overflowmenu {
+            overflow: visible !important;
+        }
+
+        #RAD_SPLITTER_PANE_TR_ctl00_TopPnl {
+            position: absolute;
+            top: 0px;
+        }
+
+        #RAD_SPLITTER_PANE_TR_ctl00_RadPane1 {
+            display: block;
+            margin-top: 28px;
+        }
+
+        #RAD_SLIDING_PANE_CONTENT_ctl00_rsp1 {
+            height: 650px !important;
+        }
+
+        #ctl00_pd1_UpdatePanel table {
+            position: fixed;
+            right: 25px;
+            top: 3px;
+        }
+
+        ul.rmRootScrollGroup {
+            width: 7500px !important;
+        }
+
+        .hide
+        {
+            display:none;
+        }
+    </style>
+
+    <script language="javascript" type="text/javascript">
+        $(document).keydown(function (e) {
+            var doPrevent;
+            if (e.keyCode == 8) {
+                var d = e.srcElement || e.target;
+                if (d.tagName.toUpperCase() == 'INPUT' || d.tagName.toUpperCase() == 'TEXTAREA') {
+                    doPrevent = d.readOnly || d.disabled;
+                }
+                else
+                    doPrevent = true;
+            }
+            else
+                doPrevent = false;
+
+            if (doPrevent)
+                e.preventDefault();
+        });
+    </script>
+    
+    <script language="javascript" type="text/javascript">
+        window.history.forward(-1);
+    </script>
+    <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
+        <%: Scripts.Render("~/bundles/EMRMasterWithTopDetailsJs") %>
+        <script language="javascript" type="text/javascript">
+            //dock and undock javascript functions  
+            function OnClientPaneDocked(sender, args) {
+                createCookie("slidingpane", "dock", 1);
+            }
+
+            function OnClientPaneUnDocked(sender, args) {
+                createCookie("slidingpane", "Undock", 1);
+            }
+
+
+            function OnClientPaneLoaded(sender, eventArgs) {
+                var pane = getCookie("slidingpane");
+                if (pane != null) {
+                    if (pane == 'dock') {
+                        var slidingZone = $find("<%= sz1.ClientID %>");
+                        var slidingPaneElement = slidingZone.getPaneById('<%= rsp1.ClientID %>');
+                        //sender.ExpandPane('<%= rsp1.ClientID %>');
+                        sender.DockPane('<%= rsp1.ClientID %>');
+                    }
+                }
+            }
+            function createCookie(name, value, days) {
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    var expires = "; expires=" + date.toGMTString();
+                }
+                else var expires = "";
+                document.cookie = name + "=" + value + expires + "; path=/";
+            }
+            function getCookie(c_name) {
+                if (document.cookie.length > 0) {
+                    c_start = document.cookie.indexOf(c_name + "=");
+                    if (c_start != -1) {
+                        c_start = c_start + c_name.length + 1;
+                        c_end = document.cookie.indexOf(";", c_start);
+                        if (c_end == -1) c_end = document.cookie.length;
+                        return unescape(document.cookie.substring(c_start, c_end));
+                    }
+                }
+                return "";
+            }
+            function eraseCookie(name) {
+                createCookie(name, "", -1);
+            }
+
+            function RadSldPaneFindPatient_OnClientExpanded(sender, eventArgs) {
+
+                var btnEMRSingleScreenIsAllowPopup = document.getElementById('ctl00_ContentPlaceHolder1_btnEMRSingleScreenIsAllowPopup');
+
+                if (btnEMRSingleScreenIsAllowPopup == null) {
+                    $get('ctl00_fp1_btnFillData').click();
+                }
+                else {
+                    $get('ctl00_ContentPlaceHolder1_btnEMRSingleScreenIsAllowPopup').click();
+
+                    $get('ctl00_fp1_btnFillData').click();
+
+
+                    //var data = '<%=common.myInt(Session["EMRSingleScreenIsAllowPopup"])%>';
+
+                    //$get('ctl00_ContentPlaceHolder1_hdnEMRSingleScreenIsAllowPopup').value
+
+                    //if (data == 1) {
+
+                    //}
+                    //else {
+                    //    $get('ctl00_fp1_btnFillData').click();
+                    //}
+                }
+            }
+
+            function OnClientExpanding(sender, args) {
+                sender.get_element().style.zIndex = 20000;
+            }
+            var sessionTimeoutWarning = '<%= System.Configuration.ConfigurationSettings.AppSettings["SessionWarning"].ToString()%>';
+            var sessionTimeout = "<%= Session.Timeout %>";
+
+            var sTimeout = parseInt(sessionTimeoutWarning) * 60 * 10000;
+            setTimeout('SessionWarning()', sTimeout);
+            function SessionWarning() {
+                $get('<%=btnReset.ClientID%>').click();
+            }
+        </script>
+
+        <script type="text/javascript">
+            function pageLoad() {
+            }
+            function ShowLeftPnl() {
+
+                $get("pnlLeft").style.visibility = 'visible';
+            }
+            function HideLeftPnl() {
+                $get("pnlLeft").style.visibility = 'hidden';
+            }
+        </script>
+
+        <script type="text/javascript" language="javascript">
+            var nSat = 0;
+            function showDia(url) {
+
+                if (nSat == 1) {
+                    //if (confirm('Your data has not been saved.\nDiscard your data?')) {
+                    //  nSat = 0;
+                    window.location = url;
+                }
+                else
+                    window.location = url;
+            }
+
+            function hidemenu() {
+                document.getElementById("framLeftMenu").style.width = "0px";
+                //document.getElementById("framLeftMenu").src = "about:blank";
+                document.getElementById("divLeftMenu").style.visibility = "hidden";
+                document.getElementById("framLeftMenu").style.visibility = "hidden";
+            }
+            function OnClientUpdated(sender, args) {
+                var message = "Update (check) was done!";
+                var newMsgs = sender.get_value();
+                if (newMsgs != 0) {
+                    sender.show();
+                    message += (newMsgs == 1) ? (" There is 1 new message!") : (" There are " + newMsgs + " new messages!");
+                }
+                else {
+                    message += " There are no new messages!";
+                }
+                logEvent(message);
+
+            }
+        </script>
+
+    </telerik:RadCodeBlock>
+</head>
+
+<body style="overflow: hidden;">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="_ScriptManager" runat="server" EnablePageMethods="true">
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/AutoSave/FixedFocus.js" />
+            </Scripts>
+        </asp:ScriptManager>
+        <%--<iframe height="0" width="0" src="RefreshSessionState.aspx"frameborder="0" />--%>
+        <%--Interval="360000"
+	height="880px"--%>
+
+        <table style="height: 100%; vertical-align: top;" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td height="100%" valign="top">
+
+                    <div id="ParentDivElement" style="height: 100%;">
+                        <telerik:RadSplitter ID="RadSplitter1" VisibleDuringInit="false" runat="server" Width="100%"
+                            Height="100%" CollapseMode="Forward" CollapseExpandPaneText="Business" Skin="Vista">
+                            <telerik:RadPane ID="LeftPnl" CssClass="BgBlockLeft" runat="server" Width="22px"
+                                Scrolling="none">
+                                <telerik:RadSlidingZone OnClientLoaded="OnClientPaneLoaded" ClickToOpen="true" ID="sz1"
+                                    runat="server" Width="22px">
+                                    <telerik:RadSlidingPane ID="rsp1" OnClientUndocked="OnClientPaneUnDocked" OnClientExpanding="OnClientExpanding"
+                                        OnClientDocked="OnClientPaneDocked" Font-Bold="true" runat="server" BackColor="#81A4C7"
+                                        Title="Menu" Width="210px">
+                                        <table>
+                                            <tr>
+                                                <td width="200px" bgcolor="#81A4C7" valign="top">
+                                                    <table cellpadding="2" cellspacing="0" border="0" width="100%">
+
+                                                        <tr>
+                                                            <td class="link">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img align="left" src="/images/add.gif" alt="my pictures" />
+                                                                        </td>
+                                                                        <td class="sublink">
+                                                                            <asp:Label ID="sModuleName" runat="server" Text="" Font-Bold="true" />
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <asp:Panel ID="pnlModulePages" onmouseover="this.style.cursor='default';" runat="server"
+                                                                    ScrollBars="Auto" Width="250px">
+                                                                    <asp:TreeView ID="tvCategory" EnableClientScript="true" runat="server" NodeIndent="10"
+                                                                        OnSelectedNodeChanged="tvCategory_SelectedNodeChanged" Font-Bold="true" Font-Size="11px"
+                                                                        ImageSet="Custom" CollapseImageUrl="/Images/minus.gif" ShowLines="true" ExpandImageUrl="/Images/links.gif">
+                                                                        <ParentNodeStyle Font-Bold="false" />
+                                                                        <HoverNodeStyle Font-Underline="True" Font-Bold="true" BackColor="#CCCCCC" BorderColor="#888888"
+                                                                            BorderStyle="Solid" BorderWidth="0px" />
+                                                                        <SelectedNodeStyle BackColor="gray" ForeColor="White" Font-Underline="False" HorizontalPadding="3px"
+                                                                            VerticalPadding="1px" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="0px" />
+                                                                        <NodeStyle Font-Names="Verdana" Font-Size="9pt" ForeColor="white" HorizontalPadding="5px"
+                                                                            NodeSpacing="2px" VerticalPadding="2px" Font-Bold="true" />
+                                                                    </asp:TreeView>
+                                                                </asp:Panel>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div id="vista_toolbar1">
+                                                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:GridView ID="gvModules" runat="server" AutoGenerateColumns="false" Width="100%"
+                                                                                    OnRowDataBound="gvModules_RowDataBound" ShowHeader="false" GridLines="None" AllowPaging="false"
+                                                                                    OnSelectedIndexChanged="gvModules_SelectedIndexChanged">
+                                                                                    <Columns>
+                                                                                        <asp:BoundField DataField="ModuleId" />
+                                                                                        <asp:BoundField DataField="ModuleName" />
+                                                                                        <asp:TemplateField ItemStyle-HorizontalAlign="Left" ItemStyle-CssClass="link">
+                                                                                            <ItemTemplate>
+                                                                                                <table width="98%" cellpadding="0" cellspacing="3">
+                                                                                                    <colgroup>
+                                                                                                        <col width="25px" />
+                                                                                                    </colgroup>
+                                                                                                    <tr id="tblM" runat="server">
+                                                                                                        <td align="left">
+                                                                                                            <img align="left" alt='<%#Eval("ModuleName") %>' src='<%#Eval("ImageUrl") %>' />
+                                                                                                            <asp:HiddenField ID="hdnModuleId" runat="server" Value='<%#Eval("ModuleId") %>' />
+                                                                                                        </td>
+                                                                                                        <td align="left">
+                                                                                                            <a href="#" style="font-size: 14px;"><span><b>
+                                                                                                                <%#Eval("ModuleName") %></b></span></a>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </ItemTemplate>
+                                                                                        </asp:TemplateField>
+                                                                                        <asp:BoundField DataField="ModuleFlag" />
+                                                                                    </Columns>
+                                                                                </asp:GridView>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </telerik:RadSlidingPane>
+
+                                    <%--<telerik:RadSlidingPane ID="RadSlidingPane2" Font-Bold="true" OnClientUndocked="OnClientPaneUnDockedTask"
+                                        runat="server" OnClientExpanding="OnClientExpanding" BackColor="#81A4C7" Title="Task" Width="800px">
+                                        <uc:Task ID="tasks" runat="server" />
+                                    </telerik:RadSlidingPane>--%>
+                                </telerik:RadSlidingZone>
+                            </telerik:RadPane>
+
+
+                            <telerik:RadSplitBar ID="Radsplitbar1" runat="server"></telerik:RadSplitBar>
+
+                            <telerik:RadPane ID="MiddlePane1" runat="server" Scrolling="None">
+                                <telerik:RadSplitter ID="Radsplitter2" VisibleDuringInit="false" runat="server" FullScreenMode="true" Orientation="Horizontal" Skin="Vista">
+                                    <telerik:RadPane ID="TopPnl" runat="server" CssClass="BgBlockTop" Height="30px" Scrolling="none" Skin="Vista">
+                                        <table cellpadding="0" cellspacing="0" style="padding-left: 0px;" width="100%">
+                                            <tr>
+                                                <td align="left" width="7%" style="vertical-align: top;">
+                                                    <telerik:RadSlidingZone ID="Radslidingzone2" runat="server"    ClickToOpen="true" Height="30px" Skin="Vista" Visible="false" SlideDirection="Bottom">
+                                                        <telerik:RadSlidingPane ID="rdpAppList" runat="server" ClickToOpen="true"  ForeColor="Black" Height="680px" OnClientExpanded="RadSldPaneFindPatient_OnClientExpanded" Skin="Vista" Title="Find Patient" DockOnOpen="false">
+                                                            <FindPatient:FindPatient ID="fp1" runat="server" />
+                                                        </telerik:RadSlidingPane>
+                                                        <telerik:RadSlidingPane ID="Radslidingpane4" runat="server" ClickToOpen="true" Font-Bold="true" ForeColor="Black" Height="156px" Skin="Vista" Title="Patient Details" DockOnOpen="true" Visible="false">
+                                                            <%--<aspl:Header ID="tophead" runat="server" />--%>
+                                                        </telerik:RadSlidingPane>
+                                                    </telerik:RadSlidingZone>
+                                                </td>
+                                                <td>
+                                                    <asp:LinkButton ID="lnkDiagnosticHistory" runat="server" OnClick="lnkDiagnosticHistory_OnClick" Skin="Vista" CssClass="hide" ForeColor="White" Text="Diagnostic History" Visible="false"  />
+                                                </td>
+                                                <td align="right">
+                                                    <aspl1:UserDetail ID="pd1" runat="server" />
+                                                    <telerik:RadWindowManager ID="RadWindowManager" runat="server" EnableViewState="false">
+                                                        <Windows>
+                                                            <telerik:RadWindow ID="RadWindowForNew" runat="server" Behaviors="Close" Opacity="100" />
+                                                        </Windows>
+                                                    </telerik:RadWindowManager>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </telerik:RadPane>
+
+                                    <telerik:RadPane ID="RadPane1" runat="server" Width="100%" Height="64px" CssClass="overflowmenu">
+                                        <div class="container-fluid" style="padding: 0px">
+                                            <telerik:RadMenu ID="RadMenu1" runat="server" Style="padding-top: 1px; padding-bottom: 0px; z-index: 100"
+                                                EnableRoundedCorners="true" EnableShadows="false" EnableRootItemScroll="true"
+                                                OnItemDataBound="RadMenu1_ItemDataBound" Skin="Windows7" Width="100%" Font-Italic="True" Visible="true" />
+                                        </div>
+                                        <table border="0" cellpadding="0" cellspacing="0" style="padding-left: 0px; width: 100%;">
+                                            <tr style="font-weight: lighter; background-color: #81A4C7;">
+                                                <td align="right" style="width: 2%;"><%--<asp:ImageButton ID="ibtnNotification" runat="server" Visible ="false"  ImageUrl="~/Icons/notification.png" OnClick="ibtnNotification_OnClick" />--%></td>
+                                                <td align="left" style="width: 5%; vertical-align: text-top; text-decoration: blink;">
+                                                    <asp:UpdatePanel ID="UpdatePanel8" runat="server">
+                                                        <ContentTemplate>
+                                                            <asp:Label ID="lblNotification" runat="server" SkinID="label" Visible="false" ForeColor="Red" Font-Bold="true" />
+                                                            <asp:HiddenField ID="hdnNotification" runat="server" />
+                                                            <div id="dvNotification" runat="server" visible="false" style="width: 400px; z-index: 200; border-bottom: 4px solid #CCCCCC; border-left: 4px solid #CCCCCC; border-right: 4px solid #CCCCCC; border-top: 4px solid #CCCCCC; background-color: #FFF8DC; position: absolute; bottom: 0; height: 250px; left: 450px; top: 150px">
+                                                                <table width="100%" cellpadding="2" cellspacing="2">
+                                                                    <tr>
+                                                                        <td style="width: 99%;">
+                                                                            <asp:Panel ID="pnl" runat="server" Width="400px">
+                                                                                <asp:GridView ID="grdViewNotification" runat="server" SkinID="gridview2" AutoGenerateColumns="false" Width="100%" OnRowCommand="grdViewNotification_OnRowCommand">
+                                                                                    <Columns>
+                                                                                        <asp:TemplateField HeaderStyle-Width="75%" ItemStyle-Wrap="false">
+                                                                                            <ItemTemplate>
+                                                                                                <asp:LinkButton ID="lblNotification" runat="server" Text='<%#Eval("Notification") %>' CommandArgument="OpenLink" />
+                                                                                                <asp:HiddenField ID="hdnLinkPage" runat="server" Value='<% #Eval("LinkPage") %>' />
+                                                                                                <asp:HiddenField ID="hdnType" runat="server" Value='<% #Eval("Type") %>' />
+                                                                                            </ItemTemplate>
+                                                                                        </asp:TemplateField>
+                                                                                        <asp:TemplateField>
+                                                                                            <ItemTemplate>
+                                                                                                <asp:Label ID="lblcount" runat="server" Text='<%#Eval("Count") %>' />
+                                                                                            </ItemTemplate>
+                                                                                        </asp:TemplateField>
+                                                                                    </Columns>
+                                                                                </asp:GridView>
+                                                                            </asp:Panel>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="center">
+                                                                            <asp:Button ID="btnCloseDiv" runat="server" OnClick="btnCloseDiv_OnClick" Text="Close" /></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                    <telerik:RadWindowManager ID="RadWindowManager1" EnableViewState="false" runat="server">
+                                                        <Windows>
+                                                            <telerik:RadWindow ID="RadWindow1" runat="server" Behaviors="Close,Move" />
+                                                        </Windows>
+                                                    </telerik:RadWindowManager>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="3">
+                                                    <table border="0" style="background: #fff; margin-left: 0px; padding-top: 0px; border-style: solid none solid none; border-width: 1px; border-color: #fff;" cellpadding="2" cellspacing="2" width="100%">
+                                                        <tr>
+                                                            <td>
+                                                                <%--<asp:Label ID="lblPatientDetail" runat="server" Text="" Font-Bold="true"   />--%>
+                                                                <asplNew:UserDetailsHeader ID="asplHeaderUD" runat="server" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </telerik:RadPane>
+
+                                    <telerik:RadPane ID="RadPane2" runat="server" Width="100%">
+
+                                        <table border="0" cellpadding="0" cellspacing="0" style="padding: 0px; width: 100%; float: left; margin: 0;">
+                                            <tr>
+                                                <td colspan="3">
+                                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </telerik:RadPane>
+                                </telerik:RadSplitter>
+                            </telerik:RadPane>
+                        </telerik:RadSplitter>
+
+                        <asp:Button ID="btnReset" runat="server" Style="visibility: hidden" Height="0px" OnClick="btnReset_OnClick" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

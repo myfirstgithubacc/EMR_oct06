@@ -1,0 +1,133 @@
+﻿body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; font-weight:normal;}
+* { margin:0; padding:0;}
+
+
+
+.ajax__tab_header span{height:21px!important;}
+.form-group input[type=text],.form-group textarea,.form-group select{ width:100%; padding:2px 5px!important; border-color:#ABABAB!important; border-radius:2px; background:#fff; border:1px solid; outline:none;}
+.form-group11 input[type=text],.form-group11 textarea,.form-group11 select{ width:100%; padding:2px 5px!important; border-color:#ABABAB!important; border-radius:2px; background:#fff; border:1px solid; outline:none;}
+input[type="checkbox"],input[type="radio"]{margin:1px 5px 0 0;}
+input[type="checkbox"],input[type="radio"]
+
+.textLabelBig { font-size:13px !importnat; font-weight:600 !important; float:left;}
+.HeadLabel { font-size:13px !importnat; font-weight:600 !important;}
+.textLabel { font-size:12px;}
+.textLabelLeft { font-size:12px; float:left; line-height:1.8em;}
+
+.textLabelLeft-New { font-size:11.3px; float:left; line-height:1.8em;}
+
+.form-group {margin-bottom:5px;}
+.outline { outline:none;}
+.inlin-bl{display:inline-block!important;}
+
+.radioo td{ margin-right:20px; display:inline-block}
+.radioo input { height:14px !important;}
+.radioo label { font-size:12px; line-height:1.4em; margin:0; font-weight:normal;}
+
+.block {display:block!important; width:100%!important;}
+.blockNew {display:block!important; width:100%!important;}
+.blockNew label { font-size:12px; font-weight:normal;}
+
+.blockNew01 {display:block!important; width:100%!important; float:left !important; margin:2px 0 0 0 !important;}
+.blockNew01 input { margin:2px 3px 0 0 !important; width:13px !important; height:13px !important; float:left;}
+.blockNew01 label { font-size:12px; font-weight:bold; float:left;}
+
+.InventoryFullBtn { border-radius:3px!important; padding:3px 0.7em !important; font-size:12px; vertical-align:top; background:#0782be;color:#fff; border:none; }
+.InventoryFullBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.InventoryFullBtn01 { border-radius:3px!important; padding:2px 0.7em !important; font-size:12px; vertical-align:top; background:#0782be;color:#fff; border:none; }
+.InventoryFullBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.InventoryFullBtn02 { background:#3A8E3D; border-radius:3px!important; padding:2px 0.7em !important; font-size:12px; vertical-align:top; color:#fff; border:none; }
+.InventoryFullBtn02:hover { background:#2A692C;color:#fff; text-decoration:none;}
+
+
+
+.HeightBox { float:left; margin:5px 0 0 0}
+.HeightBox input { height:14px !important; line-height:1.6em;}
+.HeightBoxNew { float:left; margin:2px 0 0 0}
+.HeightBoxNew input { height:14px !important; line-height:1.6em;}
+
+
+.PaddingRightSpacing01 { padding:0 8px 0 15px !important;}
+.PaddingRightSpacing { padding:0 0 0 15px;}
+.PaddingLeftSpacing { padding:0 15px 0 0;}
+.PaddingSpacing { padding:0 0 0;}
+.PaddingSpacing01 { padding:0 1px 0;}
+.PaddingRightSpacing01 { padding:0 0 0 15px !important;}
+.PaddingLeftSpacing01 { padding:0 15px 0 0 !important;}
+.PaddingRightSpacing02 { padding:0 5px 0 15px;}
+.PaddingLeftSpacing02 { padding:0 15px 0 5px;}
+.PaddingLeftSpacing03 { padding:0 5px 0 5px;}
+
+.marginTopFlat { margin:0 !important; float:left;}
+.marginTop { margin:0 !important;}
+.marginTop01 { margin:3px 0 0 !important;}
+.marginTop02 { margin:8px 0 0 !important;}
+.marginBottom { margin:0 !important;}
+
+.borderLeft { border:none !important;}
+.WidthDiv { width:140%;}
+
+.RightDiv { float:right !important; margin}
+
+
+
+.InventorybgTopNew { float:left; padding:0.3em 0 0.3em 0; margin:0em 0 0 0; width:100%; background-color:#C1E5EF !important;}
+.LegendColor { float:right; margin:0 2px 0 0; padding:1px 9px; font-size:9pt; border:solid 1px #7D7D7D; font-weight:normal;}
+
+
+
+
+
+
+/******  Purchase (Purchase Order) *******/
+.PurchaseOrderDiv { width:100%; float:left; margin:0.3em 0 0 0; padding:0;}
+.PurchaseOrderDivNew { width:100%; float:left; margin:0em 0 0 0; padding:0;}
+
+
+
+/****** GRN (Goods Receipt Notes) *******/
+.OtherChargesBtnGRN { border-radius:3px!important; padding:2px 0.7em !important; font-size:12px; font-weight:normal; vertical-align:top; background:#BF2323;color:#fff; border:none; }
+.OtherChargesBtnGRN:hover { background:#A01E1E;color:#fff; text-decoration:none;}
+.whiteColor { color:#333; font-size:12px; font-weight:500; margin:0 2px 0 7px;}
+.GRNList-RightBox01 { background-color: #94D4E6; color: #fff; font-family: 'Open Sans', sans-serif; font-weight: bold; font-size: 11px; float:left; border-bottom: solid 1px #9f9f9f; padding:5px 0 5px 10px; width:100%;}
+.GRNList-RightBox02 { float:left; margin:0px 0 0em 0; padding:0; width:100%; border:solid 1px #ccc; border-top:none;} 
+.GRNList-RightBox03 { float:left; margin:0px 0 0em 0; padding:0; width:100%;} 
+
+
+
+/****** IPD Issue (ItemIssueSaleReturn) *******/
+.IPD-Box01 { width:100%; float:left; margin:0; padding:5px 0 0 0; border:solid 1px #E2E2E2; background:#ECECEC; min-height:142px; max-height:150px;}
+.HeightBoxNew01 { float:left; margin:2px 0 0 0}
+.HeightBoxNew01 input { height:14px !important; line-height:1.6em; margin:5px 5px 0 0;}
+.IPD-Padding { padding:0 0 0 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+     {
+        .inlin-bl1{display:inline-block!important; margin:-10px 0px 0px}
+        .inlin-bl1New{display:inline-block!important; margin:0px 0px 0px}
+        .textLabelNew { margin:6px 0 0 0; float:left;}
+        
+}
+
+
+@-moz-document url-prefix() {
+	* {margin:0; padding:0;}
+
+
+}

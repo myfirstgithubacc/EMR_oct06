@@ -1,0 +1,787 @@
+﻿using System;
+using System.Configuration;
+using System.Data;
+using System.Web.UI;
+using Telerik.Web.UI;
+using System.Text;
+using System.Web.UI.WebControls;
+using System.Net;
+using System.IO;
+
+public partial class MRD_MRDFileRequest : System.Web.UI.Page
+{
+    private string sConString = ConfigurationManager.ConnectionStrings["akl"].ConnectionString;
+    clsExceptionLog objException = new clsExceptionLog();
+    BaseC.RestFulAPI objCM;// = new wcf_Service_Common.CommonMasterClient();
+    BaseC.RestFulAPI objMRD;// = new wcf_Service_MRD.MRDServiceClient();
+    BaseC.clsPharmacy objPharmacy;//f270117
+    private string FileFolderx = ConfigurationManager.AppSettings["FileFoldertemp"];
+    private string ftppath = ConfigurationManager.AppSettings["FTP"];
+    private string Rootfolder = ConfigurationManager.AppSettings["FileFolderMRD"];
+    string[] strdocType = { ".pdf", ".doc", ".xls", ".docx", ".xlsx", ".txt", ".zip" };
+    protected void Page_PreInit(object sender, System.EventArgs e)
+    {
+        Page.Theme = "DefaultControls";
+        if (common.myStr(Request.QueryString["POPUP"]).ToUpper() == "POPUP")
+        {
+            this.MasterPageFile = "~/Include/Master/BlankMaster.master";
+        }
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            //objMRD = new BaseC.RestFulAPI(sConString);
+            //objCM = new BaseC.RestFulAPI(sConString);
+            //objPharmacy = new BaseC.clsPharmacy(sConString); //f270117
+           // ViewState["PageType"] = common.myStr(Request.QueryString["PT"]).ToUpper();
+
+            //dtpRequiredDate.MinDate = Convert.ToDateTime(DateTime.Now.ToShortDateString() + " 00:00");
+
+            //dtpRequiredDate.DateInput.DateFormat = Session["OutputDateFormat"].ToString() + " hh:mm tt";
+           // dtpRequiredDate.SelectedDate = DateTime.Now;
+
+            //bindHeader();
+            //bindControl();
+            //if (common.myStr(Request.QueryString["RequestFrom"]).ToUpper() == "WARD")
+            //{
+            //    txtUHID.Text = common.myStr(Request.QueryString["Regno"]);
+
+            //    hdnRegistrationId.Value = common.myStr(Request.QueryString["RegId"]);
+            //    hdnEncounterId.Value = common.myStr(Request.QueryString["EncId"]);
+            //    hdnEncounterNo.Value = common.myStr(Request.QueryString["Encno"]);
+
+            //    BindPatientHiddenDetails(common.myStr(Request.QueryString["Regno"]));
+
+            //}
+            hdnIsPasswordRequired.Value = common.myStr(Request.QueryString["IsPasswordRequired"]);
+            //BindIssueBy();//f270117
+        }
+    }
+
+    private void bindHeader()
+    {
+        switch (common.myStr(ViewState["PageType"]))
+        {
+            case "REQ":
+              //  lblHeader.Text = "&nbsp;MRD File Request";
+               // btnSave.Text = "File Request";
+                ddlRequestBy.Enabled = false;
+                gvData.Visible = false;
+                break;
+            case "ISS":
+               // lblHeader.Text = "&nbsp;Manual File Issue";
+               // btnSave.Text = "File Issue";
+                lblfileUpload.Visible = true;
+                _FileUpload.Visible = true;
+                lblFileNaem.Visible = true;
+                txtFileName.Visible = true;
+                fileupload.Visible = true;
+                fileName.Visible = true;
+                trRequiredDate.Visible = false;
+                gvData.Visible = true;
+                break;
+            case "RTN":
+                lblHeader.Text = "&nbsp;Manual File Return";
+                btnSave.Text = "File Return";
+                ddlDoctorList.Enabled = false;
+                ddlDepartment.Enabled = false;
+                txtRemarks.Enabled = false;
+                trRequiredDate.Visible = false;
+                gvData.Visible = false;
+                break;
+        }
+    }
+
+    private void bindControl()
+    {
+        DataSet ds = new DataSet();
+        DataTable dt = new DataTable();
+        try
+        {
+            //Commented by Vinod
+            //BaseC.Hospital objH = new BaseC.Hospital(sConString);
+            //ds = objH.fillDoctorCombo(Convert.ToInt16(Session["HospitalLocationID"]), 0, Convert.ToInt16(Session["FacilityId"]));
+
+            //DataView DV = ds.Tables[0].DefaultView;
+            ////DV.RowFilter = "IsDoctor=1";
+
+            //ddlDoctorList.DataSource = DV.ToTable();
+            //ddlDoctorList.DataTextField = "DoctorName";
+            //ddlDoctorList.DataValueField = "DoctorId";
+            //ddlDoctorList.DataBind();
+
+            //ddlDoctorList.Items.Insert(0, new RadComboBoxItem("", "0"));
+
+
+            //Commented by Vinod
+
+            BaseC.EMRBilling objEMRBilling = new BaseC.EMRBilling(sConString);
+            dt = objEMRBilling.getEmployeeList(Convert.ToInt16(Session["HospitalLocationID"]), Convert.ToInt16(Session["FacilityId"]));
+
+            ddlDoctorList.DataSource = dt;
+            ddlDoctorList.DataTextField = "EmployeeName";
+            ddlDoctorList.DataValueField = "EmployeeId";
+            ddlDoctorList.DataBind();
+
+            ddlDoctorList.Items.Insert(0, new RadComboBoxItem("", "0"));
+
+            ds = new DataSet();
+            ds = objCM.GetHospitalDepartment(common.myInt(Session["HospitalLocationID"]), "");
+
+            ddlDepartment.DataSource = ds.Tables[0];
+            ddlDepartment.DataTextField = "DepartmentName";
+            ddlDepartment.DataValueField = "DepartmentID";
+            ddlDepartment.DataBind();
+
+            ddlDepartment.Items.Insert(0, new RadComboBoxItem("", "0"));
+
+
+
+        }
+        catch (Exception ex)
+        {
+            objException.HandleException(ex);
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = "Error: " + ex.Message;
+        }
+        finally
+        {
+            ds.Dispose();
+        }
+    }
+
+    protected void ddlDoctorList_OnSelectedIndexChanged(object sender, EventArgs e)
+    {
+        DataSet ds = new DataSet();
+        objMRD = new BaseC.RestFulAPI(sConString);
+
+        try
+        {
+            ddlDepartment.SelectedIndex = 0;
+
+            ds = objMRD.GetMRDEmployeeDepartment(common.myInt(Session["HospitalLocationID"]),
+                        common.myInt(ddlDoctorList.SelectedValue), common.myInt(Session["FacilityID"]), sConString);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                ddlDepartment.SelectedIndex = ddlDepartment.Items.IndexOf(ddlDepartment.Items.FindItemByValue(common.myStr(ds.Tables[0].Rows[0]["DepartmentID"])));
+            }
+        }
+        catch (Exception Ex)
+        {
+        }
+        finally
+        {
+            ds.Dispose();
+        }
+    }
+
+    protected void lnkUHID_OnClick(object sender, EventArgs e)
+    {
+        lblMessage.Text = "";
+
+        RadWindow1.NavigateUrl = "/MRD/MRDPatientDetails.aspx?MRDSearch=IP";
+        RadWindow1.Height = 580;
+        RadWindow1.Width = 900;
+        RadWindow1.Top = 10;
+        RadWindow1.Left = 10;
+        RadWindow1.OnClientClose = "SearchPatientOnClientClose";
+        RadWindow1.VisibleOnPageLoad = true; // Set this property to True for showing window from code 
+        RadWindow1.Modal = true;
+        RadWindow1.VisibleStatusbar = false;
+        RadWindow1.InitialBehaviors = WindowBehaviors.Maximize;
+    }
+
+    protected void btnClose_OnClick(object sender, EventArgs e)
+    {
+        try
+        {
+            //Done by Ujjwal 25 June 2015 to validate Registration No start
+            int UHID;
+            int.TryParse(txtUHID.Text, out UHID);
+            if ((UHID > 2147483647 || UHID.Equals(0)) && !common.myLen(txtUHID.Text).Equals(0))
+            {
+                lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+                lblMessage.Text = "Invalid UHID";
+                return;
+            }
+            //Done by Ujjwal 25 June 2015 to validate Registration No end
+            BindPatientHiddenDetails(txtUHID.Text);
+        }
+        catch (Exception ex)
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = "Error: " + ex.Message;
+            objException.HandleException(ex);
+        }
+    }
+
+    private bool isSaved()
+    {
+        bool isSave = true;
+        StringBuilder strmsg = new StringBuilder();
+
+        if (common.myInt(hdnRegistrationId.Value) == 0)
+        {
+            strmsg.Append("Registration not selected !");
+            isSave = false;
+        }
+       
+        if (common.myStr(txtRemarks.Text).Length == 0)
+        {
+            strmsg.Append("Remarks can't be blank !");
+            isSave = false;
+        }
+
+        lblMessage.Text = strmsg.ToString();
+        lblMessage.ForeColor = System.Drawing.Color.Red;
+        return isSave;
+    }
+
+    protected void btnSave_OnClick(object sender, EventArgs e)
+    {
+        if (common.myBool(hdnIsPasswordRequired.Value))
+        {
+            IsValidPassword();
+            return;
+        }
+        SaveData();
+    }
+    public bool FtpDirectoryExists(string directoryPath, string ftpUser, string ftpPassword)
+    {
+        bool IsExists = true;
+        try
+        {
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(directoryPath);
+            request.Credentials = new NetworkCredential(ftpUser, ftpPassword);
+            request.Method = WebRequestMethods.Ftp.ListDirectory;
+
+            using (FtpWebResponse response = (FtpWebResponse)request.GetResponse())
+            {
+                if (response.StatusCode == FtpStatusCode.DataAlreadyOpen)
+                    IsExists = true;
+            }
+
+
+        }
+        catch (WebException ex)
+        {
+            if (ex.Response != null)
+            {
+                FtpWebResponse response = (FtpWebResponse)ex.Response;
+                if (response.StatusCode == FtpStatusCode.ActionNotTakenFileUnavailable)
+                {
+                    IsExists = false;
+                }
+            }
+        }
+        return IsExists;
+    }
+
+    private bool CreateFTPDirectory(string directory, string username, string pwd)
+    {
+
+        try
+        {
+            //create the directory
+            FtpWebRequest requestDir = (FtpWebRequest)FtpWebRequest.Create(new Uri(directory));
+            requestDir.Method = WebRequestMethods.Ftp.MakeDirectory;
+            requestDir.Credentials = new NetworkCredential(username, pwd);
+            requestDir.UsePassive = true;
+            requestDir.UseBinary = true;
+            requestDir.KeepAlive = false;
+            FtpWebResponse response = (FtpWebResponse)requestDir.GetResponse();
+            Stream ftpStream = response.GetResponseStream();
+
+            ftpStream.Close();
+            response.Close();
+
+            return true;
+        }
+        catch (WebException ex)
+        {
+            FtpWebResponse response = (FtpWebResponse)ex.Response;
+            if (response.StatusCode == FtpStatusCode.ActionNotTakenFileUnavailable)
+            {
+                response.Close();
+                return true;
+            }
+            else
+            {
+                response.Close();
+                return false;
+            }
+        }
+    }
+    private void UploadtoFTP(FileUpload FileUpload1, string fileName)
+    {
+
+        //FTP Server URL.
+        string ftp = ftppath.Split('!')[0].ToString();
+        //Checck Directory
+        if (!FtpDirectoryExists(ftppath.Split('!')[0].ToString() + Rootfolder + Session["HospitalLocationID"].ToString(), ftppath.Split('!')[1].ToString(), ftppath.Split('!')[2].ToString()))
+        {
+            CreateFTPDirectory(ftppath.Split('!')[0].ToString() + Rootfolder + Session["HospitalLocationID"].ToString(), ftppath.Split('!')[1].ToString(), ftppath.Split('!')[2].ToString());
+        }
+        //FTP Folder name. Leave blank if you want to upload to root folder.
+        string ftpFolder = Rootfolder;
+
+
+        try
+        {
+
+            FtpWebRequest ftpClient = (FtpWebRequest)FtpWebRequest.Create(ftppath.Split('!')[0].ToString() + Rootfolder + Session["HospitalLocationID"].ToString() + "/" + fileName);
+            ftpClient.Credentials = new System.Net.NetworkCredential(ftppath.Split('!')[1].ToString(), ftppath.Split('!')[2].ToString());
+            ftpClient.Method = System.Net.WebRequestMethods.Ftp.UploadFile;
+            ftpClient.UseBinary = true;
+            ftpClient.KeepAlive = true;
+
+            ftpClient.ContentLength = FileUpload1.FileBytes.Length;
+            byte[] buffer = new byte[4097];
+            // int bytes = 0;
+            int total_bytes = (int)FileUpload1.FileBytes.Length;
+
+            using (Stream requestStream = ftpClient.GetRequestStream())
+            {
+                requestStream.Write(FileUpload1.FileBytes, 0, FileUpload1.FileBytes.Length);
+                requestStream.Close();
+            }
+
+            FtpWebResponse response = (FtpWebResponse)ftpClient.GetResponse();
+
+            FtpWebResponse uploadResponse = (FtpWebResponse)ftpClient.GetResponse();
+            string value = uploadResponse.StatusDescription;
+            uploadResponse.Close();
+
+            //lblMessage.Text += fileName + " uploaded.<br />";
+
+        }
+        catch (WebException ex)
+        {
+            throw new Exception((ex.Response as FtpWebResponse).StatusDescription);
+        }
+    }
+
+    protected string CreateFileName(string sCategoryId, string sFileName)
+    {
+        string FileName = "";
+        try
+        {
+            int extIndex = sFileName.IndexOf(".");
+            string sExt = sFileName.Substring(extIndex, sFileName.Length - extIndex);
+            BaseC.Patient objPat = new BaseC.Patient(sConString);
+            string[] sTime = null;
+            char[] chr = { ' ' };
+            sTime = DateTime.Now.ToString().Split(chr);
+            FileName = objPat.FormatDateDateMonthYear(sTime[0]) + sTime[1] + sTime[2];
+            FileName = FileName.Replace("/", "");
+            FileName = FileName.Replace(":", "");
+            //Response.Write(objPat.FormatDateDateMonthYear(DateTime.Today.ToShortDateString()) + " " + DateTime.Now.Hour.ToString() + "_" + DateTime.Today.Now.ToString() + "_" + DateTime.Now.Second.ToString());
+            if (txtUHID.Text == "")
+            {
+                FileName = txtUHID.Text.ToString().Trim() + "_" + FileName + "_" + sCategoryId + sExt;
+            }
+            else
+            {
+                FileName = txtUHID.Text.ToString() + "_" + FileName + "_" + sCategoryId + sExt;
+            }
+        }
+        catch (Exception Ex)
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = "Error: " + Ex.Message;
+            objException.HandleException(Ex);
+        }
+        return FileName;
+    }
+    private void SaveData()
+    {
+        objMRD = new BaseC.RestFulAPI(sConString);
+        try
+        {
+            string strMsg = string.Empty;
+            if (common.myLen(txtRackNo.Text).Equals(0))
+            {
+                lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+                lblMessage.Text = "Please enter Rack number";
+                return;
+            }
+            if (common.myLen(txtShelfNo.Text).Equals(0))
+            {
+                lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+                lblMessage.Text = "Please enter Shelf Number";
+                return;
+            }
+            if (common.myLen(txtRemarks.Text).Equals(0))
+            {
+                lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+                lblMessage.Text = "Please enter Remarks";
+                return;
+            }
+
+            strMsg = objMRD.MRDSaveFileRackNo(common.myInt(Session["HospitalLocationID"]), common.myInt(Session["FacilityId"]),
+                        common.myInt(hdnEncounterId.Value),    common.myInt(hdnRegistrationId.Value),common.myStr(txtRackNo.Text), 
+                        common.myStr(txtShelfNo.Text), common.myStr(txtRemarks.Text),
+                           common.myBool(hdnIsPasswordRequired.Value) ? common.myInt(PasswordRequiredHelper.GetTransactionUserId()) : common.myInt(Session["UserId"]));
+         
+
+            if ((strMsg.ToUpper().Contains(" SAVE")) && !strMsg.ToUpper().Contains("USP"))
+            {
+                lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cSucceedColor);
+                clearControl();
+            }
+            lblMessage.Text = strMsg;
+        }
+        catch (Exception ex)
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = "Error: " + ex.Message;
+            objException.HandleException(ex);
+        }
+        finally
+        {
+            objMRD = null;
+        }
+    }
+
+    void clearControl()
+    {
+        txtRackNo.Text = string.Empty;
+        txtShelfNo.Text = string.Empty;
+        txtRemarks.Text = string.Empty;
+    }
+
+    void BindPatientHiddenDetails(string RegistrationNo)
+    {
+        try
+        {
+            BaseC.ParseData bParse = new BaseC.ParseData();
+            BaseC.Patient bC = new BaseC.Patient(sConString);
+
+            if (RegistrationNo != "")
+            {
+                DataSet ds = new DataSet();
+                ds = bC.getPatientDetails(common.myInt(Session["HospitalLocationID"]), common.myInt(Session["FacilityId"]), 0, RegistrationNo, 0, common.myInt(Session["UserId"]));
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    DataRow dr = ds.Tables[0].Rows[0];
+
+                    hdnRegistrationId.Value = common.myStr(dr["RegistrationId"]);
+                    hdnEncounterNo.Value = common.myStr(dr["EncounterNo"]); ;
+                 //   hdnEncounterId.Value = common.myStr(dr["EncounterID"]);
+
+                    lblPatientName.Text = common.myStr(dr["PatientName"]) + ", " + common.myStr(dr["GenderAge"]);
+                    lblDob.Text = common.myStr(dr["DOB"]);
+                    lblEncounterNo.Text = common.myStr(dr["EncounterNo"]);
+                    lblAdmissionDate.Text = common.myStr(dr["EncounterDate"]);
+
+                    hdnGIssueId.Value = "";
+                    if (common.myStr(ViewState["PageType"]) == "RTN")
+                    {
+                        objMRD = new BaseC.RestFulAPI(sConString);
+
+                        ds = objMRD.getManualMRDFileIssueRetun("ISS", common.myInt(hdnRegistrationId.Value),
+                                    common.myInt(Session["HospitalLocationID"]), common.myInt(Session["FacilityID"]),
+                                    "", common.myDate("1900/01/01"), common.myDate("2079/01/01"), sConString);
+
+                        if (ds.Tables[0].Rows.Count == 0)
+                        {
+                            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+                            lblMessage.Text = "Issue not found !";
+                        }
+                        else
+                        {
+                            hdnGIssueId.Value = common.myStr(ds.Tables[0].Rows[0]["IssueId"]);
+                            ddlDoctorList.SelectedIndex = ddlDoctorList.Items.IndexOf(ddlDoctorList.Items.FindItemByValue(common.myStr(ds.Tables[0].Rows[0]["DoctorId"])));
+                            ddlDepartment.SelectedIndex = ddlDepartment.Items.IndexOf(ddlDepartment.Items.FindItemByValue(common.myStr(ds.Tables[0].Rows[0]["DepartmentId"])));
+                            txtRemarks.Text = common.myStr(ds.Tables[0].Rows[0]["Remarks"]);
+                        }
+                    }
+                    else if (common.myStr(ViewState["PageType"]) == "ISS")
+                    {
+                        objMRD = new BaseC.RestFulAPI(sConString);
+
+                        ds = objMRD.GetMRDManualFileIssue(common.myInt(hdnRegistrationId.Value),
+                                    common.myInt(hdnEncounterId.Value), common.myInt(Session["FacilityID"]));
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            gvData.DataSource = ds.Tables[0];
+                            gvData.DataBind();
+                        }
+
+                    }
+                }
+                else
+                {
+                    Alert.ShowAjaxMsg("Patient Not Found", Page);
+                    return;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = "Error: " + ex.Message;
+            objException.HandleException(ex);
+        }
+    }
+
+
+    protected void lbtnSearchPatientIP_Click(object sender, EventArgs e)
+    {
+        lblMessage.Text = "";
+
+        RadWindow1.NavigateUrl = "/MRD/MRDPatientDetails.aspx?MRDSearch=IP";
+        RadWindow1.Height = 580;
+        RadWindow1.Width = 900;
+        RadWindow1.Top = 10;
+        RadWindow1.Left = 10;
+        RadWindow1.OnClientClose = "SearchPatientOnClientCloseIP";
+        RadWindow1.VisibleOnPageLoad = true; // Set this property to True for showing window from code 
+        RadWindow1.Modal = true;
+        RadWindow1.VisibleStatusbar = false;
+    }
+
+    void BindPatientHiddenDetailsIP(string IPNo)
+    {
+        try
+        {
+            BaseC.ParseData bParse = new BaseC.ParseData();
+            BaseC.Patient bC = new BaseC.Patient(sConString);
+
+            if (IPNo != "")
+            {
+                DataSet ds = new DataSet();
+                ds = bC.getPatientDetailsEnc(common.myInt(Session["HospitalLocationID"]), common.myInt(Session["FacilityId"]), 0, IPNo, 0, common.myInt(Session["UserId"]));
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    DataRow dr = ds.Tables[0].Rows[0];
+
+                    hdnRegistrationId.Value = common.myStr(dr["RegistrationId"]);
+                    hdnEncounterNo.Value = common.myStr(dr["EncounterNo"]); ;
+                    hdnEncounterId.Value = common.myStr(dr["EncounterID"]);
+
+                    lblPatientName.Text = common.myStr(dr["PatientName"]) + ", " + common.myStr(dr["GenderAge"]);
+                    lblDob.Text = common.myStr(dr["DOB"]);
+                    lblEncounterNo.Text = common.myStr(dr["EncounterNo"]);
+                    lblAdmissionDate.Text = common.myStr(dr["EncounterDate"]);
+
+                    hdnGIssueId.Value = "";
+                    if (common.myStr(ViewState["PageType"]) == "RTN")
+                    {
+                        objMRD = new BaseC.RestFulAPI(sConString);
+
+                        ds = objMRD.getManualMRDFileIssueRetun("ISS", common.myInt(hdnRegistrationId.Value),
+                                    common.myInt(Session["HospitalLocationID"]), common.myInt(Session["FacilityID"]),
+                                    "", common.myDate("1900/01/01"), common.myDate("2079/01/01"), sConString);
+
+                        if (ds.Tables[0].Rows.Count == 0)
+                        {
+                            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+                            lblMessage.Text = "Issue not found !";
+                        }
+                        else
+                        {
+                            hdnGIssueId.Value = common.myStr(ds.Tables[0].Rows[0]["IssueId"]);
+                            ddlDoctorList.SelectedIndex = ddlDoctorList.Items.IndexOf(ddlDoctorList.Items.FindItemByValue(common.myStr(ds.Tables[0].Rows[0]["DoctorId"])));
+                            ddlDepartment.SelectedIndex = ddlDepartment.Items.IndexOf(ddlDepartment.Items.FindItemByValue(common.myStr(ds.Tables[0].Rows[0]["DepartmentId"])));
+                            txtRemarks.Text = common.myStr(ds.Tables[0].Rows[0]["Remarks"]);
+                        }
+                    }
+
+                    else if (common.myStr(ViewState["PageType"]) == "ISS")
+                    {
+                        objMRD = new BaseC.RestFulAPI(sConString);
+                        if (common.myInt(ds.Tables[0].Rows[0]["AcknowledmentStatus"]).Equals(0))
+                        {
+                            pnlRecordVisit.Enabled = false;
+                        }
+                        else
+                        {
+                            pnlRecordVisit.Enabled = true;
+                        }
+                        ds = objMRD.GetMRDManualFileIssue(common.myInt(hdnRegistrationId.Value),
+                                    common.myInt(hdnEncounterId.Value), common.myInt(Session["FacilityID"]));
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            gvData.DataSource = ds.Tables[0];
+                            gvData.DataBind();
+                        }
+
+                    }
+                }
+                else
+                {
+                    Alert.ShowAjaxMsg("Patient Not Found", Page);
+                    return;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = "Error: " + ex.Message;
+            objException.HandleException(ex);
+        }
+    }
+
+    protected void btnCloseIP_Click(object sender, EventArgs e)
+    {
+        try
+        {
+
+            //int UHID;
+            //int.TryParse(txtUHID.Text, out UHID);
+            //if ((UHID > 2147483647 || UHID.Equals(0)) && !common.myLen(txtUHID.Text).Equals(0))
+            //{
+            //    lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            //    lblMessage.Text = "Invalid UHID";
+            //    return;
+            //}
+
+            BindPatientHiddenDetailsIP(txtIPNo.Text);
+        }
+        catch (Exception ex)
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = "Error: " + ex.Message;
+            objException.HandleException(ex);
+        }
+
+    }
+    protected void BindIssueBy()
+    {
+        try
+        {
+            objPharmacy = new BaseC.clsPharmacy(sConString);
+            DataSet ds = new DataSet();
+            ds = new DataSet();
+            ds = objPharmacy.GetEmployee(common.myInt(Session["HospitallOcationId"]));
+            if (ds.Tables.Count > 0)
+            {
+                ddlRequestBy.DataSource = ds;
+                ddlRequestBy.DataTextField = "Name";
+                ddlRequestBy.DataValueField = "Id";
+                ddlRequestBy.DataBind();
+            }
+            ddlRequestBy.SelectedValue = common.myStr(Session["EmployeeId"]);
+
+        }
+        catch (Exception Ex)
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = "Error: " + Ex.Message;
+
+            objException.HandleException(Ex);
+        }
+    }
+
+    protected void ddlDepartment_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        if (ddlDepartment.SelectedIndex != 0)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                BaseC.Hospital objH = new BaseC.Hospital(sConString);
+                ds = objH.fillDoctorCombo(Convert.ToInt16(Session["HospitalLocationID"]), common.myInt(ddlDepartment.SelectedValue), Convert.ToInt16(Session["FacilityId"]));
+
+                DataView DV = ds.Tables[0].DefaultView;
+                //DV.RowFilter = "IsDoctor=1";
+
+                ddlDoctorList.DataSource = DV.ToTable();
+                ddlDoctorList.DataTextField = "DoctorName";
+                ddlDoctorList.DataValueField = "DoctorId";
+                ddlDoctorList.DataBind();
+
+            }
+            catch (Exception ex)
+            {
+                objException.HandleException(ex);
+                lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+                lblMessage.Text = "Error: " + ex.Message;
+            }
+            finally
+            {
+                ds.Dispose();
+            }
+        }
+    }
+
+    #region Transaction password validation
+    private void IsValidPassword()
+    {
+        hdnIsValidPassword.Value = "0";
+        RadWindow1.NavigateUrl = "/Pharmacy/Components/PasswordCheckerAllUser.aspx?UseFor=OPIP";
+        RadWindow1.Height = 120;
+        RadWindow1.Width = 340;
+        RadWindow1.Top = 10;
+        RadWindow1.Left = 10;
+        RadWindow1.OnClientClose = "OnClientIsValidPasswordClose";
+        RadWindow1.VisibleOnPageLoad = true;
+        RadWindow1.Modal = true;
+        RadWindow1.VisibleStatusbar = false;
+    }
+
+    protected void btnIsValidPasswordClose_OnClick(object Sender, EventArgs e)
+    {
+        try
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            if (common.myInt(hdnIsValidPassword.Value).Equals(0))
+            {
+                lblMessage.Text = "Invalid Username/Password!";
+                return;
+            }
+            if (!isSaved())
+            {
+                return;
+            }
+            SaveData();
+        }
+        catch (Exception Ex)
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = Ex.Message;
+            objException.HandleException(Ex);
+        }
+    }
+    #endregion
+
+
+
+    protected void gvData_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        try
+        {
+            if (e.CommandName == "Download")
+            {
+                GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
+                DataSet ds = new DataSet();
+                LinkButton lblDocumentPath = (LinkButton)row.FindControl("lblDocumentPath");
+                BaseC.EncryptDecrypt en = new BaseC.EncryptDecrypt();
+                string key = "Word";
+                string sFileName = common.myStr(lblDocumentPath.CommandArgument);
+                string sSavePath = common.myStr(ConfigurationManager.AppSettings["FileFolderMRD"] + Session["HospitalLocationID"].ToString() + "/");
+                string path = sSavePath + sFileName;
+                string URLPath = "/MRD/AttachementRender.aspx?FTPFolder=@FTPFolder&FileName=@FileName";
+                URLPath = URLPath.Replace("@FTPFolder", ConfigurationManager.AppSettings["FileFolderMRD"] + Session["HospitalLocationID"].ToString()).Replace("@FileName", sFileName);
+                lblMessage.Text = "";
+                string var = URLPath.Replace("+", "%2B");
+                ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "Script", "ShowPAgePrint('" + var + "');", true);
+            }
+        }
+
+        catch (Exception Ex)
+        {
+            lblMessage.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMessage.Text = "Error: " + Ex.Message;
+
+            objException.HandleException(Ex);
+        }
+    }
+}

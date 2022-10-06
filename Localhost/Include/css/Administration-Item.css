@@ -1,0 +1,73 @@
+﻿* { margin:0; padding:0;}
+
+
+/****** Item Service Page *******/
+.ItemServiceDiv { width:100%; float:left; margin:0; padding:0;}
+.spacingDiv { float:right; margin:0 0 1.5em 0;}
+.spacingDiv02 { float:right; margin:0.5em 0 0.8em 0;}
+
+
+.ItemService-Div { float:left; margin:0 0 0.8em 0 !important; padding:0 !important; width:100% !important;}
+.ItemService-Div h2{ font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0; width:145px;}
+.ItemService-Div h3 { float:left; padding:0; margin:0;}
+.IS-Department { width:358px !important; float:left !important; margin:0 !important; padding:0 !important;}
+.IS-DepartmentInput {width:358px !important; float:left !important; margin:0 !important; padding:1px 5px !important; outline:none; font-size:13px;}
+.IS-DepartmentDown {width:358px !important; float:left !important; margin:0 !important; padding:1px 5px !important; outline:none; font-size:13px;}
+
+
+.SearchServiceText {float:left; padding:0em 0 0 0; margin:0em 0 0 0;}
+.SearchServiceText h2 { font-size:15px; color:#232323; font-weight:bold; float:left; line-height:2.2em; margin:0; padding:0;}
+.SS-Department { float:left; margin:0 0 0.8em 0 !important; padding:0 !important; width:100% !important;}
+.SS-Department h2{ font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0; width:120px;}
+.SS-Department h4{ font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0; width:80px;}
+.SS-Department h3 { float:left; padding:0; margin:0;}
+.SS-DepartmentDown { width:200px !important; float:left !important; margin:0 !important; padding:0 !important;}
+.SS-DepartmentInput {width:200px !important; float:left !important; margin:0 !important; padding:2px 5px !important; outline:none; font-size:13px;}
+
+
+
+
+/****** Color Legend Page *******/
+.ColorLegend-Div { float:left; margin:2.2em 0 0.8em 0 !important; padding:0 !important; width:100% !important;}
+.ColorLegend { width:100%; float:left; margin:0; padding:0 0 0 0;}
+.ColorLegend h2 { font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 0em 0 0; padding:0;}
+.ColorLegend h3 { float:left; padding:0; margin:0 0 0.2em 0;width:90%; font-size:13px !important; color:#232323; font-weight:normal; outline:none;}
+.ColorLegend h3 select { outline:none; width:80%; float:left; margin:2px 0 2px; padding:0;}
+.ColorLegend01 { width:100%; float:left; margin:0; padding:0;}
+.ColorLegend01 h2 { font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 0em 0.5em 0; padding:0;}
+
+
+
+/****** Visit Type Page *******/
+.VisitTypeBtn { background:#0782be; color:#fff; font-size:13px; font-weight:bold; border:none; margin:4px 0px 4px 4px; padding:3px 12px 3px 12px; border-radius:3px; float:right;}
+.VisitTypeBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.VisitTypeBtn01 { background:#0782be; color:#fff; font-size:13px; font-weight:bold; border:none; margin:4px 0px 4px 4px; padding:3px 12px 3px 12px; border-radius:3px; float:right;}
+.VisitTypeBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.VT-Department { float:left; margin:0.2em 0 0.4em 0 !important; padding:0 !important; width:100% !important;}
+.VT-Department h2{ font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0; width:80px;}
+.VT-Department h3 { float:left; padding:0; margin:0;}
+.VT-DepartmentInput {width:430px !important; float:left !important; margin:0 !important; padding:1px 5px !important; outline:none; font-size:13px;}
+.VT-DepartmentDown { width:430px !important; float:left !important; margin:0 !important; padding:1px 5px !important; outline:none; font-size:13px;}
+
+.VT-forVisit { width:100%; float:left; margin:0; padding:0;}
+.VT-forVisit h2 { font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0;}
+
+.VT-Department01 { float:left; margin:0.4em 0 0.6em 0 !important; padding:0 !important; width:50% !important;}
+.VT-Department01 h2{ font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0; width:60px;}
+.VT-Department01 h3 { float:left; padding:0; margin:0;}
+.VT-DepartmentDown01 { width:225px !important; float:left !important; margin:0 !important; padding:1px 5px !important; outline:none; font-size:13px;}
+
+
+/****** Facility Page *******/
+.FacilityDiv { float:left; margin:0.2em 0 0.8em 0 !important; padding:0 !important; width:100% !important;}
+.FacilityDiv h2{ font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0; width:75px;}
+.FacilityDiv h3 { float:left; padding:0; margin:0;}
+.FacilityDiv h4{ font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 2em; padding:0;}
+.FacilityDivInput {width:250px !important; float:left !important; margin:0 !important; padding:4px 5px !important; outline:none; font-size:13px;}
+.FacilityDivDown { width:250px !important; float:left !important; margin:0 !important; padding:1px 5px !important; outline:none; font-size:13px;}
+.FacilityPhoneDivInput {width:95px !important; float:left !important; margin:0 !important; padding:1px 5px !important; outline:none; font-size:13px;}
+
+
+
+

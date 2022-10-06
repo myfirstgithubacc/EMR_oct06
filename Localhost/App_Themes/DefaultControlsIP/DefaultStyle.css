@@ -1,0 +1,207 @@
+﻿Gridheader
+{
+    font-family: Arial;
+    background-image: url(/Images/header.gif);
+    height: 32px;
+    color: Black;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    border-right: 1px solid #ccc;
+}
+
+.checkbox
+{
+    font-family: Arial;
+    color: Black;
+    font-size: 12px;
+    font-weight: normal;
+    height: 0.5em;
+    width: 0.5em;
+}
+
+
+
+
+
+.DropDown
+{
+    font-family: arial, verdana, helvetica, sans-serif;
+    visibility: visible;
+    border: 1px solid #6699CC;
+    color: Black;
+    vertical-align: middle;
+    background: White url(/Images/input_background.gif) repeat-x;
+    font-size: 12px;
+}
+
+Lable2
+{
+    font-family: Arial, helvetica, sans-serif;
+    visibility: visible;
+    letter-spacing: 1px;
+    color: Black;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.ListBox
+{
+    font-family: arial, helvetica, sans-serif;
+    visibility: visible;
+    border: 1px solid #6699CC;
+    color: Black;
+    vertical-align: middle;
+    background: White url(/Images/input_background.gif) repeat-x;
+    font-size: 11px;
+}
+
+
+button
+{
+    color: Black;
+    background-color: #E0DBBE;
+    border: 1px outset #AFAC9C;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+
+
+/* Pagination */
+
+.pagination
+{
+    padding: 2px;
+}
+
+.pagination ul
+{
+    margin: 0;
+    padding: 0;
+    text-align: left; /*Set to "right" to right align pagination interface*/
+    font-size: 16px;
+}
+
+.pagination li
+{
+    list-style-type: none;
+    display: inline;
+    padding-bottom: 1px;
+}
+
+.pagination a, .pagination a:visited
+{
+    padding: 0 5px;
+    border: 1px solid #FFA615;
+    text-decoration: none;
+    color: #2e6ab1;
+}
+
+.pagination a:hover, .pagination a:active
+{
+    border: 1px solid #2b66a5;
+    color: #000;
+    background-color: #FBEFDB;
+}
+
+.pagination a.currentpage
+{
+    background-color: #2e6ab1;
+    color: #FFF !important;
+    border-color: #2b66a5;
+    font-weight: bold;
+    cursor: default;
+}
+
+.pagination a.disablelink, .pagination a.disablelink:hover
+{
+    background-color: white;
+    cursor: default;
+    color: #929292;
+    border-color: #929292;
+    font-weight: normal !important;
+}
+
+.pagination a.prevnext
+{
+    font-weight: bold;
+}
+
+
+/* Patent Information */
+
+
+.thumbnail
+{
+    position: absolute;
+    z-index: 0;
+}
+
+.thumbnail:hover
+{
+    background-color: transparent;
+    z-index: 50;
+}
+
+.thumbnail span
+{
+    /*CSS for enlarged image*/
+    position: absolute;
+    background-color: lightyellow;
+    padding: 5px;
+    left: -1000px;
+    border: 1px dashed gray;
+    visibility: hidden;
+    color: black;
+    text-decoration: none;
+}
+
+.thumbnail span img
+{
+    /*CSS for enlarged image*/
+    border-width: 0;
+    padding: 2px;
+}
+
+.thumbnail:hover span
+{
+    /*CSS for enlarged image on hover*/
+    visibility: visible;
+    top: 30;
+    left: 5px; /*position where enlarged image should offset horizontally */
+    right: 35px; /*position where enlarged image should offset horizontally */
+}
+.clsheader
+{
+    color: Black;
+    font-family: arial;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    background-image: url(/Images/pagetitle.gif);
+    background-repeat: repeat-x;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+}
+.clsheaderIP
+{
+    color: Black;
+    font-family: arial;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    /*background-image: url(/Images/pagetitle.gif);
+    background-repeat: repeat-x;*/
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+    background-color:#C1DDA3;
+}
+
+
+
+
+
+
+

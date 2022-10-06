@@ -1,0 +1,1241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Alert" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\Alert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BasePage" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\BasePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BindDischargeSummary" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAECAEAEAAAQAAACEoQAAACElAAQAACABICAIAAAQA=</HashCode>
+      <FileName>App_Code\CS_Code\BindDischargeSummary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BindNotes" Collapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAECAEAAAAAQABACEgQAAACElAAQAACABACQIAAAQQ=</HashCode>
+      <FileName>App_Code\CS_Code\BindNotes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardData" Collapsed="true">
+    <Position X="19.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAGUAAREEAAgAAAgEADHiAAACIABkAABIABCAAAAk=</HashCode>
+      <FileName>App_Code\CS_Code\CardData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClinicDefaults" Collapsed="true">
+    <Position X="23.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEEAAACAAAAAIAAQBAAACAAAAAEAAAAACEAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\ClinicDefaults.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsExceptionLog" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAABAAAAgAAAAAgEAIACAAA=</HashCode>
+      <FileName>App_Code\CS_Code\clsExceptionLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDFPageEventHandler" Collapsed="true">
+    <Position X="7.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEAAQAEEJByBgBAIAAgAAAABaBiEAkAASAICgQgCBA=</HashCode>
+      <FileName>App_Code\CS_Code\clsParsePDF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsParsePDF" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAECZBjgAAIAAAgAAIAAeDiFAAQACAACgACABA=</HashCode>
+      <FileName>App_Code\CS_Code\clsParsePDF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsUseful" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\clsUseful.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="common" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAACAAAAEAEAhAASEBCAwAAoIZABAAASAAQQFQAAII=</HashCode>
+      <FileName>App_Code\CS_Code\common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringValueAttribute" Collapsed="true">
+    <Position X="23.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="commonLabelSetting" Collapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAIAAAAAIAAAQABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataProvider" Collapsed="true">
+    <Position X="18" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\DataProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dictionaries" Collapsed="true">
+    <Position X="19.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCBAQAAAAAAAAAAAAAAAAAAQAAAAAAQAAAAAgAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\Dictionaries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DL_Funs" Collapsed="true">
+    <Position X="21.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAKAAJMQJWhgCQIpIFQEAAEkAEDAKAGIJEaAoEHAUA=</HashCode>
+      <FileName>App_Code\CS_Code\DL_Funs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GridViewTemplate" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAIAAEIAAAAAAAAAAAAAAAAIAEBAAAACEAA=</HashCode>
+      <FileName>App_Code\CS_Code\GridViewTemplate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GridViewTemplate1" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAIAAAAAAAAAAAAAAAAIAEBAAAACEAA=</HashCode>
+      <FileName>App_Code\CS_Code\GridViewTemplate1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpPrescription" Collapsed="true">
+    <Position X="2.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJBoAgiAgICAgCAIBAAIAAgMAAoCACAAAAAkJCAAABg=</HashCode>
+      <FileName>App_Code\CS_Code\OpPrescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Photo" Collapsed="true">
+    <Position X="9.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAACAAAQAAAAAABAAAAAAAAIAEAA=</HashCode>
+      <FileName>App_Code\CS_Code\Photo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProblemAutoSuggestion" Collapsed="true">
+    <Position X="11" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\ProblemAutoSuggestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CustomReportCredentials" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAAAAAAAAAEAAAAIAAAAAAAAAAAAAAAAAACBAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\ReportViewerCredentials.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebPartBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAoAgAFAEQAAABAAABAAACAAAiAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\WebPartBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="cnm" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>J8oCABKpJxg7eAJSPSsxdAuBzPgqdFgWxtovDQW2DZU=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBill" Collapsed="true">
+    <Position X="23.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>e739vEsh53PO907Khf7L6WP/yj/m0z/+wNwaUvVXp5Q=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsReports" Collapsed="true">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAFAACAAAyAEgAJABAAAQAAABAhCQBiAAAAAACEABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsreports.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="emh" Collapsed="true">
+    <Position X="2.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIAWAwhAAAZABAAAQAEAAAgCQBoAAAAAAIEABXg=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\emh.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mud" Collapsed="true">
+    <Position X="16.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEgAAA4AIAAJCBAAoYAABBAgCQJoAAAAAAAFABhQ=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\mud.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportsDataSet" Collapsed="true">
+    <Position X="14.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAEgAA0AAAALAhAAAQAAAoEgCQJgAAAAgEEGEBBM=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\reportsdataset.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsAmountInWord" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>App_Code\VB_Code\clsAmountInWord.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilterCustomEditors.RadFilterDropDownEditor" Collapsed="true">
+    <Position X="2.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAgAAAgAAAAEAAAAAAAAAECAAAAAABAAAEAA=</HashCode>
+      <FileName>App_Code\CS_Code\FilterCustomDropDownEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RveiwerCredentail.ReportViewerCredentials" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAAAAAAAAQAAAAAAQACACEAAgIAAAACAAAAAiBAAAA=</HashCode>
+      <FileName>App_Code\CS_Code\RViewerCredetial.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_ListPatientsConformingToRuleTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_ListPatientsConformingToNumeratorTableAdapter" Collapsed="true">
+    <Position X="18" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetMTypeDetailsTableAdapter" Collapsed="true">
+    <Position X="18" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetRuleNameTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_QueryRuleEngineforCodesTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_QueryRuleEngineforDiagnosisTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_QueryRuleEngineforLabResultsTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_QueryRuleEngineforOrdersTableAdapter" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetCodesforCareNotificationsTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_ListPatientPercentageTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetCPTIIorNumeratorTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetPQRIMeasuresTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetCurrentPatientDemographicsTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetRuleGuidelineTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetICD9ValuesTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetCPTValuesTableAdapter" Collapsed="true">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_SearchMeasureTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_SearchRuleTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetPatientListByMeasureTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetDSDetailsTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetNumeratorCodeDetailsTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetLetterTableAdapter" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetLetterNameTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetLetterDescriptionofRuleTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetNumeratorConditionTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetHMDetailsTableAdapter" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetLoincCodeTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_ListPatientsConformingToExclusionTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetExclusionDetailsTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetExclusionCodeDetailsTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetCodesForExclusionTableAdapter" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetCodeValuesTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetCodesForNumeratorTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetMeasureTypeDetailsDataTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_ListPatientsConformingToMedicarePartBTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetExclusionConditionTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetMeasureIdTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetPQRIRulesTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetProviderDetailsTableAdapter" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetRuleValuesByRuleNameTableAdapter" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_ListPQRIResultsTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.CNM_GetQMorNumeratorDetailsTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cnmTableAdapters.QueriesTableAdapter" Collapsed="true">
+    <Position X="18" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAJgACCACAAAAAAAIACAAgAAAQAIQIAAAAAAAgCAEAQ=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\cnm.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.OrgContactsTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQEAGAAEAAAAQOAIEAAAAAAACEoiAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.citymasterTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACGICAAAAAAAQAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.GridOrgContactsTableAdapter" Collapsed="true">
+    <Position X="4" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.StateMasterTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.zipmasterTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAQMAIAAAAAAAACAIiAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.MasterContactCategoriesTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.GridMasterContactsTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_ClaimsTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAWAAEAIAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_CodesTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_StatusMasterTableAdapter" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.registrationTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.EncounterTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.CPTCodesTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgGAAEAAAAAMAIAAAAAAAACAICEAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.ModifierListTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.QuickRegistrationTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.ICD9ListTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgGAAEAAAAAMAIAAAAAAAACAICEAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridClaimLinesByBillIDTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_SubscriberTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGACEAAAAAMAIAAAAAAAACEICAAAIAAAAAAEBRA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_Claims_ServiceLineTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetClaimLineByLineIDTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_Claim_Services_TestResultsTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.TaxonomyCodesTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.InsuranceTableAdapter" Collapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.EmployeeTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAEAMAIAAAAAAAACAICAgAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetCMEncountersDetailsTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.OrgContactCategoriesTableAdapter" Collapsed="true">
+    <Position X="4" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGCAEAAAAQMAIAAAAAAAACEIiAAAAAEAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_MainTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAWAAEAIAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.QuickBillTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_AdjustmentsTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAKAAQMAIgAAAAAAACGIyAAAAAAAAAAQBBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.registrationARTableAdapter" Collapsed="true">
+    <Position X="4" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.RegistrationGuarantorDetailTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.GetServiceLineByBillIDTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_AdjustmentsStatusTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.SearchPatientByNameTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_PaymentsTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAIEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.RegistrationPaymentCasesTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_BatchTableAdapter" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAHAgEAAAAAMAIAAAAAAQACEICAAAAAAAAAAABBg=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.FacilityMasterTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.ContactQuickListTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGQAEAAAAQMAIAAAAAAAACAIiAAAAAgAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_ErrorsTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_CollectionCategoriesTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAQMAIAAAAAAAACAIiAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_LogTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.GetGridBill_LogTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.RegistrationGuarantorDetailFullTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridBatchTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridBatchItemsTableAdapter" Collapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetSpecialFeeTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetEncounterReportTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridEncounterReportsTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetRegistrationDetailsTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetPaymentPlansTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAHAAEAAAAQMAIAAAAAAAACAIiAAAAAAAAAAABBg=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetPaymentsTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAmAAAAAAAAMAIAAAAAAAACAICAAAAAIAAAEABRA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetUnappliedPaymentTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetPaymentPlansInsTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAQMAIAAAAAAAACAIiAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_ClearingHousesTableAdapter" Collapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_FormsTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.GetPatientOpenInvoicesTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetBillsByBatchIDTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_AdjustmentReasonsTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetCMEncountersTableAdapter" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridCMEncountersClaimsLinesTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_VerifyApproveClaimTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridAdjustmentsTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridARTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridERATableAdapter" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAQMAIAAAAAAAACAIiAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridERAClaimsTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAGAAAAAMAIBAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridERAClaimsLinesTableAdapter" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridERAClaimsLinesAdjustmentsTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.GetGridInsCopaysTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridSearchClaimsTableAdapter" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetGridSearchClaimsDetailsTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetRealmedDirListTableAdapter" Collapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetSuperBillFinalizedTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetBillIDsByBatchTableAdapter" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetSpecialPrintListTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.Bill_GetUserLinksTableAdapter" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.QuickEmployeeListTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsBillTableAdapters.QueriesTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FEIEdDAJutRujL4CYBwECKDgAUjLAEJCMApsoGwLkCA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsbill.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsReportsTableAdapters.ReportsTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAQMAIAAAAAAAACEIiAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsreports.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsReportsTableAdapters.Bill_CollectionCategoriesTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsreports.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsReportsTableAdapters.UsersTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsreports.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsReportsTableAdapters.FacilityMasterTableAdapter" Collapsed="true">
+    <Position X="18" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsreports.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsReportsTableAdapters.QueriesTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\dsreports.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="emhTableAdapters.EMHSearchPatientByNameTableAdapter" Collapsed="true">
+    <Position X="11" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\emh.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="emhTableAdapters.EMH_PatientContactsTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\emh.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="emhTableAdapters.EMH_GetContactDetailsTableAdapter" Collapsed="true">
+    <Position X="4" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\emh.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="emhTableAdapters.EMH_GetGuarantorDetailsTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\emh.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="emhTableAdapters.EMH_RegistrationTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\emh.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="emhTableAdapters.QueriesTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAEACAAAAAAIAAAIAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\emh.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mudTableAdapters.MUD_GetProviderListTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\mud.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mudTableAdapters.MUD_ListPatientsTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\mud.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mudTableAdapters.MUD_MeasuresDescriptionTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\mud.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mudTableAdapters.MUD_GetMeasureDetailsbyMeasureTableAdapter" Collapsed="true">
+    <Position X="18" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\mud.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mudTableAdapters.MUD_MeaningfulUseDashboardDataTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\mud.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mudTableAdapters.QueriesTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAgAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\mud.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportsDataSetTableAdapters.RegistrationSlip1TableAdapter" Collapsed="true">
+    <Position X="11" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\reportsdataset.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportsDataSetTableAdapters.AdmissionSlipTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\reportsdataset.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportsDataSetTableAdapters.UspRptOPBillTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\reportsdataset.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportsDataSetTableAdapters.UspRptOPBillSubReportTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\reportsdataset.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportsDataSetTableAdapters.UspRptRegistrationTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\reportsdataset.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportsDataSetTableAdapters.UspRptAdmissionTableAdapter" Collapsed="true">
+    <Position X="4" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\129eb8c1\f55320da\Sources_App_Code\reportsdataset.xsd.72cecc2a.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

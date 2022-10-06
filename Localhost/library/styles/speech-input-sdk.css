@@ -1,0 +1,154 @@
+  @font-face {
+    font-family: 'GothamRoundedMedium';
+    src: url('../fonts/GothamRoundedMedium.ttf');
+  }
+
+  span {
+    font-family: GothamRoundedMedium;
+  }
+
+  .sdk-main-wrap {
+    background: rgb(241, 241, 241);
+    border-radius: 15px;
+    border: 2px solid #000000;
+  }
+
+  .sdk-control-panel {
+    width: 75px;
+    height: 80px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  }
+
+  .sdk-clickable-logo {
+    cursor: pointer;
+  }
+
+  .sdk-container{
+    display: flex;
+  }
+
+  .sdk-clickable-logo {
+    width: 75px;
+  }
+
+  .sdk-controls-div {
+    /* width: 100%;  */
+    display: block; align-items: center;
+  }
+
+  .sdk-single-control-div { 
+    border-radius: 50px;
+    height: 55px;
+    width:55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+  }
+
+  .sdk-single-control-div:hover {
+    background: #f1f1f1;  
+  }
+
+  .sdk-control-btn {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    background: none;
+  }
+
+  .sdk-control-btn:disabled {
+    pointer-events: auto!important;
+    cursor: no-drop;
+  }
+
+  .sdk-status-text {
+    padding: 10px;
+    /* position: absolute; */
+    top: 70px;
+    font-weight: 400;
+  }
+  
+  /* Dropdown css ends */
+
+ /* Draggable css starts */
+  #sdk-draggable-wrap {
+    max-width: 355px;
+    position: fixed;
+    z-index: 1032;
+    top: 125px; 
+    left: 71%;
+  }
+  /* Dragable div css ends */
+
+  /* tooltip css starts */
+  .sdk-tooltip .sdk-tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute; 
+    top: -40px;
+    z-index: 1;
+  }
+  
+  .sdk-tooltip:hover .sdk-tooltiptext {
+    visibility: visible;
+  }
+  /* tooltip css ends here */
+
+  /* custom classes to be added dynamically starts*/
+
+  .sdk-d-flex {
+    display: flex;
+  }
+  
+  .sdk-d-none {
+    display: none;
+  }
+
+  .sdk-initial-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0px 50px 0px 0 #f1f1f1;
+  }
+
+  .sdk-message-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  }
+
+  .sdk-w-75 {
+    width: 75px;
+  }
+
+  .sdk-w-350 {
+    width: 350px;
+  }
+
+  .sdk-w-100 {
+    width: 100%;
+  }
+
+  .sdk-custom-radius {
+    border-radius: 15px;
+  }
+
+  /* custom classes to be added dynamically ends */
+
+  /* Make responsive size control panel css starts */
+
+  @media only screen and (max-width: 768px) {
+    .sdk-control-panel {
+      width: 55px;
+      height: 60px;
+    }
+    .sdk-clickable-logo {
+      width: 55px;
+    }
+    #sdk-draggable-wrap {
+      max-width: 305px;
+    }
+  }
+  /* Make responsive size control panel css ends */

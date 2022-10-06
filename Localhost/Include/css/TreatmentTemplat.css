@@ -1,0 +1,247 @@
+﻿
+
+/****** EMR Template Part *******/
+.emrTSpacingLeft {padding:0 0px 0 15px;}
+.emrTSpacing { padding:0 0px;}
+.emrTSpacingRight {padding:0 15px 0 0px;}
+
+.fullDiv { margin:0; padding:0;}
+.fullDiv-left { margin:0 0px 0 -1%; padding:0;}
+.fullDiv-right { margin:0; padding:0 0 0 0;}
+.emrTemplate { width:98%; float:left; margin:0 1% 1.3em; padding:0 0 7px; background:#fff; border:solid 1px #e1e1e1;}
+
+
+
+
+
+.emrTemplate-inner { width:98%; float:left; margin:5px 1% 0 1%; background:#fff;}
+.emrTemplate-inner h3 {float:left; margin:0 0 0.5em 0; padding:7px 0; color:#fff; font-size:13px; line-height:1.2em;}
+.emrTemplate-inner h2 {float:left; margin:0 0 0.5em 0; padding:7px 0; color:#353434; font-size:13px; line-height:1.2em;}
+.emrTemplate-inner h2 i { color:#fff;}
+.TemplateLabel { float:left; margin:0 0 0.5em 5px; padding:6px 8px;border:#ccc solid 1px; color:#6d6a6a; font-size:11px; width:90%;}
+.TemplateLabel i { float:right; margin:3px 0 0 0; padding:0;}
+.TemplateLabel01 { float:left; margin:0 0 0 5px; padding:6px 8px;border:#ccc solid 1px; color:#6d6a6a; font-size:11px; width:60%;}
+.TemplateLabel01 i { float:right; margin:3px 0 0 0; padding:0;}
+.AddNewRecordBtn { background:#ededed; color:#1b1a1a; font-size:12px; font-weight:500; border:none; margin:0 2px 0 8px; padding:5px 8px; border-radius:0; border:solid 1px #d6d6d6;}
+.AddNewRecordBtn:hover { background:#dcdada;color:#1b1a1a;}
+.EmrTem-box { margin:0 0 0 5em; padding:0 5px; text-align:center; border-radius:0; font-size:13px; height:29px; width:80%;} 
+.EmrTem-box:focus {box-shadow:none; border:#ccc solid 1px;}
+
+.EmrTem-box01 { float:left; margin:0 0 0 5px; padding:0 5px; text-align:left; border-radius:0; font-size:13px; height:29px; width:53.5%;} 
+.EmrTem-box01:focus {box-shadow:none; border:#ccc solid 1px;}
+
+
+
+
+
+.emrDiv-Green { width:99%; float:left; margin:0 1%; padding:0; background:#0eaf82;}
+.emrDiv-Green h2 { float:left; margin:0; padding:0; background:#08906a;}
+.emrDiv-Green h2 i{ font-size:20px; margin:0px 0 0 0; padding:7px 10px; color:#fff; float:left;} 
+.emrDiv-Green h3 { float:left; margin:7px 8px 0 8px; padding:0; font-size:16px; color:#fff; font-weight:bold; line-height:1.2em;}
+
+
+.emrDiv-White { width:99%; float:left; margin:0 1% 1% 1%; padding:0em 0 0 0; background:#fff;}
+.emrDiv-White h2 { font-size:13px; font-weight:normal; color:#353434; margin:0em 0 0 1.5em; padding:0;}
+.emrDiv-White h3 { float:left; margin:0em 0 0.5em 0; padding:0; width:67%; font-size:13px;}
+.emrDiv-White h3 .radio input{ float:left; margin:0 0 0 1em; padding:0;}
+.emrDiv-White h4 { float:left; margin:0em 1.5em 0 0 !important; padding:0; font-size:13px;}
+.emrDiv-White h4 .radio input{ float:left; margin:0em 0 0 1em; padding:0;}
+.borderRight {  border-left:solid 1px #ccc; float:left;}
+.Breasts { width:30%; float:left;}
+
+.appearanceTextarea{ float:left; margin:0 0 0 5px; padding:0 5px; text-align:left; border-radius:0; font-size:13px; height:29px;} 
+.appearanceTextarea:focus {box-shadow:none; border:#ccc solid 1px;}
+.HeightBtn { background:#ededed; color:#1b1a1a; font-size:12px; float:left; font-weight:500; border:none; margin:0em 2px 0 1.3em; padding:4px 8px; border-radius:0; border:solid 1px #d6d6d6;}
+.HeightBtn:hover { background:#dcdada;color:#1b1a1a;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#ctl00_ContentPlaceHolder1_gvProblemDetails tr th { float:left; margin:0; padding:0; text-align:center;}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gvProblemDetails, #gvService { float:left; margin:0; padding:0; width:100%;}
+
+#gvProblemDetails tr th {border:none; font-size: 12px; line-height: 1.8em; margin: 0; padding: 0 0 0 8px; color:#000;font-weight:normal;}
+#gvProblemDetails tr td { border:solid 1px #EAEAEA;  color:#484747; font-size:12px;padding: 5px 0 5px 8px;}
+#gvService tr th {border:none; font-size: 12px; line-height: 1.8em; margin: 0; padding: 0 0 0 8px; color:#000; border:solid 1px #fff; font-weight:normal;}
+#gvService tr td { border:solid 1px #EAEAEA;  color:#484747; font-size:12px;padding: 5px 0 5px 8px;}
+#ctl00_ContentPlaceHolder1_gvTreatmentPlan tr th {border:none; font-size: 13px; line-height: 1.6em; margin: 0; padding: 0 0 0 8px; color:#000; font-weight:normal;}
+#ctl00_ContentPlaceHolder1_gvTreatmentPlan tr td { border:solid 1px #EAEAEA;  color:#484747; font-size:12px;padding: 5px 0 5px 8px;}
+#ctl00_ContentPlaceHolder1_gvService tr th {border:none; font-size: 12px; line-height: 1.6em; margin: 0; padding: 0 0 0 8px; color:#000;font-weight:normal;}
+#ctl00_ContentPlaceHolder1_gvService tr td { border:solid 1px #EAEAEA;  color:#484747; font-size:12px;padding: 5px 0 5px 8px;}
+
+.MPSpacingDiv01 { float:left; margin:0.1em 0 0 0; width:100%;}
+.MPSpacingDiv01 h2 { float:left; width:100%; margin:0 0 0px 0; padding:0;font-size: 13px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPSpacingDiv01a { float:left; margin:0.2em 0 0 0; width:100%;}
+.MPSpacingDiv01a h2 { float:left; width:110px; margin:0 0 5px 0; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPSpacingDiv01a h3 { float:left !important; margin:0 0 5px 0 !important; padding:0; width:75% !important;}
+
+.MPSpacingDiv001a { float:left; margin:0.4em 0 0 0; width:100%;}
+.MPSpacingDiv001a h2 { float:left; width:110px; margin:0 0 5px 0; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPSpacingDiv001a h3 { float:left !important; margin:0 0 5px 0 !important; padding:0; width:75% !important;}
+
+.MPSpacingDiv01b { float:left; margin:0.6em 0 0 0; width:100%;}
+.MPSpacingDiv01b h2 { float:left; width:90px; margin:0 0 5px 0; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.FrequencyDrowdrop { float:left; margin:0; padding:0;}
+.FrequencyDrowdrop01 { width: 68% !important; margin: 0 0 0 0px !important; height: 25px; padding: 0px 6px !important; outline: none;}
+.MPSpacingDiv01c { float:left; margin:0.6em 0 0 0; width:100%;}
+.MPSpacingDiv01c h2 { float:left; width:66px; margin:0 0 5px 0; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPSpacingDiv02 { float:left; margin:1em 0 0.8em 0; width:100%;}
+.MPSpacingDiv02a { float:left; margin:0.6em 0 0 0; width:100%;}
+
+
+.MPSpacingDiv01New { float:left; margin:0.2em 0 0 0; width:100%;}
+.MPSpacingDiv01New h2 { float:left; width:110px; margin:0 0 5px 0; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPSpacingDiv01New h3 { float:left !important; margin:0 0 5px 0 !important; padding:0;}
+.MPSpacingDiv02New { float:left; margin:0.2em 0 0 0; width:100%;}
+.MPSpacingDiv02New h2 { float:left; width:95px; margin:0 0 5px 0; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPSpacingDiv02New h3 { margin:0 0 5px 0 !important; padding:0;}
+
+.MPSpacingDiv02NewCenter { float:left; margin:0.2em 0 0 0; width:100%;}
+.MPSpacingDiv02NewCenter h2 { float:left; width:90px; margin:0 0 5px 0; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPSpacingDiv02NewCenter h3 { margin:0 0 5px 0 !important; padding:0;}
+
+#ctl00_ContentPlaceHolder1_ddlBrand_Prescriptions { float:left !important; width:58% !important; margin:0 !important; padding:0 !important;}
+#ctl00_ContentPlaceHolder1_ddlFrequencyId  { float:left !important; width:64% !important; margin:0 !important; padding:0 !important;}
+
+
+.MPSpacingDiv02a h2 { float:left; width:105px; margin:0 0 5px 0; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPageText01 { width:150px; float:left; margin:0 5px 0 0; padding:0; text-align:right;}
+.MPageText02 { float:left; margin:0 5px 0 0; padding:0; text-align:right;}
+.MPageText01a { width:135px; float:left; margin:5px 5px 0 0; padding:0; text-align:right;}
+.MPageText01b { width:79px; float:left; margin:5px 5px 0 0; padding:0; text-align:right;}
+.MPageText01c { float:left; margin:5px 5px 0 0; padding:0; text-align:right;}
+.MPageText02a { width:135px; float:left; margin:5px 5px 0 0; padding:0; text-align:right;}
+.TreatmentEMRLeft { float:left; margin:0; padding:0 0 0 15px !important;}
+.TreatmentEMRRight { float:left; margin:0; padding:0 15px 0 0;}
+.TreatmentEMRCenter { float:left; margin:0; padding:0;}
+
+.MPSpacingDiv03 { float:left; margin:0.8em 0 0.5em 0; width:100%; padding:0 0 0.3em 0; border-bottom:solid 1px #EFEFEF;}
+.MPSpacingDiv03 h2 { float:left; width:100%; margin:0 0 0px 0; padding:0;font-size: 12px; color: #000; font-weight: 500; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPSpacingDiv03a { float:left; margin:0em 0 0.5em 0; width:100%; padding:0 0 0.3em 0; border-bottom:solid 1px #EFEFEF;}
+.MPSpacingDiv03a h2 { float:left; width:100%; margin:0 0 0px 0; padding:0;font-size: 12px; color: #000; font-weight: 500; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+
+.MPSpacingDiv04 { float:left; margin:0.6em 0 0 0; width:75%;}
+.MPSpacingDiv04 textarea { padding:5px 8px; height:100px; width:100%; font-size:13px; line-height:1.6em; color:#333;}
+.MPSpacingDiv04a { float:left; margin:0.6em 0 1.5em 0.5em; position:absolute; bottom:0;}
+.MPSpacingDiv04b { float:left; margin:0.6em 0 0 0; width:100%;}
+.MPSpacingDiv04b h2 { float:left; width:100%; margin:0 0 0px 0; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+.MPSpacingDiv04b textarea { padding:5px 8px; height:100px; width:100%; font-size:13px; line-height:1.6em; color:#333;}
+
+
+#ctl00_ContentPlaceHolder1_lblDept,
+#ctl00_ContentPlaceHolder1_lblItemName,
+#ctl00_ContentPlaceHolder1_lblDose { font-size:12px !important; float:left; margin:0 5px 0 0; padding:0; /*width:105px;*/ text-align:left;}
+#ctl00_ContentPlaceHolder1_lblFrequency,
+#ctl00_ContentPlaceHolder1_lblFoodRelation { font-size:12px !important; float:left; margin:0 5px 0 0; padding:0; /*width:90px;*/ text-align:left;}
+#ctl00_ContentPlaceHolder1_lblDays { font-size:12px !important; float:left; margin:0 5px 0 0; padding:0; /*width:66px;*/ text-align:left;}
+#ctl00_ContentPlaceHolder1_lblDoseUnit { font-size:12px !important; margin:0 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_lblRemarks { font-size:12px !important; float:left; margin:1px 5px 0 0; padding:0; width:62px; text-align:left;}
+#ctl00_ContentPlaceHolder1_lblDaysType { font-size:12px !important; margin:0 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_txtInstructions { width:217px;float:left; height:24px; margin:1px 5px 0 0; padding:0; border:solid 1px #A2A2A2; outline:none;}
+#ctl00_ContentPlaceHolder1_btnAddList { float:left; margin:0 5px 0 0; padding:0 4px; text-align:left; height:24px;}
+#ctl00_ContentPlaceHolder1_txtDose { border:solid 1px #A2A2A2; height:25px; padding:2px 5px; outline:none;}
+#ctl00_ContentPlaceHolder1_txtDuration { border:solid 1px #A2A2A2; height:25px; padding:2px 5px; outline:none;}
+
+
+.EMRTreatmentTop { width:100%; float:left; margin:0 0% 0.4em; padding:0 0 0em 0; border-bottom:solid 2px #EFEFEF; background-color:#C1E5EF}
+
+
+.ServiceEMRText { float:left; margin:0em 0 0; padding:0; width:100%;}
+.ServiceEMRText h2 { float:left; margin:0 5px 5px 0; width:105px; padding:0;font-size: 12px; color: #000; font-weight: normal; line-height: 1.8em;font-family: 'Open Sans', sans-serif;}
+.ServiceEMRText01 { float:left; margin:0em 0 1.5em; padding:0; width:100%;}
+.ServiceEMRText01 h2 { float:left; margin:0 5px 5px 0; width:105px; padding:0;font-size: 14px; color: #000; font-weight: normal; line-height: 1.8em;font-family: 'Open Sans', sans-serif;}
+#ctl00_ContentPlaceHolder1_txtWPlanOfCare {border:solid 1px #BFBFBF; outline:none;}
+#ctl00_ContentPlaceHolder1_gvTreatmentPlan {float:left; margin:0.7em 0 0 0; padding:0; width:100%;}
+#ctl00_ContentPlaceHolder1_gvService {float:left; margin:0.4em 0 0 0; padding:0; width:100%;}
+
+.RedText {margin:0; padding:0; color:#f00; font-size:14px;}
+.RedText01 { float:left; margin:0; padding:0; color:#f00; font-size:14px;}
+.EMRLineBorder { width:100%; float:left; margin:0; padding:3px 0 3px 0; border-bottom:solid 1px #ccc; background-color:#F3F3F3;}
+.EMRfeatures { float:right; margin:0; padding:0;}
+.EMRfeaturesLeft { float:left; margin:3px 0 0; padding:0;}
+.EMRfeaturesLeft h2 { float:left; margin:2px 10px 5px 0; padding:0;font-size: 13px; color: #000; font-weight: normal; line-height: 1.4em;font-family: 'Open Sans', sans-serif;}
+#btnSave { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:5px 2px 0 5px; padding:4px 8px; border-radius:3px; float:right;}
+#btnSave:hover { background:#056391;color:#fff;}
+.btnSave {background: #0782be; color: #fff; font-size: 12px; font-weight: 500; border: none; margin: 0 2px !important; padding: 4px 8px !important;  border-radius: 3px; line-height: 1.4em !important; height: 25px !important; float: left !important;}
+.btnSave:hover { background:#056391;color:#fff;}
+.btnSave01 {background: #0782be; color: #fff; font-size: 12px; font-weight: 500; border: none; margin: 0 2px !important; padding: 4px 8px !important;  border-radius: 3px; line-height: 1.4em !important;}
+.btnSave01:hover { background:#056391;color:#fff;}
+
+#lblMessage { /*float:left;*/ margin:0; padding:0;}
+#ddlPlanTemplates_Input { float:left; margin:-4px 0 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_ddlPlanTemplates_Input { float:left; margin:-4px 0 0 0; padding:0;}
+
+
+
+@media (min-width: 300px) and (max-width: 399px) {}
+@media (min-width: 400px) and (max-width: 599px) {}	
+@media (min-width: 600px) and (max-width: 767px) {}
+@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 992px) and (max-width: 1060px) {}
+@media (min-width: 1061px) and (max-width: 1169px) {}
+@media all and (min-width: 1061px){}
+
+

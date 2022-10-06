@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://43.242.214.195:999/LanguageService.asmx?disco" filename="LanguageService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://43.242.214.195:999/LanguageService.asmx?wsdl" filename="LanguageService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

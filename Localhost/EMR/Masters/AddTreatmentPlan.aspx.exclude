@@ -1,0 +1,139 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddTreatmentPlan.aspx.cs" Inherits="EMR_Masters_AddTreatmentPlan" Title="" %>
+
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="AJAX" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    
+    
+    <link href="../../Include/css/open-sans.css" rel="stylesheet" type="text/css" />
+    <link href="../../Include/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Include/css/bootstrap.min.css" rel="stylesheet" type="text/css" />   
+    <link href="../../Include/css/mainStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../../Include/css/emr.css" rel="stylesheet" type="text/css" />
+    
+    <link href="../../Include/EMRStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../../Include/Style.css" rel="stylesheet" type="text/css" />
+    
+</head>
+
+
+
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="scriptmgr1" runat="server"></asp:ScriptManager>
+
+            <asp:UpdatePanel ID="upAddType" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+                    <asp:Panel ID="pnlAddType" BackColor="White" runat="server" Width="100%" ScrollBars="Auto">
+                        
+                        
+                        <div class="VisitHistoryDiv">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    
+                                    <div class="col-sm-8 col-xs-8">
+                                        <div class="ComplaintsHistoryBox02">
+                                            <%--<h2>
+                                                <asp:Label ID="lblMsg" runat="server" ForeColor="Green"></asp:Label>
+                                                <asp:ValidationSummary ID="valsumaury1" runat="server" ValidationGroup="s" ShowMessageBox="true" ShowSummary="false" />
+                                            </h2>--%>
+                                            <h3 id="ns" runat="server">
+                                                <asp:Literal ID="ltrName" runat="server" Text="Template Name"></asp:Literal>
+                                                <asp:TextBox ID="txtstatus" runat="server" MaxLength="50" Width="150px"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="Reqval1" runat="server" ControlToValidate="txtstatus" Text="Enter Description" ErrorMessage="Please enter description" Display="None" ValidationGroup="s"></asp:RequiredFieldValidator>
+                                            </h3>
+                                              <h2>
+                                            
+                                            
+                                               <asp:Label ID="lblSpecialisation" runat="server" Text="Specialisation" />
+                                              </h2> 
+                                                             
+                                                <h3>               
+                                                                    <asp:Panel ID="Panel1" runat="server" >
+                                                                        <asp:DropDownList ID="ddlSpecialisation" runat="server" Width="250px" AppendDataBoundItems="true"
+                                                                            onkeydown="Tab();" TabIndex="2" DataTextField="Name" DataValueField="Id" SkinID="DropDown">
+                                                                            <asp:ListItem Text=" [ Select ] " Value="0" Selected="True"></asp:ListItem>
+                                                                        </asp:DropDownList>
+                                                                    </asp:Panel>
+                                            </h3>
+                                            
+                                            <h2>
+                                            <asp:Label ID="lblIsApplicableForAllSpecialities" runat="server" Text="All Specialities" />
+                                            
+                                            </h2>
+                                            <h3>
+                                            <asp:CheckBox ID="chkIsApplicableForAllSpecialities" runat="server" AutoPostBack="true" OnCheckedChanged="chkIsApplicableForAllSpecialities_CheckChanged" />
+                                            
+                                            </h3>
+                                            
+                                            <h2>
+                                                <asp:Label ID="lblMsg" runat="server" ForeColor="Green"></asp:Label>
+                                                <asp:ValidationSummary ID="valsumaury1" runat="server" ValidationGroup="s" ShowMessageBox="true" ShowSummary="false" />
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-xs-4">
+                                        <asp:Button ID="btnClose" Text="Close" runat="server" CssClass="PatientBtn01" CausesValidation="false"  OnClick="btnClose_Click"/>
+                                        <asp:Button ID="btnAdd" Text="Save" runat="server" CssClass="PatientBtn01" ValidationGroup="s" OnClick="btnAdd_Click" />&nbsp;
+                                    </div>        
+                                
+                                </div>
+                            </div>                    
+                        </div>
+                          
+                    
+                    
+                        
+                        <div class="StopMedication">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    
+                                    <div class="col-sm-12 col-xs-12">
+                                        <asp:GridView ID="lstTypeList" runat="server" AutoGenerateColumns="False" DataKeyNames="TemplateId" HeaderStyle-HorizontalAlign="Left" SkinID="gridviewOrder" Style="margin-bottom: 0px" Width="100%" OnRowEditing="lstTypeList_RowEditing" EditRowStyle-HorizontalAlign="Left" OnRowUpdating="lstTypeList_RowUpdating" OnRowCancelingEdit="lstTypeList_RowCancelingEdit" OnRowDataBound="lstTypeList_RowDataBound" OnRowDeleting="lstTypeList_RowDeleting" onpageindexchanging="lstTypeList_PageIndexChanging" AllowPaging="True" HeaderStyle-ForeColor="#15428B" HeaderStyle-Height="25px" HeaderStyle-Wrap="false" HeaderStyle-BackColor="#eeeeee" HeaderStyle-BorderColor="#ffffff" HeaderStyle-BorderWidth="0" BackColor="White" BorderColor="#eeeeee" BorderStyle="None" BorderWidth="1px">
+                                            <PagerSettings PageButtonCount="6" />
+                                            <RowStyle Wrap="false" />
+                                            <Columns>
+                                                <asp:TemplateField HeaderStyle-Wrap="false" HeaderText="Template Name" ItemStyle-HorizontalAlign="Left" ItemStyle-VerticalAlign="Middle" ItemStyle-Wrap="true">
+                                                    <ItemTemplate><asp:Label ID="lblTemplateName" runat="server" Text='<%# Eval("TemplateName")%>'> </asp:Label></ItemTemplate>
+                                                    <EditItemTemplate><asp:TextBox ID="txtTemplateName" runat="server" SkinID="textbox" Text='<%# Eval("TemplateName")%>' MaxLength="50"></asp:TextBox></EditItemTemplate>
+                                                    <HeaderStyle Wrap="False" />
+                                                    <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" Wrap="True" />
+                                                </asp:TemplateField>
+                                               <%--  <asp:TemplateField HeaderStyle-Wrap="false" HeaderText="For All Specialities" ItemStyle-HorizontalAlign="Left" ItemStyle-VerticalAlign="Middle" ItemStyle-Wrap="true">
+                                                    <ItemTemplate><asp:Label ID="lblTemplateName" runat="server" Text='<%# Eval("IsApplicableForAllSpecialities")%>'> </asp:Label></ItemTemplate>
+                                                  <EditItemTemplate>
+                                                  <asp:CheckBox ID="chkIsApplicableForAllSpecialities" runat="server" AutoPostBack="true" OnCheckedChanged="chkIsApplicableForAllSpecialities_" />                                                   
+                                                 </EditItemTemplate>
+                                                    <HeaderStyle Wrap="False" />
+                                                    <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" Wrap="True" />
+                                                </asp:TemplateField>
+                                                --%>
+                                                <asp:CommandField ButtonType="Image" ValidationGroup="Delete" DeleteImageUrl="~/Images/DeleteRow.png" ShowDeleteButton="true"><ItemStyle Width="20px" /></asp:CommandField>
+                                                <asp:CommandField ButtonType="Link" SelectText="Edit" ValidationGroup="Edit" ShowEditButton="true"><ItemStyle Width="20px" /></asp:CommandField>
+                                            </Columns>
+                                            <HeaderStyle HorizontalAlign="Left" />
+                                            <EditRowStyle HorizontalAlign="Left" />
+                                        </asp:GridView>
+                                    </div>
+                                    <div class="col-sm-12 col-xs-12"><asp:Label ID ="casetype" runat="server" style=" visibility:hidden; " ></asp:Label></div>
+                                </div>
+                            </div>                                
+                        </div>        
+                                
+                </asp:Panel>
+            </ContentTemplate>
+            
+            <Triggers><asp:AsyncPostBackTrigger ControlID="btnAdd" /></Triggers>
+        </asp:UpdatePanel>
+        
+        
+        
+        
+    </form>
+</body>
+</html>

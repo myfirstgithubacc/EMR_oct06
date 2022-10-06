@@ -1,0 +1,5 @@
+﻿<root>
+  <tools name="tool2" dockable="true" enabled="true" >
+    <tool name="ImageEditor" Text="Medical Illustration(s)" ShowIcon="false" ShowText="True"  />
+  </tools>
+</root>

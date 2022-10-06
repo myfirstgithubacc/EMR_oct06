@@ -1,0 +1,10 @@
+<table1>
+  <Table1>
+    <ShowNotification>Y</ShowNotification>
+    <SBCount>1</SBCount>
+    <PCCount>0</PCCount>
+    <ICCount>0</ICCount>
+    <StatusType>SB</StatusType>
+    <BTRCount>1</BTRCount>
+  </Table1>
+</table1>

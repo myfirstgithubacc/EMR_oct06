@@ -1,0 +1,142 @@
+
+body{font-family: 'Open Sans', sans-serif;}
+.clear{clear: both;}
+* { margin:0; padding:0;}
+
+.wrapper{ width:100%; float:left; margin:0; padding:0;}
+
+
+/***** Top Bar ****/
+.topBar { width:100%; max-width:100%; float:left; margin:0; padding:0; background:#36a9e1;}
+.topTitle { float:left; margin:0; padding:0;text-align:center; width:100%;}
+.topTitle h2 { font-size:24px; color:#fff; float:left; margin:0; padding:0.4em 0;width:100%; font-weight:normal;}
+.logoutBtn { margin:0 0px 0 0; float:left;}
+.logoutBtn li { margin:0 10px; padding:0; float:left;}
+.logoutBtn li a { color:#fff; margin:0.9em 0; padding:0; font-weight:bold;}
+.logoutBtn li a:hover { background:none; color:#bce9ff;}
+.findPatient { margin:7px 0px 0 5px; float:left; color:#1a1b1b; text-decoration:none; text-align:center; background-color:#e5f5fc; border-radius:3px; font-size:14px; padding:5px 8px;}
+.findPatient:hover {color:#080808; text-decoration:none;background-color:#fff;}
+
+
+/***** Logo Part ****/
+.logPart { width:100%; float:left; margin:0; padding:0; background:#fff;}
+.logo{ float:left; margin:0; padding:0;}
+.logo a { background:url(../images/logo.png) no-repeat; margin:0.5em 0; padding:0; float:left; width:176px; height:66px;}
+.logo a:hover{}
+
+
+/***** Appointment Details Part ****/
+.appointmentDiv { width:100%; float:left; margin:0 ; padding:0; background:#fff;}
+.ADLeft { float:left; width:100%; margin:0; padding:0 !important;}
+.AD-leftPart { width:100%; float:left; margin:0; padding:0;}
+
+.AdLeft-Time { float:left; margin:0 0 5px 0; padding:0; width:100%; border:solid 1px #1686bb; background:#25a0da;}
+.AdLeft-Time h4{ float:left; margin:7px 5px; padding:0; width:20%;}
+.AdLeft-Time h2 { font-size:15px; float:left; text-align:center; padding:12px 0 5px 11px; margin:0;color:#fff; font-weight:bold;width:65%;} 
+.AdLeft-Time h3 { font-size:20px; float:left; text-align:center; padding:5px 0; margin:0;color:#fff; font-weight:bold;width:65%;} 
+.AdLeft-Calender { float:left; width:100%; margin:0; padding:0;}
+.AdLeft-box { border:solid 1px #e6e6e6; float:left; width:100%; margin:0 0 5px 0; padding:10px 0;}
+.AdLeft-Facility { float:left; width:95%; margin:0 3% 2% 3%;}
+.AdLeft-Facility h3 {font-size:12px; float:left; text-align:left; padding:0; margin:0 0 8px 0; width:100%; font-weight:bold;}
+.AdLeft-FacilityInput { float:left; margin:0; padding:8px 0; /*width:85% !important;*/ height:38px; border:none; outline:none; font-size:14px; font-weight:bold;}
+.AdLeft-Facility span { float:left; margin:8px 0 0 0; padding:0;}
+.AdLeft-Facility span input { float:left; margin:0; padding:0;}
+.AdLeft-Facility span label { font-size:12px; margin:0 0 0 5px; padding:0; float:left;}
+
+#ctl00_ContentPlaceHolder1_txtServiceOffered { border:solid 1px #ababab; margin:0;padding: 4px 6px 4px 6px; background:none; color:#474747; font-size:12px; float:left; width:100%;}
+#ctl00_ContentPlaceHolder1_txtQualification { border:solid 1px #ababab; margin:0;padding: 4px 6px 4px 6px; background:none; color:#474747; font-size:12px; width:100%; float:left;}
+#ctl00_ContentPlaceHolder1_ddlNationality { background:none !important; border:none; width:100% !important;float:left; }
+#ctl00_ContentPlaceHolder1_RadLstDoctor { width:100% !important;float:left; }
+#ctl00_ContentPlaceHolder1_ddlLanguage { width:100% !important;float:left; }
+#ctl00_ContentPlaceHolder1_ddlSpecilization { width:100% !important;float:left;}
+#ctl00_ContentPlaceHolder1_ddlFacility { width:100% !important;float:left;}
+#ctl00_ContentPlaceHolder1_ddlNationality { background:none !important; border:none;}
+#ctl00_ContentPlaceHolder1_rdoGender label { font-weight:normal !important; float:left !important;}
+#ctl00_ContentPlaceHolder1_rdoGender1 label { font-weight:normal !important;  margin: 7px 4px 0 2px !important;}
+#ctl00_ContentPlaceHolder1_rdoGender1_0 input { margin: 9px 1px 0 1px !important;}
+
+.nextBtn { float:left; padding:10px 14px; background:#444444; border-radius:0; margin:0 0 0 2px; border:none;}
+.nextBtn:hover{background:#292929;}
+.AdLeft-Gender { float:left; width:95%; margin:0 3% 2% 3%;}
+.AdLeft-GenderIcon { float:left; margin:0; padding:7px 10px; width:40px; border:solid 1px #e6e6e6; background:#ececec;}
+.AdLeft-GenderRadio { float:left; margin:8px 0 0 10px; padding:0;}
+
+.AdLeft-Btn { float:right; margin:10px 5px 0 0; padding:0;}
+.flatLeft01 { float:left; margin:2px 2px 0; padding:0; background:#e7e7e7; color:#000; cursor:pointer; border:solid 1px #d4d4d4;}
+.flatLeft01:hover { background:#d6d6d6;color:#222222; text-decoration:none;border:solid 1px #c7c7c7;}
+.flatLeft01 a { color:#000; float:left; margin:0; padding:8px 3px 8px 12px;}
+.flatLeft01 a:hover{ color:#000;}
+.SearchBtn {  background:#e7e7e7;color:#000; font-size:14px; font-weight:bold; border:none; margin:0 1px; padding:7px 8px 7px 5px;}
+.SearchBtn:hover {  background:#d6d6d6;color:#222222;}
+
+.App-SearchBtn { float:left; margin:2px 0px 0px 0; padding:0;}
+.AppSearchBtn { background:#25a0da; color:#fff; font-size:14px; font-weight:bold; text-align:center; border:none; margin:0 0px 5px 0; padding:6px 5px 6px 5px !important; float:left; width:100%;}
+.AppSearchBtn:hover { background:#0f73a3;color:#fff; text-decoration:none;}
+.RadComboBox { background:none !important; border:none; padding:0px 0;}
+
+
+/***** Appointment Day ****/
+.Appoint-Day { float:left; margin:0; padding:0; width:100%;}
+.App-firstDiv { width:100%; float:left; margin:0; padding:0 0 0px 0;}
+.App-DayBtn { float:right; margin:2px 0px 0 0; padding:0;}
+.DayBtn { background:#0782be; color:#fff; font-size:13px; font-weight:bold; border:none; margin:0 0px; padding:8px 11px;}
+.DayBtn:hover { background:#056391;color:#fff;}
+
+.Appoint-table { float:left; margin:0px 0 10px 0; padding:0; width:100%;}
+.Appoint-BottomDIv {width:100%; float:left; margin:0; padding:3px 0 3px 0; background:#fff; border:solid 1px #e6e6e6;}
+.AppointBD-left { float:left; margin:0; padding:0; border:1px;}
+.AppointBD-div { float:left; margin:0 5px 0 5px; padding:0;  border:1px;}
+.radioBtn-text { float:left; margin:7px 4px 0 4px; padding:0; font-size:11px; font-weight:bold;}`
+.radioBtn-lightYellow { border-radius:50px; float:left; width:12px; height:12px; background:#fffbc7; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+.radioBtn-lightGreen { border-radius:50px; float:left; width:12px; height:12px; background:#0DECBB; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+.radioBtn-lightPink { border-radius:50px; float:left; width:12px; height:12px; background:#f1dcff; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+.radioBtn-LightGreen { border-radius:50px; float:left; width:12px; height:12px; background:#7fffd4; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+.radioBtn-LightBlack { border-radius:50px; float:left; width:12px; height:12px; background:#c8c8c8; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+
+.AppointBD-right { float:right; margin:0; padding:0;}
+.ABD-rightNo { float:left; margin:0; padding:0;}
+.AdLeft-PageNo { float:left; margin:0; padding:0; width:100%; border:solid 1px #e6e6e6; outline:none; font-size:14px; font-weight:bold;}
+.pageNo { float:right; margin:0 10px 0 10px; padding:0; width:45px;}
+
+.NextPage { float:left; margin:0px 3px 0; padding:0; background:#0eaf82 ; border-radius:5px; color:#fff; cursor:pointer;}
+.NextPage:hover { background:#0a8c68;color:#fff; text-decoration:none;}
+.NextPage a { color:#fff; float:left; margin:0; padding:8px 10px 8px 10px;}
+.NextPage a:hover{ color:#fff;}
+.NextPageBtn {background:#0eaf82; color:#fff; font-size:14px; font-weight:bold; border:none; margin:0px 0px 5px 0px; padding:8px 10px 8px !important; float:left; width:100%;}
+.NextPageBtn:hover { background:#0a8c68;color:#fff; text-decoration:none;}
+
+
+/***** Appointment Summary ****/
+.App-Summary {float:left; margin:0 0 0 0; padding:0; width:100%;}
+.AS-Heading { background:#313131; float:left; margin:0; width:100%;}
+.AS-Heading h2{ font-size:17px; font-weight:bold; color:#fff; margin:0; padding:8px 0px; text-align:center;}
+
+.AS-chartY { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#fffbc7; border-bottom:solid 4px #ece589;}
+.AS-chartY h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartY h4 a {color:#3f3f3f;}
+.AS-chartY h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chart-left { width:60%; float:left; margin:0; padding:0;}
+.AS-chart-left h3 { float:left; margin:0; padding:0.1em 0.3em 0 0.3em; font-size:28pt; color:#3f3f3f; font-weight:bold; text-align:center;}
+.AS-chart-left h4 { float:left; margin:0; padding:0.2em 0.5em 0 0.3em; font-size:11px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chart-right { width:40%; float:left; margin:0; padding:0.5em 0 0;}
+.AS-chart-right h6{ float:left; margin:0; padding:0; text-align:center;}
+.AS-chartG { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#DBEEFF; border-bottom:solid 4px #a7c7e3;}
+.AS-chartG h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartG h4 a {color:#3f3f3f;}
+.AS-chartG h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chartP { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#f1dcff; border-bottom:solid 4px #c9a3e3;}
+.AS-chartP h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartP h4 a {color:#3f3f3f;}
+.AS-chartP h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chartGreen { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#d0ecbb; border-bottom:solid 4px #adde89;}
+.AS-chartGreen h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartGreen h4 a {color:#3f3f3f;}
+.AS-chartGreen h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chartPink { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#ecbbbb; border-bottom:solid 4px #d67070;}
+.AS-chartPink h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartPink h4 a {color:#3f3f3f;}
+.AS-chartPink h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chartPayment { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#7fffd4; border-bottom:solid 4px #52d6aa;}
+.AS-chartPayment h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartPayment h4 a {color:#3f3f3f;}
+.AS-chartPayment h4 a:hover {color:#3f3f3f; text-decoration:none;}

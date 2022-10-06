@@ -1,0 +1,60 @@
+﻿Gridheader { font-family: Arial; background-image: url(/Images/header.gif); height: 32px; color: Black; font-size: 11px; font-weight: normal; letter-spacing: 1px; border-right: 1px solid #ccc;}
+.checkbox { font-family: Arial; color: Black; font-size: 12px; font-weight: normal; height: 0.5em; /* width: 0.5em; */ width:auto;}
+.DropDown { font-family: arial, verdana, helvetica, sans-serif; visibility: visible; border: 1px solid #6699CC; color: Black; vertical-align: middle; background: White url(/Images/input_background.gif) repeat-x; font-size: 12px;}
+Lable2{ font-family: Arial, helvetica, sans-serif; visibility: visible; letter-spacing: 1px; color: Black; vertical-align: middle; font-size: 12px;}
+.ListBox { font-family: arial, helvetica, sans-serif; visibility: visible; border: 1px solid #6699CC; color: Black; vertical-align: middle; background: White url(/Images/input_background.gif) repeat-x; font-size: 11px;}
+button { color: Black; background-color: #E0DBBE; border: 1px outset #AFAC9C; font-family: Arial; font-weight: bold; font-size: 11px;}
+
+.buttonpd { color: Black; background-color: #00006A; border: 1px outset #AFAC9C; font-family: Arial; font-weight: bold; font-size: 11px;}
+
+.buttonBlue { BORDER-RIGHT: #AAAAAA 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #AAAAAA 1px solid; PADDING-LEFT: 6px; FONT-SIZE: 11px; font-weight:bold; PADDING-BOTTOM: 2px;BORDER-LEFT: #AAAAAA 1px solid; CURSOR: default; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: #AAAAAA 1px solid; HEIGHT: 20px; BACKGROUND-COLOR:#DEDEDE; TEXT-ALIGN: center}
+.buttonBlue:hover {CURSOR:HAND; BORDER-RIGHT: #023090 1px solid; BORDER-TOP: #023090 1px solid; BORDER-LEFT: #023090 1px solid; COLOR: #fff; BORDER-BOTTOM: #023090 1px solid; BACKGROUND-COLOR: #71ABDB}
+.buttonBluepd {BORDER-RIGHT: #AAAAAA 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #AAAAAA 1px solid; PADDING-LEFT: 6px; FONT-SIZE: 11px; font-weight:bold; PADDING-BOTTOM: 2px;BORDER-LEFT: #AAAAAA 1px solid; CURSOR: default; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: #AAAAAA 1px solid; HEIGHT: 30px; BACKGROUND-COLOR:#6F6FFF; TEXT-ALIGN: center}
+.buttonBluepd:hover { CURSOR:HAND; BORDER-RIGHT: #023090 1px solid; BORDER-TOP: #023090 1px solid; BORDER-LEFT: #023090 1px solid; COLOR: #fff; BORDER-BOTTOM: #023090 1px solid; BACKGROUND-COLOR: #71ABDB}
+
+/* Pagination */
+.pagination { padding: 2px; margin:5px 0 !important; background:#fff !important;}
+
+.pagination span { margin:0 3px;}
+.pagination ul { margin: 0; padding: 0; text-align: left; /*Set to "right" to right align pagination interface*/ font-size: 16px;}
+.pagination li { list-style-type: none; display: inline; padding-bottom: 1px;}
+.pagination a, .pagination a:visited { padding: 2px 6px; margin:0 3px; border: 1px solid #A2A2A2; text-decoration: none; color: #2e6ab1; background:#ECECEC !important;}
+.pagination a:hover, .pagination a:active { border: 1px solid #797A7B; color: #000; background-color: #FBEFDB; text-decoration:none;}
+.pagination a.currentpage { background-color: #2e6ab1; color: #FFF !important; border-color: #2b66a5; font-weight: bold; cursor: default;}
+.pagination a.disablelink, .pagination a.disablelink:hover { background-color: white; cursor: default; color: #929292; border-color: #929292; font-weight: normal !important;}
+.pagination a.prevnext { font-weight: bold;}
+.pagination td { border:none;}
+
+/* Patent Information */
+.thumbnail { position: absolute;z-index: 0;}
+.thumbnail:hover { background-color: transparent; z-index: 50;}
+.thumbnail span { /*CSS for enlarged image*/ position: absolute; background-color: lightyellow; padding: 5px; left: -1000px; border: 1px dashed gray; visibility: hidden; color: black; 
+text-decoration: none;}
+.thumbnail span img { /*CSS for enlarged image*/ border-width: 0; padding: 2px;}
+.thumbnail:hover span { /*CSS for enlarged image on hover*/ visibility: visible; top: 30; left: 5px; /*position where enlarged image should offset horizontally */ right: 35px; /*position where enlarged image should offset horizontally */}
+
+
+
+.Menu, .Menu A, .Menu a:link , .Menu a:visited, .Menu a:hover, .Menu a:active { font-family: Tahoma; font-size: 12px; font-weight: bold; line-height: 14px; color: #C4FAFB; background-color: black; text-align: left;}
+.TopMenu, .TopMenu A, .TopMenu a:link , .TopMenu a:visited, .TopMenu a:hover, .TopMenu a:active { font-family:Arial; font-size: 12px; font-weight: bold; color: #EEE7B9;}
+.Toolbar,  .Toolbar td, .Toolbar td a, .Toolbar A, Toolbar a:link , Toolbar a:visited, Toolbar a:hover, Toolbar a:active { font-family: Tahoma; font-size: 10px; font-weight: bold; color: #10BDC1; background-color: Black;}
+.Footer { font-family: Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: White;}
+.ZoneHeader, .ZoneHeader table { color: black; background-color: #C0C0C0; text-align: center;}
+.EditorZone, .CatalogZone { background-color: #E1E1E1;}
+.ZoneInstruction, .EmptyZone { margin:5px; font-family: Tahoma; font-size: 8pt; color: #6593CF;}
+.CatalogPartLink { color: Green;}
+.WebPart { background: #E1EDFF;}
+
+.WebPartTitle /*.WebPartTitle a, .WebPartTitle a:visited, .WebPartTitle a:link , .WebPartTitle a:hover, .WebPartTitle a:active */
+{ background : transparent url(/Images/PartHeaderOffice2007.JPG) repeat-x scroll 0 0; border-bottom: 1px solid #6593CF; border-right: 0px solid #6593CF; color: #15428B; font-weight: 700; height: 20px; padding: 2px 8px; width: 100%; font-size: 8pt; outline: black solid 0px;}
+.WebPartTitle:Hover /*.WebPartTitle a, .WebPartTitle a:visited, .WebPartTitle a:link , .WebPartTitle a:hover, .WebPartTitle a:active */
+{ background : transparent url(/Images/PartHeaderOffice2007Off1.JPG) repeat-x; border-bottom: 1px solid #6593CF; border-right: 0px solid #6593CF; color: #15428B; font-weight: 700; height: 20px; padding: 2px 8px; width: 100%; font-size: 8pt;  outline: black solid 0px;}
+
+WebPartMenuPopup, WebPartMenuPopup span, WebPartMenuPopup table { background-color: Blue;}
+.WebPartMenuHover { font-family: Garamond; background-color: #163A98; font-family: Lucida Console;}
+
+/*P { font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; color: #666666; margin-top: 3pt; margin-bottom: 2pt;}
+H1 { font-family: "Franklin Gothic Medium", Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; font-weight: bold; color: #1A808C;}
+H2 { font-family: "Franklin Gothic Medium", Arial, Helvetica, sans-serif; font-size: 12px; line-height: 10px; font-weight: bold; color: #1A808C; margin-bottom: 3pt;}
+H3 { font-family: "Franklin Gothic Medium", Arial, Helvetica, sans-serif; font-size: 10px; line-height: 12px; font-weight: bold; color: #1A808C;}
+*/

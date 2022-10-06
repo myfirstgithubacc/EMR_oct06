@@ -1,0 +1,381 @@
+D:\Santosh\n\Aster Medicity\BaseC\bin\Debug\BaseC.dll.config
+D:\Santosh\n\Aster Medicity\BaseC\bin\Debug\BaseC.dll
+D:\Santosh\n\Aster Medicity\BaseC\bin\Debug\BaseC.pdb
+D:\Santosh\n\Aster Medicity\BaseC\bin\Debug\DAL.dll
+D:\Santosh\n\Aster Medicity\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Santosh\n\Aster Medicity\BaseC\obj\Debug\BaseC.dll
+D:\Santosh\n\Aster Medicity\BaseC\obj\Debug\BaseC.pdb
+D:\Kochi_17092014\Source (1)\Source\BaseC\bin\Debug\BaseC.dll.config
+D:\Kochi_17092014\Source (1)\Source\BaseC\bin\Debug\BaseC.dll
+D:\Kochi_17092014\Source (1)\Source\BaseC\bin\Debug\BaseC.pdb
+D:\Kochi_17092014\Source (1)\Source\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Kochi_17092014\Source (1)\Source\BaseC\obj\Debug\BaseC.dll
+D:\Kochi_17092014\Source (1)\Source\BaseC\obj\Debug\BaseC.pdb
+D:\Rajeev\MultiFacility_Astermedcity\BaseC\bin\Debug\BaseC.dll.config
+D:\Rajeev\MultiFacility_Astermedcity\BaseC\bin\Debug\BaseC.dll
+D:\Rajeev\MultiFacility_Astermedcity\BaseC\bin\Debug\BaseC.pdb
+D:\Rajeev\MultiFacility_Astermedcity\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Rajeev\MultiFacility_Astermedcity\BaseC\obj\Debug\BaseC.dll
+D:\Rajeev\MultiFacility_Astermedcity\BaseC\obj\Debug\BaseC.pdb
+D:\Kochi_17092014\KOchi_24092014\KOchi_24092014\BaseC\bin\Debug\BaseC.dll.config
+D:\Kochi_17092014\KOchi_24092014\KOchi_24092014\BaseC\bin\Debug\BaseC.dll
+D:\Kochi_17092014\KOchi_24092014\KOchi_24092014\BaseC\bin\Debug\BaseC.pdb
+D:\Kochi_17092014\KOchi_24092014\KOchi_24092014\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Kochi_17092014\KOchi_24092014\KOchi_24092014\BaseC\obj\Debug\BaseC.dll
+D:\Kochi_17092014\KOchi_24092014\KOchi_24092014\BaseC\obj\Debug\BaseC.pdb
+C:\Manmohan\AsterNew\BaseC\bin\Debug\BaseC.dll.config
+C:\Manmohan\AsterNew\BaseC\bin\Debug\BaseC.dll
+C:\Manmohan\AsterNew\BaseC\bin\Debug\BaseC.pdb
+C:\Manmohan\AsterNew\BaseC\obj\Debug\ResolveAssemblyReference.cache
+C:\Manmohan\AsterNew\BaseC\obj\Debug\BaseC.dll
+C:\Manmohan\AsterNew\BaseC\obj\Debug\BaseC.pdb
+C:\Santosh\tfs1410\BaseC\bin\Debug\BaseC.dll.config
+C:\Santosh\tfs1410\BaseC\bin\Debug\BaseC.dll
+C:\Santosh\tfs1410\BaseC\bin\Debug\BaseC.pdb
+C:\Santosh\tfs1410\BaseC\obj\Debug\ResolveAssemblyReference.cache
+C:\Santosh\tfs1410\BaseC\obj\Debug\BaseC.dll
+C:\Santosh\tfs1410\BaseC\obj\Debug\BaseC.pdb
+D:\Manmohan\KochiLive\BaseC\bin\Debug\BaseC.dll.config
+D:\Manmohan\KochiLive\BaseC\bin\Debug\BaseC.dll
+D:\Manmohan\KochiLive\BaseC\bin\Debug\BaseC.pdb
+D:\Manmohan\KochiLive\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Manmohan\KochiLive\BaseC\obj\Debug\BaseC.dll
+D:\Manmohan\KochiLive\BaseC\obj\Debug\BaseC.pdb
+G:\Manmohan\KochiEmergencyLive\BaseC\bin\Debug\BaseC.dll.config
+G:\Manmohan\KochiEmergencyLive\BaseC\bin\Debug\BaseC.dll
+G:\Manmohan\KochiEmergencyLive\BaseC\bin\Debug\BaseC.pdb
+G:\Manmohan\KochiEmergencyLive\BaseC\obj\Debug\ResolveAssemblyReference.cache
+G:\Manmohan\KochiEmergencyLive\BaseC\obj\Debug\BaseC.dll
+G:\Manmohan\KochiEmergencyLive\BaseC\obj\Debug\BaseC.pdb
+D:\Manmohan\KochiEmergencyLive\BaseC\bin\Debug\BaseC.dll.config
+D:\Manmohan\KochiEmergencyLive\BaseC\bin\Debug\BaseC.dll
+D:\Manmohan\KochiEmergencyLive\BaseC\bin\Debug\BaseC.pdb
+D:\Manmohan\KochiEmergencyLive\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Manmohan\KochiEmergencyLive\BaseC\obj\Debug\BaseC.dll
+D:\Manmohan\KochiEmergencyLive\BaseC\obj\Debug\BaseC.pdb
+D:\Rajeev\KochiLiveSource\BaseC\bin\Debug\BaseC.dll.config
+D:\Rajeev\KochiLiveSource\BaseC\bin\Debug\BaseC.dll
+D:\Rajeev\KochiLiveSource\BaseC\bin\Debug\BaseC.pdb
+D:\Rajeev\KochiLiveSource\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Rajeev\KochiLiveSource\BaseC\obj\Debug\BaseC.dll
+D:\Rajeev\KochiLiveSource\BaseC\obj\Debug\BaseC.pdb
+D:\Record\HIS_26_10_2015\Kochi_Live_source\BaseC\bin\Debug\BaseC.dll.config
+D:\Record\HIS_26_10_2015\Kochi_Live_source\BaseC\bin\Debug\BaseC.dll
+D:\Record\HIS_26_10_2015\Kochi_Live_source\BaseC\bin\Debug\BaseC.pdb
+D:\Record\HIS_26_10_2015\Kochi_Live_source\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Record\HIS_26_10_2015\Kochi_Live_source\BaseC\obj\Debug\BaseC.dll
+D:\Record\HIS_26_10_2015\Kochi_Live_source\BaseC\obj\Debug\BaseC.pdb
+D:\Record\Kochi_Live_source_Taken_From_RAJU_16_12_2015\BaseC\bin\Debug\BaseC.dll.config
+D:\Record\Kochi_Live_source_Taken_From_RAJU_16_12_2015\BaseC\bin\Debug\BaseC.dll
+D:\Record\Kochi_Live_source_Taken_From_RAJU_16_12_2015\BaseC\bin\Debug\BaseC.pdb
+D:\Record\Kochi_Live_source_Taken_From_RAJU_16_12_2015\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Record\Kochi_Live_source_Taken_From_RAJU_16_12_2015\BaseC\obj\Debug\BaseC.dll
+D:\Record\Kochi_Live_source_Taken_From_RAJU_16_12_2015\BaseC\obj\Debug\BaseC.pdb
+D:\Cloud_Publish_Code\Kochi_Live_source\BaseC\bin\Debug\BaseC.dll.config
+D:\Cloud_Publish_Code\Kochi_Live_source\BaseC\bin\Debug\BaseC.dll
+D:\Cloud_Publish_Code\Kochi_Live_source\BaseC\bin\Debug\BaseC.pdb
+D:\Cloud_Publish_Code\Kochi_Live_source\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Cloud_Publish_Code\Kochi_Live_source\BaseC\obj\Debug\BaseC.dll
+D:\Cloud_Publish_Code\Kochi_Live_source\BaseC\obj\Debug\BaseC.pdb
+C:\Users\user\Desktop\BaseC\bin\Debug\BaseC.dll.config
+C:\Users\user\Desktop\BaseC\bin\Debug\BaseC.dll
+C:\Users\user\Desktop\BaseC\bin\Debug\BaseC.pdb
+C:\Users\user\Desktop\BaseC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Desktop\BaseC\obj\Debug\BaseC.dll
+C:\Users\user\Desktop\BaseC\obj\Debug\BaseC.pdb
+G:\Jiten\CloudEMR\BaseC\bin\Debug\BaseC.dll.config
+G:\Jiten\CloudEMR\BaseC\bin\Debug\BaseC.dll
+G:\Jiten\CloudEMR\BaseC\bin\Debug\BaseC.pdb
+G:\Jiten\CloudEMR\BaseC\obj\Debug\ResolveAssemblyReference.cache
+G:\Jiten\CloudEMR\BaseC\obj\Debug\BaseC.dll
+G:\Jiten\CloudEMR\BaseC\obj\Debug\BaseC.pdb
+D:\Record\cloud_emr_5_4_2016\BaseC\bin\Debug\BaseC.dll.config
+D:\Record\cloud_emr_5_4_2016\BaseC\bin\Debug\BaseC.dll
+D:\Record\cloud_emr_5_4_2016\BaseC\bin\Debug\BaseC.pdb
+D:\Record\cloud_emr_5_4_2016\BaseC\obj\Debug\ResolveAssemblyReference.cache
+D:\Record\cloud_emr_5_4_2016\BaseC\obj\Debug\BaseC.dll
+D:\Record\cloud_emr_5_4_2016\BaseC\obj\Debug\BaseC.pdb
+D:\Record\cloud_emr_14_4_2016\BaseC\bin\Debug\BaseC.dll.config
+D:\Record\cloud_emr_14_4_2016\BaseC\bin\Debug\BaseC.dll
+D:\Record\cloud_emr_14_4_2016\BaseC\bin\Debug\BaseC.pdb
+D:\Record\cloud_emr_14_4_2016\BaseC\obj\Debug\BaseC.dll
+D:\Record\cloud_emr_14_4_2016\BaseC\obj\Debug\BaseC.pdb
+E:\Rajeev\ArvindMedicare\Arvind_EMR\BaseC\bin\Debug\BaseC.dll.config
+E:\Rajeev\ArvindMedicare\Arvind_EMR\BaseC\bin\Debug\BaseC.dll
+E:\Rajeev\ArvindMedicare\Arvind_EMR\BaseC\bin\Debug\BaseC.pdb
+E:\Rajeev\ArvindMedicare\Arvind_EMR\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Rajeev\ArvindMedicare\Arvind_EMR\BaseC\obj\Debug\BaseC.dll
+E:\Rajeev\ArvindMedicare\Arvind_EMR\BaseC\obj\Debug\BaseC.pdb
+E:\Rajeev\EMR\BaseC\bin\Debug\BaseC.dll.config
+E:\Rajeev\EMR\BaseC\bin\Debug\BaseC.dll
+E:\Rajeev\EMR\BaseC\bin\Debug\BaseC.pdb
+E:\Rajeev\EMR\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Rajeev\EMR\BaseC\obj\Debug\BaseC.dll
+E:\Rajeev\EMR\BaseC\obj\Debug\BaseC.pdb
+E:\EMR\BaseC\bin\Debug\BaseC.dll.config
+E:\EMR\BaseC\bin\Debug\BaseC.dll
+E:\EMR\BaseC\bin\Debug\BaseC.pdb
+E:\EMR\BaseC\obj\Debug\BaseC.dll
+E:\EMR\BaseC\obj\Debug\BaseC.pdb
+D:\HIS Source Code\MotherVersion Module wise\WardEMRSourceCode\BaseC\bin\Debug\BaseC.dll.config
+D:\HIS Source Code\MotherVersion Module wise\WardEMRSourceCode\BaseC\bin\Debug\BaseC.dll
+D:\HIS Source Code\MotherVersion Module wise\WardEMRSourceCode\BaseC\bin\Debug\BaseC.pdb
+D:\HIS Source Code\MotherVersion Module wise\WardEMRSourceCode\BaseC\obj\Debug\BaseC.dll
+D:\HIS Source Code\MotherVersion Module wise\WardEMRSourceCode\BaseC\obj\Debug\BaseC.pdb
+D:\HIS Source Code\MotherVersion Module wise\WardEMRSourceCode\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Final_EMR_Application_11_11_2016\WardEMRApplication\BaseC\bin\Debug\BaseC.dll.config
+E:\Final_EMR_Application_11_11_2016\WardEMRApplication\BaseC\bin\Debug\BaseC.dll
+E:\Final_EMR_Application_11_11_2016\WardEMRApplication\BaseC\bin\Debug\BaseC.pdb
+E:\Final_EMR_Application_11_11_2016\WardEMRApplication\BaseC\obj\Debug\BaseC.dll
+E:\Final_EMR_Application_11_11_2016\WardEMRApplication\BaseC\obj\Debug\BaseC.pdb
+E:\Manmohan\CommonProject\EMRWard\BaseC\bin\Debug\BaseC.dll.config
+E:\Manmohan\CommonProject\EMRWard\BaseC\bin\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\BaseC\bin\Debug\BaseC.pdb
+E:\Manmohan\CommonProject\EMRWard\BaseC\obj\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\BaseC\obj\Debug\BaseC.pdb
+D:\Santosh\23122016-EMRWard\23122016-EMRWard\BaseC\bin\Debug\BaseC.dll.config
+D:\Santosh\23122016-EMRWard\23122016-EMRWard\BaseC\bin\Debug\BaseC.dll
+D:\Santosh\23122016-EMRWard\23122016-EMRWard\BaseC\bin\Debug\BaseC.pdb
+D:\Santosh\23122016-EMRWard\23122016-EMRWard\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+D:\Santosh\23122016-EMRWard\23122016-EMRWard\BaseC\obj\Debug\BaseC.dll
+D:\Santosh\23122016-EMRWard\23122016-EMRWard\BaseC\obj\Debug\BaseC.pdb
+E:\EMR\23122016-EMRWard\BaseC\bin\Debug\BaseC.dll.config
+E:\EMR\23122016-EMRWard\BaseC\bin\Debug\BaseC.dll
+E:\EMR\23122016-EMRWard\BaseC\bin\Debug\BaseC.pdb
+E:\EMR\23122016-EMRWard\BaseC\obj\Debug\BaseC.dll
+E:\EMR\23122016-EMRWard\BaseC\obj\Debug\BaseC.pdb
+E:\Final_EMR_Application_11_11_2016\WardEMRApplication\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\BaseC\bin\Debug\BaseC.dll.config
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\BaseC\bin\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\BaseC\bin\Debug\BaseC.pdb
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\BaseC\obj\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\BaseC\obj\Debug\BaseC.pdb
+D:\manoj\EMR_WARD_02032017\BaseC\bin\Debug\BaseC.dll.config
+D:\manoj\EMR_WARD_02032017\BaseC\bin\Debug\BaseC.dll
+D:\manoj\EMR_WARD_02032017\BaseC\bin\Debug\BaseC.pdb
+D:\manoj\EMR_WARD_02032017\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+D:\manoj\EMR_WARD_02032017\BaseC\obj\Debug\BaseC.dll
+D:\manoj\EMR_WARD_02032017\BaseC\obj\Debug\BaseC.pdb
+D:\__Kabir\WardEMR_13_May_2017\BaseC\bin\Debug\BaseC.dll.config
+D:\__Kabir\WardEMR_13_May_2017\BaseC\bin\Debug\BaseC.dll
+D:\__Kabir\WardEMR_13_May_2017\BaseC\bin\Debug\BaseC.pdb
+D:\__Kabir\WardEMR_13_May_2017\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+D:\__Kabir\WardEMR_13_May_2017\BaseC\obj\Debug\BaseC.dll
+D:\__Kabir\WardEMR_13_May_2017\BaseC\obj\Debug\BaseC.pdb
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\BaseC\bin\Debug\BaseC.dll.config
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\BaseC\bin\Debug\BaseC.dll
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\BaseC\bin\Debug\BaseC.pdb
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\BaseC\obj\Debug\BaseC.dll
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\BaseC\obj\Debug\BaseC.pdb
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\BaseC\bin\Debug\BaseC.dll.config
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\BaseC\bin\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\BaseC\bin\Debug\BaseC.pdb
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\BaseC\obj\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\BaseC\obj\Debug\BaseC.pdb
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\BaseC\obj\Debug\BaseC.dll
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\BaseC\obj\Debug\BaseC.pdb
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\BaseC\bin\Debug\BaseC.dll.config
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\BaseC\bin\Debug\BaseC.dll
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\BaseC\bin\Debug\BaseC.pdb
+E:\VIKASH KUMAR\EMR Ward Scource\EMR_WARD_Common_1909018\19_Sep_2018\BaseC\bin\Debug\BaseC.dll.config
+E:\VIKASH KUMAR\EMR Ward Scource\EMR_WARD_Common_1909018\19_Sep_2018\BaseC\bin\Debug\BaseC.dll
+E:\VIKASH KUMAR\EMR Ward Scource\EMR_WARD_Common_1909018\19_Sep_2018\BaseC\bin\Debug\BaseC.pdb
+E:\VIKASH KUMAR\EMR Ward Scource\EMR_WARD_Common_1909018\19_Sep_2018\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\VIKASH KUMAR\EMR Ward Scource\EMR_WARD_Common_1909018\19_Sep_2018\BaseC\obj\Debug\BaseC.dll
+E:\VIKASH KUMAR\EMR Ward Scource\EMR_WARD_Common_1909018\19_Sep_2018\BaseC\obj\Debug\BaseC.pdb
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\16Nov2018\BaseC\bin\Debug\BaseC.dll.config
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\16Nov2018\BaseC\bin\Debug\BaseC.dll
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\16Nov2018\BaseC\bin\Debug\BaseC.pdb
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\16Nov2018\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\16Nov2018\BaseC\obj\Debug\BaseC.dll
+E:\Final_EMR_Application_11_11_2016\WardEMRApplicationLatestVersion2017\19072018_EMRFinalSouce\19072018_EMRFinalSouce\16Nov2018\BaseC\obj\Debug\BaseC.pdb
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\TFSEMRWard\BaseC\bin\Debug\BaseC.dll.config
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\TFSEMRWard\BaseC\bin\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\TFSEMRWard\BaseC\bin\Debug\BaseC.pdb
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\TFSEMRWard\BaseC\obj\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\FinalSource\TFSEMRWard\BaseC\obj\Debug\BaseC.pdb
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\03052019\TFSEMRWard\BaseC\bin\Debug\BaseC.dll.config
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\03052019\TFSEMRWard\BaseC\bin\Debug\BaseC.dll
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\03052019\TFSEMRWard\BaseC\bin\Debug\BaseC.pdb
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\03052019\TFSEMRWard\BaseC\obj\Debug\BaseC.dll
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\03052019\TFSEMRWard\BaseC\obj\Debug\BaseC.pdb
+D:\Manoj Working\CLIENTS\WEB\SHARDA\EMR_11July2019_SourceCode\BaseC\bin\Debug\BaseC.dll.config
+D:\Manoj Working\CLIENTS\WEB\SHARDA\EMR_11July2019_SourceCode\BaseC\bin\Debug\BaseC.dll
+D:\Manoj Working\CLIENTS\WEB\SHARDA\EMR_11July2019_SourceCode\BaseC\bin\Debug\BaseC.pdb
+D:\Manoj Working\CLIENTS\WEB\SHARDA\EMR_11July2019_SourceCode\BaseC\obj\Debug\BaseC.dll
+D:\Manoj Working\CLIENTS\WEB\SHARDA\EMR_11July2019_SourceCode\BaseC\obj\Debug\BaseC.pdb
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\17_July_2019\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\17_July_2019\BaseC\obj\Debug\BaseC.dll
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\17_July_2019\BaseC\obj\Debug\BaseC.pdb
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\17_July_2019\BaseC\bin\Debug\BaseC.dll.config
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\17_July_2019\BaseC\bin\Debug\BaseC.dll
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\17_July_2019\BaseC\bin\Debug\BaseC.pdb
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\26_July_2019\BaseC\bin\Debug\BaseC.dll.config
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\26_July_2019\BaseC\bin\Debug\BaseC.dll
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\26_July_2019\BaseC\bin\Debug\BaseC.pdb
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\26_July_2019\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\26_July_2019\BaseC\obj\Debug\BaseC.dll
+E:\Record\All_ClientsPublish\WardEMRFinalSourceCode\26_July_2019\BaseC\obj\Debug\BaseC.pdb
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\ClientSource\Dhoot\BaseC\bin\Debug\BaseC.dll.config
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\ClientSource\Dhoot\BaseC\bin\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\ClientSource\Dhoot\BaseC\bin\Debug\BaseC.pdb
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\ClientSource\Dhoot\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\ClientSource\Dhoot\BaseC\obj\Debug\BaseC.dll
+E:\Manmohan\CommonProject\EMRWard\EMRWardLiveSource\ClientSource\Dhoot\BaseC\obj\Debug\BaseC.pdb
+E:\Manoj Working\CLIENTS\WEB\Dhoot\EMR\EMR_WARD_Dhoot_SourceCode\BaseC\bin\Debug\BaseC.dll.config
+E:\Manoj Working\CLIENTS\WEB\Dhoot\EMR\EMR_WARD_Dhoot_SourceCode\BaseC\bin\Debug\BaseC.dll
+E:\Manoj Working\CLIENTS\WEB\Dhoot\EMR\EMR_WARD_Dhoot_SourceCode\BaseC\bin\Debug\BaseC.pdb
+E:\Manoj Working\CLIENTS\WEB\Dhoot\EMR\EMR_WARD_Dhoot_SourceCode\BaseC\obj\Debug\BaseC.dll
+E:\Manoj Working\CLIENTS\WEB\Dhoot\EMR\EMR_WARD_Dhoot_SourceCode\BaseC\obj\Debug\BaseC.pdb
+E:\Record\All_ClientsPublish\DhootHospital\LastSource\LastSource21_Nov_2019\EMR_WARD_Dhoot_SourceCode\EMR_WARD_Dhoot_SourceCode\BaseC\bin\Debug\BaseC.dll.config
+E:\Record\All_ClientsPublish\DhootHospital\LastSource\LastSource21_Nov_2019\EMR_WARD_Dhoot_SourceCode\EMR_WARD_Dhoot_SourceCode\BaseC\bin\Debug\BaseC.dll
+E:\Record\All_ClientsPublish\DhootHospital\LastSource\LastSource21_Nov_2019\EMR_WARD_Dhoot_SourceCode\EMR_WARD_Dhoot_SourceCode\BaseC\bin\Debug\BaseC.pdb
+E:\Record\All_ClientsPublish\DhootHospital\LastSource\LastSource21_Nov_2019\EMR_WARD_Dhoot_SourceCode\EMR_WARD_Dhoot_SourceCode\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Record\All_ClientsPublish\DhootHospital\LastSource\LastSource21_Nov_2019\EMR_WARD_Dhoot_SourceCode\EMR_WARD_Dhoot_SourceCode\BaseC\obj\Debug\BaseC.dll
+E:\Record\All_ClientsPublish\DhootHospital\LastSource\LastSource21_Nov_2019\EMR_WARD_Dhoot_SourceCode\EMR_WARD_Dhoot_SourceCode\BaseC\obj\Debug\BaseC.pdb
+D:\Manmohan\ClientSource\Paras\EMRWard\Final\BaseC\bin\Debug\BaseC.dll.config
+D:\Manmohan\ClientSource\Paras\EMRWard\Final\BaseC\bin\Debug\BaseC.dll
+D:\Manmohan\ClientSource\Paras\EMRWard\Final\BaseC\bin\Debug\BaseC.pdb
+D:\Manmohan\ClientSource\Paras\EMRWard\Final\BaseC\obj\Debug\BaseC.dll
+D:\Manmohan\ClientSource\Paras\EMRWard\Final\BaseC\obj\Debug\BaseC.pdb
+D:\Manmohan\ClientSource\CommonEMR\Final\BaseC\bin\Debug\BaseC.dll.config
+D:\Manmohan\ClientSource\CommonEMR\Final\BaseC\bin\Debug\BaseC.dll
+D:\Manmohan\ClientSource\CommonEMR\Final\BaseC\bin\Debug\BaseC.pdb
+D:\Manmohan\ClientSource\CommonEMR\Final\BaseC\obj\Debug\BaseC.dll
+D:\Manmohan\ClientSource\CommonEMR\Final\BaseC\obj\Debug\BaseC.pdb
+E:\Manmohan\ClientSource\CommonEMR\Final\BaseC\bin\Debug\BaseC.dll.config
+E:\Manmohan\ClientSource\CommonEMR\Final\BaseC\bin\Debug\BaseC.dll
+E:\Manmohan\ClientSource\CommonEMR\Final\BaseC\bin\Debug\BaseC.pdb
+E:\Manmohan\ClientSource\CommonEMR\Final\BaseC\obj\Debug\BaseC.dll
+E:\Manmohan\ClientSource\CommonEMR\Final\BaseC\obj\Debug\BaseC.pdb
+D:\Jiten\Common Version\EMRWARD\NEWEMR\BaseC\bin\Debug\BaseC.dll.config
+D:\Jiten\Common Version\EMRWARD\NEWEMR\BaseC\bin\Debug\BaseC.dll
+D:\Jiten\Common Version\EMRWARD\NEWEMR\BaseC\bin\Debug\BaseC.pdb
+D:\Jiten\Common Version\EMRWARD\NEWEMR\BaseC\obj\Debug\BaseC.dll
+D:\Jiten\Common Version\EMRWARD\NEWEMR\BaseC\obj\Debug\BaseC.pdb
+D:\Jiten\Common Version\EMRWARD\NEWEMR\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Kabir\MergedCommonEMR\Common_EMRWARD_28092020\Common_EMRWARD_28092020\BaseC\bin\Debug\BaseC.dll.config
+E:\Kabir\MergedCommonEMR\Common_EMRWARD_28092020\Common_EMRWARD_28092020\BaseC\bin\Debug\BaseC.dll
+E:\Kabir\MergedCommonEMR\Common_EMRWARD_28092020\Common_EMRWARD_28092020\BaseC\bin\Debug\BaseC.pdb
+E:\Kabir\MergedCommonEMR\Common_EMRWARD_28092020\Common_EMRWARD_28092020\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Kabir\MergedCommonEMR\Common_EMRWARD_28092020\Common_EMRWARD_28092020\BaseC\obj\Debug\BaseC.dll
+E:\Kabir\MergedCommonEMR\Common_EMRWARD_28092020\Common_EMRWARD_28092020\BaseC\obj\Debug\BaseC.pdb
+E:\Manmohan\ClientSource\CommonEMR\Final\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+D:\Jiten\Common Version\EMRWARD\NEWEMR\Final\BaseC\bin\Debug\BaseC.dll.config
+D:\Jiten\Common Version\EMRWARD\NEWEMR\Final\BaseC\bin\Debug\BaseC.dll
+D:\Jiten\Common Version\EMRWARD\NEWEMR\Final\BaseC\bin\Debug\BaseC.pdb
+D:\Jiten\Common Version\EMRWARD\NEWEMR\Final\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+D:\Jiten\Common Version\EMRWARD\NEWEMR\Final\BaseC\obj\Debug\BaseC.dll
+D:\Jiten\Common Version\EMRWARD\NEWEMR\Final\BaseC\obj\Debug\BaseC.pdb
+D:\mahendra_jaiswal\Demo Version\CommonEMRV1.1\Final\BaseC\bin\Debug\BaseC.dll.config
+D:\mahendra_jaiswal\Demo Version\CommonEMRV1.1\Final\BaseC\bin\Debug\BaseC.dll
+D:\mahendra_jaiswal\Demo Version\CommonEMRV1.1\Final\BaseC\bin\Debug\BaseC.pdb
+D:\mahendra_jaiswal\Demo Version\CommonEMRV1.1\Final\BaseC\obj\Debug\BaseC.dll
+D:\mahendra_jaiswal\Demo Version\CommonEMRV1.1\Final\BaseC\obj\Debug\BaseC.pdb
+D:\mahendra_jaiswal\Demo Version\CommonEMRV1.1\Final\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Manmohan\ClientSource\DemoEMR\Final\BaseC\bin\Debug\BaseC.dll.config
+E:\Manmohan\ClientSource\DemoEMR\Final\BaseC\bin\Debug\BaseC.dll
+E:\Manmohan\ClientSource\DemoEMR\Final\BaseC\bin\Debug\BaseC.pdb
+E:\Manmohan\ClientSource\DemoEMR\Final\BaseC\obj\Debug\BaseC.dll
+E:\Manmohan\ClientSource\DemoEMR\Final\BaseC\obj\Debug\BaseC.pdb
+E:\Manmohan\ClientSource\DevOps\DemoEMR\Final\BaseC\bin\Debug\BaseC.dll.config
+E:\Manmohan\ClientSource\DevOps\DemoEMR\Final\BaseC\bin\Debug\BaseC.dll
+E:\Manmohan\ClientSource\DevOps\DemoEMR\Final\BaseC\bin\Debug\BaseC.pdb
+E:\Manmohan\ClientSource\DevOps\DemoEMR\Final\BaseC\obj\Debug\BaseC.dll
+E:\Manmohan\ClientSource\DevOps\DemoEMR\Final\BaseC\obj\Debug\BaseC.pdb
+F:\AkhilSourceNew\BaseC\bin\Debug\BaseC.dll.config
+F:\AkhilSourceNew\BaseC\bin\Debug\BaseC.dll
+F:\AkhilSourceNew\BaseC\bin\Debug\BaseC.pdb
+F:\AkhilSourceNew\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+F:\AkhilSourceNew\BaseC\obj\Debug\BaseC.dll
+F:\AkhilSourceNew\BaseC\obj\Debug\BaseC.pdb
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEMR\BaseC\bin\Debug\BaseC.dll.config
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEMR\BaseC\bin\Debug\BaseC.dll
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEMR\BaseC\bin\Debug\BaseC.pdb
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEMR\BaseC\obj\Debug\BaseC.dll
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEMR\BaseC\obj\Debug\BaseC.pdb
+E:\Manoj Working\CLIENTS\WEBDevOps\CommonEMR\BaseC\bin\Debug\BaseC.dll.config
+E:\Manoj Working\CLIENTS\WEBDevOps\CommonEMR\BaseC\bin\Debug\BaseC.dll
+E:\Manoj Working\CLIENTS\WEBDevOps\CommonEMR\BaseC\bin\Debug\BaseC.pdb
+E:\Manoj Working\CLIENTS\WEBDevOps\CommonEMR\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Manoj Working\CLIENTS\WEBDevOps\CommonEMR\BaseC\obj\Debug\BaseC.dll
+E:\Manoj Working\CLIENTS\WEBDevOps\CommonEMR\BaseC\obj\Debug\BaseC.pdb
+F:\AkhilSourceLatest\BaseC\bin\Debug\BaseC.dll.config
+F:\AkhilSourceLatest\BaseC\bin\Debug\BaseC.dll
+F:\AkhilSourceLatest\BaseC\bin\Debug\BaseC.pdb
+F:\AkhilSourceLatest\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+F:\AkhilSourceLatest\BaseC\obj\Debug\BaseC.dll
+F:\AkhilSourceLatest\BaseC\obj\Debug\BaseC.pdb
+F:\AKHILSOURCE_22022021\BaseC\bin\Debug\BaseC.dll.config
+F:\AKHILSOURCE_22022021\BaseC\bin\Debug\BaseC.dll
+F:\AKHILSOURCE_22022021\BaseC\bin\Debug\BaseC.pdb
+F:\AKHILSOURCE_22022021\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+F:\AKHILSOURCE_22022021\BaseC\obj\Debug\BaseC.dll
+F:\AKHILSOURCE_22022021\BaseC\obj\Debug\BaseC.pdb
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommanEmr\BaseC\bin\Debug\BaseC.dll.config
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommanEmr\BaseC\bin\Debug\BaseC.dll
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommanEmr\BaseC\bin\Debug\BaseC.pdb
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommanEmr\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommanEmr\BaseC\obj\Debug\BaseC.dll
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommanEmr\BaseC\obj\Debug\BaseC.pdb
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmr\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Manmohan\ClientSource\DevOps\CommonEMR\Final\FinalSourceOffline\BaseC\bin\Debug\BaseC.dll.config
+E:\Manmohan\ClientSource\DevOps\CommonEMR\Final\FinalSourceOffline\BaseC\bin\Debug\BaseC.dll
+E:\Manmohan\ClientSource\DevOps\CommonEMR\Final\FinalSourceOffline\BaseC\bin\Debug\BaseC.pdb
+E:\Manmohan\ClientSource\DevOps\CommonEMR\Final\FinalSourceOffline\BaseC\obj\Debug\BaseC.dll
+E:\Manmohan\ClientSource\DevOps\CommonEMR\Final\FinalSourceOffline\BaseC\obj\Debug\BaseC.pdb
+E:\Manmohan\ClientSource\DevOps\CommonEMR\Final\FinalSourceOffline\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrLatest\BaseC\bin\Debug\BaseC.dll.config
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrLatest\BaseC\bin\Debug\BaseC.dll
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrLatest\BaseC\bin\Debug\BaseC.pdb
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrLatest\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrLatest\BaseC\obj\Debug\BaseC.dll
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrLatest\BaseC\obj\Debug\BaseC.pdb
+D:\soft\CommonEMR\BaseC\bin\Debug\BaseC.dll.config
+D:\soft\CommonEMR\BaseC\bin\Debug\BaseC.dll
+D:\soft\CommonEMR\BaseC\bin\Debug\BaseC.pdb
+D:\soft\CommonEMR\BaseC\obj\Debug\BaseC.csprojAssemblyReference.cache
+D:\soft\CommonEMR\BaseC\obj\Debug\BaseC.csproj.CoreCompileInputs.cache
+D:\soft\CommonEMR\BaseC\obj\Debug\BaseC.csproj.CopyComplete
+D:\soft\CommonEMR\BaseC\obj\Debug\BaseC.dll
+D:\soft\CommonEMR\BaseC\obj\Debug\BaseC.pdb
+D:\soft\CommonEMRLatest\BaseC\bin\Debug\BaseC.dll.config
+D:\soft\CommonEMRLatest\BaseC\bin\Debug\BaseC.dll
+D:\soft\CommonEMRLatest\BaseC\bin\Debug\BaseC.pdb
+D:\soft\CommonEMRLatest\BaseC\obj\Debug\BaseC.csprojAssemblyReference.cache
+D:\soft\CommonEMRLatest\BaseC\obj\Debug\BaseC.csproj.CoreCompileInputs.cache
+D:\soft\CommonEMRLatest\BaseC\obj\Debug\BaseC.csproj.CopyComplete
+D:\soft\CommonEMRLatest\BaseC\obj\Debug\BaseC.dll
+D:\soft\CommonEMRLatest\BaseC\obj\Debug\BaseC.pdb
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\bin\Debug\BaseC.dll.config
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\bin\Debug\BaseC.dll
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\bin\Debug\BaseC.pdb
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\obj\Debug\BaseC.dll
+D:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\obj\Debug\BaseC.pdb
+E:\Palendra\PalendraWork\CommonEMR21102021\BaseC\bin\Debug\BaseC.dll.config
+E:\Palendra\PalendraWork\CommonEMR21102021\BaseC\bin\Debug\BaseC.dll
+E:\Palendra\PalendraWork\CommonEMR21102021\BaseC\bin\Debug\BaseC.pdb
+E:\Palendra\PalendraWork\CommonEMR21102021\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Palendra\PalendraWork\CommonEMR21102021\BaseC\obj\Debug\BaseC.dll
+E:\Palendra\PalendraWork\CommonEMR21102021\BaseC\obj\Debug\BaseC.pdb
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\bin\Debug\BaseC.dll.config
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\bin\Debug\BaseC.dll
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\bin\Debug\BaseC.pdb
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\obj\Debug\BaseC.dll
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrMaster\BaseC\obj\Debug\BaseC.pdb
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrWord\BaseC\bin\Debug\BaseC.dll.config
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrWord\BaseC\bin\Debug\BaseC.dll
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrWord\BaseC\bin\Debug\BaseC.pdb
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrWord\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrWord\BaseC\obj\Debug\BaseC.dll
+E:\Kuldeep Kumar\Akhil Projects\Cloud DevOps\CommonEmrWord\BaseC\obj\Debug\BaseC.pdb
+D:\Hospitals\Source Code\Extracted Source\EMRWard_devopsV3\BaseC\bin\Debug\BaseC.dll.config
+D:\Hospitals\Source Code\Extracted Source\EMRWard_devopsV3\BaseC\bin\Debug\BaseC.dll
+D:\Hospitals\Source Code\Extracted Source\EMRWard_devopsV3\BaseC\bin\Debug\BaseC.pdb
+D:\Hospitals\Source Code\Extracted Source\EMRWard_devopsV3\BaseC\obj\Debug\BaseC.dll
+D:\Hospitals\Source Code\Extracted Source\EMRWard_devopsV3\BaseC\obj\Debug\BaseC.pdb
+D:\Hospitals\Source Code\Extracted Source\EMRWard_devopsV3\BaseC\obj\Debug\BaseC.csprojResolveAssemblyReference.cache

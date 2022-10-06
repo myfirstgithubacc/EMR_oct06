@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JsonHttpContentConverter</name>
+    </assembly>
+    <members>
+        <member name="T:JsonHttpContentConverter.IJsonHttpContentConverter">
+            <summary>
+            Defines methods to convert between an object and <see cref="T:System.Net.Http.HttpContent"/> that includes JSON.
+            </summary>
+        </member>
+        <member name="M:JsonHttpContentConverter.IJsonHttpContentConverter.ToJsonHttpContent``1(``0)">
+            <summary>
+            Convert an object to <see cref="T:System.Net.Http.HttpContent"/> that includes JSON.
+            </summary>
+            <typeparam name="T">The type of the value.</typeparam>
+            <param name="value">The value.</param>
+            <returns>A converted <see cref="T:System.Net.Http.HttpContent"/>.</returns>
+        </member>
+        <member name="M:JsonHttpContentConverter.IJsonHttpContentConverter.FromJsonHttpContent``1(System.Net.Http.HttpContent)">
+            <summary>
+            Convert <see cref="T:System.Net.Http.HttpContent"/> that includes JSON to an object.
+            </summary>
+            <typeparam name="T">The type of the value.</typeparam>
+            <param name="content"><see cref="T:System.Net.Http.HttpContent"/> that includes JSON.</param>
+            <returns>A converted object.</returns>
+        </member>
+    </members>
+</doc>

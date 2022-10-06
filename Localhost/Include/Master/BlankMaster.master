@@ -1,0 +1,236 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BlankMaster.master.cs" Inherits="Include_BlankMaster" %>
+
+<%@ Import Namespace="System.Web.Optimization" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:PlaceHolder runat="server">
+        <%: Styles.Render("~/bundles/BlankMasterStyle") %>
+        <%: Styles.Render("~/bundles/EMRMasterCss") %>
+    </asp:PlaceHolder>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body id="Body1" runat="server">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+
+
+        <div>
+            <%-- 
+    <div id='MicrosoftTranslatorWidget' class='Dark' style='color:white;background-color:#555555'>                                
+                                            </div><script type='text/javascript'>
+                                                      setTimeout(function() { { var s = document.createElement('script'); s.type = 'text/javascript'; s.charset = 'UTF-8'; s.src = ((location && location.href && location.href.indexOf('https') == 0) ? 'https://ssl.microsofttranslator.com' : 'http://www.microsofttranslator.com') + '/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=True&ui=true&settings=Manual&from=en'; var p = document.getElementsByTagName('head')[0] || document.documentElement; p.insertBefore(s, p.firstChild); } }, 0);</script>
+            --%>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+     
+      <%-- Augnito Start --%>
+
+<%--    <script src="/SpeechAPI/lib/Augnito/AugnitoCMDs.js?v=3"></script>
+    <script src="/SpeechAPI/lib/Augnito/AugnitoCMDStatic.js?v=3"></script>
+    <script src="/SpeechAPI/lib/Augnito/AugnitoCMDRegex.js?v=3"></script>
+    <script src="/SpeechAPI/lib/Augnito/TextWordToInteger.js?v=3"></script>
+    <script src="/SpeechAPI/lib/Augnito/RecordRTC.js"></script>
+    <script src="/SpeechAPI/lib/Augnito/AugnitoSDK.js?v=3"></script>
+
+    <script src="/SpeechAPI/lib/jquery.js"></script>
+    <script src="/SpeechAPI/lib/MobileMic/GetSetCookie.js"></script>
+    <script src="/SpeechAPI/lib/MobileMic/ProcessNotification.js"></script>
+    <script src="/SpeechAPI/lib/MobileMic/qrcode.min.js"></script>
+
+    <script src="/SpeechAPI/lib/PhilipsMicHandler.js?v=3"></script>
+    <script src="/SpeechAPI/lib/jquery-ui/jquery-ui.js?v=1"></script>
+    <script src="/SpeechAPI/DemoJS/InitializeAugnito.js?v=3"></script>
+    <script src="/SpeechAPI/lib/HtmlFormEditorProcess.js?v=3"></script>
+    <script src="/SpeechAPI/DemoJS/HtmlFormLogic.js?v=3"></script>
+
+    <link href="/SpeechAPI/lib/jquery-ui/jquery-ui.css?v=1" type="text/css" rel="stylesheet" />
+    <link href="/SpeechAPI/DemoCSS/AugnitoStyle.css?v=3" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="/SpeechAPI/DemoCSS/bootstrap.min.css?v=1">
+    <link href="/SpeechAPI/DemoCSS/menu.css?v=1" type="text/css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="/SpeechAPI/images/favicon.ico">
+    --%>
+
+    <%-- Augnito End--%>
+
+
+<%--      <div id="MessageDialog" title="Warning">
+            <p id="txtMessageInformation">Invalid authentication, Please check your Account Status, Lm Id and Access Key.</p>
+        </div>
+        <div id="UserTagDialog" title="Warning">
+            <p>User Tag is not defined into URL.</p>
+        </div>
+
+        <div id="MicOffDialog" title="Switch Off Augnito Mic">
+            <p>It seems you are not using Augnito. Do you want to keep the Mic on?</p>
+            <p>Mic switching off in <label id="lblTimer">10</label> sec..</p>
+        </div>
+
+        <div id="QRCodeDialog" title="Pair Augnito Mic">
+            <div class="QRCodeParent">
+                <div class="ScanQRCodeWithAugnitoMic" style="margin-bottom:5px;">Scan QR code with Augnito Mic</div>
+                <div style="text-align:center; padding:8px; background-color:white; max-width: 286px; width: 286px;">
+                    <div id="qrcode" class="" style=""></div>
+                </div>
+            </div>
+        </div>
+        <div id="commandHelp" title="COMMANDS">
+            <div id="command-list-dialog">
+                <div style="font-size:12px;"> Augnito is voice driven with naturally spoken commands. Here are some examples to get you started.</div>
+                <div class="ControlListParent">
+                    <div class="ControlListTitle" style="margin-top:15px;">DICTATE</div>
+                    <div class="ControlListCommand">Full Stop / Comma / Colon</div>
+                    <div class="ControlListCommand">New line</div>
+                    <div class="ControlListTitle">EDIT &amp; FORMAT</div>
+                    <div class="ControlListCommand">Add Space</div>
+                    <div class="ControlListCommand">Delete last &lt;n&gt; words</div>
+                    <div class="ControlListCommand">Delete last &lt;n&gt; lines</div>
+                    <div class="ControlListTitle">SELECTION</div>
+                    <div class="ControlListCommand">Select last word</div>
+                    <div class="ControlListCommand">Select last &lt;n&gt; words</div>
+                    <div class="ControlListCommand">Select last &lt;n&gt; lines</div>
+                    <div class="ControlListTitle">NAVIGATION</div>
+                    <div class="ControlListCommand">Go to line start / Go to line end</div>
+                    <div class="ControlListCommand">Go to document start / Go to document end</div>
+                    <div class="ControlListCommand">Go to next filed</div>
+                    <div class="ControlListCommand">Go to previous filed</div>
+                    <div class="ControlListTitle">CONTROL NAVIGATION</div>
+                    <div class="ControlListCommand">Go to patientId</div>
+                    <div class="ControlListCommand">Go to Date of birth</div>
+                    <div class="ControlListCommand">Go to Diagnosis</div>
+                    <div class="ControlListCommand">Go to Medication</div>
+                    <div class="ControlListCommand">Go to History</div>
+                    <div class="ControlListTitle">CONTROL</div>
+                    <div class="ControlListCommand">Stop Mic</div>
+                </div>
+            </div>
+
+        </div>
+        <div id="augnitoMicBar" class="floatingWindow">
+            <div class="augnitoFloatingParentElementStyle">
+                <div class="FloatingHyperText" id="FloatingHyperText"></div>
+                <button id="btnAugnitoMic" class="AugnitoStopButtonStyle"></button>
+                <div class="MenuWrapper popup" onclick="openMenu()">
+                    <div class="popuptext" id="menuOptions">
+                        <ul class="popupSubMenu">
+                            <li onclick="openMacro()">Macros</li>
+                            <li onclick="openPairMic()">Pair Mic</li>
+                            <li onclick="openCommandHelp()">Command Help</li>
+                        </ul>
+                    </div>
+                    <span class="MenuIcon">...</span>
+                </div>
+            </div>
+
+        </div>--%>
+
+    <%-- K.K --%>
+    <%--<script type="text/javascript">
+
+        function openMenu() {
+            var popup = document.getElementById("menuOptions");
+            popup.classList.toggle("show");
+        }
+
+        function openMacro() {
+            var userTag = '';
+            if (typeof URLSearchParams != "undefined") {
+                var urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has('UserTag')) {
+                    userTag = urlParams.get('UserTag');
+                }
+            }
+
+            if (userTag == '') {
+                $("#UserTagDialog").dialog("open");
+                return;
+            }
+            var macroWindows = window.open("ManageMacro.html?UserTag=" + userTag, "", "scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width = 867, height = 500");
+        }
+
+        function openPairMic(){
+            $("#QRCodeDialog").dialog("open");
+        }
+
+        function openCommandHelp() {
+            $("#commandHelp").dialog("open");
+        }
+
+        $(document).ready(function () {
+            $("#mnhtmlform").addClass("active");
+            $("#MessageDialog").dialog({
+                autoOpen: false,
+                modal: true
+            });
+
+            $("#UserTagDialog").dialog({
+                autoOpen: false,
+                modal: true,
+            });
+
+            $("#QRCodeDialog").dialog({
+                autoOpen: false,
+                modal: true,
+                width: "307px"
+            });
+
+            $("#commandHelp").dialog({
+                autoOpen: false,
+                modal: true,
+                width: "600px"
+            });
+
+            $("#MicOffDialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Keep Mic On": function () {
+                        clearInterval(stopInterval);
+                        MicCloseInSec = 10;
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            $("#augnitoMicBar").draggable();
+        });
+
+        var MicCloseInSec = 10;
+        var stopInterval;
+        function HandleMicOff() {
+            $("#MicOffDialog").dialog("open");
+            $("#lblTimer").html(MicCloseInSec);
+            stopInterval = setInterval(() => {
+                if (MicCloseInSec > 0) {
+                    MicCloseInSec--;
+                    $("#lblTimer").html(MicCloseInSec);
+                } else {
+                    clearInterval(stopInterval);
+                    MicCloseInSec = 10;
+                    $("#btnAugnitoMic").click();
+                    $("#MicOffDialog").dialog("close");
+                }
+            }, 1000)
+        }
+    </script>--%>
+
+
+</body>
+
+<%--<script src="library/speech-input-sdk-akhil-1.min.js"></script>
+
+
+<script>
+    td_speechInput.TD_onLoad("akhil123");
+</script>--%>
+</html>

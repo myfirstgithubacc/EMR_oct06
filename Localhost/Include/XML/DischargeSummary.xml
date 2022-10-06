@@ -1,0 +1,37 @@
+﻿<root>
+
+  <tools name="Formatting" enabled="true" dockable="true">
+    <tool name="AjaxSpellCheck"/>
+    <tool name="Bold" />
+    <tool name="Italic" />
+    <tool name="Underline" />
+    <tool name="Superscript" />
+    <tool name="Subscript" />
+    <tool separator="true"/>
+    <tool name="ForeColor" />
+    <tool name="BackColor"/>
+    <tool separator="true"/>
+    <tool name="JustifyLeft" />
+    <tool name="JustifyCenter" />
+    <tool name="JustifyRight" />
+    <tool name="JustifyFull" />
+    <tool name="InsertOrderedList" />
+    <tool name="InsertUnorderedList"/>
+    <tool name="InsertTable" />
+    <tool name="InsertRowAbove" />
+    <tool name="InsertRowBelow" />
+    <tool name="DeleteRow" />
+    <tool name="InsertColumnLeft" />
+    <tool name="InsertColumnRight" />
+    <tool name="DeleteColumn" />
+  </tools>
+  <tools name="tools4" dockable="true" enabled="true" >
+    <tool name="FontName"/>
+  </tools>
+  <tools name="tool3" dockable="true" enabled="true" >
+    <tool name="RealFontSize"/>
+  </tools>
+  <!--<tools name="tool2" dockable="true" enabled="true" >  
+    <tool name="MedicalIllustration" Text="Medical Illustration(s)" ShowIcon="false" ShowText="True" shortcut="CTRL+M" />  
+  </tools>-->
+</root>

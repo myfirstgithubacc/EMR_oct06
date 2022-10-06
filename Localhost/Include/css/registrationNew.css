@@ -1,0 +1,151 @@
+/****** Patient Icon *******/
+.Regpatient-Top { width:100%; float:left; margin:0 0 0em; padding:0; background:#eeeeee; border-top:solid 2px #e1e1e1; border-bottom:solid 2px #e1e1e1;}
+.RegNew-Patient { float:left; margin:0; padding:0;}
+.RegNew-Patient h2 { font-size:25px; color:#111111; margin:0; padding:0; line-height:1.8em;}
+#lblRegistration { display:none;}
+
+.RegNew-Patient-Left { float:left; margin:0 0 0 0.5em; padding:0; width:100%;}
+.RegNew-Patient-Left h3 { float:left; margin:4px 0px 0 0; padding:0;}
+.RegNew-Patient-Left h5 { float:right; margin:0px 0 0 0; padding:0;}
+.searchDiv { float:left !important; margin:0 0 0 3px !important; padding:0 0 1px 5px !important; width:80% !important; height:30px;}
+.searchDivBtn { float:left; margin:0; padding:4px 9px !important; border-radius:0 !important;}
+
+
+.RegNew-Patient-TopRight { float:right; margin:0 0em 0em 0; padding:0;}
+.RegNew-Patient-TopRight h3 { font-size:12px; float:left; text-align:center; padding:0; margin:1.4em 5px 0 0;}
+.RegNew-Patient-TopRight h4 { float:left; margin:4px 0px 0 0; padding:0;}
+.RegSaveBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0 2px 0 0px; padding:4px 8px;}
+.RegSaveBtn:hover { background:#056391;color:#fff;}
+.RegNewBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0 2px 8px 0px; padding:5px 10px; border-radius:2px;}
+.RegNewBtn:hover { background:#056391;color:#fff;}
+
+#pnlSearch { float:left; margin:0; padding:0;}
+.lbtnSearchPatient { float:left; margin:0 0.5em 0 0 !important; padding:0; font-size:13px; text-align:left; line-height:2em;  text-decoration:underline !important;}
+.txtAccountNo { float:left; margin:0px 0 0 5px; padding:3px 8px 3px 8px; font-size:14px; outline:none !important; height:26px; width:150px !important;}
+#TextBox1, #txtRegNo, #btnGetInfo, #btnGetMotherInfo, #btnFillInsurance { display:none;}
+
+#lnkchecklist { color:#fff; font-size:12px; font-weight:bold; border:none; margin:1px 6px 0 0px; padding:8px 8px 8px 29px; background:#0782be url(/Images/check.png) no-repeat 5px 5px !important; background-size: 18% !important; border-radius:3px; float:left;display:none;}
+#lnkchecklist:hover { background:#056391 url(/Images/check.png) no-repeat 5px 5px !important;color:#fff; background-size: 18% !important; text-decoration:none;}
+#linkcustomfields { color:#fff !important; font-size:12px; font-weight:bold; border:none; margin:1px 6px 0 0px; padding:8px 8px 8px 29px; background:#0782be url(/Images/Custom-Fields.png) no-repeat 5px 3px !important; background-size: 15% !important; border-radius:3px; float:left; display:none;}
+#linkcustomfields:hover { background:#056391  url(/Images/Custom-Fields.png) no-repeat 5px 3px !important;color:#fff !important; background-size: 15% !important; text-decoration:none;}
+#btnNew { color:#fff !important; font-size:12px; font-weight:500; border:none; margin:1px 6px 0 0px; padding:8px 8px 8px 29px; background:#0782be url(/Images/Past-Clinical-Notes-white.png) no-repeat 5px 6px !important; background-size: 29% !important; border-radius:3px; float:left;}
+#btnNew:hover { background:#056391  url(/Images/Past-Clinical-Notes-white.png) no-repeat 5px 6px !important;color:#fff !important; background-size: 29% !important; text-decoration:none;}
+#btnSave { color:#fff !important; font-size:12px; font-weight:500; border:none; margin:1px 6px 0 0px; padding:8px 8px 8px 29px; background:#0782be url(/Images/save.png) no-repeat 5px 6px !important; background-size: 27% !important; border-radius:3px; float:left; height:auto;}
+#btnSave:hover { background:#056391 url(/Images/save.png) no-repeat 5px 6px !important;color:#fff !important; background-size: 27% !important; text-decoration:none;}
+#btnprint { color:#fff !important; font-size:12px; font-weight:500; border:none; margin:1px 6px 0 0px; padding:8px 8px 8px 29px; background:#0782be url(/Images/Print-Card.png) no-repeat 5px 6px !important; background-size: 29% !important; border-radius:3px; float:left; height:auto;}
+#btnprint:hover { background:#056391 url(/Images/Print-Card.png) no-repeat 5px 6px !important;color:#fff !important; background-size: 29% !important; text-decoration:none;}
+
+#btnprintlabel { color:#fff !important; font-size:12px; font-weight:500; border:none; margin:1px 6px 0 0px; padding:8px 8px 8px 29px; background:#0782be url(/Images/Print-Card.png) no-repeat 5px 6px !important; background-size: 24% !important; border-radius:3px; float:left; height:auto;}
+#btnprintlabel:hover { background:#056391 url(/Images/Print-Card.png) no-repeat 5px 6px !important;color:#fff !important; background-size: 24% !important; text-decoration:none;}
+
+.GeneralDiv { float:left; margin:0; padding:0; width:100%; height:10px;}
+.GeneralMessage { float:left; margin:-2px 0; padding:0; width:100%;}
+.GeneralMessageText { float:left !important; margin:0.8em 0 0 0 !important; padding:0 !important; width:100% !important; text-align:center !important;}
+
+.DemoPopBox {width: 400px; z-index: 200; border: 1px solid #60AFC3; background-color: #A8D9E6; position:fixed; bottom: 35%; height: 85px; left: 38%;}
+.DemoPopBoxText {font-size:12px; text-align:center; font-weight:bold; margin:1.2em 0 0.8em !important; padding:0; width:100%; float:left;}
+.DemoPopBoxBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0 2px 0 0px; padding:4px 8px;} 
+.DemoPopBoxBtn:hover { background:#056391;color:#fff;}
+
+
+
+/****** Photo Part (Left) *******/
+.fullDiv { margin:0; padding:0;}
+.RegfullDiv-left { margin:0 0px 0 -1%; padding:0;}
+.RegPart-Green { width:98%; float:left; margin:0 1%; padding:0; background:#C1E5EF;}
+.RegPart-Green h2 { float:left; margin:0; padding:0; background:#68B6CC;}
+.RegPart-Green h2 img { float:left; margin:5px 8px; padding:0;}
+.RegPart-Green h3 { float:left; margin:6px 8px 0 8px; padding:0; font-size:13px; color:#232323; font-weight:500; line-height:1.2em;}
+.RegTemplate { width:98%; float:left; margin:0 1% 0.3em; padding:0 0 0px; background:#fff; border:solid 1px #e1e1e1;}
+.RegTemplate h2 { float:left; margin:0.2em 0 0 0; padding:0.1em 0 0; border:solid 5px #dedede; background:#fff;  width:100%;}
+.RegTemplate h3 { float:right; margin:0; padding:0.2em 0.2em 0 0.2em;}
+.RegUploadBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0 2px 8px 0px; padding:5px 13px; border-radius:2px;}
+.RegUploadBtn:hover { background:#056391;color:#fff;}
+
+
+/****** Patient Demographics (New Registration) (Right) *******/
+.Registration-Right { margin:0; padding:0;}
+.RegGreen { width:99%; float:left; margin:0 1%; padding:0; background:#C1E5EF;}
+.RegGreen h2 { float:left; margin:0; padding:0; background:#68B6CC;}
+.RegGreen h2 i{ font-size:16px; margin:0px 0 0 0; padding:7px 10px 6px 10px; color:#fff; float:left;} 
+.RegGreen h3 { float:left; margin:7px 8px 0 8px; padding:0; font-size:13px; color:#232323; font-weight:500; line-height:1.2em;}
+.RegGreen h4 { float:right; margin:0px 0px 0 0px; padding:3px 8px 3px 8px; font-size:16px; color:#fff;background:#68B6CC; font-weight:bold;}
+.RegGreen h4 span {float:left; margin:0px 0px 0 0px; padding:7px 8px 7px 8px; font-size:14px; color:#fff; line-height:0.6em; font-weight:500;}
+.RegGreen h4 input { float:left; color:#333; font-size:13px; padding:2px 0; margin:0; font-weight:600;} 
+#txtRegistrationDate { float:left !important; margin:0px 0 6px 0 !important; padding:0 !important; background:none !important; border:none !important; width:97px; text-align:center; line-height:1.4em;}
+
+.RegistrationDiv { float:left; margin:0 0; padding:0; width:100%;}
+.Reg-personalInfomation { float:left; margin:0; padding:0 0 4px 0; border-right:solid 1px #ddd; width:33.2%}
+.RegWhiteDiv { width:99%; float:left; margin:0 0 1% 1%; padding:0.1em 0 0; background:#fff; border:solid 1px #ddd;}
+.Reg-PI {float:left; margin:0; padding:0; width:100%;}
+.Reg-PI h3 { float:left; margin:0 0 7px 0; padding:5px 0 5px 10px; width:100%; background-color:#dcdcdc; font-size:13px; font-weight:600;}
+
+.lblMobileSearch { font-size:13px; margin: 8px 8px 0 20px; padding: 0; float: left; line-height:0.9em !important;}
+.btnSearchMob { float:right; margin:0 0 0 -1px; padding:13px 19px 13px 20px;background:#0782be url(/Images/searchNew.png) no-repeat 12px 7px !important; border:none; color:#fff; border-top-right-radius:3px; border-bottom-right-radius:3px;}
+.btnSearchMobAppt { float:left; margin:0 0 0 -1px; padding:13px 19px 13px 20px;background:#0782be url(/Images/searchNew.png) no-repeat 12px 7px !important; border:none; color:#fff; border-top-right-radius:3px; border-bottom-right-radius:3px;}
+.txtSearchMobile { padding:3px 0 3px 8px; outline:none;  height:26px; outline:none;}
+.txtSearchMobileNo { padding:3px 0 3px 8px; outline:none;  height:26px; outline:none; width:25% !important; float:left !important;}
+
+.red { color:#f00 !important;}
+.Reg-Name {float:left; margin:0 0 1px 0; padding:0; width:100%;}
+.Reg-Name h2  { float:left; margin:0; padding:5px 0 10px 10px; width:120px; font-size:13px; font-weight:normal;}
+.RegText { float:left; margin:0; padding:3px 2px; width:58%; color:#333; font-size:12px; outline:none;}
+.RegText input {border:solid 1px #BFBFBF;}
+.RegText select {border:solid 1px #BFBFBF;}
+.RegText textarea {border:solid 1px #BFBFBF; outline:none; padding:0 5px;}
+.displayDiv { display:none; }
+
+.RegText-YY { float:left; margin:0 2px 0 0; padding:6px 5px; width:19.1%; color:#333; font-size:12px;}
+.RegText-YY input {border:solid 1px #BFBFBF; float:left; outline:none; padding:2px;}
+.RegText-DD { float:left; margin:0; padding:6px 5px; width:19.1%; color:#333; font-size:12px;}
+.RegText-DD input {border:solid 1px #BFBFBF; float:left; outline:none; padding:2px;}
+
+#txtFname, #dropTitle, #txtMName, #txtLame, #dropSex, #dtpDateOfBirth, #txtYear, #txtMonth, #txtDays, #txtParentof { border:none; outline:none;}
+#txtLAddress1, #dropLCountry, #dropLState, #dropLCity, #ddlCityArea, #txtLPin { border:none; outline:none;}
+#txtLPhoneRes, #txtPMobile, #txtPEmailID, #txtVIPNarration, #txtIdentityNumber, #dropNationality { border:none; outline:none;}
+#REV1 { display:none;}
+
+.Reg-personalInfomation-Center { float:left; margin:0 0 0 1px; padding:0; width:33.3%}
+.Reg-personalInfomation-right { float:left; margin:0 0 0 1px; padding:0; border-left:solid 1px #ddd; width:33.2%; height:292px;}
+#aa14 { float:left; margin:0; padding:0; width:100%; display:none;}
+#UpdatePanel1 { margin:0.5em 0; padding:0; float:left; width:100%; text-align:center;}
+
+
+
+
+
+
+
+
+
+
+/****** EMR Part (UHID) *******/
+.PRegistrationPop { float:left; padding:0.5em 0; margin:0em 0 0 0; width:100%; background-color:#C1E5EF;}
+.PRegPop-FacilityText {float:left !important; padding:0em 0 0 0 !important; margin:0em 0 0 0 !important; width:50% !important;}
+.PRegPop-FacilityText h2 { font-size:13px; color:#232323; font-weight:bold; float:left; line-height:1.6em; margin:3px 10px 0 0; padding:0;}
+.PRegPop-FacilityText h3 { float:left; margin:0; padding:0; width:20%;} 
+.PRegPop-FacilityInput { float:left; margin:3px 0 0 0; padding:0; width:100%; color:#000; font-size:14px; height:20px;}
+
+
+.PRegRadioDiv { float:left; margin:0; padding:0;}
+.PRegRadioDiv input {float:left; margin:2px 2px 0 0; padding:0;}
+.PRegRadioDiv label {float:left; margin:0 15px 0 0; padding:0; font-size:12px; font-weight:normal;}
+
+.PopMessageText { float:left !important; margin:-3.1em 0 0 2em !important; padding:0 !important; text-align:center !important;}
+.PopMessageText span {width:100% !important; text-align:center !important;float:left !important; padding:0 !important;}
+.PRegPopBtn { background:#0782be; color:#fff; font-size:13px; font-weight:bold; border:none; margin:0px 0px 2px 5px; padding:4px 8px; border-radius:3px; float:right;}
+.PRegPopBtn:hover { background:#056391; color:#fff; text-decoration:none;}
+
+.PRegPop-FacilityText02 {float:right; padding:0em 0 0 0; margin:0em 0 0 0;}
+
+.PRegBorder { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 5px 0; width:100%; background-color:#fff;border-bottom: solid 1px #ccc;}
+.PRegNonBorder { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 0 0; width:100%; background-color:#fff;}
+.PRegNonBorder01 { float:left; padding:0em 0 0.2em 0; margin:0em 0 0 0; width:100%; background-color:#fff;}
+.PRegNonBorder01Table {float:left; padding:0em 0% 0.5em 0%; margin:0em 0 0 0; width:100%;}
+.PRegNonBorder01Table01 {float:left; padding:0em 1% 0.5em 1.5%; margin:0em 0 0 0;}
+.PRegUHIDDiv { width:100%; float:left; margin:0 0 8px; padding:0;}
+.PRegUHIDDiv h2 { float:left; margin:3px 0 0 0; padding:0; width:95px; color:#000; font-size:12px;}
+.PRegUHIDDiv h3 { float:left; margin:0; padding:0; width:48%;} 
+.PRegUHIDDiv h3 input { width:100%; float:left; margin:0; padding:3px 5px; height:22px; outline:none; font-size:12px;}
+.PRegNonBorder02 { float:left; padding:0em 0 0.5em 0; margin:0em 0 0 0; width:99.5%; background-color:#fff;}
+.PRegNonBorder02 h2 { float:left; margin:0 0 0.5em 0; padding:0; font-size:14px; font-weight:bold;}

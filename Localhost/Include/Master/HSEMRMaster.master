@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableViewState="true" CodeFile="HSEMRMaster.master.cs"
+    Inherits="Include_Master_HSEMRMaster" %>
+
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register TagPrefix="aspl" TagName="Left" Src="~/Include/Components/ucTree.ascx" %>
+<%@ Register TagPrefix="aspl" TagName="PatientDetail" Src="~/Include/Components/MasterComponent/TopPanel.ascx" %>
+<%@ Register TagPrefix="aspl" TagName="FindPatient" Src="~/Include/Components/MasterComponent/FindPatient.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.2)">
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0.2)">
+    <title></title>
+        
+    <link rel="shortcut icon" type="image/ico" href="" />    
+    <link id="Link1" href="~/Include/css/open-sans.css" rel="stylesheet" runat="server" />
+    <link id="Link2" href="~/Include/css/bootstrap.min.css" rel="stylesheet" runat="server" />
+    <link id="Link3" href="~/Include/css/font-awesome.min.css" rel="stylesheet" runat="server" />
+        
+    <link id="Link9" href="~/Include/css/Administration-Item.css" rel="stylesheet" type="text/css" runat="server" />
+    <link id="Link10" href="~/Include/css/Administration.css" rel="stylesheet" type="text/css" runat="server" />
+    <link id="Link11" href="~/Include/css/Appointment.css" rel="stylesheet" type="text/css" runat="server" />
+    <link id="Link4" href="~/Include/css/chosen.css" rel="stylesheet" type="text/css" runat="server" />
+    <link id="Link6" href="~/Include/css/emr.css" rel="stylesheet" runat="server" />
+    <link id="Link12" href="~/Include/css/FavoriteSet.css" rel="stylesheet" runat="server" />
+    <link id="Link5" href="~/Include/css/mainStyle.css" rel="stylesheet" runat="server" />
+    <link id="Link13" href="~/Include/css/registrationNew.css" rel="stylesheet" runat="server" />
+    <link id="Link14" href="~/Include/css/Reports.css" rel="stylesheet" runat="server" /> 
+    <link id="Link15" href="~/Include/css/TreatmentTemplat.css" rel="stylesheet" runat="server" /> 
+    
+    <link id="Link7" href="~/Include/EMRStyle.css" rel="stylesheet" runat="server" /> 
+    <link id="Link8" href="~/Include/Style.css" rel="stylesheet" type="text/css" runat="server" />    
+        
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script language="javascript" type="text/javascript" src="/Include/JS/Common1.js"></script>    
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="_ScriptManager" runat="server"></asp:ScriptManager>
+    
+    <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
+   
+        <script language="javascript" type="text/javascript">
+       //dock and undock javascript functions  
+       function OnClientPaneDocked(sender, args) {
+           createCookie("slidingpane", "dock", 1);
+       }
+       function OnClientPaneUnDocked(sender, args) {
+           createCookie("slidingpane", "Undock", 1);
+       }
+       function OnClientPaneLoaded(sender, eventArgs) {
+           var pane = getCookie("slidingpane");
+           if (pane != null) {
+               if (pane == 'dock') {
+                   var slidingZone = $find("<%= sz1.ClientID %>");
+                   var slidingPaneElement = slidingZone.getPaneById('<%= rsp1.ClientID %>');
+                   sender.ExpandPane('<%= rsp1.ClientID %>');
+                   sender.DockPane('<%= rsp1.ClientID %>');                   
+               }
+           }      
+       }
+       function createCookie(name, value, days) {           
+           if (days) {
+               var date = new Date();
+               date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+               var expires = "; expires=" + date.toGMTString();               
+           }
+           else var expires = "";
+           document.cookie = name + "=" + value + expires + "; path=/";           
+       }      
+       function getCookie(c_name) {
+           if (document.cookie.length > 0) {
+               c_start = document.cookie.indexOf(c_name + "=");
+               if (c_start != -1) {
+                   c_start = c_start + c_name.length + 1;
+                   c_end = document.cookie.indexOf(";", c_start);
+                   if (c_end == -1) c_end = document.cookie.length;
+                   return unescape(document.cookie.substring(c_start, c_end));                   
+               }
+           }
+           return "";
+       }
+       function eraseCookie(name) {
+           createCookie(name, "", -1);
+       } 
+    </script>
+    </telerik:RadCodeBlock>
+    
+    
+    
+    <table width="100%">
+        <tr>
+            <td>
+                <telerik:RadSplitter ID="RadSplitter1" VisibleDuringInit="false" runat="server" Width="100%" Height="620px"
+                    Skin="Vista">
+                    <telerik:RadPane ID="LeftPnl" CssClass="BgBlockLeft" runat="server" Width="22px"
+                        Scrolling="none">
+                        <telerik:RadSlidingZone OnClientLoaded="OnClientPaneLoaded" ClickToOpen="true" ID="sz1" runat="server" Width="22px">
+                            <telerik:RadSlidingPane ID="rsp1" OnClientUndocked="OnClientPaneUnDocked" OnClientDocked="OnClientPaneDocked" Font-Bold="true" runat="server" BackColor="#81A4C7" Title="Menu"
+                                Width="217px"> 
+                                <aspl:Left ID="ucTree1" runat="server"></aspl:Left>
+                            </telerik:RadSlidingPane>
+                            </telerik:RadSlidingZone>
+                    </telerik:RadPane>
+                    <telerik:RadSplitBar ID="Radsplitbar1" runat="server"></telerik:RadSplitBar>
+                    <telerik:RadPane ID="MiddlePane1" runat="server" Scrolling="None">
+                        <telerik:RadSplitter ID="Radsplitter2" VisibleDuringInit="false" runat="server" FullScreenMode="true" Orientation="Horizontal"
+                            Skin="Vista">
+                            <telerik:RadPane ID="TopPnl" runat="server" CssClass="BgBlockTop" Height="30px" Scrolling="none"
+                                Skin="Vista">
+                                <table cellpadding="0" cellspacing="0" style="padding-left: 0px;" width="100%">
+                                    <tr>
+                                        <td align="left" style="width: 300px; vertical-align: middle;">
+                                            <telerik:RadSlidingZone ClickToOpen="true" ID="Radslidingzone2" runat="server" Height="30px"
+                                                Skin="Vista" SlideDirection="Bottom">                                                                                              
+                                            </telerik:RadSlidingZone>
+                                        </td>
+                                        <td style="vertical-align: middle;">
+                                            <aspl:PatientDetail ID="pd1" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </telerik:RadPane>
+                           <%-- <telerik:RadSplitBar ID="Radsplitbar3" runat="server"></telerik:RadSplitBar>--%>
+                            <telerik:RadPane ID="ContentPnl" runat="server">                              
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </telerik:RadPane>
+                        </telerik:RadSplitter>
+                    </telerik:RadPane>
+                    <%--<telerik:RadSplitBar ID="RadSplitBar2" runat="server"></telerik:RadSplitBar>--%>
+                    <telerik:RadPane ID="EndPane" CssClass="BgBlockRight" runat="server" Width="22px"
+                        Scrolling="None">
+                        <%--<telerik:RadSlidingZone ID="Radslidingzone1" runat="server" ClickToOpen="true" SlideDirection="Left"
+                            Width="22px">
+                            <telerik:RadSlidingPane ID="Radslidingpane5" runat="server" Title="Pane1" Width="150px">
+                                Pane 1 Content</telerik:RadSlidingPane><telerik:RadSlidingPane ID="Radslidingpane6"
+                                    runat="server" Title="Pane2" Width="150px">Pane 2 Content</telerik:RadSlidingPane></telerik:RadSlidingZone>--%>
+                    </telerik:RadPane>
+                </telerik:RadSplitter>
+            </td>
+        </tr>
+    </table>
+    <table cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+            <td class="tophead" align="center" style="width: 100%">
+                &nbsp;ASPL Copyright 2011 all rights reserved. CPT copyright 2010 American Medical Association. All rights reserved.
+                
+
+                
+
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

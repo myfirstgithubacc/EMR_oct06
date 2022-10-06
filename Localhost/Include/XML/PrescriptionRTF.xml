@@ -1,0 +1,6 @@
+﻿<root>
+  <tools name="Formatting" enabled="true" dockable="true">
+    <tool name="Bold" />
+    <tool name="Underline" />
+  </tools>
+</root>

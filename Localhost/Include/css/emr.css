@@ -1,0 +1,1223 @@
+body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; font-weight:normal; font-size:12px!important;}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid rgb(215 200 200);
+}
+
+.leftPartEMR { float:left; margin:0; padding:0; position:relative; top:0; width:100%;}
+.leftPartEMR01 {float:left; margin:0; padding:0; position:absolute; top:0; width:100%;}
+.emrTopDiv { width:100% !important; height:100% !important; float:left !important; overflow:auto !important;}
+.emrTopDiv01 { width:100% !important; height:auto !important; float:left !important; overflow:auto !important;}
+.patientDiv { width:100%; float:left; margin:0 0 0em 0; padding:0;}
+.patientDiv-Main { width:100%; float:left; margin:0; padding:0; /*border-bottom:#36a9e1 3px solid;*/}
+
+/* 
+.patientDiv { width:100%; float:left; margin:0 0 0.2em 0; padding:0;}
+.patientDiv-Photo { float:left; width:4%; margin:0 0em 0 1.5em; padding:0.18em 0.2em 0.18em; background:#fff; border:solid 1px #d2d0d0; background-color:#F1F1F1;}
+.patientDiv-Table { float:left; width:93%; margin:0; padding:0; height:38px;}
+*/
+.patientDiv-Photo { float:left; width:4%; margin:0 0em 0 0em; padding: 0.22em 0.4em 0.22em; background:#fff; border:solid 1px #d2d0d0; background-color:#F1F1F1;}
+.patientDiv-Photo input { text-align: center; margin: 0 19%; padding: 0; outline: none; float: left; width: 50%; background-position: 11px 8px; height:25px;}
+
+.patientDiv-Table { float:right; width:96%; margin:0; padding:0; height:33px;}
+.patientDiv-Table table { float:left; margin:0; padding:0;}
+.patientDiv-Table table tr td { margin:0; padding:0.6em 0.2em 0.5em 0.2em!important; color:#4d4d4d; font-size:12px; font-weight:500;}
+#ctl00_ContentPlaceHolder1_lblMessage { float:left; margin:1.5% 0 0; padding:0; font-size:14px; text-align:center; font-weight:bold; width:20%; position:absolute; z-index:9999;}
+
+.patientDiv-TablePackage  { float:left; width:97.1%; margin:0 1.7%; padding:0; height:24px;}
+.patientDiv-TablePackage table { float:left; margin:0; padding:0; border-top:none !important;}
+.patientDiv-TablePackage table tr td { margin:0; padding:0.3em 0.2em !important; color:#4d4d4d; font-size:12px !important; font-weight:bold; border-top:none !important;}
+
+.labelLine { line-height:22px;}
+
+/* .emrFixed { float:left; width:100%; margin:0; padding:0; position:fixed; top:2.2em; z-index:9999; background:#fff;}*/
+/* */
+
+/****** Patient Icon *******/
+.patientTop-Fixed { width:100%; float:left; padding:0; margin:0; position:relative;}
+.patient-Top { width:96.9%; float:left; margin:-4px 0 0.3em; padding:0; background:#eeeeee; border-bottom:solid 3px #e1e1e1; border-top:solid 3px #36a9e1; position:fixed;}
+
+.patientTopNew-Fixed { width:100%; float:left; padding:0; margin:0; position:relative;}
+.patient-TopNew { width:100%; float:left; margin:0 0 0.3em; padding:0; background:#eeeeee; border-bottom:solid 3px #e1e1e1; border-top:solid 3px #36a9e1; position:fixed;}
+
+
+
+.patient-TopLeft { float:left; margin:0 0 0 -1em; padding:1px 0px; width:100%;}
+.features02 { float:left; margin:0; padding:0;}
+.iconEMRimg01 { float:left; margin:0.9% 5px 0.5% 3em; padding:0; width:24px; height:24px;}
+.patient-TopLeft a i { color:#000;}
+.patient-TopRight { float:right; margin:0 -1em 0.4em 0; padding:0;}
+.patient-TopRight h3 { font-size:12px; float:left; text-align:center; padding:0; margin:0.8em 5px 0 0;}
+.patient-TopRight h4 { float:left; margin:0.2em 0px 0 0; padding:0;}
+.joinDiv { float:left; margin:0; padding:0;}
+.SaveBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0 2px 0 0px; padding:6px 8px;}
+.SaveBtn:hover { background:#056391;color:#fff;}
+
+.ExpandAllBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0 2px 0 0px; padding:6px 12px 6px 34px; background-image:url(/images/Past-Clinical-Notes-white.png); background-repeat:no-repeat; background-position:8px 6px;} 
+.ExpandAllBtn:hover { background:#056391;color:#fff;background-image:url(/images/Past-Clinical-Notes-white.png); background-repeat:no-repeat; background-position:8px 6px;}
+.SaveBtnNew { background:#0782be; color:#fff; font-size:12px; height:29px; font-weight:500; border:none; margin:0 2px 0 0px; padding:6px 8px; border-radius:3px;} 
+.SaveBtnNew:hover { background:#056391;color:#fff;}
+.ICCAViewerBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0 2px 0 0px; padding:2px 8px; background-image:url(/images/ICCAViewer.png); background-repeat:no-repeat; background-position:8px 6px; border-radius:3px;} 
+.ICCAViewerBtn:hover { background:#056391;color:#fff;background-image:url(/images/ICCAViewer.png); background-repeat:no-repeat; background-position:8px 6px;}
+.patient-TopRight h5 { float:left; margin:7px 0 0 0; padding:0;}
+.searchDiv { float:left !important; margin:0 0 0 3px !important; padding:0 0 1px 5px !important; width:25% !important; height:30px; outline:none;}
+.searchDivBtn { float:left; margin:0; padding:8px 12px 9px 12px !important; border-radius:0 !important; height:30px;}
+
+.features01 #ctl00_ContentPlaceHolder1_lblMessage { width:62% !important; float:left !important; margin:0 !important; padding:0 !important;}
+
+
+
+/****** Used Complaints *******/
+/* 
+.emrRoll-Center { float:left; width:100%; margin:0.8em 0 0 0; padding:0; position:relative; background:#fff;}
+.emrPart-Green { width:98%; float:left; margin:0 1% 0em; padding:0px 0; background:#C1E5EF;}
+.emrPart-White { width:98%; float:left; margin:0 1% 0em; padding:0 0 1px; background:#fff; border:solid 1px #e1e1e1; border-bottom:none;}
+.emrRoll { float:left; width:100%; margin:0; padding:0; position:relative; top:3.0em; background:#fff; height:556px; overflow-y:scroll; }
+
+*/
+.emrRoll-New { float:left; width:100%; margin:0; padding:0; position:relative; top:0em; background:#fff; height:465px; overflow-y:scroll; }
+
+
+
+.emrRoll { float:left; width:100%; margin:0; padding:0; position:relative; top:3.2em; background:#fff; max-height:565px; overflow-y:scroll; }
+.emrRoll-Center { float:left; width:100%; margin:0em 0 0 0; padding:0; position:relative; background:#fff;}
+.emrPart { width:100%; float:left; margin:0; padding:0;}
+.emrPart-Green { width:100%; float:left; margin:0 0 0em; padding:0px 0; background:#D2D6DE; border: 1px solid #B5BBC8;}
+.emrPart-Green p {
+    float: left;
+    margin: 0;
+    background: #53656F;
+    padding: 6px;
+}
+.emrPart-Green h2 {
+    float: left;
+    margin: 0;
+    padding: 5px;
+    background: #53656F;
+}
+.emrPart-Green h2 img { float:left; margin:5px 8px; padding:0;}
+ ul.icons {
+    padding: 0px;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+ul.icons li {
+    background: #eee none repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 35px;
+    line-height: 41px;
+    margin: 3px;
+    padding: 3px;
+    border: 1px solid #ccc;
+    text-align: center!important;
+    width: 35px;
+}
+.emrPart-Green h3 {
+    float: left;
+    margin: 0px 0px 0 8px !important;
+    padding: 0;
+    font-size: 12px;
+    color: #04090A;
+    font-weight: normal;
+    line-height: 28px;
+}.emrPart-Green h3 img{float:left; margin:3px 0px; padding:0; }
+.emrPart-Green h3 span {
+    float: left;
+    margin: 0 5px 0 0 !important;
+    padding: 0;
+}.emrPart-Green h4 { float:right; margin:0; padding:2px 5px; background:#67A5B7;}
+.emrPart-Green h5 {
+    line-height: 1.7em;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    margin-top: 6px;
+}
+.emrPart-Green h4 i { float:left; margin:0px; padding:0; color:#fff; width:18px; height:18px;}
+.emrPart-Green h4 img { float:left; margin:3px 12px; padding:0; color:#fff;}
+.emrPart-White { width:100%; float:left; margin:0 0 0em; padding:0 0 0px; background:#fff; /*border:solid 1px #e1e1e1; border-bottom:none;*/}
+.red { color:#f00 !important;}
+.red1 { color:#f00 !important; float:left; margin:0; padding:0;}
+.lightGreen { background:#acefdc; border-bottom:solid 1px #e1e1e1;}
+.emrSpacingLeft {padding:0 5px 0 15px;}
+.emrSpacing { padding:0 5px; font-size:12px; text-transform:capitalize;}
+.emrSpacingRight {padding:0 15px 0 5px;}
+/*sanyamtanwar*/
+#ctl00_ContentPlaceHolder1_Label3,
+#ctl00_ContentPlaceHolder1_Label7,
+#ctl00_ContentPlaceHolder1_Label13,
+#ctl00_ContentPlaceHolder1_Label14,
+#ctl00_ContentPlaceHolder1_Label15,
+#ctl00_ContentPlaceHolder1_Label16,
+#ctl00_ContentPlaceHolder1_Label24 {float:none; margin:0px 2px 0 0!important; padding:2px 0; color:#0D2E38; font-size:12px; /*line-height:1.7em;*/}
+#ctl00_ContentPlaceHolder1_Label20{float:none; margin:0px 2px 0 0!important; padding:2px 0; /*color:#0D2E38;*/ font-size:12px; /*line-height:1.7em;*/}
+/*sanyamtanwar*/
+
+
+/****** Chief Complaints *******/
+.emrPWhite-inner { width:98%; float:left; padding:0px 0; margin:2px 1% 0 1%; background:#eeeeee;}
+.emrPWhite-inner h2 {float:left; margin:0 10px; padding:5px 0px; color:#232323; font-size:14px;}
+.emrPWhite-inner h3 {float:left; margin:0; padding:6px 10px; color:#232323; font-size:14px; text-align:center;}
+.emrPWhite-inner h4 {float:right; margin:0; padding:6px 10px; color:#232323; font-size:14px; text-align:center;}
+
+.emrPWhite-innerBottom { width:98%; float:left; margin:0px 1% 0 1%; background:#fff;}
+.cc-box01 { margin:0; padding:0 5px; border-radius:0; font-size:13px; height:32px;} 
+.cc-box01:focus {box-shadow:none; border:#ccc solid 1px;}
+.cc-box02 { margin:0; padding:0 5px; text-align:center; border-radius:0; font-size:13px; height:32px;} 
+.cc-box02:focus {box-shadow:none; border:#ccc solid 1px;}
+.cc-box03 { margin:0; padding:0 5px; text-align:center; border-radius:0; font-size:13px; height:32px;} 
+.cc-box03 a { color:#252525;}
+.cc-box03 a i{ font-size:20px;}
+.emrPWhite-innerBottom01 { width:100%; float:left; margin:0px 0 0 0; background:#fff;}
+.emrPWhite-innerBottom01 h2 { margin:0; padding:8px 5px; font-size:12px; border:#ccc solid 1px; float:left; color:#353434; width:100%;} 
+.emrPWhite-innerBottom01 h3 { margin:0; padding:8px 5px; font-size:12px; text-align:center; border:#ccc solid 1px; float:left; color:#353434; width:100%;} 
+
+.emrWidth01 { text-align:center; width:50%; float:left; margin:0 !important; padding:5px 10px !important; border-top:none !important;color:#232323; font-size:14px;}
+.emrWidth02 { text-align:center; float:left; margin:0 !important; padding:5px 20px !important; border-top:none !important;color:#232323; font-size:14px;}
+.chiefTextarea {padding: 2px 10px; vertical-align: top; width: 200px;}
+.chiefTextarea:focus {outline-style: solid;outline-width: 2px;}
+.chiefTextarea01 td textarea {padding: 3px 5px !important; width:100% !important; border:none !important; background:none !important;}
+.chiefTextarea01 td textarea:focus {outline-style: solid;outline-width: 2px;}
+.chiefDelete { float:left; margin:2px 0px;}
+
+/* 
+.chiefComplaintInput textarea:first-child { height:50px !important; float:left; width:100%; margin:0; padding:0;}
+.emrPWhite-innerBottom01 { width:98%; float:left; margin:0px 1% 0 1%; background:#fff;}
+.emrAllergies-inner { width:98%; float:left; padding:5px 0 0 0; margin:2px 1% 0 1%;}
+*/
+
+
+
+/****** Allergies *******/
+.emrAllergies-inner { width:100%; float:left; padding:5px 0 0 0; margin:2px 0 0 0;}
+.emrAllergies-inner h2 {float:left; margin:0 10px; padding:5px 10px 0px 10px; color:#ff0000; font-size:13px; line-height:0.2em;}
+.emrAllergies-inner h2 input { float:left; margin:1px 5px 0 0; padding:0;}
+.emrAllergies-inner h3 {float:left; margin:0; padding:5px 0; color:#353434; font-size:13px; line-height:1.2em;}
+.AllergiesLabel { float:left; margin:0 0 0 2px; padding:6px 8px;border:#ccc solid 1px; color:#6d6a6a; font-size:12px; width:82%;}
+.AllergiesLabel i { float:right;}
+.AllergiesLabel01 { float:left; margin:0 0 0 2px; padding:0px 2px 6px 7px; color:#6d6a6a; font-size:12px; width:55%;}
+.AllergiesLabel01 i { float:right; margin:2px 7px 2px 15px; padding:0;}
+.AllergiesLabel02 { float:left; margin:0 0 0 2px; padding:6px 2px 6px 7px; color:#6d6a6a; font-size:12px; width:35%;}
+.AllergiesLabel02 i { float:right; margin:2px 7px 2px 15px; padding:0;}
+.AllergiesLabel03 { float:left; margin:0 0 0 2px; padding:6px 2px 6px 7px;border:#ccc solid 1px; color:#6d6a6a; font-size:12px; width:70%;}
+.AllergiesLabel03 i { float:right; margin:2px 7px 2px 15px; padding:0;}
+.emrAllergies-innerBottom { width:98%; float:left; margin:4px 1% 0 1%; background:#fff;}
+.emrAllergies-innerBottom h3 { margin:0; padding:9px 5px; font-size:12px; text-align:left; border:#ccc solid 1px; float:left; color:#353434; width:100%;} 
+.AllergyNameSelect { float:left; margin:0 0 0 5px; padding:0; width:70%;}
+
+
+/****** Immunisation History *******/
+.IHwidth01-top { text-align:center; width:16%; float:left; margin:0 !important; padding:5px 5px !important; border-top:none !important; border-bottom: 1px solid #DEDDDD !important; border-left: 1px solid #DEDDDD !important;color:#232323; font-size:14px; font-weight:normal;}
+.IHwidth02-top { text-align:center; width:7%; float:left; margin:0 !important; padding:5px 9px 6px 9px !important; border-top:none !important;color:#232323; font-size:13px; font-weight:normal;}
+.IHwidth01-bottom { text-align:center; width:16% !important; float:left; margin:0 !important; height:25px; padding:5px 5px !important; border-top:none !important;color:#6d6a6a; font-size:13px;}
+.IHwidth02-bottom { text-align:center; width:7%; float:left; margin:0 !important; height:25px; padding:5px 10px !important; border-top:none !important;color:#6d6a6a; font-size:13px;}
+.IHwidth03-bottom { text-align:center; width:7%; float:left; margin:-3px 0 0 !important; height:25px; padding:0px 0px 0px 0px !important; border-top:none !important; border-bottom:none !important;color:#6d6a6a; font-size:13px;}
+.IHwidth03-bottom .form-control {display: block !important;
+    width: 100% !important;
+    height: 28px !important;
+    padding: 1px 6px !important;
+    font-size: 14px !important;
+    margin:0 !important;
+    line-height: 1.42857143 !important;
+    color: #555 !important;
+    background-color: #fff !important;
+    background-image: none !important;
+    border-left: 1px solid #ccc !important; border-right: 1px solid #ccc !important; -webkit-transition:none !important;
+    border-radius: 0px !important;}
+
+.IHwidth04-bottom { text-align:center; float:left; margin:0 !important; height:25px; padding:5px 5px !important; border-top:none !important;color:#6d6a6a; font-size:13px;}
+.IH-box { margin:0; padding:3px 0px; text-align:center; border-radius:0; font-size:13px; height:25px; border:none;} 
+.IH-box:focus {box-shadow:none; border:none;}
+
+#ctl00_ContentPlaceHolder1_lblHTUnit,
+#ctl00_ContentPlaceHolder1_lblWTUnit,
+#ctl00_ContentPlaceHolder1_lblHCUnit,
+#ctl00_ContentPlaceHolder1_lblTUnit { float:left !important; margin:0 !important; padding:0 !important; text-align:center !important; width:100% !important; line-height:2.4em !important; font-size:12px !important;}
+.heightEMR { float:left !important; width:100% !important; margin:0 !important; padding:0 !important; text-align:center !important; font-size:12px !important; color:#333 !important;}
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label29, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label30, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label31, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label32, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label33, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label34, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label35, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label36, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label37, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label38, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label39, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label40, 
+#ctl00_ContentPlaceHolder1_gvVitals_ctl01_Label41 { color:#353535 !important; text-align: right !important; width: 68px !important; float: left !important; margin: 0 !important; padding: 0 !important; text-align:center !important;}
+.emrDivSpacing { margin:0 0 2px 0; float:left;}
+
+.emrWidth { width:15.7em; margin:0; padding:0;}
+.CloseEMRimg { margin:5px 0 0 0;}
+
+
+/****** History *******/
+.emrHisWhite-inner { width:98%; float:left; padding:0px 0; margin:2px 1% 0 1%; background:#eeeeee;}
+.emrHisWhite-inner h2 {float:left; margin:0 10px; padding:5px 0px; color:#232323; font-size:14px;}
+.emrHisWhite-inner h3 {float:none; margin:0; padding:6px 1px; color:#232323; font-size:14px; text-align:center;}
+/* 
+.emrHisWhite-innerBottom { width:98%; float:left; margin:0px 1% 0 1%; background:#fff;}
+
+*/
+.emrHisWhite-innerBottom { width:100%; float:left; margin:0px 0 0 0; background:#fff;}
+.History-box01 { margin:0; padding:0 5px; border-radius:0; font-size:13px; height:32px;} 
+.History-box01:focus {box-shadow:none; border:#ccc solid 1px;}
+.History-box02 { margin:0; padding:0 5px; text-align:center; border-radius:0; font-size:13px; height:32px;} 
+.History-box02:focus {box-shadow:none; border:#ccc solid 1px;}
+.History-box03 { margin:0; padding:0 5px; text-align:center; border-radius:0; font-size:13px; height:32px;} 
+.History-box03 a { color:#252525;}
+.History-box03 a i{ font-size:20px;}
+/*
+.emrHisWhite-innerBottom01 { width:100%; float:left; margin:0px 1% 0em 1%; background:#fff;}
+*/
+.emrHisWhite-innerBottom01 { width:100%; float:left; margin:0px 0 -0.4em 0; background:#fff;}
+.emrHisWhite-innerBottom01 table { margin-bottom: 5px;}
+.emrHisWhite-innerBottom01 h2 { margin:0; padding:8px 5px; font-size:12px; border:#ccc solid 1px; float:left; color:#353434; width:100%;} 
+.emrHisWhite-innerBottom01 h3 { margin:0; padding:8px 5px; font-size:12px; text-align:center; border:#ccc solid 1px; float:left; color:#353434; width:100%;}
+.emrFullDivCenter { width:100%; float:left; margin:0; padding:0; text-align:left; border:none; outline:none;}
+
+#ctl00_ContentPlaceHolder1_gvHistory_ctl02_editorHistory { height:auto !important; width:100% !important; float:left !important; margin:0 !important; padding:0 !important;}
+#ctl00_ContentPlaceHolder1_gvProblemDetails_ctl02_editorProblem { height:auto !important; width:100% !important; float:left !important; margin:0 !important; padding:0 !important;}
+#ctl00_ContentPlaceHolder1_gvExamination_ctl02_editorExamination { height:auto !important; width:100% !important; float:left !important; margin:0 !important; padding:0 !important;}
+#ctl00_ContentPlaceHolder1_gvPlanOfCare_ctl02_editorPlanOfCare { height:auto !important; width:100% !important; float:left !important; margin:0 !important; padding:0 !important;}
+#ctl00_ContentPlaceHolder1_gvData_ctl02_editorProvisionalDiagnosis { width:100% !important; float:left !important; margin:0 !important; padding:0 !important;}
+
+
+/****** Other Notes *******/
+.emrNotesWhite-inner { width:98%; float:left; padding:0px 0; margin:2px 1% 0 1%; background:#eeeeee;}
+.emrNotesWhite-inner h2 {float:left; margin:0 10px; padding:5px 0px; color:#232323; font-size:14px;}
+.emrNotesWhite-inner h3 {float:none; margin:0; padding:6px 1px; color:#232323; font-size:14px; text-align:center;}
+.emrNotesWhite-inner h4 {float:none; margin:0; padding:6px 1px; color:#232323; font-size:14px; text-align:center;}
+.emrNotesWhite-innerBottom { width:98%; float:left; margin:1px 1% 0 1%; background:#fff;}
+.Notes-box01 { margin:0; padding:0 5px; border-radius:0; font-size:13px; height:32px;} 
+.Notes-box01:focus {box-shadow:none; border:#ccc solid 1px;}
+.Notes-box02 { margin:0; padding:0 5px; text-align:center; border-radius:0; font-size:13px; height:32px;} 
+.Notes-box02:focus {box-shadow:none; border:#ccc solid 1px;}
+.Notes-box03 { margin:0; padding:0 5px; text-align:center; border-radius:0; font-size:13px; height:32px;} 
+.Notes-box03 a { color:#252525;}
+.Notes-box03 a i{ font-size:20px;}
+/*.emrNotesWhite-innerBottom01 { width:98%; float:left; margin:0px 1% 0 1%; background:#fff;} */
+.emrNotesWhite-innerBottom01 { width:100%; float:left; margin:0px 0 0 0; background:#fff;}
+.emrNotesWhite-innerBottom01 h2 { margin:0; padding:8px 5px; font-size:12px; border:#ccc solid 1px; float:left; color:#353434; width:100%;} 
+.emrNotesWhite-innerBottom01 h3 { margin:0; padding:8px 5px; font-size:12px; text-align:center; border:#ccc solid 1px; float:left; color:#353434; width:100%;}
+
+
+/****** Provisional Diagnosis *******/
+/* .emrProvisional-inner { width:98%; float:left; padding:5px 0; margin:2px 1% 0 1%;}*/
+.emrProvisional-inner { width:100%; float:left; padding:5px 0; margin:2px 0 0 0;}
+.emrProvisional-inner h3 {float:left; margin:0; padding:5px 0; color:#353434; font-size:13px; line-height:1.2em;}
+.emrProvisional01 {float:left; margin:0 0 0 2px; padding:2px 2px 6px 7px; color:#6d6a6a; font-size:12px;}
+.emrNonDrugOrder-inner { width:98%; float:left; padding:5px 0; margin:2px 1% 0 1%;}
+.emrNonDrugOrder-inner01 { width:100%; float:left; padding:0 0; margin:2px 0 0 0;}
+.emrNonDrugOrder-inner h3 {float:left; margin:0; padding:8px 0; color:#353434; font-size:13px; line-height:1.2em;}
+#ctl00_ContentPlaceHolder1_ddlDoctor { float:left; margin:0; padding:0px 0; border: solid 1px #ccc; outline:none;}
+.emrProvDiagnosis-inner { width:98%; float:left; padding:2px 0 0; margin:2px 1% 0 1%;}
+.emrProvDiagnosis-inner h3 {float:left; margin:0; padding:8px 0.2em 8px 0; color:#353434; font-size:13px; line-height:1.2em;}
+#ctl00_ContentPlaceHolder1_ddlDiagnosisSearchCodes {padding:1px 0;}
+
+
+/****** Orders And Procedures *******/
+.spacingBottom { margin:0 0 0.8em; }
+.spacingDiv { float:left; margin:0; padding:0 0 8px;}
+.spacingDivEMR { float:left; margin:0; padding:0 0 20px;}
+/* .emrProcedures-White { width:98%; float:left; margin:0 1% 0em; padding:0 0 0; background:#fff;}*/
+.emrProcedures-White { width:100%; float:left; margin:0 0 0em; padding:0 0 0; background:#fff;}
+.emrProcedures-inner { width:100%; float:left; padding:0px 0; margin:0;background:#eeeeee; border-top:#fff solid 1px;}
+.emrProcedures-innerBottom { width:98%; float:left; margin:0 1% 0 1%; background:#fff;}
+.emrProcedures-innerBottomNew { width:100%; float:left; margin:0; background:#fff;}
+.width01-top { width:15%; float:left; margin:0 !important; padding:5px 5px !important;background:#eeeeee;  border:none !important;color:#232323; font-size:14px;}
+.width02-top { width:50%; float:left; margin:0 !important; padding:5px 10px !important;background:#eeeeee; border:none !important;color:#232323; font-size:14px;}
+.width03-top { width:35%; float:left; margin:0 !important; padding:5px 10px !important;background:#eeeeee; border:none !important;color:#232323; font-size:14px;}
+.width01-bottom { width:15%; float:left; margin:0 !important; padding:5px 5px !important; border-top:none !important;color:#6d6a6a; font-size:13px;}
+.width02-bottom { width:50%; float:left; margin:0 !important; padding:5px 10px !important; border-top:none !important;color:#6d6a6a; font-size:13px;}
+.width03-bottom{ width:35%; float:left; margin:0 !important; padding:5px 10px !important; border-top:none !important;color:#6d6a6a; font-size:13px;}
+.header-center{text-align:center; margin:0; padding:0 0 0 10px; float:left;}
+.header-left{text-align:left; margin:0; padding:0 0 0 10px;}
+.borderLeftDiv { border-left:none;}
+#tech-companies-1 { float:left; margin:0; padding:0; height:1px; width:100%;}
+#ctl00_ContentPlaceHolder1_gvPrescriptions { float:left; margin:0; padding:0; border:none; width:100%; border-bottom: solid 1px #fff;}
+#ctl00_ContentPlaceHolder1_cmbServiceName_Input { float:left; margin:0px 0 0 0; padding: 4px 0 0 8px; border:none; width:100%;}
+#ctl00_ContentPlaceHolder1_txtInstruction { padding:2px 5px; float:left; color:#333; font-size:13px; outline:none; height:24px; margin:0 1em 0 0; border:solid 1px #A0A0A0;}
+.AddNotesText { float:left; margin:1px 0 0 10em; padding:0; font-size:14px;}
+
+/*#ctl00_ContentPlaceHolder1_lblremark1 { float: left; margin: 0 1em 0 5em; line-height: 2.2em;}*/
+
+
+/****** Provisional Diagnosis *******/
+.spacingDiv01 { float:left; margin:0; padding:0;}
+.SearchKeyBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:1px 0px 0 5px; padding:3px 8px; border-radius:3px; float:left;}
+.SearchKeyBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.SearchKeyBtnRight { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:1px 0px 0 5px; padding:3px 8px; border-radius:3px; float:right;}
+.SearchKeyBtnRight:hover { background:#056391;color:#fff; text-decoration:none;}
+
+/****** EMR Footer *******/
+.EMR-Footer { width:100%; float:left; margin:0 0 0em; padding:0; background:#2e2d2d; border-top:solid 1px #1e1e1e; border-bottom:solid 1px #1e1e1e;}
+.EMR-Footer p { font-size:12px; text-align:left; margin:0.5em 0; padding:0; color:#b2b2b2; }
+#ctl00_ContentPlaceHolder1_chkNoAllergies { float:left; margin:0px 0 0 0; padding:0;}
+.emrSpacingLeft label { float:left; margin:5px 0 0 5px; padding:0; font-size:11px; font-weight:normal;}
+#ctl00_ContentPlaceHolder1_ddlAllergySeverity { margin:4px 0 0 6px;}
+#ctl00_ContentPlaceHolder1_editorAllergy { margin:0.5em 0 0 0;}
+#ctl00_ContentPlaceHolder1_ddlBrand {margin:0px 0 0px 8px;}
+/*#ctl00_ContentPlaceHolder1_ddlBrand_Prescriptions_Input {float:left; margin:-6px 0 -4px 3px; padding:0;}
+#ctl00_ContentPlaceHolder1_ddlFrequencyId_Input{float:left; margin:-6px 0 -4px 3px; padding:0;}
+#ctl00_ContentPlaceHolder1_ddlFoodRelation_Input{float:left; margin:-6px 0 -4px 3px; padding:0;} 
+#ctl00_ContentPlaceHolder1_ddlUnit_Input {float:left; margin:-6px 0 -4px 3px; padding:0;}
+#ctl00_ContentPlaceHolder1_ddlPeriodType_Input {float:left; margin:-6px 0 -4px 3px; padding:0;}*/
+
+#ctl00_ContentPlaceHolder1_ddlAllergySeverity { float:left; margin:-5px 0 0 0; padding:0; height:22px; border: solid 1px #B3B3B3;}
+#ctl00_ContentPlaceHolder1_gvOtherNotes_ctl02_lnkView { float:left; width:100%; text-align:center;}
+#ctl00_ContentPlaceHolder1_trChiefComplaints,
+#ctl00_ContentPlaceHolder1_trAllergies,
+#ctl00_ContentPlaceHolder1_trVitals,
+#ctl00_ContentPlaceHolder1_trHistory,
+#ctl00_ContentPlaceHolder1_trPreviousTreatment,
+#ctl00_ContentPlaceHolder1_trExamination,
+#ctl00_ContentPlaceHolder1_trNutritionalStatus,
+#ctl00_ContentPlaceHolder1_trPlanOfCare,
+#ctl00_ContentPlaceHolder1_trCostAnalysis, 
+#ctl00_ContentPlaceHolder1_trOtherNotes,
+#ctl00_ContentPlaceHolder1_trProvisionalDiagnosis,
+#ctl00_ContentPlaceHolder1_trOrdersAndProcedures,
+#ctl00_ContentPlaceHolder1_trPrescriptions,
+#ctl00_ContentPlaceHolder1_trNonDrugOrder  { float:left; margin:0 0 0em}
+#EMR-TopFirstPart { width:50% !important; float:left !important; margin:0 !important; padding:0 !important;}
+#ctl00_ContentPlaceHolder1_gvPrescriptions_ctl02_lblSDate { float:left; margin:0; padding:0; border:solid 1px #f00;}
+
+/* .inputNewRow { padding: 0px 10px !important; width: 100% !important; border: solid 1px #0099cc !important; outline: none; height: 25px !important; background: none !important;outline:none;}*/
+
+.inputNewOneColum { padding:0;}
+.paraGraphtext { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 300px;}
+.ServiceNameText {float:left; margin:0.8em 0.5em 0.3em 0; padding:0; width:102px;}
+.ServiceNameText-Div {float:left; margin:0; padding:0;}
+.ServiceNameSelect {float:left; margin:0.8em 0.5em 0.3em 0; padding:0;}
+.ServiceNameSelectOnly {float:left; margin:0.4em 0.5em 0.3em 0; padding:0; width:40%;}
+.ServiceNameSelect-Div { width:300px !important; float:left !important; margin:0 !important; padding:0 !important;}
+.ServiceInstText {float:left; margin:0.5em 0.5em 0.3em 2em; padding:0; font-size:14px;}
+.ServiceInstText-Div {float:left; margin:0; padding:0;}
+.ServiceInstInput {float:left; margin:0.3em 0.5em 0.3em 0; padding:0;}
+.ServiceInstInput-Div { width:60% !important; float:left !important; margin:0 !important; padding:0 5px !important;}
+.ServiceInstInputDivOnly {float:left; margin:0.4em 0.5em 0.3em 0; padding:0; width:37% !important;}
+
+
+/****** EMR Template Part *******/
+.emrTSpacingLeft {padding:0 0px 0 15px;}
+.emrTSpacing { padding:0 0px;}
+.emrTSpacingRight {padding:0 15px 0 0px;}
+.fullDiv { margin:0; padding:0;}
+.fullDiv-left { margin:0 0px 0 -1%; padding:0;}
+.fullDiv-right { margin:0; padding:0 0 0 0;}
+.emrTemplate { width:98%; float:left; margin:0 1% 1.3em; padding:0 0 7px; background:#fff; border:solid 1px #e1e1e1;}
+.emrTemplate-inner { width:98%; float:left; margin:5px 1% 0 1%; background:#fff;}
+.emrTemplate-inner h3 {float:left; margin:0 0 0.5em 0; padding:7px 0; color:#fff; font-size:13px; line-height:1.2em;}
+.emrTemplate-inner h2 {float:left; margin:0 0 0.5em 0; padding:7px 0; color:#353434; font-size:13px; line-height:1.2em;}
+.emrTemplate-inner h2 i { color:#fff;}
+.TemplateLabel { float:left; margin:0 0 0.5em 5px; padding:6px 8px;border:#ccc solid 1px; color:#6d6a6a; font-size:11px; width:90%;}
+.TemplateLabel i { float:right; margin:3px 0 0 0; padding:0;}
+.TemplateLabel01 { float:left; margin:0 0 0 5px; padding:6px 8px;border:#ccc solid 1px; color:#6d6a6a; font-size:11px; width:60%;}
+.TemplateLabel01 i { float:right; margin:3px 0 0 0; padding:0;}
+.AddNewRecordBtn { background:#ededed; color:#1b1a1a; font-size:12px; font-weight:500; border:none; margin:0 2px 0 8px; padding:5px 8px; border-radius:0; border:solid 1px #d6d6d6;}
+.AddNewRecordBtn:hover { background:#dcdada;color:#1b1a1a;}
+.EmrTem-box { margin:0 0 0 5em; padding:0 5px; text-align:center; border-radius:0; font-size:13px; height:29px; width:80%;} 
+.EmrTem-box:focus {box-shadow:none; border:#ccc solid 1px;}
+.EmrTem-box01 { float:left; margin:0 0 0 5px; padding:0 5px; text-align:left; border-radius:0; font-size:13px; height:29px; width:53.5%;} 
+.EmrTem-box01:focus {box-shadow:none; border:#ccc solid 1px;}
+
+.emrDiv-Green { width:99%; float:left; margin:0 1%; padding:0; background:#0eaf82;}
+.emrDiv-Green h2 { float:left; margin:0; padding:0; background:#08906a;}
+.emrDiv-Green h2 i{ font-size:20px; margin:0px 0 0 0; padding:7px 10px; color:#fff; float:left;} 
+.emrDiv-Green h3 { float:left; margin:7px 8px 0 8px; padding:0; font-size:16px; color:#fff; font-weight:bold; line-height:1.2em;}
+.emrDiv-White { width:99%; float:left; margin:0 1% 1% 1%; padding:0em 0 0 0; background:#fff;}
+.emrDiv-White h2 { font-size:13px; font-weight:normal; color:#353434; margin:0em 0 0 1.5em; padding:0;}
+.emrDiv-White h3 { float:left; margin:0em 0 0.5em 0; padding:0; width:67%; font-size:13px;}
+.emrDiv-White h3 .radio input{ float:left; margin:0 0 0 1em; padding:0;}
+.emrDiv-White h4 { float:left; margin:0em 1.5em 0 0 !important; padding:0; font-size:13px;}
+.emrDiv-White h4 .radio input{ float:left; margin:0em 0 0 1em; padding:0;}
+.borderRight {  border-left:solid 1px #ccc; float:left;}
+.Breasts { width:30%; float:left;}
+.appearanceTextarea{ float:left; margin:0 0 0 5px; padding:0 5px; text-align:left; border-radius:0; font-size:13px; height:29px;} 
+.appearanceTextarea:focus {box-shadow:none; border:#ccc solid 1px;}
+.HeightBtn { background:#ededed; color:#1b1a1a; font-size:12px; float:left; font-weight:500; border:none; margin:0em 2px 0 1.3em; padding:5px 8px; border-radius:0; border:solid 1px #d6d6d6;}
+.HeightBtn:hover { background:#dcdada;color:#1b1a1a;}
+#ctl00_ContentPlaceHolder1_lblMessage_2 { float:left; margin:0; padding:0; width:100%; height:5px;}
+
+
+/****** EMR Prescriptions Part *******/
+.PrescriptionsDiv { float:left; padding:0.3em 0 0 0; margin:0em 0 0 0; width:100%;}
+.PrescriptionsDiv01 { float:left; padding:0.5em 0 0 0; margin:0em 0 0 0; width:100%;}
+.emrPrescriptions { font-size:13px; font-weight:normal !important; float:left; color:#232323; margin:3px 5px 0 0;}
+.emrPrescriptionsDoseInput { width:18% !important; margin:0 5px 0 0 !important; float:left; padding:4px 6px 4px 6px !important; outline:none; border:solid 1px #A0A0A0;}
+.emrPrescriptions01 { font-size:13px; font-weight:normal !important; color:#232323; margin:3px 1.6em 0 0; float:left;}
+.emrPrescriptions01a { font-size:13px; font-weight:normal !important; color:#232323; margin:3px 5px 0 8px;}
+#ctl00_ContentPlaceHolder1_ddlBrand_Prescriptions { width:64% !important; margin:0 0 0 0px !important; height:25px; padding:0px 0px !important; outline:none;}
+#ctl00_ContentPlaceHolder1_ddlFrequencyId { /*width:61% !important;*/ margin:0 0 0 0px !important; height:25px; padding:0px 0px !important; outline:none;}
+.PresDurationText { width:10% !important; float:left !important; margin:0 3px 0 15px !important; text-align:left; padding:4px 6px 4px 6px !important; outline:none; border:solid 1px #A0A0A0;}
+
+#ctl00_ContentPlaceHolder1_ddlPeriodType { /*width:26% !important;*/ float:left; height:22px; margin:0 !important; padding:1px 0px !important; outline:none;}
+/* #ctl00_ContentPlaceHolder1_txtDose { width:18% !important; margin:0 3px 0 14px !important; padding:1px 6px 2px 6px !important; outline:none; border:solid 1px #A0A0A0;} */
+#ctl00_ContentPlaceHolder1_ddlUnit { /*width:35% !important;*/ margin:0 !important; height:25px; padding:1px 6px !important; outline:none;}
+#ctl00_ContentPlaceHolder1_ddlFoodRelation { /*width:68% !important;*/ float:left !important; margin:0 !important; height:25px; padding:0px 0px !important; outline:none;}
+#ctl00_ContentPlaceHolder1_txtInstructions { width:72% !important; float:left !important; margin:0 !important; height:25px; padding:3px 6px !important; outline:none; border:solid 1px #A0A0A0;}
+
+.AddListBtn { background:#0782be; color:#fff; font-size:12px; float:left; font-weight:500; border:none; margin:0 0px; padding:3px 8px 4px 8px; border-radius:3px;}
+.AddListBtn:hover { background:#056391;color:#fff;}
+
+.AddListNewBtn { background:#0782be; color:#fff; font-size:12px; float:left; font-weight:500; border:none; margin:0 0px; padding:3px 8px 4px 8px !important; border-radius:3px;}
+.AddListNewBtn:hover { background:#056391;color:#fff;}
+
+#ctl00_ContentPlaceHolder1_lblServiceName_Control { float:left; margin:0 4px 0 0; font-size:13px;}
+.FDBtn { background-size:70%; float:left;  background-color:#0782be; background-image:url(/images/Favourite-Drug.png); background-repeat:no-repeat; background-position:3px 3px; border:none; margin:0 0 0 5px; padding:2px 14px 3px 15px; border-radius:3px;}
+.FDBtn:hover { background:#056391;background-image:url(/images/Favourite-Drug.png); background-repeat:no-repeat; background-position:3px 3px;background-size:70%; }
+.AFBtn {background-size:60%; float:left;  background-color:#0782be; background-image:url(/images/Add-Favourite.png); background-repeat:no-repeat; background-position:5px 4px; border:none; margin:0 0 0 5px; padding:2px 14px 3px 15px; border-radius:3px;}
+.AFBtn:hover { background:#056391;background-image:url(/images/Add-Favourite.png); background-repeat:no-repeat; background-position:5px 4px;background-size:60%;}
+
+.DurationDaySelect { float:left !important; margin:0 3px !important; padding:0 !important; width:100% !important;}
+.DurationDayNew { float:left !important; margin:0 5px 0 0 !important; padding:0 !important; width:80px !important;}
+.BrandSelect { float:left; margin:0 0 0 0.4em; padding:0; width:82%;}
+.redFloat { float:left; color:#f00 !important;}
+.FrequencySelect { float:left; margin:0 0 0 1.1em; padding:0; width:70%;}
+.DoseSelect { float:left; margin:0 0.2em 0.5em 0; padding:0; width:62.5%;}
+.FoodRelationSelect { float:left; margin:0 0 0.5em 0.1em; padding:0; width:70.3%;}
+
+/****** EMR Search Keyword Part *******/
+.SearchKeywordDiv { float:left; padding:0.3em 0 0 0; margin:0em 0 0 0; width:100%;}
+.SearchKeywordText { float:left !important; margin:0 !important; padding:0 !important; font-size:12px !important; line-height:2em; font-weight:bold !important; color:#000 !important;}
+.SearchKeywordInput { float:left; margin:0 15px 0 12px; padding:0; outline:none; border:none;}
+.SearchKeywordInput input {padding:0 5px;outline:none;}
+.searchKeywordTopPart { width:96%; float:left; margin:0 2% 0.5em 2%; padding:0;}
+.searchKeywordTable { width:96%; float:left; margin:0 2%; padding:0;}
+.searchKeywordTable table tr th { color:#000; padding:0 0 0 10px;}
+.searchKeywordTable table tr td { border-bottom: solid 1px #ccc; border-left: solid 1px #ccc; border-right: solid 1px #ccc; height: 15px; padding: 3px 8px 4px 8px;}
+#lstTypeList tr th { border:solid 1px #ccc;}
+
+
+/****** EMR Visit History Part *******/
+.VisitHistoryDiv { float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%; background-color:#C1E5EF;}
+/*
+.VisitHistoryBorder { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 0 0; width:100%; background-color:#fff;border-bottom: solid 1px #ccc;}
+ */
+.VisitHistoryBorderNew { float:left; padding:0em 0 0em 0; margin:0em 0 0 0; width:100%; background-color:#fff;}
+
+.VisitHistoryBorder { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 0 0; width:100%; background-color:#fff;border-bottom: solid 1px #ccc;}
+.VisitHistoryTopBorder { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 0 0; width:100%; background-color:#fff;border-top: solid 1px #ccc;}
+.VisitHistoryDivText {float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%;overflow:auto;}
+.VisitHistoryDivText h2 { font-size:13px; color:#232323; font-weight:500; float:left; line-height:1.5em; margin:5px 0 0; padding:0;}
+.VisitTopDiv { width:100%; float:left; margin:1em 0 0 0; padding:0;}
+.VisitTopDiv01 { width:100%; float:left; margin:0.5em 0 0 0; padding:0;}
+.VisitTopDiv01a { width:100%; float:left; margin:0.1em 0 0 0; padding:0;}
+
+.VisitUHID { width:65px; float:left; margin:0; padding:0; line-height:2.2em}
+.VisitUHID a { text-decoration:none; color:#232323; font-size:12px;}
+#ctl00_ContentPlaceHolder1_txtRegNo { width:265px; float:left; padding:5px; font-size:12px; height:23px; color:#000; letter-spacing:2px;}
+#ctl00_ContentPlaceHolder1_ddlSource_Input { float:left; margin:-4px 0 0 0;}
+#ctl00_ContentPlaceHolder1_ddlProvider_Input { float:left; margin:-4px 0 0 0; width:250px;}
+#ctl00_ContentPlaceHolder1_ddlrange_Input { float:left; margin:-4px 0 0 0; width:247px;}
+#ctl00_ContentPlaceHolder1_Lable1  { float:left; margin:-5px 0 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_gvPatientHistory { outline:none;}
+.VisitHistoryDate { width:65px; float:left; margin:0; padding:0; line-height:2.2em; font-size:12px;}
+.VisitHistoryDate01 { width:65px; margin:0; padding:0; line-height:2.2em; font-size:12px;}
+.VisitHistoryDateInput { padding:2px 5px; height:20px;}
+#ctl00_ContentPlaceHolder1_dtpfrmdate {font-size:12px;}
+
+.rgHeader { color:#000 !important; font-size:13px !important; font-weight:normal !important;  padding:0 !important; margin:0 !important;}
+.rgHeader th label { color:#000 !important; font-size:13px !important; font-weight:normal !important; padding:0 !important; margin:0 !important; }
+.rgMasterTable {}
+.rgHeaderOver input { float:left; margin:0;}
+
+
+
+/****** EMR Part (Word Processor) *******/
+.WordProcessorDiv { float:left; padding:0.2em 0; margin:0em 0 0 0; width:100%; background-color:#C1E5EF;}
+.WordProcessorDivText {float:left; padding:0em 0 0 0; margin:0em 0 0 0;}
+.WordProcessorDivText h2 { font-size:13px; color:#232323; font-weight:500; float:left; line-height:2.2em; margin:0; padding:0;}
+.WordProcessorDivText h3 {float:left; margin:0 0 0 0; padding:0;}
+.WordProcessorDivText h4 {float:left !important; margin:0 0 0 0 !important; padding:0 !important; width:100% !important;}
+.WordProcessorDivText h4  #ctl00_ContentPlaceHolder1_lblMessage { width:100% !important; float:left !important; margin:0 !important; padding:0 !important;}
+.WordProcessorDivText h5 {float:left !important; margin:0.7em 0 0 0 !important; padding:0 !important; width:100% !important;}
+.WordProcessorDivText h5  #ctl00_ContentPlaceHolder1_lblMessage { width:100% !important; float:left !important; margin:0 !important; padding:0 !important;}
+
+.WordProcessorDivText01 {float:left; padding:0em 0 0 0; margin:0em 0 0 0;}
+.WordProcessorDivText01 h2 { font-size:13px; color:#232323; font-weight:bold; float:left; line-height:2.2em; margin:0 5px 0 0; padding:0;}
+.WordProcessorDivText01 h3 {float:left; margin:3px 0 0 0; padding:0;}
+
+.WordProcessorDivText02 {float:right; padding:0em 0 0 0; margin:0.5em 0 0 0;}
+
+
+#ctl00_ContentPlaceHolder1_ddlReport { float:left; margin:3px 0 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_ddlReport_Input { float:left; margin:-4px 0 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_ddlTemplatePatient_Input { float:left; /*margin:-4px 0 0 0; padding:0;*/}
+#ctl00_ContentPlaceHolder1_RTF1 { float:left !important; width:100% !important; height:403px !important; margin:0 !important; padding:0 !important;}
+.emrWPDate { float:left; margin:0.5em 0 0.6em 0; padding:0;}
+#ctl00_ContentPlaceHolder1_txtFromDate_wrapper { float:left; width:90px; margin:0; padding:0;}
+.emrWPCheckBox { float:left; margin:0.5em 0 0.6em 0; padding:0;}
+.emrWPCheckBox input { float:left; margin:-10px 0 0 0; padding:0;}
+.emrWPCheckBox label { float:left; margin:-5px 0 0 0; padding:0; font-weight:bold;}
+#ctl00_ContentPlaceHolder1_ddlTemplatePatient { width:180px; float:left; margin:2px 0 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_Label2 { float:none!important; margin:0px!important; padding:0; font-size:12px;}
+#ctl00_ContentPlaceHolder1_Label4, #ctl00_ContentPlaceHolder1_Label6  { font-size:12px;float:left; margin:3px 1px 0 0; padding:0; }
+
+.emrWPDate #ctl00_ContentPlaceHolder1_lblMessage { float:left; margin:2% 0 0; padding:0; font-size:13px; text-align:center; font-weight:bold; width:100%; position:absolute; z-index:9999;}
+
+/****** EMR Part (Immunization Due Date) *******/
+.SearchKeyBtn01 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:5px 0px 0 5px; padding:3px 8px; border-radius:3px; float:right;}
+.SearchKeyBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+.SearchKeyBtn01a { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:3px 0px 3px 5px; padding:3px 8px; border-radius:3px; float:right;}
+.SearchKeyBtn01a:hover { background:#056391;color:#fff; text-decoration:none;}
+.SearchKeyBtn01b { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 0 5px !important; padding:3px 8px !important; border-radius:3px; float:left !important;}
+.SearchKeyBtn01b:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.ImmunizationDD-Div { float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%;}
+.ImmunizationDD-Div img { width:100% !important; float:left !important; margin:0 !important; padding:0 !important;}
+.ImmunizationDOB-Div { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 0 0; width:100%;}
+.ImmunizationDOB { float:left !important; margin:3px 15px 0 0 !important; padding:0; font-size:12px !important; font-weight:500 !important; color:#232323 !important;} 
+.ImmunizationDOB01 { float:left !important; margin:3px 15px 0 0 !important; padding:0 !important; font-size:12px !important; font-weight:normal !important; color:#232323 !important;} 
+.ImmunizationCancellation { width:60%; float:left; margin:0; padding:0 5px ; height:25px; outline:none;}
+.ImmunizationRemark { width:100%; float:left; margin:0; padding:0 5px ; height:25px; outline:none;}
+.ImmunizationDD-DivTable { float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%; height: 530px; overflow: auto; border-top:solid 1px #ccc; border-bottom:solid 1px #ccc;}
+.ImmunizationDD-DivTable01 { float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%;}
+.ImmunizationColor { float:left; padding:0em 0 0 0; margin:0.8em 0 0 0; width:100%;}
+.ImmunizationGreen { float:left !important; margin:3px 1px 0 0 !important; background-color:#90EE90; padding:3px 7px !important; font-size:13px !important; font-weight:normal !important; color:#232323 !important;} 
+.ImmunizationSkyBlue  { float:left !important; margin:3px 1px 0 0 !important; background-color:#00FFFF; padding:3px 7px !important; font-size:13px !important; font-weight:normal !important; color:#232323 !important;} 
+.ImmunizationSkyGreen { float:left !important; margin:3px 1px 0 0 !important; background-color:#ADFF2F; padding:3px 7px !important; font-size:13px !important; font-weight:normal !important; color:#232323 !important;}
+.ImmunizationDDPopup {float:left; padding:0.2em 0 0.5em 0; margin:0em 0 0 0;}
+.ImmunizationDDPopup h2 { font-size:14px; color:#232323; font-weight:bold; float:left; line-height:2.2em; margin:0 0 0 0; padding:0;}
+.ImmunizationSpacing { float:left; margin:0; padding:0.8em 0 0 0; width:100%;}
+.ImmunizationFacility { float:left; margin:0; padding:0.8em 0 0em 0; width:100%;}
+.ImmunizationFacility h2 {font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.4em; margin:0; padding:0; width:20%;}
+.ImmunizationFacility h3 { float:left; margin:0; padding:0; width:80%;font-size:13px; color:#232323;}
+.ImmunizationFacility h3 input { outline:none; padding:1px 5px;}
+.ImmunizationFacility h3 textarea { outline:none; padding:2px 5px; border:solid 1px #A7A7A7;}
+.ImmunizationFacility h4 {font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.4em; margin:0; padding:0; width:100%;}
+
+
+
+
+/****** EMR Part (Vital History) *******/
+.VitalMessageText { float:left !important; margin:-2.1em 0 0 8em !important; padding:0 !important; width:82% !important; text-align:center !important;}
+.TopMessageText { float:left !important; margin:-3.1em 0 0 2em !important; padding:0 !important; width:100% !important; text-align:center !important;}
+.TopMessageText span {width:100% !important; text-align:center !important;float:left !important; padding:0 !important;}
+
+.VitalHistory-Div { float:left; padding:1em 0 0 0; margin:0; width:100%;}
+.VitalHistory-Div01 { float:left; padding:0.1em 0 0 0; margin:0; width:100%;}
+.VitalHistory-Div02 { float:left; padding:0.5em 0 0 0; margin:0; width:100%; background-color:#fff;}
+
+.VitalText{ font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0 10px 0 0; padding:0;}
+.VitalDropdown { float:left; margin:0; padding:0; width:60%;}
+.VitalDateText{ font-size:13px; color:#232323; font-weight:normal; line-height:1.6em; margin:0 10px 0 0; padding:0;}
+p.VitalTextCheck { float:left; line-height:1.6em; margin:0 10px 0 0; padding:0;}
+p.VitalTextCheck input { float:left !important; margin:5px 5px 0 0 !important; padding:0 !important;}
+p.VitalTextCheck label { float:left !important; margin:0 !important; padding:0 !important;font-size:13px; color:#232323; font-weight:normal; }
+.SearchKeyBtn02 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 0 5px; padding:3px 8px; border-radius:3px; float:right;}
+.SearchKeyBtn02:hover { background:#056391;color:#fff; text-decoration:none;}
+
+
+/****** EMR Part (Past Clinical Notes) *******/
+.PCNViewText01 { font-size:13px; color:#232323; font-weight:bold; float:left; line-height:1.6em; margin:0 30px 0 0; padding:0;}
+.PCNViewText { font-size:13px; color:#232323; font-weight:bold; float:left; line-height:0.85em; margin:0 10px 0 0; padding:0;}
+.PCNText { font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0 10px 0 0; padding:0;}
+.PCNText input { float:left !important; margin:5px 5px 0 0 !important; padding:0 !important;}
+.PCNText label { float:left !important; margin:0px 5px 0 0 !important; padding:0 !important;font-size:13px; color:#232323; font-weight:normal;}
+.PCN-EMRDiv {padding:0em 0 0.5em 0; margin:0em 0 0 0;}
+.PCN-EMRDivRight {padding:0.2em 15px 0.5em 5px; margin:0em 0 0 0;}
+.PCN-EMRDivLeft {padding:0.2em 5px 0.5em 15px; margin:0em 0 0 0;}
+.PCNDiv { float:left !important; padding:0em 0 0 0 !important; margin:0em 0 0 0 !important; width:100% !important;}
+
+
+
+/****** EMR Part (Attachment) *******/
+.EMRUHID { float:left; margin:0; padding:0; font-size:13px;color:#232323; width:100%;}
+.EMRUHIDBtn { color:#0074AD; font-size:12px; font-weight:normal; border:none; margin:4px 0px 0 0px; padding:4px 8px; float:left;}
+.EMRUHIDBtn:hover { color:#0074AD; text-decoration:none;}
+.EMRUHID input { float:left; margin:4px 0px 4px 5px; padding:2px 5px 2px 5px; width:70%; font-size:12px; color:#232323; outline:none;}
+.EMRDocuments { float:left; margin:0; padding:0.2em 0 0em 1em; font-size:13px; color:#232323; font-weight:normal;line-height:1.4em;}
+.EMRDocuments input { margin:0.3em 0.5em 0 0.5em; float:left;}
+
+.EMRList { float:left; margin:0; width:100%; border-top:solid 1px #ccc; padding:0.2em 0 0em 1.5em; font-size:11px; color:#232323; font-weight:normal;line-height:1.4em;}
+.EMRUploadDiv { float:left; padding:1em 0 0 0; margin:0em 0 0 0; width:100%;}
+.EMRUploadDiv h2 { float:left; margin:0 0 0 0; padding:0; font-size:13px; line-height:1.6em; color:#232323; width:100px;}
+.EMRUploadDiv h3 { float:left; margin:0 0 0 0; padding:0; font-size:13px; line-height:1.6em; color:#232323; width:100%;}
+.EMRUploadDiv h4 { float:left; margin:0; padding:0; width:22%;}
+.EMRUploadDiv h4 input { float:left; margin:0; padding:0 3px; outline:none; width:100% !important;}
+
+.EMRUploadDiv select { float:left; margin:0; padding:0; outline:none; width:250px !important;}
+.EMRUploadDiv input { float:left; margin:0; padding:0 3px; outline:none; width:250px !important;}
+.EMRUploadDiv01 { float:left; padding:1em 0 0.5em 0; margin:0em 0 0 0; width:100%;}
+.EMRUploadDiv01 h2 { float:left; margin:0 0 0 0; padding:0; font-size:13px; line-height:1.6em; color:#232323; width:100px;}
+.EMRUploadDiv01 h3 { float:left; margin:0 8px 0 8px; padding:0; font-size:13px; line-height:1.7em; color:#232323;}
+.EMRUploadDiv01 select { float:left; margin:0; padding:0; outline:none; width:100px !important;}
+.EMRUploadDiv01 input { float:left; margin:0; padding:0 3px; outline:none; width:88px !important;}
+
+.EMRDateDiv { float:left; margin:0; padding:0 3px; outline:none; width:100px !important;}
+.SearchKeyBtn03 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:8px 0px 0 0px; padding:3px 8px; border-radius:3px; float:left;}
+.SearchKeyBtn03:hover { background:#056391;color:#fff; text-decoration:none;}
+.SearchCloseBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:5px 0px 5px 5px; padding:3px 8px; border-radius:3px; float:right;}
+.SearchCloseBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.GrowthChart { width:100% !important; float:left; margin:5px 0 8px 0; padding:0;}
+.GrowthChart-Text {width:100% !important; float:left; margin:5px 0 8px 0; padding:0;}
+.GrowthChart-Textlabel { float:left; margin:0 0 0 0; padding:0; font-size:13px; line-height:1.6em; color:#232323; width:10%;}
+.GrowthChartInput { float:left; margin:0; padding:0 3px; outline:none; width:90% !important;}
+.FilterBtn { background:#0782be; color:#fff; font-size:12px; float:left; font-weight:500; border:none; margin:3px 0px 6px 4px; padding:3px 8px 4px 8px; border-radius:3px;}
+.FilterBtn:hover { background:#056391;color:#fff;}
+.PatientAlergyDiv {float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%;}
+.PatientAlergyDivClose {float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:40%;}
+
+
+/****** Find Patient (EMR) *******/
+.findPatientText { font-size: 12px; width:82px; color: #232323; font-weight: normal; float: left; line-height: 1.6em; margin: 0 0px 0.5em 0; padding: 0;}
+.findPatientSelect { width:64% !important; float:left !important; margin:0 0 0.5em 0 !important; padding:0 !important;}
+.findPatientSelect-Mobile { width:32% !important; float:left !important; margin:0 0 0.5em 0 !important; padding:0 !important;}
+.findPatientSelect-Small { width:30%; float:left; margin:0; padding:0;}
+.findPatientInput-Mobile { width:30% !important; float:left !important; margin:0 0 0.5em 5px !important; padding:3px 5px !important; outline:none; font-family: arial, verdana, helvetica, sans-serif; border: 1px solid #C5C4C4; color: #232323; vertical-align: middle; background: White; font-size: 11px;}
+.findPatientRadio { float:left; margin:0; padding:0;}
+.findPatientRadio input { float:left; margin: 0 0 0em 3px; padding:0;}
+.findPatientRadio label { font-size: 12px; color: #232323; font-weight: normal; float: left; line-height: 1.6em; margin: 0 10px 0em 4px; padding: 0;}
+
+#ctl00_fp1_rblSearchCriteria_0 { float:left}
+#ctl00_fp1_ddlLocation { width:100% !important; float:left !important; margin:0 0 0.5em 0 !important; padding:0 !important;}
+#ctl00_fp1_ddlrange { width:100% !important; float:left !important; margin:0 0 0.5em 0 !important; padding:0 !important;}
+#ctl00_fp1_ddlSpecilization { width:100% !important; float:left !important; margin:0 0 0.5em 0 !important; padding:0 !important;}
+#ctl00_fp1_ddlProvider { width:100% !important; float:left !important; margin:0 0 0.5em 0 !important; padding:0 !important;}
+#ctl00_fp1_ddlAppointmentStatus { width:100% !important; float:left !important; margin:0 0 0.5em 0 !important; padding:0 !important;}
+.FPKeyBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 10px 0 0px; padding:4px 8px; border-radius:3px; float:left;}
+.FPKeyBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.findPatientShowingText { font-size: 12px; width:100%; color: #232323; font-weight: normal; float: left; line-height: 1.6em; margin: 0 0px 0em 0; padding: 0;}
+
+
+
+
+.PatientBtn01 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:5px 0px 5px 5px; padding:3px 8px; border-radius:3px; float:right;}
+.PatientBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+.PatientBtn01a { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:5px 0em 5px 5px; padding:3px 8px; border-radius:3px; float:right;}
+.PatientBtn01a:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.PatientBtn02 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:5px 0px 5px 5px; padding:3px 8px; border-radius:3px; float:left;}
+.PatientBtn02:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.PatientBtn03 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 5px; padding:5px 8px !important; border-radius:3px; float:right;}
+.PatientBtn03:hover { background:#056391;color:#fff; text-decoration:none;}
+.PatientBtn03a { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 5px; padding:5px 8px !important; border-radius:3px; float:right;}
+.PatientBtn03a:hover { background:#056391;color:#fff; text-decoration:none;}
+.PatientBtn03b { background:#86B547; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 0px; padding:3px 8px !important; border-radius:3px; float:left;}
+.PatientBtn03b:hover { background:#6D9438;color:#fff; text-decoration:none;}
+.PatientBtn04 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 5px; padding:5px 8px !important; border-radius:3px; float:right !important; width:58px !important;}
+.PatientBtn04:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.PatientMessageText { float:left !important; margin:0.4em 0 0 0em !important; padding:0 !important; width:100% !important; text-align:center !important;}
+
+.PatientHistoryDiv { float:left; margin:0 2px 0.7em 0em; padding:0; width:55.5%;}
+.PatientHistoryDiv h2 { float:left; margin:0 7px 0 0; padding:0; font-size: 13px; color: #232323; font-weight: bold; line-height: 1.5em;}
+.PatientHistoryDiv h3 { float:left; margin:0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important;}
+.PatientHistoryDiv h3 input {float:left; margin:4px 0 0 0 !important; padding:0; font-size: 12px; color: #232323; width:13px !important; height:13px !important;}
+.PatientHistoryDiv h3 label { float:left; margin:0 -2px; padding:0; font-size: 12px; color: #232323; font-weight: normal; line-height: 1.6em;}
+.PatientHistoryDiv h4 { float:left; margin:0 0px 0 0px !important; padding:0; font-size: 12px; color: #232323 !important; font-weight: bold !important; line-height: 1.5em; border:none !important;}
+.PatientHistoryDiv h5 { float:left; margin:3px 0px 0 0px !important; padding:0; font-size: 12px; color: #232323 !important; font-weight: bold !important; line-height: 1.2em; border:none !important;}
+.PatientHistoryDiv h6 { float:left; margin:0 1px 0 1px !important; padding:0; border:none !important;}
+
+
+.PatientHistoryDiv01 { float:left; margin:0 0 0.7em 0; padding:0;}
+.PatientHistoryDiv01 h2 { float:left; margin:0 5px 0 0; padding:0; font-size: 13px; color: #232323; font-weight: normal; line-height: 1.5em;}
+.PatientHistoryCheckBox { width:13px !important; height:13px !important; float:left !important; margin:-4px 0 0 0 !important; padding:0 !important; font-size: 12px !important;}
+.PatientHistoryCheckBox input { width:13px !important; height:13px !important; float:left !important; margin:0.4em 3px 0 3px !important; padding:0 !important; font-size: 12px !important;}
+.PatientHistoryCheckBox01 { width:13px !important; height:13px !important; float:left !important; margin:-2px 0 0 0 !important; padding:0 !important; font-size: 12px !important;}
+.PatientHistoryCheckBox01 input { width:13px !important; height:13px !important; float:left !important; margin:0.4em 3px 0 3px !important; padding:0 !important; font-size: 12px !important;}
+.PatientHistoryCheckText { float:left !important; margin:-13px 0 0 17px !important; padding:0 !important; font-size: 13px;  width:88%;}
+.PatientHistoryCheckText01 { float:left !important; margin:2px 0 0 5px !important; padding:0 !important; font-size: 13px;}
+.PatientHistoryDiv02 { float:left; margin:0 0 0em 6px; padding:0; width:12%;}
+.PatientPopHeight { float:left; margin:0; padding:5px 0 5px 5px !important; width:100%;}
+.PatientHistoryDiv03 { float:left; margin:0 0 0.7em 0; padding:0; width:17%;}
+.PatientHistoryDiv03 h3 { float:left; margin:0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important;}
+.PatientHistoryDiv03 h3 input {float:left; margin:4px 0 0 0 !important; padding:0; font-size: 12px; color: #232323; width:12px !important; height:12px !important;}
+.PatientHistoryDiv03 h3 label { float:left; margin:-15px -1px 0 17px; padding:0; font-size: 11px; color: #232323; font-weight: normal; line-height: 1.6em; width:80px;}
+
+
+.PatientHistoryText01 { width:100%; float:left; margin:0 0 0.5em; padding:0;}
+.PatientHistoryText01 h2 { float:left; margin:0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; width:88px; line-height:1.6em;}
+.PatientHistoryText01 h3 { float:left; margin:0; padding:0;}
+.PatientHistoryText01 h4 { float:left; margin:0; padding:0;}
+
+.PatientHistoryText01a { width:100%; float:left; margin:0 0 0.5em; padding:0;}
+.PatientHistoryText01a h2 { float:left; margin:0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; width:121px;}
+.PatientHistoryText01a h3 { float:left; margin:0; padding:0;}
+.PatientHistoryText01a h4 { float:left; margin:0; padding:0;}
+.PatientHistoryText01b { width:100%; float:left; margin:0 0 0.5em; padding:0;}
+.PatientHistoryText01b h2 { float:left; margin:0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; width:71px; line-height:1.6em;}
+.PatientHistoryText01b h3 { float:left; margin:0; padding:0;}
+.PatientHistoryText01b h4 { float:left; margin:0; padding:0;}
+
+.PatientHistoryText02 { width:100%; float:left; margin:0 0 0.5em; padding:0;}
+.PatientHistoryText02 h2 { float:left; margin:0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; width:125px;}
+.PatientHistoryText02 h3 { float:left; margin:0; padding:0;}
+.PatientHistoryText02 h3 input { float:left; margin:0 3px 0 0; padding:3px 5px; outline:none; font-size:12px;}
+.PatientHistoryText02 h4 { float:left; margin:0; padding:0;}
+
+.PatientHistoryLeft { width:250px; float:left; margin:0 3px 0 10px; padding:2px 0 0; border:solid 1px #EFF0F1; min-height:424px; max-height:300px; background: #F3F9FB;}
+.PatientHistoryImg {float:left; margin:0 2% 0 2%; padding:0;}
+.PatientHistoryRight { max-width:1010px;float:left; margin:0; padding:0;  /*border:solid 1px #CECECE; EAF4F7 background: #EAF4F7;*/  }
+.borderNone {border:0px solid #fff !important;}
+
+.YellowBorder { border:solid 1px #E8E8E0;}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {position: absolute; margin-top: 4px\9; margin-left: 0px !important; margin-top: 2px !important;}
+input[type=checkbox], input[type=radio] { margin: 4px 0 0; margin-top: 1px\9; line-height: normal; float: left;}
+.checkbox label, .radio label { min-height: 20px; padding-left: 20px; margin-bottom: 0; font-weight: 400; cursor: pointer; margin-right: 10px;}
+
+
+
+
+/****** Lab Results (EMR) *******/
+.LabResultsDiv {width:100%; float:left; margin:0 0 0.5em; padding:0;}
+.LabResultsDiv h2 { float:left; margin:0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; width:102px; line-height:1.7em;}
+.LabResultsDiv h3 { float:left; margin:0; padding:0;}
+.LabResultsDiv h4 { float:left; margin:0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; }
+.LabResultsDiv h5 { float:left; margin:0; padding:0;}
+
+.LabResultsDiv01 {width:100%; float:left; margin:0 0 0.5em; padding:0;}
+.LabResultsDiv01 h2 { float:left; margin:0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; width:102px; line-height:1.7em;}
+.LabResultsDiv01 h3 { float:left; margin:-0.2em 0 0 0; padding:0;}
+
+.LabResultsDiv01a {width:100%; float:left; margin:0 0 0.5em; padding:0;}
+.LabResultsDiv01a h2 { float:left; margin:0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; width:75px; line-height:1.7em;}
+.LabResultsDiv01a h3 { float:left; margin:-0.2em 0 0 0; padding:0;}
+
+
+.LabResultsDiv02 {width:100%; float:left; margin:0 0 0.5em; padding:0;}
+.LabResultsDiv02 h2 { float:left; margin:0em 5px 0 0px; padding:0;}
+.LabResultsDiv02 h3 { float:left; margin:0 0 0 0px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important;}
+.LabResultsDiv02 h4 { float:left; margin:0 0 0 2px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.7em;}
+
+.LabResultsDiv02 h5 { float:left; margin:0em 0px 0 0px; padding:0;}
+.LabResultsDiv02 h5 span input { float:left; margin:0em 5px 0 5px; padding:0;}
+.LabResultsDiv02 h5 span label { float:left; margin:0 0 0 19px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.4em;}
+
+.LabResultsDiv02 h6 { float:left; margin:0.1em 0px 0 13px; padding:0;}
+.LabResultsDiv02 h6 span input { float:left; margin:0em 0px 0 0px; padding:0;}
+.LabResultsDiv02 h6 span label { float:left; margin:0 0 0 19px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.4em;}
+
+.LabResultsDivDate { float:left; margin:0 0 0.5em; padding:0;}
+.LabResultsDivDate h2 { float:left; margin:0 3px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; }
+.LabResultsDivDate h3 { float:left; margin:0 0px 0 0; padding:0; font-size: 13px !important;}
+
+.pastClinicalRadio { float:left; margin:0.3em 0 0 0; padding:0;}
+.pastClinicalRadio input { float:left !important; margin:0em 2px 0 1px !important; padding:0 !important;}
+.pastClinicalRadio label { float:left !important; margin:-4px 4px 0 0px !important; padding:0 !important; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.4em;}
+
+.LabResultsCheckBox { width:200px; float:left; margin:0; padding:0;}
+
+
+
+
+
+/****** Patient Complaint(s) (EMR) *******/
+.PatientLeftPart { width:100%; float:left; margin:0.6em 0 0; padding:0;}
+.PatientLeftPart h2 { float:left; margin:0 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; }
+.PatientLeftPart h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PatientLeftPart h3 input { float:left; margin:0 5px 0 0; padding:2px 5px; outline:none; font-size:13px; width:145px;}
+.PatientLeftPartTable { width:100%; float:left; margin:0.5em 0 0 0; padding:0;}
+
+.PatientCenterPart { width:100%; float:left; margin:0.6em 0 0; padding:0;}
+.PatientCenterPart h2 { float:left; margin:0 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; }
+.PatientCenterPart h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PatientCenterPart h4 { float:left; margin:0em 0 0 0; padding:0;}
+.PatientCenterPart01 { width:100%; float:left; margin:0; padding:0;}
+.PatientCenterPart01 h2 { float:left; margin:0 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; }
+.PatientCenterPart01 h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PatientCenterPart01 h4 { float:left; margin:-0.1em 0 0 0.2em; padding:0;}
+
+.PatientCenterPart02 { width:100%; float:left; margin:1.5em 0 0 0; padding:0; border:solid 1px #888;}
+.PatientCenterPart02 legend { float:left; font-size: 18px !important; color: #232323 !important; font-weight:500 !important; border-bottom:none; margin:-14px 7px 0 7px; padding:0 6px 0; line-height:1.6em; width:20%;}
+.PatientCenterPart02 h3 { float:left; margin:0.2em 0 0 0; padding:0 3%; width:100%;}
+.PatientCenterPart02 h3 input { float:left; margin:0; padding:0;}
+.PatientCenterPart02 h3 label { float:left; margin:0 5px; padding:0; font-size:12px; font-weight:normal;}
+.PatientCenterPart02 h4 { float:left; margin:0.8em 0 0 0; padding:0 3%; width:100%;}
+.PatientCenterPart02 h4 input { float:left; margin:0 0px; padding:0;}
+.PatientCenterPart02 h4 label { float:left; margin:0 5px; padding:0; font-size:11px; font-weight:normal;}
+.PatientCenterPart02 h5 { float:left; margin:1.5em 0 0 0; padding:0 3%; width:100%;}
+.PatientCenterPart02 h5 input { float:left; margin:0 0px; padding:0;}
+.PatientCenterPart02 h5 label { float:left; margin:0 5px; padding:0; font-size:12px; font-weight:normal;}
+.PatientCenterPart03 { width:100%; float:left; margin:0.5em 0 0 0; padding:0;}
+.PatientCenterPart03 a { float:left; margin:7px 0 0 0; padding:0; font-size:12px;}
+.ajax__tab_xp .ajax__tab_body { padding:0 !important;}
+
+.PatientRightPart { width:100%; float:left; margin:0.6em 0 0; padding:0;}
+
+.PatientChiefPop { width:100%; float:left; margin:0 0 5px; padding:0;}
+.PatientChiefPop h2 { float:left; margin:4px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.PatientChiefPop h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PatientChiefPop h4 { float:left; margin:0em 0 0 0; padding:0;}
+.PatientChiefPop h4 input { float:left; margin:0.4em 0 0 0; padding:0;}
+.PatientChiefPop h5 { float:left; margin:10px 5px 0 0; padding:0; font-size: 13px !important; color: #003399 !important; font-weight:bold !important; line-height:1.6em;}
+.PatientChiefPopInput { width:200px; height:25px; float:left; margin:0; padding:5px; border:solid 1px #B7D6DE; font-size:12px; color: #232323;font-weight:bold; outline:none;}
+
+
+
+.PatientChiefPop01 { width:100%; float:left; margin:0 0 5px; padding:0;}
+.PatientChiefPop01 h2 { float:left; margin:4px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.PatientChiefPop01 h3 { float:left; margin:0em 0 0 0; padding:0; width:180px;}
+.PatientChiefPop01 h4 { float:left; margin:-0.3em 0 0 0; padding:0;}
+.PatientChiefPop01 h4 input { float:left; margin:0.4em 0 0 0; padding:0;}
+.PatientChiefPop01 h6 { float:left; margin:-0.4em 0 0 0; padding:0;}
+.PatientChiefPop01 h6 input { float:left; margin:0.4em 0.2em 0 0; padding:0;}
+    
+/****** Health Check Up Summary (EMR) *******/
+.PaddingRightSpacing { padding:0 0 0 15px;}
+.PaddingLeftSpacing { padding:0 15px 0 0;}
+.PaddingSpacing { padding:0 0 0;}
+
+.PatientLabBtn01 { background:#007bff; color:#fff; font-size:12px; font-weight:500; border-color:#007bff; border:1px solid transparent; margin:5px 0px 5px 3px; padding:3px 8px; border-radius:3px; float:right;}
+.PatientLabBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+.PatientLabBtn02 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:3px 0px 5px 3px; padding:3px 8px; border-radius:3px; float:right;}
+.PatientLabBtn02:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.PatientLabBtn03 { background:#0782be; color:#fff; font-size:12px !important; font-weight:500; border:none; margin:3px 0px 5px 3px; padding:4px 8px; border-radius:3px; float:left;}
+.PatientLabBtn03:hover { background:#056391;color:#fff; text-decoration:none;}
+
+
+.EMR-HealthPreparedBorder { float:left; padding:0.2em 0 0.2em 0; margin:0em 0 0 0; width:100%; background-color:#fff;}
+.EMR-HealthPrepared { width:100%; float:left; margin:0 0 5px; padding:0;}
+.EMR-HealthPrepared h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.EMR-HealthPrepared h3 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.EMR-HealthPreparedMessage { float:left !important; width:100% !important; margin:0 !important; padding:0 !important; position:relative; z-index:-9999;}
+.EMR-HealthPrepared h4 span { float:left !important; margin:100% !important; margin:0 !important; padding:0 !important;} 
+
+
+.LabbgTopText-Message {float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%; text-align:center;}
+.LabbgTopText-Message h2 { font-size:13px; color:#232323; font-weight:bold !important; float:left; line-height:1.6em; margin:0 5px 0 0; padding:0; text-align:center; width:100%;}
+.LabbgTopText-Message h2 #ctl00_ContentPlaceHolder1_lblMessage { width:100% !important; float:left !important; margin:0 !important; padding:0 !important;}
+.LabbgTopText-Message01 {float:left; padding:0em 0 0 0; margin:0em 0 0 0;text-align:center;}
+.LabbgTopText-Message01 h2 { font-size:12px !important; color:#232323; font-weight:bold !important; float:left; line-height:1.6em; margin:0 5px 0 0; padding:0; text-align:center; width:100%;}
+.LabbgTopText-Message01 h2 #ctl00_ContentPlaceHolder1_lblMessage { width:100% !important; float:left !important; font-size:12px !important; margin:0 !important; padding:0 0 !important;}
+.HealthCheckupPage { position:relative !important; z-index:9999 !important;}
+
+
+.EMR-HealthCheck { width:100%; float:left; margin:0px 0 5px; padding:0;}
+.EMR-HealthCheck h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:110px;}
+.EMR-HealthCheck h3 { float:left; margin:0em 0 0 0; padding:0;}
+.EMR-HealthCheck h4 { float:left; margin:0em 0 0 0; padding:0;font-size: 13px !important;}
+.EMR-HealthCheck h4 select { width:140px; float:left; margin:0; padding:0; height:24px;}
+.EMR-HealthCheck h4 input { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:0px 0px 5px 5px; padding:5px 8px; border-radius:3px; float:right;}
+.EMR-HealthCheck h4 input:hover { background:#056391;color:#fff; text-decoration:none;}
+.EMR-HealthCheck h5 { float:left; margin:0px 5px 0 8px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:78px;}
+
+.EMR-HealthCheckBox { width:100%; float:left; margin:0 0 5px; padding:0;}
+.EMR-HealthCheckBox h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.EMR-HealthCheckBox h2 input { float:left; margin:4px 4px; padding:0;}
+.EMR-HealthCheckBox h2 label { font-weight:normal;}
+.EMR-HealthCheckBox h3 { float:left; margin:0em 0 0 0; padding:0;}
+
+.EMR-HealthCheckBox01 { width:100%; float:left; margin:0 0 5px; padding:0;}
+.EMR-HealthCheckBox01 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:55px;}
+.EMR-HealthCheckBox01 h3 { float:left; margin:0em 0 0 0; padding:0;}
+.EMR-HealthCheckBox01 h5 { float:left !important; margin:0 5px 0 0 !important; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+
+
+
+.EMR-HealthCheckBox02 { float:left; margin:0.8em 0 0 0; padding:0; width:100%;}
+
+
+/*
+.HealthBox { width:100%; float:left; margin:0; padding:0;}
+.HealthBox .patientDiv .patientDiv-Photo { float:left; margin:0 0 0 1em; padding:0em 0em;}
+.HealthBox .patientDiv-Table { width:90%; float:left; margin:0; padding:0;}
+*/
+
+/****** Discharge Summary (EMR) *******/
+.PatientDisBtn01 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:5px 0px 5px 2px; padding:4px 8px; border-radius:3px; float:right;}
+.PatientDisBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+.PatientDisBtn02 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:3px 0px 5px 3px; padding:4px 8px; border-radius:3px; float:left;}
+.PatientDisBtn02:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.EMR-DischargeSumBox01 { width:100%; float:left; margin:0 0 5px; padding:0;}
+.EMR-DischargeSumBox01 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:45px;}
+.EMR-DischargeSumBox01 h3 { float:left; margin:0em 0 0 0; padding:0; width:100px;}
+
+.EMR-DischargeSumBox02 { float:right; margin:0 0 0.8em; padding:0;}
+.EMR-DischargeSumBox02 h2 { float:left; margin:0px 5px 0 0; padding:0; font-weight:normal; font-size:12px;}
+.EMR-DischargeSumBox02 h2 input {float:left; margin:0.1em 0.2em 0 0; padding:0;}
+.EMR-DischargeSumBox02 h2 label { float:left; margin:0px 5px 0 0; padding:0; font-size: 11px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+
+.redStar { color:#f00; font-size:10px; float:left; margin:4px 8px 0 -6px; padding:0;}
+.EMR-DischargeSumBox02 h3 { float:left; margin:0em 0 0 0; padding:0;}
+
+.EMR-DischargeSumBox03 { float:left; margin:1em 0 0.8em; padding:0; width:100%;}
+.EMR-DischargeSumBox03 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:bold !important; line-height:1.6em; width:100%;}
+.EMR-DischargeSumBox03 h3 { float:left; margin:0em 0 0 0; padding:0; width:100%;}
+.EMR-DischargeSumBox03 h3 textarea { width:100%; float:left; margin:0;}
+
+.DischargeTextarea { width:100%; float:left; margin:0; padding:5px; height:150px; font-size:12px; background-color:#fff; background-image:none;}
+
+
+
+/****** Prescriptions Popup (EMR) *******/
+.PrescriptionsBtn01 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 3px; padding:3px 8px; border-radius:3px; float:right;}
+.PrescriptionsBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.Prescriptions-Pop { float:right; margin:0.4em 0 0 0; padding:0;} 
+.Prescriptions-Pop h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.Prescriptions-Pop h3 { float:left; margin:0em 0 0 0; padding:0;}
+
+.Prescriptions-Pop01 { float:right; margin:0.4em 0 0 0; padding:0;} 
+.Prescriptions-Pop01 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.Prescriptions-Pop01 h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PrescriptionsMessage { width:100% !important; float:left !important; margin:0.5em 0 0 0 !important; padding:0 !important; font-size:13px !important;}
+
+.PrescriptionsBox01 { width:100%; float:left; margin:0 0 0.5em 0; padding:0;}
+.PrescriptionsBox01 label { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.PrescriptionsBox01 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.PrescriptionsBox01 h2 label { margin:0px 5px 0 5px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.PrescriptionsLink { float:left; margin:0 5px; padding:0;}
+.PrescriptionsBox01 h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PrescriptionsBox01 h3 textarea { font-size:12px; float:left; margin:0; padding:3px 5px; outline:none; border: solid 1px #C1C1C1;}
+.PrescriptionsBox01 h3 input { outline:none; font-size:12px; float:left; margin:0; padding:3px 5px;}
+.PrescriptionsBox01 h4 { float:left; margin:0em 0 0 0; padding:0;}
+.PrescriptionsBox01 h4 textarea { outline:none; font-size:12px; float:left; margin:0; padding:3px 5px;}
+.PrescriptionsBox01a { width:100%; float:left; margin:0 0 0.5em 0; padding:0;}
+.PrescriptionsBox01a h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.PrescriptionsBox01a h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PrescriptionsBox01a h3 input { float:left; margin:0.15em 0.1em 0 0; padding:0;}
+.PrescriptionsBox01a h3 label { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.PrescriptionsBox02 { width:100%; float:left; margin:0 0 0.5em 0; padding:0;}
+.PrescriptionsBox02 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.PrescriptionsBox02 h3 { float:left; margin:0em 0 0 0; padding:0; width:52%;}
+.PrescriptionsBox02 h3 input { outline:none; font-size:12px; float:left; margin:0; padding:3px 5px; width:100%;}
+.PrescriptionsBox02 h4 { float:left; margin:0em 0 0 0.2em; padding:2px 1px;}
+
+.PrescriptionsBox001 { width:100%; float:left; margin:0 0 0.5em 0; padding:0;}
+.PrescriptionsBox001a { width:100%; float:left; margin:0; padding:0.5em 0 0.5em 0;}
+
+.PrescriptionsBox002Check { width:100%; float:left; margin:0 0 0.5em 0; padding:0 2%;}
+.PrescriptionsBox002Check h2 {  float:left; margin:0px 5px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:115px;}
+.PrescriptionsBox002Check h2 label { font-weight:normal; margin:0 0 0 5px;}
+.PrescriptionsBox002Check h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PrescriptionsBox002 { width:100%; float:left; margin:0 0 0.5em 0; padding:0 2%;}
+.PrescriptionsBox002 h2 {  width:85px; float:left; margin:0px 5px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.PrescriptionsBox002 h2 label { margin:0px 5px 0 5px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+
+.PrescriptionsBox002 h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PrescriptionsBox002 h3 input { font-size:12px; outline:none; padding:3px 5px;}
+.redStar2 {color: #f00; font-size: 10px; margin: -1px 8px 0 4px; padding: 0; float:right;}
+.PrescriptionsBox002 h4 { float:left; margin:0.2em 0 0 0; padding:0;}
+.PrescriptionsBox002 h4 input { float:left; margin:0 5px ; padding:0;}
+.PrescriptionsBox002 h4 label { float:left; margin:0; padding:0; font-size:12px; font-weight:normal;}
+
+.PrescriptionsBox002a { float:left; margin:0 1em 0.5em 0; padding:0;}
+.PrescriptionsBox002a h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.PrescriptionsBox002a h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PrescriptionsBox002a h3 input { font-size:12px; outline:none; padding:3px 5px;}
+
+.PrescriptionsBox002b { margin:0 0em 0.5em 0; padding:0;}
+.PrescriptionsBox002b h2 { float:left; margin:0px 0px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:45px;}
+.PrescriptionsBox002b h3 { float:left; margin:0em 0 0 0; padding:0; width:83px;}
+.PrescriptionsBox002b h3 input { width:50px !important; float:left; margin:0; padding:0;}
+.PrescriptionsBox002c { margin:0 0em 0.5em 0; padding:0;}
+.PrescriptionsBox002c h2 { float:left; margin:0px 0px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:60px;}
+.PrescriptionsBox002c h3 { float:left; margin:0em 0 0 0; padding:0; width:83px;}
+.PrescriptionsBox002c h3 input { width:50px !important; float:left; margin:0; padding:0;}
+.PrescriptionsBox002c h4 { float:left; margin:0px 0px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:45px;}
+
+
+.UnitSelect { width:100px !important; float:left !important; margin:0 !important; padding:0 !important;}
+.redStar3 {color: #f00; font-size: 10px; margin:0px; padding: 0;}
+.PrescriptionsRemoveBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 3px; padding:3px 8px; border-radius:3px; float:right;}
+.PrescriptionsRemoveBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.PrescriptionsRemoveBtnLeft { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 3px; padding:3px 8px; border-radius:3px; float:left;}
+.PrescriptionsRemoveBtnLeft:hover { background:#056391;color:#fff; text-decoration:none;}
+.PrescriptionsRemoveBtn01 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 3px; padding:5px 8px; border-radius:3px; float:right;}
+.PrescriptionsRemoveBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+.PrescriptionsRemoveBtn02 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 11px 5px 3px; padding:4px 8px; border-radius:3px; float:right;}
+.PrescriptionsRemoveBtn02:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.PrescriptionsBox003 { width:100%; float:left; margin:0 0 0.5em 0; padding:0 2%;}
+.PrescriptionsBox003 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.PrescriptionsBox003 h3 { margin:-0.8em 0 0 3.2em; padding:0; float:left;}
+.PrescriptionsBox004 h3 input {font-size:12px; text-align:left; outline:none; padding:3px 3px; width:100px !important;}
+.PrescriptionsBox003 h3 select { font-size:12px; outline:none; padding:3px 5px; width:120px !important;}
+.PrescriptionsBox003 h4 { margin:-1.3em -6px 0 3.5em; padding:0; float:right;}
+
+.PrescriptionsBox004 { width:100%; float:left; margin:0 0 0.5em 0; padding:0 2%;}
+.PrescriptionsBox004 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.PrescriptionsBox004 h3 { margin:0em; padding:0; float:left; }
+.PrescriptionsBox004 h3 input {font-size:12px; text-align:left; outline:none; padding:3px 3px; }
+.PrescriptionsBox004 h4 { float:left; margin:0; padding:0; width:145px;}
+.PrescriptionsBox004 h4 #ctl00_ContentPlaceHolder1_ddlPeriodType { width: 80% !important;}
+
+.PrescriptionsBox005 { width:100%; float:left; margin:0 0 0.5em 0; padding:0 2%;}
+.PrescriptionsBox005 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.PrescriptionsBox005 h3 { margin:0em; padding:0;}
+
+.PrescriptionsBox006 { width:100%; float:left; margin:0 0 0.5em 0; padding:0 2%;}
+.PrescriptionsBox006 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.PrescriptionsBox006 h3 { margin:0em; padding:0; float:left; }
+.PrescriptionsBox006 h4 { float:left; margin:0px 5px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:65px;}
+
+.PrescriptionsBox007 { width:100%; float:left; margin:0 0 0.5em 0; padding:0 2%;}
+.PrescriptionsBox007 h2 { float:left; margin:0px 0px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:85px;}
+.PrescriptionsBox007 h3 { margin:0em 0 0 0em; padding:0; float:left;}
+.PrescriptionsBox007 h3 input {font-size:12px; text-align:left; outline:none; padding:3px 3px; width:100px !important;}
+.PrescriptionsBox007 h3 select { font-size:12px; outline:none; padding:3px 5px; width:120px !important;}
+.PrescriptionsBox007 h4 { margin:0em -6px 0 0em; padding:0; float:left;}
+
+
+
+/****** Orders And Procedures Popup (EMR) *******/
+.orderPop { float:left; margin:0.5em 0 0 0; padding:0;}
+.orderPop input { float:left; margin:4px 5px 0; padding:0;}
+.orderPop label { float:left; margin:2px 0 0; padding:0; font-size:13px;}
+
+.orderPopLeftPart { width:100%; float:left; margin:0.5em 0 0; padding:0;}
+.orderPopLeftPart h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.orderPopLeftPart h3 { margin:0em; padding:0; float:left;}
+.orderPopLeftPart h3 input {font-size:12px; text-align:left; outline:none; padding:3px 3px; width:290px;}
+.orderPopLeftPart h4 { float:left; margin:2px 5px 0; padding:0;}
+
+
+
+.orderPopCenterPart { width:100%; float:left; margin:0.5em 0 0; padding:0; border:solid 1px #ccc;}
+
+.orderPopCenterPart01 { margin:0em 0 0.5em 0; padding:0 2%; float:left; width:100%; border-bottom: solid 1px #B5DFEA; background-color:#C1E5EF;}
+.orderPopCenterPart01 h3 { margin:0.4em 0 0.4em 0; padding:0; float:left;}
+.orderPopCenterPart01 h3 input { float:left; margin:0 5px ; padding:0;}
+.orderPopCenterPart01 h3 label { float:left; margin:0; padding:0; font-size:13px;}
+.orderPopCenterPart01 h4 { margin:0.3em 0 0 0; padding:0; float:right; }
+
+.orderPopCenterPart02 { margin:0em; padding:0 2%; float:left; width:100%;}
+.orderPopCenterPart02 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:150px;}
+.orderPopCenterPart02 h3 { margin:0em; padding:0; float:left;}
+.orderPopCenterPart02 h3 textarea { width:570px; float:left; margin:0; padding:3px 5px; height:25px; font-size:12px; color:#333; outline: none; border: solid 1px #C1BEBE;}
+
+.orderPopCenterPart03 { margin:0em; padding:0 2%; float:left; width:100%;}
+.orderPopCenterPart03a { margin:0.5em 0 0 0; padding:0; float:left; width:48%;}
+.orderPopCenterPart03a h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:150px;}
+.orderPopCenterPart03a h3 { margin:0em; padding:0; float:left;}
+.orderPopCenterPart03a h3 input { float:left; margin:0; padding:0; height:23px; padding:3px 5px; font-size:12px; outline:none;}
+.orderPopCenterPart03a h4 { float:left; margin:0px 5px 0 10px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:35px;}
+
+.orderPopCenterPart03b { margin:0.5em 0 0 0; padding:0; float:left; width:48%;}
+.orderPopCenterPart03b h4 { float:left; margin:0px 5px 0 10px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.orderPopCenterPart03b h4 input { float:left; margin:4px 5px 0; padding:0;}
+.orderPopCenterPart03b h4 label { float:left; margin:0; padding:0; font-size:13px;font-weight:normal !important;}
+.orderPopCenterPart03b h2 { float:left; margin:0px 5px 0 3em; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:80px;}
+.orderPopCenterPart03b h3 { margin:0em; padding:0; float:left;}
+.orderPopCenterPart03b h3 input { float:left; margin:0; padding:0; height:23px; padding:3px 5px; font-size:12px; outline:none;}
+
+.orderPopCenterPart03c { margin:0.5em 0 0 0; padding:0; float:left; width:80%;}
+.orderPopCenterPart03c h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:150px;}
+.orderPopCenterPart03c h3 { margin:0em; padding:0; float:left;}
+.orderPopCenterPart03c h3 textarea { width:288px; float:left; margin:0; padding:3px 5px; height:65px !important; font-size:12px; color:#333; outline: none; border: solid 1px #C1BEBE;}
+.orderPopCenterPart03c h4 { float:left; margin:5px 5px 0 0px; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+
+.PrescriptionsAddBtnLeft { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:-4px 0px 5px 3px; padding:3px 8px; border-radius:3px; float:left;}
+.PrescriptionsAddBtnLeft:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.orderPopCenterBottomPart { width:100%; float:left; margin:0.5em 0 0; padding:0;}
+.orderPopCenterBottomPart01 { margin:0em 0 0.5em 0; padding:0 2%; float:left; width:100%;}
+.orderPopCenterBottomPart01 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:bold !important; line-height:1.6em;}
+
+.orderPopCenterBottomPart02 { margin:0em 0 0.5em 0; padding:0 2%; float:left; width:100%;}
+.orderPopCenterBottomPart02 h2 { float:left; margin:0px 0px 0 0; padding:0;}
+.orderPopCenterBottomPart02 h2 .Lable2 { float:left; margin:0px 3px 0 0; padding:0; font-size: 12px !important; color: #232323 !important; font-weight:bold !important; line-height:1.6em;}
+.orderPopCenterBottomPart02 h2 span { float:left; margin:0 3px; padding:0;}
+
+
+
+.StopMedication { float:left; padding:0em 0 0 0; margin:1.3em 0 0 0; width:100%;}
+
+
+
+/****** Previous Medications Popup (EMR) *******/
+.PreviousMedicationsBox01 { width:100%; float:left; margin:0 0 0.5em 0; padding:0;}
+.PreviousMedicationsBox01 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.PreviousMedicationsBox01 h3 { float:left; margin:0em 0 0 0; padding:0;}
+.PreviousMedicationsBox01 h3 input { outline:none; font-size:10px; color: #232323 !important;  float:left; margin:0; padding:3px 5px; line-height:1.6em;}
+.PreviousMedicationsBox01 h4 { float:left; margin:0em 0 0 0; padding:0;}
+.PreviousMedicationsBox01 h4 input { outline:none; font-size:12px; color: #232323 !important;  float:left; margin:0; padding:4px 5px;}
+.PreviousMedicationsBox01 h5 { float:left; margin:0em 0 0 0.1em; padding:0;}
+
+.PrescriptionsFilterBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 3px; padding:5px 8px; border-radius:3px; float:left;}
+.PrescriptionsFilterBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.PreviousMedicationsBox02 { width:100%; float:left; margin:1em 0 0.5em 0; padding:0;}
+.PreviousMedicationsBox02 span { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.1em;}
+
+
+
+
+/****** Complaints History Popup (EMR) *******/
+.ComplaintsHistoryBox01 { width:100%; float:left; margin:0 0 0.5em 0; padding:0;}
+.ComplaintsHistoryBox01 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:70px;}
+.ComplaintsHistoryBox01 h2 #ctl00_ContentPlaceHolder1_Lable1 { float: left; margin: 0px 0 0 0; padding: 0;}
+.ComplaintsHistoryBox01 h3 { float:left; margin:0em 0 0 0; padding:0; font-size:12px;font-weight:normal !important; line-height:1.6em;}
+.ComplaintsHistoryBox01 h4 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+.ComplaintsHistoryBox01 h4 input { float:left; margin:4px 5px 0; padding:0;}
+.ComplaintsHistoryBox01 h4 label { float:left; margin:0; padding:0; font-size:13px;font-weight:normal !important;}
+.ComplaintsHistoryBox01 h5 { float:left; margin:0px 1px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:51px;}
+
+.ComplaintsHistoryBox02 { width:100%; float:left; margin:0.5em 0 0.5em 0; padding:0;}
+.ComplaintsHistoryBox02 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:bold !important; line-height:1.6em; width:70px;}
+.ComplaintsHistoryBox02 h3 { float:left; margin:0em 0 0 0; padding:0; font-size:12px;font-weight:normal !important; line-height:1.6em;}
+.ComplaintsHistoryBox02 h3 input { margin:0; padding:0 5px; outline:none !important; font-size:12px;color: #232323;}
+
+.ComHistoryBtn01 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 5px 5px; padding:4px 8px; border-radius:3px; float:right;}
+.ComHistoryBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.ComplaintsHistoryBox03 { width:100%; float:left; margin:0.5em 0 0.5em 0; padding:0;}
+.ComplaintsHistoryBox03 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:170px;}
+.ComplaintsHistoryBox03 h3 { float:left; margin:0em 0 0 0; padding:0; font-size:12px;font-weight:normal !important; line-height:1.6em;}
+.ComplaintsHistoryBox03 h4 { float:left; margin:0em 0 0 0; padding:0; font-size:12px;font-weight:normal !important; line-height:1.6em; width:280px;}
+.ComplaintsHistoryBox03 h4 textarea { outline:none; font-size:12px; float:left; margin:0; padding:3px 5px; border:solid 1px #ABABAB;}
+
+.StopMedication01 { float:left; padding:0em 0 0 0; margin:0.3em 0 0 0; width:100%;}
+.ComplaintsHistoryBox04 { width:100%; float:left; margin:0.5em 0 0.5em 0; padding:0;}
+.ComplaintsHistoryBox04 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:100px;}
+.ComplaintsHistoryBox04 h3 { float:left; margin:0em 0 0 0; padding:0;}
+.ComplaintsHistoryBox04 h3 input { margin:0; padding:3px 5px; outline:none !important; font-size:12px;color: #232323;}
+
+
+
+/****** Referral Request (EMR) *******/
+.ReferralRequestBox { width:100%; float:left; margin:0.5em 0 0em 0; padding:0;}
+.ReferralRequestBox h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:105px;}
+.ReferralRequestBox h3 { float:left; margin:0em 0 0 0; padding:0;}
+.ReferralRequestBox h3 input { margin:0 !important; padding:1px 5px; margin:0 3px 0 5px !important; outline:none !important; font-size:12px !important; color: #232323 !important; width:13px !important; height:13px !important;}
+.ReferralRequestBox h4 label { float:left !important; margin:0 3px 0 10px !important; padding:0 3px 0 5px !important; font-size:13px !important; font-weight:normal !important;}
+
+.ReferralRequestBox01 { width:100%; float:left; margin:0.3em 0 0.2em 0; padding:0;}
+.ReferralRequestBox01 h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:135px;}
+.ReferralRequestBox01 h3 { float:left; margin:0em 0 0 0; padding:0;}
+.ReferralRequestBox01 h4 { float:left; margin:0em 0 0; padding:0; width:57%; border-bottom:none !important;}
+.ReferralRequestBox01 h4 textarea { outline:none !important; font-size:12px; float:left; margin:0 0 3px 0; padding:3px 5px; border:solid 1px #A9A9A9;}
+.ReferralRequestBox01 h5 { float:right; margin:0.8em 0 0; padding:0;  border-bottom:none !important;}
+.ReferralRequestBox01 h5 input { margin:0 !important; padding:1px 5px; margin:0 3px 0 5px !important; outline:none !important; font-size:12px !important; color: #232323 !important; width:13px !important; height:13px !important;}
+
+
+
+.ReferralRequestBox01a { width:100%; float:none; margin:0; padding:0;}
+.ReferralRequestBox01a h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:105px;}
+.ReferralRequestBox01a h3 { float:left; margin:0em 0 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+
+.ReferralRequestBox01b { width:100%; float:left; margin:0.3em 0 0.1em 0; padding:0;}
+.ReferralRequestBox01b h2 { float:left; margin:0px 5px 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em; width:105px;}
+.ReferralRequestBox01b h3 { float:left; margin:0em 0 0 0; padding:0; font-size: 13px !important; color: #232323 !important; font-weight:normal !important; line-height:1.6em;}
+
+.backgroundColor{
+    background-color:white;
+    padding:4px 0px;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+
+    border: 1px solid rgb(225 214 214)!important;
+
+}
+
+
+@media (min-width: 300px) and (max-width: 399px) {}	
+@media (min-width: 400px) and (max-width: 599px) {}
+@media (min-width: 600px) and (max-width: 767px) {}
+@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 992px) and (max-width: 1060px) {}
+@media (min-width: 1061px) and (max-width: 1169px) {}
+@media all and (min-width: 1061px){}

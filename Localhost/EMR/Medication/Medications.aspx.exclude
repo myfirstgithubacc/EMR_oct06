@@ -1,0 +1,1118 @@
+<%@ Page Language="C#" MasterPageFile="~/Include/Master/EMRMaster.master" AutoEventWireup="true"
+    CodeFile="Medications.aspx.cs" Inherits="EMR_Medication_Medication1" Title="" %>
+
+<%@ Register TagPrefix="aspl" TagName="ICD" Src="~/Include/Components/ICDPanel.ascx" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%@ Register TagPrefix="AJAX" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+<%@ Register TagPrefix="ucl" TagName="legend" Src="~/Include/Components/Legend.ascx" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+    <script language="javascript" type="text/javascript">
+        function SearchPatientOnClientClose(oWnd, args) {
+            var arg = args.get_argument();
+            alert(arg);
+            if (arg) {
+                $get('<%=hdnxmlString.ClientID%>').value = xmlString;
+            }
+            $get('<%=btnBindGridWithXml.ClientID%>').click();
+        }
+        function disableButtonOnClick(oButton, sButtonText, sCssClass) {
+            // set button to disabled so you can't click on it.
+            oButton.disabled = true;
+            // change the text of the button.
+            oButton.value = sButtonText;
+            // IE uses className for the css property.
+            oButton.setAttribute('className', sCssClass);
+            // Firefox, Safari use class for the css property.  (doesn't hurt to do both).
+            oButton.setAttribute('class', sCssClass);
+        }
+        function OnClientItemsRequesting(sender, eventArgs) {
+            var ddlgeneric = $find('<%= ddlGeneric.ClientID %>');
+            var value = ddlgeneric.get_value();
+            var context = eventArgs.get_context();
+            context["GenericId"] = value;
+        }
+
+        function ddlGeneric_OnClientSelectedIndexChanged(sender, args) {
+            var ddlbrand = $find("<%=ddlBrand.ClientID%>");
+            ddlbrand.clearItems();
+            ddlbrand.set_text("");
+            ddlbrand.get_inputDomElement().focus();
+
+            var item = args.get_item();
+            $get('<%=hdnGenericId.ClientID%>').value = item != null ? item.get_value() : sender.value();
+            $get('<%=hdnGenericName.ClientID%>').value = item != null ? item.get_text() : sender.text();
+
+            $get('<%=btnGetInfoGeneric.ClientID%>').click();
+        }
+
+        function ddlGenericOnClientDropDownClosedHandler(sender, args) {
+            if (sender.get_text().trim() == "") {
+                $get('<%=hdnGenericId.ClientID%>').value = "";
+                $get('<%=hdnGenericName.ClientID%>').value = "";
+
+                $get('<%=btnGetInfoGeneric.ClientID%>').click();
+            }
+        }
+
+        function ddlBrand_OnClientSelectedIndexChanged(sender, args) {
+            var item = args.get_item();
+            $get('<%=hdnItemId.ClientID%>').value = item != null ? item.get_value() : sender.value();
+            $get('<%=hdnIsUnSavedData.ClientID%>').value = 1;
+            $get('<%=hdnItemName.ClientID%>').value = item != null ? item.get_text() : sender.text();
+
+            $get('<%=hdnCIMSItemId.ClientID%>').value = item != null ? item.get_attributes().getAttribute("CIMSItemId") : "";
+            $get('<%=hdnCIMSType.ClientID%>').value = item != null ? item.get_attributes().getAttribute("CIMSType") : "";
+
+            $get('<%=hdnVIDALItemId.ClientID%>').value = item != null ? item.get_attributes().getAttribute("VIDALItemId") : "";
+
+            $get('<%=btnGetInfo.ClientID%>').click();
+        }
+        window.onbeforeunload = function(evt) {
+            var IsUnsave = $get('<%=hdnIsUnSavedData.ClientID%>').value;
+            if (IsUnsave == 1) {
+                return false;
+            }
+        }
+        function ddlBrandOnClientDropDownClosedHandler(sender, args) {
+            if (sender.get_text().trim() == "") {
+                $get('<%=hdnItemId.ClientID%>').value = "";
+                $get('<%=hdnItemName.ClientID%>').value = "";
+
+                $get('<%=hdnCIMSItemId.ClientID%>').value = "";
+                $get('<%=hdnCIMSType.ClientID%>').value = "";
+
+                $get('<%=btnGetInfo.ClientID%>').click();
+            }
+        }
+
+        function MaxLenTxt(TXT, LEN) {
+            if (TXT.value.length > LEN) {
+                alert("Text length should not be greater then " + LEN + " ...");
+
+                TXT.value = TXT.value.substring(0, LEN);
+                TXT.focus();
+            }
+        }
+
+        function clickEnterInGrid(obj, event) {
+            var keyCode;
+            if (event.keyCode > 0) {
+                keyCode = event.keyCode;
+            }
+            else if (event.which > 0) {
+                keyCode = event.which;
+            }
+            else {
+                keycode = event.charCode;
+            }
+            if (keyCode == 13) {
+                document.getElementById(obj).focus();
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        function ShowICDPanel(ctrlPanel, txt1) {
+            var ICDarr = new Array();
+            var txt = document.getElementById('<%=txtICDCode.ClientID%>');
+            ICDarr = txt.value.split(',');
+
+            var ICDCodes = '';
+            var tt = document.getElementById(ctrlPanel);
+            tt.style.visibility = 'visible';
+            var tableElement = document.getElementById('rptrICDCodes');
+            if (tableElement != null) {
+                for (var i = 0; i < tableElement.rows.length; i++) {
+                    var rowElem = tableElement.rows[i];
+                    var col = rowElem.cells[0].childNodes[0];
+                    col.checked = false;
+                }
+
+                for (var i = 0; i < tableElement.rows.length; i++) {
+                    var rowElem = tableElement.rows[i];
+                    var col = rowElem.cells[0].childNodes[0];
+                    var chklabel = rowElem.cells[0].childNodes[1];
+                    for (var j = 0; j < ICDarr.length; j++) {
+                        if (chklabel.innerText == ICDarr[j]) {
+                            col.checked = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        function OnClientClosePrescription(oWnd, args) {
+            $get('<%=btnPrescriptionRemarksMaster.ClientID%>').click();
+        }
+        function OnClientFavoriteFrequencyClose(oWnd, args) {
+            $get('<%=btnBindFrequencyFavorite.ClientID%>').click();
+        }
+
+        function OnClientMedicationOverrideClose(oWnd, args) {
+
+            var arg = args.get_argument();
+            if (arg) {
+                var IsOverride = arg.IsOverride;
+                var OverrideComments = arg.OverrideComments;
+                var DrugAllergyScreeningResult = arg.DrugAllergyScreeningResult;
+
+                $get('<%=hdnIsOverride.ClientID%>').value = IsOverride;
+                $get('<%=hdnOverrideComments.ClientID%>').value = OverrideComments;
+                $get('<%=hdnDrugAllergyScreeningResult.ClientID%>').value = DrugAllergyScreeningResult;
+            }
+
+            $get('<%=btnMedicationOverride.ClientID%>').click();
+        }
+        
+        
+        
+    </script>
+
+    <style type="text/css">
+        .blink
+        {
+            text-decoration: blink;
+        }
+        .blinkNone
+        {
+            text-decoration: none;
+        }
+    </style>
+   <%-- <asp:UpdateProgress ID="UpdtProgress" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+        <ProgressTemplate>
+            <img alt="progress" src="../Images/wait.gif">
+            Processing...
+        </ProgressTemplate>
+    </asp:UpdateProgress>--%>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <table border="0" width="100%" class="clsheader" bgcolor="#e3dcco" cellpadding="0"
+                cellspacing="0">
+                <tr align="left">
+                    <td width="130px" valign="middle">
+                        <asp:Label ID="lblHeader" runat="server" Text="Prescription" SkinID="label" />
+                    </td>
+                    <td style="width: 100px">
+                    </td>
+                    <td style="width: 360px">
+                        <asp:Label ID="Label24" runat="server" Text="Prescription No" SkinID="label" />&nbsp;
+                        <telerik:RadComboBox ID="ddlPrescription" runat="server" EmptyMessage="[ Select ]"
+                            Width="130px" AutoPostBack="true" OnSelectedIndexChanged="ddlPrescription_SelectedIndexChanged" />
+                        <asp:Button ID="btnCancel" Text="Cancel" runat="server" OnClick="btnCancel_Onclick"
+                            SkinID="button" Visible="false" CausesValidation="false" />
+                        &nbsp;
+                        <asp:Button ID="btnPrint" runat="server" SkinID="Button" Text="Print" OnClick="btnPrint_Click"
+                            Visible="false" CausesValidation="false" />
+                    </td>
+                    <td id="tdStore" runat="server">
+                        <asp:Label ID="Label22" runat="server" Text="Store&nbsp;" SkinID="label" />
+                        <telerik:RadComboBox ID="ddlStore" SkinID="DropDown" runat="server" Width="200px"
+                            EmptyMessage="[ Select ]" AutoPostBack="true" OnSelectedIndexChanged="ddlStore_SelectedIndexChanged" />
+                    </td>
+                    <td style="width: 270px" align="right">
+                     <asp:Label ID="lblMessage" SkinID="label" runat="server" Text="&nbsp;" />
+                        <asp:Button ID="btnCaseSheet" runat="server" Text="Case Sheet" SkinID="Button" ToolTip="Back to Case Sheet"
+                            OnClick="btnCaseSheet_Click" />
+                        <asp:Button ID="btnNew" runat="server" ToolTip="New&nbsp;Record" SkinID="Button"
+                            Text="New" OnClick="btnNew_OnClick" CausesValidation="false" />
+                        <asp:Button ID="btnSave" Text="Save" runat="server" OnClick="btnSave_Onclick" BackColor="#FFCBA4"
+                            Width="100px" Font-Bold="true" CausesValidation="false" />
+                        <asp:Button ID="btnclose" Text="Close" runat="server" ToolTip="Close" CausesValidation="false"
+                            SkinID="Button" Visible="false" OnClientClick="window.close();" />
+                        <asp:HiddenField ID="hdnIsUnSavedData" runat="server" />
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                <tr valign="top">
+                    <td style="width: 450px">
+                        <table border="0" style="margin-left: 1px" cellpadding="0" cellspacing="2">
+                            <tr valign="top">
+                                <td>
+                                    <table cellpadding="0" cellspacing="1">
+                                        <tr valign="top">
+                                            <td colspan="3">
+                                                <table style="width: 100%;">
+                                                    <tr>
+                                                        <td>
+                                                            <asp:RadioButtonList ID="rdoDrugType" runat="server" AutoPostBack="true" 
+                                                                OnSelectedIndexChanged="rdoDrugType_SelectedIndexChanged" 
+                                                                RepeatDirection="Horizontal">
+                                                                <asp:ListItem Selected="True" Text="All&nbsp;Rx" Value="ALL" />
+                                                                <asp:ListItem Text="Favorite&nbsp;Rx&nbsp;" Value="FAV" />
+                                                                <asp:ListItem Text="Order&nbsp;Set&nbsp;" Value="OS" />
+                                                            </asp:RadioButtonList>
+                                                        </td>
+                                                        <td style="text-align: right;">
+                                                            <telerik:RadComboBox ID="ddlOrderSet" runat="server" 
+                                                                AppendDataBoundItems="true" Visible="false">
+                                                            </telerik:RadComboBox>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td  >
+                                                <asp:RadioButtonList ID="rdoFormularyType" runat="server" AutoPostBack="true" 
+                                                    OnSelectedIndexChanged="rdoFormularyType_SelectedIndexChanged" 
+                                                    RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                                    <asp:ListItem Text="NHIS Drugs List&nbsp;" Value="1" />
+                                                    <asp:ListItem Text="Hospital Formulary" Value="0" />
+                                                </asp:RadioButtonList>
+                                                &nbsp;&nbsp;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Button ID="btnAddtoFav" runat="server" OnClick="btnAddtoFav_Click" 
+                                        SkinID="Button" Text="Add to Favorities" ToolTip="Add to Favorities" 
+                                        Visible="false" />
+                                    <asp:Button ID="btnDeleteFavourite" runat="server" 
+                                        OnClick="btnDeleteFavourite_Click" SkinID="Button" 
+                                        Text="Delete From Favorite" />
+                                    <asp:Button ID="btnWarnings" runat="server" OnClick="btnWarnings_Click" 
+                                        SkinID="Button" Text="Warnings" />
+                                    <asp:Button ID="btnMonograph" runat="server" OnClick="btnMonograph_OnClick" 
+                                        SkinID="Button" Text="Monographs" Visible="false" />
+                                    <asp:CheckBox ID="chkCustomMedication" runat="server" AutoPostBack="true" 
+                                        OnCheckedChanged="chkCustomMedication_OnCheckedChanged" SkinID="checkbox" 
+                                        Text="Custom&nbsp;Medication" />
+                                </td>
+                            </tr>
+                        </table>
+                        <hr />
+                        <table style="border-style: hidden solid hidden hidden; margin-left: 2px; border-width:1px; border-color:Black;" 
+                            cellpadding="0" cellspacing="3" width="100%">
+                            <tr id="trGeneric" runat="server">
+                                <td>
+                                    <asp:Label ID="Label16" runat="server" Text="Generic" SkinID="label" />
+                                </td>
+                                <td colspan="3">
+                                    <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID="ddlGeneric" />
+                                        </Triggers>
+                                        <ContentTemplate>
+                                            <telerik:RadComboBox ID="ddlGeneric" runat="server" Width="100%" Height="300px"
+                                                EmptyMessage="" AllowCustomText="true" MarkFirstMatch="true" EnableLoadOnDemand="true"
+                                                OnItemsRequested="ddlGeneric_OnItemsRequested" DataTextField="GenericName" DataValueField="GenericId"
+                                                Skin="Office2007" ShowMoreResultsBox="true" EnableVirtualScrolling="true" OnClientSelectedIndexChanged="ddlGeneric_OnClientSelectedIndexChanged"
+                                                OnClientDropDownClosed="ddlGenericOnClientDropDownClosedHandler" />
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </td>
+                            </tr>
+                            <tr id="trDrugs" runat="server">
+                                <td>
+                                    <asp:Label ID="Label20" runat="server" Text="Drug" SkinID="label" />
+                                </td>
+                                <td colspan="3">
+                                    <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID="ddlBrand" />
+                                        </Triggers>
+                                        <ContentTemplate>
+                                            <telerik:RadComboBox ID="ddlBrand" runat="server" HighlightTemplatedItems="true"
+                                                Width="100%" EmptyMessage="[ Search Drugs By Typing Minimum 2 Characters ]"
+                                                EnableLoadOnDemand="true" OnItemsRequested="ddlBrand_OnItemsRequested" Skin="Office2007"
+                                                OnClientItemsRequesting="OnClientItemsRequesting" 
+                                                ShowMoreResultsBox="true" OnClientSelectedIndexChanged="ddlBrand_OnClientSelectedIndexChanged"
+                                                OnClientDropDownClosed="ddlBrandOnClientDropDownClosedHandler" Height="300px"
+                                                EnableVirtualScrolling="true" 
+                                                onselectedindexchanged="ddlBrand_SelectedIndexChanged">
+                                                <HeaderTemplate>
+                                                    <table style="width: 100%" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td style="width: 80%" align="left">
+                                                                <asp:Literal ID="Literal2" runat="server" Text="Item Name" />
+                                                            </td>
+                                                            <td style="width: 10%" align="center">
+                                                                Stock
+                                                            </td>
+                                                            <td style="width: 0%" align="right" visible="false">
+                                                            </td>
+                                                            <td style="width: 0%" align="right" visible="false">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </HeaderTemplate>
+                                                <ItemTemplate>
+                                                    <table style="width: 100%" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td style="width: 80%" align="left">
+                                                                <%# DataBinder.Eval(Container, "Text")%>
+                                                            </td>
+                                                            <td style="width: 10%" align="left">
+                                                                <%# DataBinder.Eval(Container, "Attributes['ClosingBalance']")%>
+                                                            </td>
+                                                            <td style="width: 0%" align="right" visible="false">
+                                                                <asp:HiddenField ID="hdnAttCIMSItemId" runat="server" Value=<%# DataBinder.Eval(Container, "Attributes['CIMSItemId']")%> />
+                                                            </td>
+                                                            <td style="width: 0%" align="right" visible="false">
+                                                                <asp:HiddenField ID="hdnAttCIMSType" runat="server" Value=<%# DataBinder.Eval(Container, "Attributes['CIMSType']")%> />
+                                                            </td>
+                                                            <td style="width: 0%" align="right" visible="false">
+                                                                <asp:HiddenField ID="hdnAttVIDALItemId" runat="server" Value=<%# DataBinder.Eval(Container, "Attributes['VIDALItemId']")%> />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </ItemTemplate>
+                                            </telerik:RadComboBox>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </td>
+                            </tr>
+                            <tr id="trCustomMedication" runat="server" visible="false">
+                                <td valign="top">
+                                    <asp:Label ID="Label23" runat="server" Text="Custom Medication" SkinID="label" />
+                                </td>
+                                <td valign="top" colspan="3">
+                                    <asp:TextBox ID="txtCustomMedication" runat="server" SkinID="textbox" MaxLength="1000"
+                                        TextMode="MultiLine" Style="min-height: 44px; max-height: 44px; min-width: 330px;
+                                        max-width: 330px;" Width="330px" Height="44px" onkeyup="return MaxLenTxt(this, 1000);" />
+                                </td>
+                            </tr>
+                            <tr id="trDiagnosis" runat="server">
+                                <td>
+                                    <asp:Label ID="label1" runat="server" SkinID="label" Text="Diagnosis" />
+                                    <span style="color: Red; font-weight: bold; visibility: hidden">*</span>
+                                </td>
+                                <td colspan="3">
+                                    <asp:UpdatePanel ID="indicationsel" runat="server">
+                                        <ContentTemplate>
+                                            <input id="hdnICDCode" value='<%# Eval("ICDCodes")%>' type="hidden" runat="server" />
+                                            <input id="hdnExitOrNot" value='<%# Eval("ExitOrNot")%>' type="hidden" runat="server" />
+                                            <asp:TextBox ID="txtICDCode" runat="server" SkinID="textbox" Wrap="true" Width="99%"
+                                                MaxLength="200" Visible="true" TabIndex="20" />
+                                            <asp:Panel ID="pnlICDCodes" BorderStyle="Solid" BorderWidth="1px" Style="visibility: hidden;
+                                                position: absolute;" BackColor="#E0EBFD" runat="server" Height="100px" ScrollBars="Auto"
+                                                Width="400px">
+                                                <asp:UpdatePanel ID="update" runat="server">
+                                                    <ContentTemplate>
+                                                        <aspl:ICD ID="icd" runat="server" width="400px" PanelName="ctl00_ContentPlaceHolder1_pnlICDCodes"
+                                                            ICDTextBox="ctl00_ContentPlaceHolder1_txtICDCode" />
+                                                        <asp:HiddenField ID="hdnGridClientId" runat="server" />
+                                                    </ContentTemplate>
+                                                </asp:UpdatePanel>
+                                            </asp:Panel>
+                                            <AJAX:PopupControlExtender ID="PopUnit" runat="server" TargetControlID="txtICDCode"
+                                                PopupControlID="pnlICDCodes" Position="Right" OffsetX="5" />
+                                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="None"
+                                                ErrorMessage="Please Select Diagnosis !" ValidationGroup="Add" ControlToValidate="txtICDCode">
+                                            </asp:RequiredFieldValidator>--%>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label12" runat="server" SkinID="label" Text="Frequency" ToolTip="Frequency" />
+                                    <span style="color: Red; font-weight: bold;">*</span>
+                                </td>
+                                <td >
+                                    <telerik:RadComboBox ID="ddlFrequency"  runat="server" EmptyMessage="[ Select ]"
+                                        Width="120px" DropDownWidth="230px" AutoPostBack="true" OnSelectedIndexChanged="ddlFrequency_OnSelectedIndexChanged"
+                                         />
+                                    <asp:ImageButton ID="lnkAddName" runat="server" ImageUrl="~/Images/PopUp.jpg" ToolTip="Add Favorite Frequency"
+                                        Width="15px" OnClick="lnkAddName_OnClick" CausesValidation="false" />
+                                </td>
+                                <td>
+                                    <asp:Label ID="Label11" runat="server" SkinID="label" Text="Dose" /><span style="color: Red;
+                                        font-weight: bold;">*</span>
+                                
+                                        <asp:TextBox ID="txtDose" runat="server" CssClass="Textbox" SkinID="textbox" Width="40px"
+                                            MaxLength="8" AutoPostBack="true" OnTextChanged="txtDose_OnTextChanged" />
+                                        <AJAX:FilteredTextBoxExtender ID="PhoneFilteredTextBoxExtender" runat="server" Enabled="True"
+                                            TargetControlID="txtDose" FilterType="Custom, Numbers" ValidChars="." />
+                                    </td>
+                                    <td>
+                                    <asp:Label ID="Label21" runat="server" SkinID="label" Text="Unit" />&nbsp;&nbsp;&nbsp;
+                                     <telerik:RadComboBox ID="ddlUnit" runat="server" DropDownWidth="120px" 
+                                            EmptyMessage="[ Select ]" MarkFirstMatch="true" Width="80px"  
+                                        onselectedindexchanged="ddlUnit_SelectedIndexChanged" AutoPostBack="true" />
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td colspan="4">
+                                                <asp:Label ID="Label13" runat="server" SkinID="label" Text="Duration" />
+                                                <span style="color: Red; font-weight: bold;">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                                <asp:RadioButtonList ID="rdoDurationList" runat="server" RepeatDirection="Horizontal"
+                                                  AutoPostBack="true" OnSelectedIndexChanged="rdoDurationList_OnSelectedIndexChanged" >
+                                                    <asp:ListItem Text="1" Value="1" Selected="True"></asp:ListItem>
+                                                    <asp:ListItem Text="2" Value="2"></asp:ListItem>
+                                                    <asp:ListItem Text="3" Value="3"></asp:ListItem>
+                                                    <asp:ListItem Text="4" Value="4"></asp:ListItem>
+                                                    <asp:ListItem Text="5" Value="5"></asp:ListItem>
+                                                    <asp:ListItem Text="6" Value="6"></asp:ListItem>
+                                                    <asp:ListItem Text="7" Value="7"></asp:ListItem>
+                                                    <asp:ListItem Text="8" Value="8"></asp:ListItem>
+                                                    <asp:ListItem Text="9" Value="9"></asp:ListItem>
+                                                    <asp:ListItem Text="10" Value="10"></asp:ListItem>
+                                                </asp:RadioButtonList>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td >
+                                                <asp:RadioButtonList ID="ddlPeriodType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPeriodType_OnSelectedIndexChanged"
+                                                    RepeatDirection="Horizontal">
+                                                    <Items>
+                                                        <asp:ListItem Text="Day(s)" Value="D" Selected="True"></asp:ListItem>
+                                                        <asp:ListItem Text="Week(s)" Value="W"></asp:ListItem>
+                                                        <asp:ListItem Text="Month(s)" Value="M"></asp:ListItem>
+                                                        <asp:ListItem Text="Year(s)" Value="Y"></asp:ListItem>
+                                                        <asp:ListItem Text="Other(s)" Value="O"></asp:ListItem>
+                                                    </Items>
+                                                </asp:RadioButtonList>
+                                            </td>
+                                            <td  align="right">
+                                                <asp:Panel ID="Panel3" runat="server" DefaultButton="btnEndDate">
+                                                    <asp:TextBox ID="txtDays" runat="server" SkinID="textbox" Width="20px" MaxLength="3" AutoPostBack="true"
+                                                        OnTextChanged="txtDays_OnTextChanged" Visible="false" />
+                                                    <AJAX:FilteredTextBoxExtender ID="FilteredTextBoxExtender4" runat="server" Enabled="True"
+                                                        TargetControlID="txtDays" FilterType="Custom, Numbers"
+                                                        ValidChars="1234567890">
+                                                    </AJAX:FilteredTextBoxExtender>
+                                                </asp:Panel>
+                                            </td>
+                                            <td>
+                                                 <telerik:RadComboBox ID="ddlPeriodType1" runat="server" Width="60px" Visible="false" DropDownWidth="100px"
+                                                  AutoPostBack="true" OnSelectedIndexChanged="ddlPeriodType1_OnSelectedIndexChanged" >
+                                            <Items>
+                                                <telerik:RadComboBoxItem Text="Day(s)" Value="D" Selected="true" />
+                                                <telerik:RadComboBoxItem Text="Week(s)" Value="W" />
+                                                <telerik:RadComboBoxItem Text="Month(s)" Value="M" />
+                                                <telerik:RadComboBoxItem Text="Year(s)" Value="Y" />
+                                            </Items>
+                                        </telerik:RadComboBox>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    Time
+                                </td>
+                                <td>
+                                    <telerik:RadComboBox ID="ddlTime" runat="server" MarkFirstMatch="true" EmptyMessage="[ Select ]"
+                                        Width="60px"/>
+                                </td>
+                                <td>
+                                    Relationship to Food
+                                </td>
+                                <td>
+                                    <telerik:RadComboBox ID="ddlFood" runat="server" MarkFirstMatch="true" EmptyMessage="[ Select ]"
+                                        Width="120px" DropDownWidth="200px"/>
+                                </td>
+                            </tr>
+                            <tr id="trV" runat="server" visible="false">
+                               
+                                    <td>
+                                        <asp:Label ID="Label2" runat="server" Text="Remarks" SkinID="label" />
+                                    <span id="spnremarks" runat="server" visible="false" style="color: Red; font-weight: bold;">
+                                        *</span></td>
+                                    <td>
+                                        <table cellpadding="0" cellspacing="1">
+                                        <tr>
+                                            <td>
+                                                <telerik:RadComboBox ID="ddlDrugRemarks" runat="server" Filter="Contains" EnableLoadOnDemand="true"
+                                                    EmptyMessage="[ Select ]" Width="100px" />
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <asp:ImageButton ID="imgBtnPrescriptionRemarks" runat="server" Enabled="true" ImageUrl="~/Images/PopUp.jpg"
+                                                    ToolTip="Add&nbsp;New&nbsp;Drug&nbsp;Remarks" Height="18px" Visible="true" CausesValidation="false"
+                                                    OnClick="imgBtnPrescriptionRemarks_Click" />
+                                            </td>
+                                        </tr>
+                                    </table></td>
+                               
+                            </tr>
+                            <tr>
+                            <td>
+                            Medication Instructions
+                            </td>
+                                <td colspan="3">
+                                    <asp:TextBox ID="txtSpecialInstrucation" runat="server" TextMode="MultiLine"
+                                        Width="95%" Height="60px"></asp:TextBox>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    <asp:Label ID="Label10" runat="server" SkinID="label" Text="Strength" />
+                                </td>
+                                <td colspan="3">
+                                    <telerik:RadComboBox ID="ddlStrength" runat="server" MarkFirstMatch="true" EmptyMessage="[ Select ]"
+                                         Width="340px" DropDownWidth="200px"/>
+                                        
+                                           
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label8" runat="server" SkinID="label" Text="Form" />
+                                </td>
+                                <td>
+                                    <telerik:RadComboBox ID="ddlFormulation" runat="server" MarkFirstMatch="true" EmptyMessage="[ Select ]"
+                                         Width="120px" DropDownWidth="200px" />
+                                </td>
+                                <td>
+                                    <asp:Label ID="Label9" runat="server" SkinID="label" Text="Route" />
+                                    <td>
+                                        <telerik:RadComboBox ID="ddlRoute" runat="server" DropDownWidth="200px" 
+                                            EmptyMessage="[ Select ]" MarkFirstMatch="true" Width="120px" />
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label14" runat="server" SkinID="label" Text="Start" />
+                                </td>
+                                <td>
+                                    <asp:Panel ID="Panel4" runat="server" DefaultButton="btnEndDate">
+                                        <telerik:RadDatePicker ID="txtStartDate" Enabled="false" runat="server" MinDate="01/01/1900"
+                                            Width="100px" AutoPostBack="true" ontextchanged="txtStartDate_OnTextChanged" />
+                                    </asp:Panel>
+                                </td>
+                                <td>
+                                    <asp:Label ID="Label15" runat="server" SkinID="label" Text="End" />
+                                </td>
+                                <td>
+                                    <telerik:RadDatePicker ID="txtEndDate" Enabled="false" runat="server" MinDate="01/01/1900"
+                                        Width="120px" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <asp:UpdatePanel ID="UpdatePanel18" runat="server">
+                                        <ContentTemplate>
+                                            <asp:CheckBox ID="chkSOS" TextAlign="Left" Text="PRN" Font-Bold="true" runat="server"
+                                                AutoPostBack="false" />
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                    PRN Remarks
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtPRN" runat="server" TextMode="MultiLine" Width="139px"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblRefill" runat="server" Text="Refill" SkinID="label" />
+                                </td>
+                                <td>
+                                    <telerik:RadComboBox ID="ddlRefill" runat="server" AllowCustomText="False" MarkFirstMatch="False"
+                                        Width="120px" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="label17" runat="server" SkinID="label" Text="Total&nbsp;Qty" />
+                                </td>
+                                <td>
+                                    <asp:Panel ID="Panel1" runat="server" DefaultButton="btnAddItem">
+                                        <asp:TextBox ID="txtTotQty" runat="server" SkinID="textbox" Text="0.00" Width="70px"
+                                            MaxLength="10" Style="text-align: right" autocomplete="off" ReadOnly="True" Enabled="True" />
+                                        <AJAX:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" Enabled="True"
+                                            FilterType="Custom,Numbers" TargetControlID="txtTotQty" ValidChars="0123456789." />
+                                    </asp:Panel>
+                                </td>
+                                <td>
+                                    <asp:Label ID="label26" runat="server" SkinID="label" Text="Mode " />
+                                </td>
+                                <td>
+                                    <telerik:RadComboBox ID="ddlPrescriptionMode" runat="server" Width="120px" DropDownWidth="150px"
+                                        AppendDataBoundItems="true" />
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="4" style="text-align: right;">
+                                    <asp:ValidationSummary ID="valSummary" runat="server" DisplayMode="BulletList" ShowMessageBox="true"
+                                        ShowSummary="False" ValidationGroup="Add" />
+                                    <asp:Button ID="btnAddItem" runat="server" BackColor="#FFCBA4" Font-Bold="true" Text="Add To List"
+                                        ValidationGroup="Add" OnClick="btnAddItem_OnClick" Style="height: 26px" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align="left" valign="top">
+                        <table border="0" style="margin-left: 1px;" width="99%" cellpadding="0" cellspacing="2">
+                            <tr>
+                                <td align="left">
+                                    <table border="0" cellpadding="0" cellspacing="4">
+                                        <tr>
+                                            <td style="width: 150px">
+                                                <asp:Label ID="lblIndentType" runat="server" SkinID="label" 
+                                                    Text="Indent&nbsp;Type" />
+                                            </td>
+                                            <td>
+                                                <telerik:RadComboBox ID="ddlIndentType" runat="server" 
+                                                    EmptyMessage="[ Select ]" MarkFirstMatch="true" Width="100px">
+                                                    <Items>
+                                                        <telerik:RadComboBoxItem Selected="true" Text="Routine Orders" Value="0" />
+                                                        <telerik:RadComboBoxItem Text="STATS" Value="1" />
+                                                        <telerik:RadComboBoxItem Text="Discharge" Value="2" />
+                                                        <telerik:RadComboBoxItem Text="Urgent" Value="3" />
+                                                    </Items>
+                                                </telerik:RadComboBox>
+                                            </td>
+                                            <td>
+                                                <asp:Label ID="Label18" runat="server" SkinID="label" 
+                                                    Text="Advising&nbsp;Doctor" />
+                                            </td>
+                                            <td>
+                                                <telerik:RadComboBox ID="ddlAdvisingDoctor" runat="server" 
+                                                    EmptyMessage="[ Select ]" MarkFirstMatch="true" Width="130px" />
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <asp:LinkButton ID="btnPreviewPreviousMedications" runat="server" 
+                                                    OnClick="btnPreviewPreviousMedications_Click" 
+                                                    Text="Previous&nbsp;Medications" />&nbsp;&nbsp;&nbsp;&nbsp; 
+                                                    <asp:LinkButton ID="lnkLabHistory" runat="server" OnClick="lnkLabHistory_OnClick"
+                                        Text="Lab History"></asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <asp:Label ID="Label7" runat="server" Font-Bold="true" SkinID="label" 
+                                                    Text="Height(Cm)" />
+                                                <asp:TextBox ID="txtHeight" runat="server" ReadOnly="true" SkinID="textbox" 
+                                                    Width="50px" />
+                                                <asp:Label ID="Label6" runat="server" Font-Bold="true" SkinID="label" 
+                                                    Text="Weight(Kg)" />
+                                                <asp:TextBox ID="lbl_Weight" runat="server" ReadOnly="true" SkinID="textbox" 
+                                                    Width="50px" />
+                                                <asp:Label ID="Label19" runat="server" Font-Bold="true" SkinID="label" 
+                                                    Text="BSA" />
+                                                <asp:TextBox ID="lbl_BSA" runat="server" ReadOnly="true" SkinID="textbox" 
+                                                    Width="50px" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px">
+                                                <asp:CheckBox ID="chkAllergyReviewed" runat="server" SkinID="checkbox" 
+                                                    Text="Allergy&nbsp;List&nbsp;Reviewed" />
+                                            </td>
+                                            <td colspan="3">
+                                                <asp:LinkButton ID="lnkAllergyDetails" runat="server" 
+                                                    OnClick="lnkAllergyDetails_OnClick" Text="Allergy&nbsp;Details" 
+                                                    ToolTip="Allergy&nbsp;Details" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <table border="0" cellpadding="0" cellspacing="2">
+                                                    <tr>
+                                                        <%-- <td>
+                                                            <asp:Label ID="Label21" runat="server" SkinID="label" Text="Patient&nbsp;Alert&nbsp;" />
+                                                        </td>
+                                                        <td>
+                                                            <telerik:RadComboBox ID="ddlPatientAlert" runat="server" Width="200px" CheckBoxes="true"
+                                                                EnableCheckAllItemsCheckBox="true" EmptyMessage="Patient Informations" />
+                                                        </td>--%>
+                                                        <td>
+                                                            <asp:CheckBox ID="chkNoMedicine" runat="server" SkinID="checkbox" Text="No Current Medications" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:LinkButton ID="lnkPrescriptionRemarks" runat="server" Text="Prescription Remarks"
+                                                    OnClick="lnkPrescriptionRemarks_OnClick" />
+                                                <span id="spnPrescriptionRemarks" runat="server" visible="false" style="color: Red;
+                                                    font-weight: bold; font-size: 14px">
+                                                    <blink>*</blink>
+                                                </span>
+                                            </td>
+                                            <td colspan="3">
+                                                <table width="100%" cellpadding="4" cellspacing="4">
+                                                    <tr>
+                                                        <td>
+                                                            <asp:LinkButton ID="lnkAlerts" runat="server" Text="Patient Alert" OnClick="lnkAlerts_OnClick" />
+                                                        </td>
+                                                        <td style="padding-left: 10px;">
+                                                            <asp:Button ID="btnCopyLastPrescription" runat="server" OnClick="btnCopyLastPrescription_Click"
+                                                                Text="Copy Last Prescription" SkinID="Button" />
+                                                        </td>
+                                                        <td id="tdDrugAllergy" runat="server">
+                                                            <asp:LinkButton ID="lnkDrugAllergy" runat="server" OnClick="lnkDrugAllergy_OnClick"
+                                                                BackColor="#82CAFA" Text="Drug&nbsp;Allergy" ToolTip="Drug&nbsp;Allergy" Font-Bold="true"
+                                                                Visible="false" />
+                                                        </td>
+                                                        <td>
+                                                            <span id="Span1" runat="server" style="color: Red; font-weight: bold; font-size: 20px">
+                                                                <blink>
+                                                                 NHIS 
+                                                                </blink>
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Table ID="tblLegend" runat="server" border="0" CellPadding="2" CellSpacing="0">
+                                                                <asp:TableRow>
+                                                                    <asp:TableCell>
+                                                                        <asp:Label ID="Label4" runat="server" BorderWidth="1px" BackColor="Bisque" SkinID="label"
+                                                                            Width="22px" Height="14px" />
+                                                                    </asp:TableCell><asp:TableCell>
+                                                                        <asp:Label ID="Label5" runat="server" SkinID="label" Text="Custom&nbsp;Medication" />
+                                                                    </asp:TableCell></asp:TableRow>
+                                                            </asp:Table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <asp:UpdatePanel ID="UpdatePanel4" runat="server" UpdateMode="Conditional">
+                                        <%-- <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID="gvStore" />
+                                        </Triggers>--%>
+                                        <ContentTemplate>
+                                            <asp:Panel ID="Panel2" runat="server" CssClass="panel_y" Height="320px" ScrollBars="Auto">
+                                                <asp:GridView ID="gvStore" runat="server" Width="100%" Height="100%" AllowPaging="false"
+                                                    SkinID="gridview" AutoGenerateColumns="False" CellPadding="0" CellSpacing="0"
+                                                    OnRowDataBound="gvStore_OnRowDataBound" OnRowCommand="gvStore_OnRowCommand">
+                                                    <Columns>
+                                                        <asp:TemplateField HeaderText='<%$ Resources:PRegistration, SerialNo%>' HeaderStyle-Width="20px"
+                                                            HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" FooterStyle-HorizontalAlign="Right">
+                                                            <ItemTemplate>
+                                                                <%# Container.DataItemIndex + 1 %>
+                                                                <asp:HiddenField ID="hdnDetailsId" runat="server" Value='<%# Eval("DetailsId") %>' />
+                                                                <asp:HiddenField ID="hdnGenericId" runat="server" Value='<%# Eval("GenericId") %>' />
+                                                                <asp:HiddenField ID="hdnGenericName" runat="server" Value='<%# Eval("GenericName") %>' />
+                                                                <asp:HiddenField ID="hdnItemId" runat="server" Value='<%# Eval("ItemId") %>' />
+                                                                <asp:HiddenField ID="hdnFormulationId" runat="server" Value='<%# Eval("FormulationId") %>' />
+                                                                <asp:HiddenField ID="hdnRouteId" runat="server" Value='<%# Eval("RouteId") %>' />
+                                                                <asp:HiddenField ID="hdnStrengthId" runat="server" Value='<%# Eval("StrengthId") %>' />
+                                                                <asp:HiddenField ID="hdnFrequencyId" runat="server" Value='<%# Eval("FrequencyId") %>' />
+                                                                <asp:HiddenField ID="hdnDose" runat="server" Value='<%# Eval("Dose") %>' />
+                                                                <asp:HiddenField ID="hdnFrequency" runat="server" Value='<%# Eval("Frequency") %>' />
+                                                                <asp:HiddenField ID="hdnDays" runat="server" Value='<%# Eval("Days") %>' />
+                                                                <asp:HiddenField ID="hdnStartDate" runat="server" Value='<%# Eval("StartDate") %>' />
+                                                                <asp:HiddenField ID="hdnEndDate" runat="server" Value='<%# Eval("EndDate") %>' />
+                                                                <asp:HiddenField ID="hdnRemarks" runat="server" Value='<%# Eval("Remarks") %>' />
+                                                                <asp:HiddenField ID="hdnICDCode" runat="server" Value='<%# Eval("ICDCode") %>' />
+                                                                <asp:HiddenField ID="hdnSOS" runat="server" Value='<%# Eval("SOS") %>' />
+                                                                <asp:HiddenField ID="hdnRefill" runat="server" Value='<%# Eval("Refill") %>' />
+                                                                <asp:HiddenField ID="chdnIsOverride" runat="server" Value='<%# Eval("IsOverride") %>' />
+                                                                <asp:HiddenField ID="chdnOverrideComments" runat="server" Value='<%# Eval("OverrideComments") %>' />
+                                                                <asp:HiddenField ID="chdnDrugAllergyScreeningResult" runat="server" Value='<%# Eval("DrugAllergyScreeningResult") %>' />
+                                                                <asp:HiddenField ID="hdnPrescriptionModeId" runat="server" Value='<%#Eval("PrescriptionModeId") %>' />
+                                                                <asp:HiddenField ID="hdnCIMSItemId" runat="server" Value='<%#Eval("CIMSItemId") %>' />
+                                                                <asp:HiddenField ID="hdnCIMSType" runat="server" Value='<%# Eval("CIMSType") %>' />
+                                                                <asp:HiddenField ID="hdnVIDALItemId" runat="server" Value='<%#Eval("VIDALItemId") %>' />
+                                                                
+                                                                <asp:HiddenField ID="hdnDoseTime" runat="server" Value='<%#Eval("DoseTime") %>' />
+                                                                 <asp:HiddenField ID="hdnDurationType" runat="server" Value='<%#Eval("DurationType") %>' />
+                                                                <asp:HiddenField ID="hdnDoseUnitID" runat="server" Value='<%#Eval("DoseUnitID") %>' />
+                                                                <asp:HiddenField ID="hdnFoodID" runat="server" Value='<%# Eval("FoodID") %>' />
+                                                                <asp:HiddenField ID="hdnPRNRemarks" runat="server" Value='<%#Eval("PRNRemarks") %>' />
+                                                                <asp:HiddenField ID="hdnSubDurationType" runat="server" Value='<%#Eval("SubDurationType") %>' />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Drug">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblItemName" runat="server" Width="100%" SkinID="label" Text='<%# Eval("ItemName") %>' />
+                                                                <asp:Label ID="lblCustomMedication" runat="server" Width="100%" SkinID="label" Text='<%# Eval("CustomMedication") %>'
+                                                                    Visible="false" />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Frequency" HeaderStyle-Width="90px">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblFrequencyName" runat="server" Width="100%" SkinID="label" Text='<%# Eval("FrequencyName") %>' />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Days" ItemStyle-HorizontalAlign="Right" HeaderStyle-Width="30px">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblDays" runat="server" Width="100%" SkinID="label" Text='<%# Eval("Days") %>' />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Total&nbsp;Qty" ItemStyle-HorizontalAlign="Right"
+                                                            HeaderStyle-Width="40px">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblTotalQty" runat="server" Width="100%" SkinID="label" Text='<%# Eval("Qty") %>' />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Mon." ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="20px">
+                                                            <ItemTemplate>
+                                                                <asp:LinkButton ID="lnkBtnMonographCIMS" runat="server" ToolTip="Click here to view cims monograph"
+                                                                    CommandName="MonographCIMS" CausesValidation="false" CommandArgument='<%#Eval("CIMSItemId")%>'
+                                                                    Text="Mon." Width="16px" />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Int." ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="20px">
+                                                            <ItemTemplate>
+                                                                <asp:LinkButton ID="lnkBtnInteractionCIMS" runat="server" ToolTip="Click here to view cims drug to drug interaction"
+                                                                    CommandName="InteractionCIMS" CausesValidation="false" BackColor="#ECBBBB" Text="&nbsp;"
+                                                                    Width="16px" />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="DH." ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="20px">
+                                                            <ItemTemplate>
+                                                                <asp:LinkButton ID="lnkBtnDHInteractionCIMS" runat="server" ToolTip="Click here to view cims drug health interaction"
+                                                                    CommandName="DHInteractionCIMS" CausesValidation="false" BackColor="#82AB76"
+                                                                    Text="&nbsp;" Width="16px" />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Mon." ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="20px">
+                                                            <ItemTemplate>
+                                                                <asp:LinkButton ID="lnkBtnMonographVIDAL" runat="server" ToolTip="Click here to view vidal monograph"
+                                                                    CommandName="MonographVIDAL" CausesValidation="false" CommandArgument='<%#Eval("VIDALItemId")%>'
+                                                                    Text="Mon." Width="16px" />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Int." ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="20px">
+                                                            <ItemTemplate>
+                                                                <asp:LinkButton ID="lnkBtnInteractionVIDAL" runat="server" ToolTip="Click here to view vidal drug to drug interaction"
+                                                                    CommandName="InteractionVIDAL" CausesValidation="false" BackColor="#ECBBBB" Text="&nbsp;"
+                                                                    Width="16px" />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="DH." ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="20px">
+                                                            <ItemTemplate>
+                                                                <asp:LinkButton ID="lnkBtnDHInteractionVIDAL" runat="server" ToolTip="Click here to view vidal drug health interaction"
+                                                                    CommandName="DHInteractionVIDAL" CausesValidation="false" BackColor="#82AB76"
+                                                                    Text="&nbsp;" Width="16px" />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText='Edit' HeaderStyle-HorizontalAlign="Center" HeaderStyle-Width="20px"
+                                                            ItemStyle-HorizontalAlign="Center">
+                                                            <ItemTemplate>
+                                                                <asp:LinkButton ID="lnkEdit" runat="server" Text='Edit' CommandName="Select" />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="20px">
+                                                            <ItemTemplate>
+                                                                <asp:ImageButton ID="ibtnDelete" runat="server" ToolTip="Click here to delete this record"
+                                                                    CommandName="ItemDelete" CausesValidation="false" CommandArgument='<%#Eval("ItemId")%>'
+                                                                    ImageUrl="~/Images/DeleteRow.png" Width="16px" />
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                    </Columns>
+                                                </asp:GridView>
+                                            </asp:Panel>
+                                            <table border="0" cellpadding="0" cellspacing="2">
+                                                <tr>
+                                                    <td>
+                                                        <div id="dvprescripConfirmDeletion" runat="server" visible="false" style="width: 200px;
+                                                            z-index: 200; border-bottom: 4px solid #CCCCCC; border-left: 4px solid #CCCCCC;
+                                                            border-right: 4px solid #CCCCCC; border-top: 4px solid #CCCCCC; background-color: #FFFFCC;
+                                                            position: absolute; bottom: 0; height: 60px; left: 400px; top: 200px">
+                                                            <table width="100%" cellspacing="2" cellpadding="0">
+                                                                <tr>
+                                                                    <td colspan="3" align="center">
+                                                                        <asp:HiddenField ID="hdnChroniclblId" runat="server" Value="0" />
+                                                                        <strong>Do you want to delete ?</strong>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">
+                                                                        &nbsp;
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center">
+                                                                    </td>
+                                                                    <td align="center">
+                                                                        <asp:Button ID="btnprescripYes" SkinID="Button" runat="server" Text="Yes" OnClick="btnprescripYes_OnClick"
+                                                                            CausesValidation="false" />
+                                                                        &nbsp;
+                                                                        <asp:Button ID="btnprescripNo" SkinID="Button" runat="server" Text="No" OnClick="btnprescripNo_OnClick"
+                                                                            CausesValidation="false" />
+                                                                    </td>
+                                                                    <td align="center">
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ucl:legend ID="Legend1" runat="server" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <div id="divPrescriptionRemarks" runat="server" visible="false" style="width: 350px;
+                            z-index: 100; border-bottom: 1px solid #000000; border-left: 1px solid #000000;
+                            background-color: White; border-right: 1px solid #000000; border-top: 1px solid #000000;
+                            position: absolute; bottom: 0; height: 130px; left: 340px; top: 230px">
+                            <asp:UpdatePanel ID="UpdatePanel5" runat="server">
+                                <Triggers>
+                                    <asp:AsyncPostBackTrigger ControlID="btnPrescriptionRemarks" />
+                                </Triggers>
+                                <ContentTemplate>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="2">
+                                        <tr>
+                                            <td valign="top">
+                                                <asp:Label ID="Label3" runat="server" Font-Bold="true" Text="Prescription Remarks" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">
+                                                <asp:TextBox ID="txtPrescriptionRemarks" runat="server" SkinID="textbox" MaxLength="1000"
+                                                    TextMode="MultiLine" Style="min-height: 75px; max-height: 75px; min-width: 340px;
+                                                    max-width: 340px;" Width="340px" Height="75px" onkeyup="return MaxLenTxt(this, 250);" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <asp:Button ID="btnPrescriptionRemarks" SkinID="Button" runat="server" Text="Save Prescription Remarks"
+                                                    OnClick="PrescriptionRemarks_Click" />
+                                                <asp:Button ID="btnPrescriptionRemarksClose" SkinID="Button" runat="server" Text="Close"
+                                                    OnClick="PrescriptionRemarksClose_Click" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table border="0" cellpadding="0" cellspacing="2">
+                <tr>
+                    <td>
+                        <div id="dvConfirmCancel" runat="server" visible="false" style="width: 400px; z-index: 200;
+                            border-bottom: 4px solid #CCCCCC; border-left: 4px solid #CCCCCC; border-right: 4px solid #CCCCCC;
+                            border-top: 4px solid #CCCCCC; background-color: #FFFFCC; position: absolute;
+                            bottom: 0; height: 75px; left: 300px; top: 150px">
+                            <table width="100%" cellspacing="2" cellpadding="0">
+                                <tr>
+                                    <td colspan="3" align="center">
+                                        <asp:Label ID="lblConfirm" Font-Size="12px" runat="server" Font-Bold="true" Text="Cancel Prescription ?" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                    </td>
+                                    <td align="center">
+                                        <asp:Button ID="btnYesCancel" SkinID="Button" runat="server" Text="Yes" OnClick="btnYesCancel_OnClick" />
+                                        &nbsp;
+                                        <asp:Button ID="btnNoCancel" SkinID="Button" runat="server" Text="No" OnClick="btnNoCancel_OnClick" />
+                                    </td>
+                                    <td align="center">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table border="0" cellpadding="0" cellspacing="2">
+                <tr>
+                    <td>
+                        <div id="dvInteraction" runat="server" visible="false" style="width: 400px; z-index: 200;
+                            border-bottom: 4px solid #CCCCCC; border-left: 4px solid #CCCCCC; border-right: 4px solid #CCCCCC;
+                            border-top: 4px solid #CCCCCC; background-color: #FFFFCC; position: absolute;
+                            bottom: 0; height: 75px; left: 300px; top: 140px">
+                            <table width="100%" cellspacing="2" cellpadding="0">
+                                <tr>
+                                    <td colspan="3" align="center">
+                                        <asp:Label ID="Label25" Font-Size="12px" runat="server" Font-Bold="true" Text="This drug has interaction with prescribed medicines !" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                    </td>
+                                    <td align="center">
+                                        <asp:Button ID="btnInteractionView" SkinID="Button" runat="server" Text="Interaction View"
+                                            OnClick="btnInteractionView_OnClick" />
+                                        &nbsp;
+                                        <asp:Button ID="btnMonographView" SkinID="Button" runat="server" Text="Monograph View"
+                                            OnClick="btnMonographView_OnClick" />
+                                        &nbsp;
+                                        <asp:Button ID="btnInteractionContinue" SkinID="Button" runat="server" Text="Continue"
+                                            OnClick="btnInteractionContinue_OnClick" />
+                                        &nbsp;
+                                        <asp:Button ID="btnInteractionCancel" SkinID="Button" runat="server" Text="Cancel"
+                                            OnClick="btnInteractionCancel_OnClick" />
+                                    </td>
+                                    <td align="center">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <asp:HiddenField ID="hdnStoreId" runat="server" />
+                        <asp:HiddenField ID="hdnGenericId" runat="server" />
+                        <asp:HiddenField ID="hdnGenericName" runat="server" />
+                        <asp:HiddenField ID="hdnItemId" runat="server" />
+                        <asp:HiddenField ID="hdnItemName" runat="server" />
+                        <asp:HiddenField ID="hdnCIMSItemId" runat="server" />
+                        <asp:HiddenField ID="hdnCIMSType" runat="server" />
+                        <asp:HiddenField ID="hdnVIDALItemId" runat="server" />
+                        <asp:HiddenField ID="hdnIsOverride" runat="server" Value="" />
+                        <asp:HiddenField ID="hdnOverrideComments" runat="server" Value="" />
+                        <asp:HiddenField ID="hdnDrugAllergyScreeningResult" runat="server" Value="" />
+                        <asp:Button ID="btnPrescriptionRemarksMaster" runat="server" Text="" CausesValidation="true"
+                            SkinID="button" Style="visibility: hidden;" OnClick="btnPrescriptionRemarksMaster_Click" />
+                        <asp:Button ID="btnBindFrequencyFavorite" runat="server" Text="" CausesValidation="true"
+                            SkinID="button" Style="visibility: hidden;" OnClick="btnBindFrequencyFavorite_Click" />
+                        <asp:Button ID="btnMedicationOverride" runat="server" Text="" CausesValidation="true"
+                            SkinID="button" Style="visibility: hidden;" OnClick="btnMedicationOverride_OnClick" />
+                        <asp:Button ID="btnGetInfo" runat="server" Text="" CausesValidation="false" SkinID="button"
+                            Style="visibility: hidden;" OnClick="btnGetInfo_Click" />
+                        <asp:Button ID="btnGetInfoGeneric" runat="server" Text="" CausesValidation="false"
+                            SkinID="button" Style="visibility: hidden;" OnClick="btnGetInfoGeneric_Click" />
+                        <asp:Button ID="btnBindGridWithXml" runat="server" Style="visibility: hidden;" OnClick="btnBindGridWithXml_OnClick"
+                            Text="" />
+                        <asp:Button ID="btnEndDate" runat="server" Style="visibility: hidden;" OnClick="btnEndDate_OnClick" />
+                        <asp:Button ID="btnCalc" runat="server" Style="visibility: hidden;" OnClick="btnCalc_OnClick" />
+                        <asp:HiddenField ID="hdnxmlString" runat="server" Value="" />
+                        <asp:HiddenField ID="hdnXMLCIMS" runat="server" />
+                        <telerik:RadWindowManager ID="RadWindowManager1" runat="server" Width="850" Height="500"
+                            Left="10" Top="10" VisibleStatusbar="false" Behaviors="Close,Move,Minimize,Maximize,Resize,Pin"
+                            Modal="true" OnClientClose="SearchPatientOnClientClose">
+                        </telerik:RadWindowManager>
+                        <telerik:RadWindowManager ID="RadWindowManager" EnableViewState="false" runat="server">
+                            <Windows>
+                                <telerik:RadWindow ID="RadWindow1" runat="server" Behaviors="Close,Move" />
+                            </Windows>
+                        </telerik:RadWindowManager>
+                    </td>
+                </tr>
+            </table>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+</asp:Content>

@@ -1,0 +1,67 @@
+﻿BODY { font-family: 'Open Sans', sans-serif; font-size: 11px; font-style: normal; border-right: medium none; border-top: medium none; margin: 0px; border-left: medium none; border-bottom: medium none; background-color:#fff; /*background-image: url(/Images/bg.gif);*/}
+
+
+.BlueBox { background-color: #B9D6F8; border: 1px solid #5498EB; padding: 3px; vertical-align: top;}
+.clssubtopic { background-color: #5685B3; color: #fff; font-family: 'Open Sans', sans-serif; font-weight: bold; height: 18px; font-size: 11px; border-bottom: solid 1px #9f9f9f; padding-left: 10px;}
+.clssubtopicbar { height: 22px; border-bottom: solid 1px #9f9f9f;}
+.clspopupwindow { background-image: url(/Images/bg.gif);}
+
+.GVFixedHeader { font-weight: normal; text-align: left; position: relative; height: 22px; top: expression(this.parentNode.parentNode.parentNode.scrollTop);}
+.GVFixedFooter { position: relative; background-image: url(/images/backlg.jpg); height: 22px; font-size: xx-small; top: expression(this.parentNode.parentNode.parentNode.scrollTop);}
+.CollapsablePanelTop { font-family: 'Open Sans', sans-serif; font-size: 12px; font-weight: normal; color: #003366; text-decoration: none; background-repeat: no-repeat; background-position: 5px; height: 30px; padding-left: 30px; background-color: #e0ebfd; vertical-align: middle;}
+.clsGridheaderCoverSheet { background-image: url(/Images/coversheet.gif); height: 19px; color: Black; letter-spacing: 1px; border-right: 1px solid #ccc; padding-left: 5px;}
+
+.txt06 { font-family: 'Open Sans', sans-serif; font-size: 12px; font-weight: bold; color: #003366; text-decoration: none; line-height: 20px; background-color: #F0F0F0; padding-left: 8px;}
+.brdr01 { border-top: 1px solid #DBDBDB; border-right: 1px solid #BEBEBE; border-bottom: 1px solid #BEBEBE; border-left: 1px solid #DBDBDB;}
+.TopToolbar { background-image: url(/images/bck01.jpg);}
+
+
+/*input { border:solid 1px #0099CC; font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif;}*/
+
+chk1 { border: solid 0px black;}
+input:visited { border: solid 2px #0099CC; font-size: 24px; font-family: 'Open Sans', sans-serif;}
+textarea { border: solid 1px #0099CC; font-family: 'Open Sans', sans-serif; font-size: 14px;}
+
+.gridInput { border: solid 0px #0099CC; font-size: 11px; text-align: left; padding: 1px 1px 1px 1px; font-family: 'Open Sans', sans-serif;}
+a.BtnBookmark:link, a.BtnBookmark:visited { background-image: url(/images/butt-bck01.jpg); background-repeat: no-repeat; text-align: center; font-size: 11px; font-weight: bold; height: 25px; width: 95px; border: none;}
+a.BtnBookmark:hover { background-image: url(/images/butt-bck02.jpg); background-repeat: no-repeat; text-align: center; font-size: 11px; font-weight: bold; height: 25px; width: 95px; border: none;}
+.line01 { border-top-width: 1px; border-top-style: dotted; border-top-color: #999999; border-right-color: #999999; border-bottom-color: #999999; border-left-color: #999999;}
+.bck-tpmnu { background-image: url(/images/bck-07.jpg);}
+.bck-Loginmnu { background-image: url(/images/bck-07.jpg); background-repeat: repeat-x; height: 32px;}
+.txt02 { font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: normal; color: #003366; text-decoration: none;}
+.lnk-rt { margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 0px;}
+.topbck { background-image: url(/images/topbar-bck.jpg); background-repeat: repeat-x;}
+.PageLeft { background-image: url(/Images/bck-shdr-lft.jpg); background-repeat: repeat-y; background-position: right;}
+.PageCentre { background-color: #FFFFFF;}
+.PageRight { background-image: url(/Images/bck-shdr-rt.jpg); background-repeat: repeat-y; background-position: left;}
+.MnuHover { background-color: #FDFDFD; height: 30px; color: Black;}
+.FooterMenu { background-color: #333333; font-family: 'Open Sans', sans-serif; font-size: 10px; font-weight: normal; color: #FFFFFF; text-decoration: none; line-height: 22px;}
+.tabOn { background-image: url(/images/backlg.jpg); height: 25px; text-align: center; color:#fff;}
+.tabOff { background-image: url(/images/backup.png); height: 25px; text-align: center; border-bottom: solid 1px #599DF0;}
+.tabMenuOff { text-decoration: none; line-height: 15px;color:#fff;}
+.dropdownlist { font-family: 'Open Sans', sans-serif; font-size: 10px; font-weight: normal; color: black; width: 150px;}
+.ListBox { overflow: hidden; border: solid 0px black;}
+
+.black { float: left; filter: alpha(opacity=25); -moz-opacity: .25; opacity: .25;}
+.white { background-color: #fff;}
+.linkText { text-decoration: underline; text-transform: none;}
+.gridInputNumber { border: solid 0px #0099CC; font-size: 11px; text-align: right; padding: 1px 1px 1px 1px;}
+.ButtonClicked { border-color: #EB8022; border-width: 1px; border-style: solid;}
+.ButtonUnClicked { border-color: #EB8022; border-width: 0px; border-style: solid;}
+.List { border: solid 1px black; border-style: solid;}
+.txtAlignRight { border-right: #0099cc 1px solid; padding-right: 1px; border-top: #0099cc 1px solid; padding-left: 1px; font-size: 11px; padding-bottom: 1px; border-left: #0099cc 1px solid; padding-top: 1px; border-bottom: #0099cc 1px solid; text-align: right;}
+.SideHeading { vertical-align: bottom; padding: 3px; width: 90%; font-weight: bold; border: 1px solid #a4a4a4; border-bottom: 0px; border-right: 0px; background-color: #EFEFEF;}
+.SideClose { width: 5%; padding: 3px; text-align: center; vertical-align: middle; text-transform: uppercase; background-color: #EFEFEF; border: 1px solid black; border-bottom: 0px; color: #fff;}
+.SideSection { visibility: hidden; position: absolute; width: 1px; top: 73px; border: 1px thin #a4a4a4;}
+.SideContent { border: 1px solid #a4a4a4; padding: 0px; width: 100%;}
+.tabMenuOff { text-decoration: none; color: #fff;}
+.clsGridheaderCoverSheet { background-image: url(/Images/cover-header.jpg); height: 19px; color:#fff; letter-spacing: 1px; border-right: 1px solid #ccc; padding-left: 5px;}
+.modalBackground  { background-color:Gray; filter:alpha(opacity=70); opacity:0.7;}
+.modalPopup  { background-color:#EBE8D3; border-width:3px; border-style:solid; border-color:Gray; padding:3px;}
+.unwatermarked { font-style:italic;}
+.watermarked  { font-style:italic; padding:2px 0 0 2px; border:1px solid #6699CC; background-color:#EBF2FE; color:gray; height:14px;}
+
+.tophead { background-image: url(/Images/back.gif); height: 30px; vertical-align: middle; color: #fff; font-size: 11px; padding-left: 20px; text-decoration:none; font-family:'Open Sans', sans-serif; font-weight:normal;}
+.Success { font-style:normal; padding:2px 0 0 2px; color:Green; font-size:smaller; font-family:'Open Sans', sans-serif;}
+div#confirm_blue a { margin-right:4px; margin-left:4px; float:left; width:180px; height:19px; text-decoration:none; font-family:'Open Sans', sans-serif; font-size:11px; font-weight:bold; color:#FFFFFF; background-color:#2175d9; text-align:center; padding-top:3px;}
+

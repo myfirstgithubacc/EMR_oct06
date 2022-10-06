@@ -1,0 +1,104 @@
+.main_box{ margin-top:3em}
+.margin_bottom{margin-bottom:10px!important;}
+.form-group {margin-bottom:5px;}
+.border-box{border:1px solid #ABABAB; padding:6px;}
+.border-box h1{ font-size: 17px;margin: 0 0 5px; padding: 0;}
+.form-group input[type=text],.form-group textarea,.form-group select{ width:100%; padding:2px 5px!important; border-color:#ABABAB!important; border-radius:2px; background:#fff; border:1px solid;}
+.form-group11 input[type=text],.form-group11 textarea,.form-group11 select{ width:100%; padding:2px 5px!important; border-color:#ABABAB!important; border-radius:2px; background:#fff; border:1px solid;}
+.block{display:block!important; width:100%!important;}
+.inlin-bl{display:inline-block!important;}
+.spac{width:100%; background:#eee; overflow:hidden; padding:5px 0px;}
+.btn{ border-radius:3px!important; padding:2px 5px !important; font-size:11px; vertical-align:top;}
+
+.input-text{border:1px solid #ABABAB !important; width:100%!important;}
+.input-text a{margin:0px!important;}
+.input-text input[type=text]{border:0px solid #C3D9F9 !important; width:186px!important}
+.header_main{background:#C1E5EF; padding:6px 6px;}
+.header_main .mrgn_header{width:100%!important; margin:0px!important;}
+
+.header_main h2{font-size:13px; margin:0px; padding:0px; line-height:20px; font-weight:bold;}
+.checkboxes{ margin:9px 0px 0px;}
+input[type="checkbox"],input[type="radio"]{margin:1px 5px 0 0;}
+aside{background:#eee; padding:10px;}
+.label1{ line-height:20px;}
+.btn_image{ Width:25px; height:25px; margin-top:-5px; margin-left:7px;}
+.btn_large .btn{ padding:2px 5%!important;}
+.ajax__tab_header span{height:21px!important;}
+.subheading_main{ padding:5px 0px; overflow:hidden; background:#F2F2F2; border-bottom:1px solid #ccc; margin-bottom:5px;}
+.inline_btn{ display:inline; margin-left:10px;}
+.textbox11{Width:100%; max-width:59%!important;  }	
+.alert_new{ margin:0px!important; width:100%!important; z-index:1!important;}
+.relativ{ position:relative!important;}
+.margin_z{margin:0px!important}
+.l_height{line-height:20px;}
+.radioo td{ margin-right:20px; display:inline-block}
+.check_intolerence{ position:relative; top:3px;}
+.h5{ padding:5px; background:#C7DEFC; margin:0px; font-weight:bold;}
+.hr{ margin:8px 0px;}
+.overflo{overflow:hidden}
+.flex{display:inline-flex;}
+
+
+.PD-TabRadio { float:left; margin:0.2em 3em 0.6em 0; padding:0;} 
+.PD-TabRadio span input {margin:0.3em 0.2em 0 0.2em !important; padding:0; float:left; width:12px !important; height:12px !important;}
+.PD-TabRadio span label {margin:0em 0 0 0; padding:0; float:left; font-size: 13px !important; text-align:right; font-weight:normal !important;}
+.PD-TabRadio input {margin:0.3em 0.2em 0 0.2em !important; padding:0; float:left; width:12px !important; height:12px !important;}
+/*.PD-TabRadio label {margin:0em 0 0 0; padding:0; float:left; font-size: 13px !important; text-align:right; font-weight:normal !important;}*/
+
+.margin_bottom01{margin-bottom:5px!important;}
+.PaddingRightSpacing { padding:0 0 0 15px;}
+.PaddingLeftSpacing { padding:0 15px 0 0;}
+
+
+
+/* hack for ie10+ version */
+   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+     {
+        .inlin-bl1{display:inline-block!important; margin:-10px 0px 0px} /* IE10 */
+        
+     }
+
+
+
+     /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        .textbox11{max-width: 50% !important;}
+        .btn_image {
+            height: 25px;
+            margin-left: -3px;
+            margin-top: -5px;
+            width: 25px;
+        }
+
+        .PD-TabRadio label{font-size:10px;}
+        
+        .btn_large .btn {
+            padding: 2px 0% !important;
+            font-size:10px;
+        }
+        .small_font{ font-size:70%!important;}
+        .btn_small{ padding:2px 4px!important;font-size:80%!important}
+
+         }
+
+     /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        .textbox11{max-width: 59% !important;} 
+       
+         .btn_image {
+        height: 25px;
+        margin-left: 7px;
+        margin-top: -5px;
+        width: 25px;
+        }
+        
+         .btn_large .btn {
+            padding: 2px 5% !important;
+            font-size:11px;
+        }
+
+        .PD-TabRadio label {
+            font-size: 12px;
+        }
+         .btn_small{ padding: 4px 8px!important; font-size:12px!important}
+    }

@@ -1,0 +1,44 @@
+﻿* { margin:0; padding:0;}
+
+
+
+
+/****** Button *******/
+.ReportsAP-Div01 { float:left; margin:0.4em 0 0.4em 0 !important; padding:0 !important; width:100% !important;}
+.PrintPreviewBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 0 5px; padding:4px 8px; border-radius:3px; float:right;}
+.PrintPreviewBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.ReportsMessage {color: green; font-size: 13px; font-weight: bold; text-align:center; float:left; width:100%; margin:0.5em 0; padding:0;}
+.ReportsMessage01 {color: green; font-size: 13px; font-weight: bold; text-align:center; float:left; margin:0.5em 0; padding:0;}
+
+
+/****** Appointment List Page *******/
+.Reports-Div { float:left; padding:1em 0 0 0; margin:0em 0 0 0; width:100%;}
+.ReportsDiv { float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%; background-color:#C1E5EF;}
+.ReportsBorder { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 0 0; width:100%; background-color:#fff;border-top: solid 1px #ccc;}
+.ReportsDivText {float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%;}
+.ReportsDivText h2 { font-size:13px; color:#232323; font-weight:500; float:left; line-height:2.7em; margin:0; padding:0;}
+
+
+.ReportsAPDiv { width:100%; float:left; margin:0; padding:0;}
+.ReportsAP-Div { float:left; margin:0 0 0.8em 0 !important; padding:0 !important; width:100% !important;}
+.ReportsAP-Div h2{ font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0; width:90px;}
+.ReportsAP-Div h3 { float:left; padding:0; margin:0;}
+.ReportsAP-Div h4{ font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 0 0 0; padding:0; width:27%;}
+.ReportsAP-Div h4 input { float:left; margin:4px 7px 0 0 ; padding:0;}
+.ReportsAP-Div h4 label { float:left; margin:0; padding:0; font-weight:normal}
+
+.ReportsDoctor { font-size:13px !important; color:#232323; font-weight:normal; float:left; line-height:1.2em; margin:0em 0em 0 0; padding:0; width:100%;}
+
+.ReportsAP-Div02 { float:left; margin:0 0 0.8em 0 !important; padding:0 !important; width:100% !important;}
+.ReportsAP-Div02 h2{ font-size:13px !important; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0; width:80px; }
+.ReportsAP-Div02 h2 span {font-size:13px !important; color:#232323 !important; }
+.ReportsAP-Div02 h3 { float:left; padding:0; margin:0 1.5em 0 0;}
+
+
+
+
+
+
+
+

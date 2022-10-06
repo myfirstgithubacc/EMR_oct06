@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="EncryptDecrypt" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>EncryptDecrypt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="User">
+    <Position X="0.5" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAREQAABAQAAgAiMAAAAEAAAASAAAAACDEAAAAgAAAQ=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInfo">
+    <Position X="4.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACQAAAAAAAAAIACAABAAEAAAgAACEABAAAAAAA=</HashCode>
+      <FileName>UserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mails">
+    <Position X="2.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEEAAAAAAAAgAAAAAACAACAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Mails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseC.Hospital">
+    <Position X="4" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAIAAAAAAQAIAAAAACAAAgAABAAAAQAAAgAACAAAA=</HashCode>
+      <FileName>Hospital.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

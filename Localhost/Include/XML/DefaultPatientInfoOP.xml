@@ -1,0 +1,21 @@
+﻿<pr>
+    <RegistrationNo>UHID</RegistrationNo>
+    <PatientName>Name Of Patient</PatientName>
+    <PatientAgeGender>Age Y/M/D Gender</PatientAgeGender>
+    <DateOfBirth>DOB</DateOfBirth>
+    <SponsorId>40</SponsorId>
+    <PayorId>40</PayorId>
+    <LocalAddress> Address </LocalAddress>
+    <CityName>City Name</CityName>
+    <StateName>State Name</StateName>
+    <CountryName>Country Name</CountryName>
+    <LocalPin>Local Pin </LocalPin>
+    <PhoneHome> Phone (H) </PhoneHome>
+    <MobileNo> Mobile </MobileNo>
+    <Email> Email </Email>
+    <c>
+        <SponsorName>Sponsor Name</SponsorName>
+        <PayerName>Payer Name</PayerName>
+        <Insurance>Insurance</Insurance>
+    </c>
+</pr>

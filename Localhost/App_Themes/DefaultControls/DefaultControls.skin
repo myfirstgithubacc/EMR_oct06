@@ -1,0 +1,153 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+
+
+
+<asp:GridView runat="server" SkinId="gridviewOrder" CellPadding="4" ForeColor="#333333" GridLines="Both">
+    <PagerSettings Mode="NumericFirstLast" />
+    <RowStyle CssClass="clsGridRoworder" />
+    <FooterStyle CssClass="clsGridRowfooterorder" />
+    <PagerStyle CssClass="pagination1" BackColor="#EFF3FB" />
+    <SelectedRowStyle BackColor="Pink" Font-Bold="false" ForeColor="#333333" />
+    <HeaderStyle CssClass="clsGridheaderorder" Height="20px" />
+    <EditRowStyle BackColor="#A5B8C9" />
+    <AlternatingRowStyle BackColor="White" />
+</asp:GridView>
+
+
+<asp:GridView runat="server" SkinId="gridviewOrderNew" CellPadding="4" ForeColor="#333333" GridLines="Both">
+    <PagerSettings Mode="NumericFirstLast" />
+    <RowStyle CssClass="clsGridRoworderNew" />
+    <FooterStyle CssClass="clsGridRowfooterorderNew" />
+    <PagerStyle CssClass="pagination1" BackColor="#EFF3FB" />
+    <SelectedRowStyle BackColor="Pink" Font-Bold="false" ForeColor="#333333" />
+    <HeaderStyle CssClass="clsGridheaderorderNew" Height="20px" />
+    <EditRowStyle BackColor="#A5B8C9" />
+    <AlternatingRowStyle BackColor="White" />
+</asp:GridView>
+
+
+<asp:GridView runat="server" SkinId="gridviewOrderNewP" CellPadding="4" ForeColor="#333333" GridLines="Both">
+    <PagerSettings Mode="NumericFirstLast" />
+    <RowStyle CssClass="clsGridRoworderNewP" />
+    <FooterStyle CssClass="clsGridRowfooterorderNewP" />
+    <PagerStyle CssClass="pagination1" BackColor="#EFF3FB" />
+    <SelectedRowStyle BackColor="Pink" Font-Bold="false" ForeColor="#333333" />
+    <HeaderStyle CssClass="clsGridheaderorderNewP" Height="20px" />
+    <EditRowStyle BackColor="#A5B8C9" />
+    <AlternatingRowStyle BackColor="White" />
+</asp:GridView>
+
+
+
+
+
+
+<asp:GridView runat="server" SkinId="gridview" CellPadding="4"
+ForeColor="#333333" GridLines="Both">
+    <PagerSettings Mode="NumericFirstLast" />
+    <RowStyle CssClass="clsGridRow" />
+    <FooterStyle CssClass="clsGridRowfooter" />
+    <PagerStyle CssClass="pagination1" BackColor="#EFF3FB" />
+    <SelectedRowStyle BackColor="Pink" Font-Bold="false" ForeColor="#333333" />
+    <HeaderStyle CssClass="clsGridheader" Height="20px" />
+    <EditRowStyle BackColor="#A5B8C9" />
+    <AlternatingRowStyle BackColor="White" />
+</asp:GridView>
+<asp:CheckBox SkinId="checkbox" runat="server" CssClass="checkbox" />
+<asp:TextBox SkinId="textbox" runat="server" CssClass="Textbox" />
+<asp:DropDownList SkinId="DropDown" CssClass="DropDown" runat="server"></asp:DropDownList>
+<asp:Button SkinId="Button" CssClass="buttonBlue" runat="server" />
+<asp:Button SkinId="Buttonpd" CssClass="buttonBluepd" runat="server" />
+<asp:Label runat="server" SkinId="label" CssClass="Lable2"></asp:Label>
+<asp:ListBox SkinId="listbox" runat="server" CssClass="clsListBox"></asp:ListBox>
+
+<asp:GridView runat="server" SkinId="gridview2" CellPadding="4"
+ForeColor="#333333" GridLines="Both">
+    <PagerSettings Mode="NumericFirstLast" />
+    <RowStyle CssClass="clsGridRow" />
+    <FooterStyle CssClass="clsGridRowfooter" />
+    <FooterStyle BackColor="#4F94CD" />
+    <PagerStyle CssClass="pagination1" BackColor="#EFF3FB" />
+    <SelectedRowStyle BackColor="Pink" Font-Bold="false" ForeColor="#333333" />
+    <HeaderStyle CssClass="clsGridheader" Height="20px" />
+    <EditRowStyle BackColor="#A5B8C9" />    
+</asp:GridView>
+
+
+
+
+<asp:Menu Runat="server" StaticDisplayLevels="3"  StaticSubMenuIndent="10px" DynamicHorizontalOffset="2" CssClass="Menu" Width=100% >
+    <StaticSelectedStyle CssClass="Menu" ></StaticSelectedStyle>
+    <StaticMenuItemStyle CssClass="Menu" HorizontalPadding="8" VerticalPadding="2"  ></StaticMenuItemStyle>
+    <DynamicMenuStyle ></DynamicMenuStyle>
+    <DynamicSelectedStyle BackColor="#507CD1"></DynamicSelectedStyle>
+    <DynamicMenuItemStyle HorizontalPadding="5" VerticalPadding="2"></DynamicMenuItemStyle>
+    <DynamicHoverStyle ForeColor="White" Font-Bold="True" BackColor="#10BDC1"></DynamicHoverStyle>
+    <StaticHoverStyle ForeColor="White" Font-Bold="True" BackColor="#10BDC1"></StaticHoverStyle>    
+</asp:Menu>
+<asp:WebPartZone SkinID="" Runat="server" Height="100%" Width="100%" 
+                 PartChromeType="TitleAndBorder" 
+                 DragHighlightColor="255, 255, 128">
+    <HeaderStyle CssClass="ZoneHeader" />
+    <PartTitleStyle CssClass="WebPartTitle"  />
+    <PartStyle CssClass="WebPart" CellSpacing=5  />
+    <PartChromeStyle BorderWidth="1px" BackColor="#FFFFC0"></PartChromeStyle>
+    <EmptyZoneTextStyle CssClass="EmptyZone" />
+    <MenuLabelHoverStyle BackColor="#EBFEFE"></MenuLabelHoverStyle>
+    <MenuLabelStyle BorderColor="Transparent" BackColor="#EBFEFE"></MenuLabelStyle>
+    <MenuPopupStyle BackColor="#E1EDFF" BorderColor="#5072CB" 
+										ShadowColor="#284286" BorderStyle="Solid" 
+										BorderWidth="1px" GridLines="Horizontal"
+										Font-Names="Tahoma" Font-Size="9pt" />
+    <MinimizeVerb ImageUrl="/Emr/Dashboard/img/Minimize.gif"></MinimizeVerb>
+    <RestoreVerb ImageUrl="/Emr/Dashboard/img/Restore.GIF"></RestoreVerb>
+    <CloseVerb ImageUrl="/Emr/Dashboard/img/PTCLOSE.GIF"></CloseVerb>
+    <DeleteVerb ImageUrl="/Emr/Dashboard/imgg/DELETE.GIF" />
+    <EditVerb ImageUrl="/Emr/Dashboard/img/EditVerb.gif"></EditVerb>
+</asp:WebPartZone>
+
+
+
+<asp:EditorZone runat="server" SkinID="" CssClass="EditorZone" 
+                HeaderText="Editor Zone" PartChromeType="TitleAndBorder"
+                InstructionTextStyle-BorderStyle="Solid" InstructionTextStyle-BorderWidth="0"
+                Width="100%" 
+                VerbButtonType="Button" >
+    <HeaderStyle CssClass="ZoneHeader" />
+		<HeaderCloseVerb ImageUrl="/Emr/Dashboard/img/CloseVerb.gif" />
+		<PartTitleStyle CssClass="WebPartTitle" BackColor="#1A808C"  />
+    <PartStyle CssClass="WebPart" BackColor="#C5DCFE"    />
+    <EmptyZoneTextStyle CssClass="EmptyZone" />
+    <InstructionTextStyle CssClass="ZoneInstruction" />
+    <PartChromeStyle BorderWidth="0px" BackColor="#E1EDFF"></PartChromeStyle>
+		<EmptyZoneTextStyle CssClass="EmptyZone" />
+    <EditUIStyle ForeColor="Blue" />
+    <FooterStyle HorizontalAlign="Center"  />
+</asp:EditorZone>
+
+<asp:CatalogZone runat="server" SkinID="" CssClass="CatalogZone" VerbButtonType="Button" 
+                 Width="100%" >
+    <InstructionTextStyle CssClass="ZoneInstruction" />
+				<HeaderStyle CssClass="ZoneHeader" />
+				<HeaderCloseVerb ImageUrl="/Emr/Dashboard/img/CloseVerb.gif" />
+				<PartTitleStyle CssClass="WebPartTitle"  />
+				<PartLinkStyle Font-Names="Arial" Font-size="10" ForeColor="#1A808C" />
+				<SelectedPartLinkStyle Font-Names="Arial" Font-size="10" ForeColor="#1E3062" />
+				<PartStyle CssClass="WebPart" />
+				<EmptyZoneTextStyle CssClass="EmptyZone" />
+				<FooterStyle HorizontalAlign="Center" />
+</asp:CatalogZone>

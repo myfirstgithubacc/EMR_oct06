@@ -1,0 +1,116 @@
+body{font-family: 'Roboto', sans-serif; font-size:14px;position:absolute: top:0; z-index:1;}
+.bg1{ background:#005a9f ; margin-bottom:20px; }
+.head_main{padding:5px 0px;  overflow:hidden;}
+.logo_client img,.logo_main img, .left_image img{max-width:100%}
+.logo_main{max-width:100%; padding: 0;}
+.logo_client{max-width:200px;}
+.cl_white{color:#fff!important;}
+.relativ{position:relative;}
+.licence{position:absolute; top:-15px; color:#fff ; right:0px; font-size:12px;}
+.body_main{ height:100vh;}
+.body_main { background: url(../images/login/login-bg.jpg) no-repeat left 100px; background-size: cover;}
+	
+	
+background: #f0f9ff; /* Old browsers */
+background: -moz-linear-gradient(top, #f0f9ff 0%, #d3d8e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f0f9ff 0%,#d3d8e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f0f9ff 0%,#d3d8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#d3d8e8',GradientType=0 ); /* IE6-9 */
+}
+
+
+.body_main .btn {
+    border-radius: 0;
+    padding: 8px 0;
+}
+
+.body_main h1 {
+    line-height: inherit;
+    color: #5f9cdb !important;
+}
+
+#right_side h3 {
+    display: none;
+}
+
+.form_main .form-group input[type=text], .form_main .form-group input[type=password] {
+   
+    border: 1px solid #e5e5e5; border-radius: 4px;
+    /*box-shadow: inset -1px 1px 3px 0px #ededed;*/
+    font-size: 12px !important; padding: 8px 10px !important;
+    
+}
+
+.RadComboBox .rcbInner {
+    background: #fff !important; border: 1px solid #e5e5e5 !important; border-radius: 4px;
+    /*box-shadow: inset -1px 1px 3px 0px #ededed;*/ padding: 8px 5px !important;
+    
+
+}
+
+
+.RadComboBox .rcbInner * {
+   color: #000 !important; font-size: 12px !important; font-style: inherit !important; 
+}
+
+.logo_client {
+    max-width: 138px;
+    margin-top: 10px;
+    float: right;
+}
+
+
+.body_main h1{ margin-top:0px; font-size:36px; font-weight:600; color:#333;}
+.form_main{ width:100%;}
+.form_main .form-group,.form_main .form-group1{ margin-bottom:15px;}
+.form_main .form-group input[type=text],.form_main .form-group input[type=password]{ background:#fff; border:1px solid #e5e5e5; padding:7px; color:#9197a3; width:100%; font-size:17px; font-weight:500; }
+.form-group1 input[type=text],.form_main .form-group1 input[type=password]{  padding:7px!important; color:#9197a3; width:100%; font-size:17px; font-weight:500; }
+footer{padding:10px 0px; font-size:12px; background: rgba(0,0,0,.5); color: #fff; position:fixed; bottom:0px; width:100%;}
+div.RadComboBox_Simple table td.rcbInputCellLeft {
+    border-width:0px!important;
+}
+
+.form_main .form-group input[type=text]:focus,.form_main .form-group input[type=password]:focus {outline:0; border: 1px solid #ccc;}
+.form_main .RadComboBox_Simple .rcbInputCell .rcbEmptyMessage{color:#9197a3!important; font-style:normal!important; opacity:.9}
+.form_main div.RadComboBox_Simple table td.rcbInputCell {
+    height: 18px;
+    line-height: 18px;
+    border-top: 1px solid #bdc7d8!important;
+    border-left: 1px solid #bdc7d8!important;
+    border-bottom: 1px solid #bdc7d8!important;
+    background: #fff;
+}
+.form_main div.RadComboBox_Simple table td.rcbArrowCell
+{		border:1px solid #bdc7d8 !important;
+		 border-top: 1px solid #bdc7d8 !important;
+		 
+		 border-bottom: 1px solid #bdc7d8 !important;
+		 border-right: 1px solid #bdc7d8 important;
+	}
+.right_bx_padding{ padding: 20px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 1px solid #ebebeb;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px #f5f5f5;}
+.right_bx_padding h3 { font-size:24px; color:#333; padding:20px 0 10px !important; font-weight:600;}
+
+.btn-link {
+    clear: both;
+    display: block;
+    padding-top: 10px;
+}
+
+
+
+@media only screen and (min-width:320px){
+	.body_main{ height:100%;}
+	footer{ bottom:0;}
+}
+@media only screen and (min-width:992px){
+	.body_main{ height:100vh;}
+	footer{ bottom:0px;}
+}

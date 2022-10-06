@@ -1,0 +1,675 @@
+﻿body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; font-weight:normal;}
+
+
+.PaddingRightSpacing { padding:0 0 0 15px;}
+.PaddingLeftSpacing { padding:0 15px 0 0;}
+.PaddingSpacing { padding:0 0 0;}
+
+
+
+.AdLeft-Date { float:left; margin:0; padding:0.5em 0; width:100%; border:solid 1px #dadada; background:#eeeeee;}
+.AdLeft-Date h2 { font-size:22px; float:left; text-align:center; padding:0; margin:0; width:100%;}
+.AdLeft-Time { float:left; margin:0 0 5px 0; padding:0.5em 0; width:100%; border:solid 1px #0972a5; background:#1c90c9;}
+.AdLeft-Time span { float:left; margin:0 15px; padding:0;}
+.AdLeft-Time h3 { font-size:40px; float:left; text-align:center; padding:5px 0; margin:0;color:#fff; font-weight:bold;} 
+.AdLeft-Calender { float:left; width:100%; margin:0; padding:0;}
+.AdLeft-box {  border:solid 1px #e6e6e6; float:left; width:100%; margin:0 0 10px 0;  padding:10px 0;}
+.AdLeft-Facility { float:left; width:95%; margin:0 3% 2% 3%; /* border:solid 1px #e6e6e6; */}
+.AdLeft-FacilityIcon { float:left; margin:0; padding:7px 10px; width:15%;height:38px; border-right:solid 1px #e6e6e6; background:#ececec;}
+.AdLeft-FacilityInput { float:left; margin:0; padding:0; width:85%; height:38px; border:none; outline:none; font-size:14px; font-weight:bold;}
+.AdLeft-FacilityInput select { float:left; margin:0; padding:0 0 0 10px;}
+.AdLeft-FacilityInput:focus { box-shadow:none;}
+
+
+
+
+
+
+/***** Appointment Details Part ****/
+.appointmentDiv { width:100%; float:left; margin:0 ; padding:0; background:#fff;}
+.ADLeft { float:left; margin:0; padding:0 !important;}
+.AD-leftPart { width:100%; float:left; margin:0; padding:0;}
+
+.AdLeft-Time { float:left; margin:0 0 5px 0; padding:0; width:100%; border:solid 1px #1686bb; background:#25a0da;}
+.AdLeft-Time h4{ float:left; margin:7px 5px; padding:0; width:20%;}
+.AdLeft-Time h2 { font-size:12px; float:right; text-align:center; padding:12px 0 5px 0px; margin:0;color:#fff; font-weight:normal;width:70%;} 
+.AdLeft-Time h3 { font-size:18px; float:right; text-align:center; padding:5px 0; margin:0;color:#fff; font-weight:normal;width:65%;} 
+.AdLeft-Calender { float:left; width:100%; margin:0; padding:0;}
+.AdLeft-box { border:solid 1px #e6e6e6; float:left; width:100%; margin:0 0 5px 0; padding:10px 0;}
+.AdLeft-Facility { float:left; width:95%; margin:0 3% 2% 3%;}
+.AdLeft-Facility h3 {font-size:12px; float:left; text-align:left; padding:0; margin:0 0 8px 0; width:100%; font-weight:600;}
+.AdLeft-FacilityInput { float:left; margin:0; padding:8px 0; /*width:85% !important;*/ height:38px; border:none; outline:none; font-size:14px; font-weight:bold;}
+.AdLeft-Facility span { float:left; margin:8px 0 0 0; padding:0;}
+.AdLeft-Facility span input { float:left; margin:0; padding:0;}
+.AdLeft-Facility span label { font-size:12px; margin:0 0 0 5px; padding:0; float:left;}
+
+#ctl00_ContentPlaceHolder1_txtServiceOffered { border:solid 1px #ababab; margin:0;padding: 4px 6px 4px 6px; background:none; color:#474747; font-size:12px; float:left; width:100%;}
+#ctl00_ContentPlaceHolder1_txtQualification { border:solid 1px #ababab; margin:0;padding: 4px 6px 4px 6px; background:none; color:#474747; font-size:12px; width:100%; float:left;}
+#ctl00_ContentPlaceHolder1_ddlNationality { background:none !important; border:none; width:100% !important;float:left; }
+#ctl00_ContentPlaceHolder1_RadLstDoctor { width:100% !important;float:left; }
+#ctl00_ContentPlaceHolder1_ddlLanguage { width:100% !important;float:left; }
+#ctl00_ContentPlaceHolder1_ddlSpecilization { width:100% !important;float:left;}
+/*
+#ctl00_ContentPlaceHolder1_ddlFacility { width:100% !important;float:left;}
+*/
+
+#ctl00_ContentPlaceHolder1_ddlNationality { background:none !important; border:none;}
+#ctl00_ContentPlaceHolder1_rdoGender label { font-weight:normal !important; float:left !important;}
+#ctl00_ContentPlaceHolder1_rdoGender1 label { font-weight:normal !important;  margin: 7px 4px 0 2px !important;}
+#ctl00_ContentPlaceHolder1_rdoGender1_0 input { margin: 9px 1px 0 1px !important;}
+
+.nextBtn { float:left; padding:10px 14px; background:#444444; border-radius:0; margin:0 0 0 2px; border:none;}
+.nextBtn:hover{background:#292929;}
+.AdLeft-Gender { float:left; width:95%; margin:0 3% 2% 3%;}
+.AdLeft-GenderIcon { float:left; margin:0; padding:7px 10px; width:40px; border:solid 1px #e6e6e6; background:#ececec;}
+.AdLeft-GenderRadio { float:left; margin:8px 0 0 10px; padding:0;}
+
+.AdLeft-Btn { float:right; margin:10px 5px 0 0; padding:0;}
+.flatLeft01 { float:left; margin:2px 2px 0; padding:0; background:#e7e7e7; color:#000; cursor:pointer; border:solid 1px #d4d4d4;}
+.flatLeft01:hover { background:#d6d6d6;color:#222222; text-decoration:none;border:solid 1px #c7c7c7;}
+.flatLeft01 a { color:#000; float:left; margin:0; padding:8px 6px 8px 6px;}
+.flatLeft01 a:hover{ color:#000;}
+.SearchBtn {  background:#e7e7e7;color:#000; font-size:12px; font-weight:normal; border:none; margin:0 1px; padding:7px 5px 7px 5px;}
+.SearchBtn:hover {  background:#d6d6d6;color:#222222;}
+
+.App-SearchBtn { float:left; margin:2px 0px 0px 0; padding:0;}
+.AppSearchBtn { background:#25a0da; color:#fff; font-size:12px; font-weight:600 !important; text-align:center; border:none; margin:0 0px 5px 0; padding:6px 5px 6px 5px !important; float:left; width:100%;}
+.AppSearchBtn:hover { background:#0f73a3;color:#fff; text-decoration:none;}
+.RadComboBox { background:none !important; border:none; padding:0px 0;}
+
+
+/***** Appointment Day ****/
+.Appoint-Day { float:left; margin:0; padding:0; width:100%;}
+.App-firstDiv { width:100%; float:left; margin:0; padding:0 0 0px 0;}
+.App-DayBtn { float:right; margin:2px 0px 0 0; padding:0;}
+.DayBtn { background:#0782be; color:#fff; font-size:13px; font-weight:bold; border:none; margin:0 0px; padding:8px 11px;}
+.DayBtn:hover { background:#056391;color:#fff;}
+
+.Appoint-table { float:left; margin:0px 0 10px 0; padding:0; width:100%;}
+.Appoint-BottomDIv {width:100%; float:left; margin:0; padding:3px 0 3px 0; background:#fff; border:solid 1px #e6e6e6;}
+.AppointBD-left { float:left; margin:0; padding:0; border:1px;}
+.AppointBD-div { float:left; margin:0 5px 0 5px; padding:0;  border:1px;}
+.radioBtn-text { float:left; margin:7px 4px 0 4px; padding:0; font-size:11px; font-weight:bold;}
+.radioBtn-lightYellow { border-radius:50px; float:left; width:12px; height:12px; background:#fffbc7; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+.radioBtn-lightGreen { border-radius:50px; float:left; width:12px; height:12px; background:#0DECBB; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+.radioBtn-lightPink { border-radius:50px; float:left; width:12px; height:12px; background:#f1dcff; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+.radioBtn-LightGreen { border-radius:50px; float:left; width:12px; height:12px; background:#7fffd4; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+.radioBtn-LightBlack { border-radius:50px; float:left; width:12px; height:12px; background:#c8c8c8; border:solid 2px #2c2b2b; margin:9px 0 0 0; padding:0;}
+
+.AppointBD-right { float:right; margin:0; padding:0;}
+.ABD-rightNo { float:left; margin:0; padding:0;}
+.AdLeft-PageNo { float:left; margin:0; padding:0; width:100%; border:solid 1px #e6e6e6; outline:none; font-size:14px; font-weight:bold;}
+.pageNo { float:right; margin:0 10px 0 10px; padding:0; width:45px;}
+
+.NextPage { float:left; margin:0px 3px 0; padding:0; background:#0eaf82 ; border-radius:5px; color:#fff; cursor:pointer;}
+.NextPage:hover { background:#0a8c68;color:#fff; text-decoration:none;}
+.NextPage a { color:#fff; float:left; margin:0; padding:8px 10px 8px 10px;}
+.NextPage a:hover{ color:#fff;}
+.NextPageBtn {background:#0eaf82; color:#fff; font-size:13px; font-weight:600; border:none; margin:0px 0px 5px 0px; padding:4px 10px 4px !important; float:left; width:100%;}
+.NextPageBtn:hover { background:#0a8c68;color:#fff; text-decoration:none;}
+
+
+/***** Appointment Summary ****/
+.App-Summary {float:left; margin:0 0 0 0; padding:0; width:100%;}
+.AS-Heading { background:#044E71; float:left; margin:0; width:100%;}
+.AS-Heading h2{ font-size:13px; font-weight:bold; color:#fff; margin:0; padding:8px 0px; text-align:center;}
+
+.AS-chartY { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#fffbc7; border-bottom:solid 4px #ece589;}
+.AS-chartY h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartY h4 a {color:#3f3f3f; text-decoration: none; font-size: 12px;font-weight: 500;}
+.AS-chartY h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chart-left { width:60%; float:left; margin:0; padding:0;}
+.AS-chart-left h3 { float:left; margin:0; padding:0.1em 0.3em 0 0.3em; font-size:28pt; color:#3f3f3f; font-weight:bold; text-align:center;}
+.AS-chart-left h4 { float:left; margin:0; padding:0.2em 0.5em 0 0.3em; font-size:11px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chart-right { width:40%; float:left; margin:0; padding:0.5em 0 0;}
+.AS-chart-right h6{ float:left; margin:0; padding:0; text-align:center;}
+.AS-chartG { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#DBEEFF; border-bottom:solid 4px #a7c7e3;}
+.AS-chartG h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartG h4 a {color:#3f3f3f; text-decoration: none; font-size: 12px;font-weight: 500;}
+.AS-chartG h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chartP { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#f1dcff; border-bottom:solid 4px #c9a3e3;}
+.AS-chartP h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartP h4 a {color:#3f3f3f; text-decoration: none; font-size: 12px;font-weight: 500;}
+.AS-chartP h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chartGreen { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#d0ecbb; border-bottom:solid 4px #adde89;}
+.AS-chartGreen h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartGreen h4 a {color:#3f3f3f; text-decoration: none; font-size: 12px;font-weight: 500;}
+.AS-chartGreen h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chartPink { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#ecbbbb; border-bottom:solid 4px #d67070;}
+.AS-chartPink h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartPink h4 a {color:#3f3f3f; text-decoration: none; font-size: 12px;font-weight: 500;}
+.AS-chartPink h4 a:hover {color:#3f3f3f; text-decoration:none;}
+.AS-chartPayment { width:100%; float:left; margin:0 0 0.2em 0; padding:0; background:#7fffd4; border-bottom:solid 4px #52d6aa;}
+.AS-chartPayment h4 { float:left; margin:0 0 0.5em 0; padding:0em 0.5em 0 1em; font-size:13px; color:#1e1e1e; font-weight:bold; text-align:center;}
+.AS-chartPayment h4 a {color:#3f3f3f;text-decoration: none; font-size: 12px;font-weight: 500;}
+.AS-chartPayment h4 a:hover {color:#3f3f3f; text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+
+/***** Break and Block Page ****/
+.BBreak-Top { width:100%; float:left; margin:0 0 0.4em; padding:0; background:#C1E5EF; border-top:solid 2px #C0ECF9;}
+.BBreak-TopRight { float:right; margin:0 0em 0.5em 0; padding:0;}
+.BBreak-TopRight h4 { float:left; margin:4px 0px 0 0; padding:0;}
+.BBSaveBtn { background:#0782be !important; color:#fff!important; font-size:12px!important; font-weight:bold !important; border:none; margin:0 2px 0 0px; padding:4px 15px 4px 15px;}
+.BBSaveBtn:hover { background:#056391 !important;color:#fff !important;}
+
+.Registration-Right { margin:0; padding:0;}
+.ABreakSpacingLeft { padding:3px 0 0 15px;}
+.ABreakSpacing { padding:3px 13px 0 13px;}
+.ABreakSpacingRight {margin:0 0px 0 0px; padding:3px 0px 0 0;}
+.ABreakfullDiv { margin:0; padding:0;}
+.ABreakfullDiv-left { margin:0 0px 0 -1%; padding:0;}
+.ABreakfullDiv-right { margin:0; padding:0 0 0 0;}
+
+.GeneralDiv { float:left; margin:0; padding:0; width:100%;}
+.BBGreen { width:100%; float:left; margin:0; padding:0; background:#C1E5EF;}
+.BBGreen h2 { float:left; margin:0; padding:0; background:#63BAD2; font-weight:normal;}
+.BBGreen h2 img{ margin:2px 7px; color:#fff; float:left;} 
+.BBGreen h3 { float:left; margin:4px 8px 0 8px; padding:0; font-size:13px; color:#232323; font-weight:500; line-height:1.4em;}
+
+.red { color:#f00 !important; float:left;}
+.red1 { color:#f00 !important;}
+.bbTopBox { float:left; margin:0em 0 0 0; padding:0 0 0 0em;}
+.bbTopBox h2 {font-size:12px; font-weight:normal; color:#333; float:left; margin:0.1em 0.5em 0 0 !important; padding:0;}
+.bbTopBox input { float:left; margin:0.6em 0.4em 0 0; padding:0;}
+.bbTopBox label {font-size:12px; font-weight:normal; color:#333; float:left; margin:0.45em 1em 0 0 !important; padding:0;}
+
+
+
+
+
+.bbTopBox h3 {font-size:12px; font-weight:normal; color:#333; float:left; margin:0.4em 0.5em 0 0 !important; padding:0;}
+.BBWhiteIcon { float:left; margin:1px 6px 0 0 !important; padding:0 !important;}
+
+
+
+.bbTopBox02 { float:left; margin:0.4em 0 0 0; padding:0 0 0 0;}
+.bbTopBox02 h3 {font-size:12px; font-weight:normal; color:#333; float:left; margin:0em 0.5em 0 0 !important; padding:0; line-height:1.6em}
+.bbTopBox02 input { float:left; margin:0.1em 0.4em 0 0; padding:2px 3px; outline:none; font-size:12px;}
+.colorBlack {color:#333 !important; float:left; }
+
+.bbTopBox01 { float:left; margin:0.2em 0 0.4em 0em; padding:0 0 0 0em;}
+.bbTopBox01 h2 {font-size:12px; font-weight:normal; color:#333; float:left; margin:0.2em 0.5em 0 0 !important; padding:0; width:60px;}
+.bbTopBox01 h3 {font-size:12px; font-weight:500; color:#333; float:left; margin:0.2em 0em 0 0em !important; padding:0; line-height:1.6em;}
+.bbTopBox01 h4 {font-size:12px; font-weight:normal; color:#333; float:left; margin:0em 0.5em 0 0em !important; padding:0;}
+.bbTopBox01 input { float:left; margin:0; padding:2px 5px; outline:none; font-size:12px; outline:none; width:250px; height:22px;}
+
+
+.bbTopBox001 { float:left; margin:0.2em 0 0.4em 1em; padding:0 0 0 0em;}
+.bbTopBox001 h2 {font-size:14px; font-weight:normal !important; color:#333; float:left; margin:0.2em 0.8em 0 0 !important; padding:0; width:130px;}
+.bbTopBox001 h3 {font-size:14px; font-weight:500; color:#333; float:left; margin:0.2em 0.5em 0 1em !important; padding:0;}
+.bbTopBox001 h4 {font-size:14px; font-weight:normal; color:#333; float:left; margin:0em 0.5em 0 0em !important; padding:0; width:55%;}
+
+.bbTopBox002 { float:left; margin:0.2em 0 0.4em 1em; padding:0 0 0 0em; width:100%;}
+.bbTopBox002 h2 {font-size:14px; font-weight:normal !important; color:#333; float:left; margin:0.2em 0.8em 0 0 !important; padding:0;}
+.bbTopBox002 h3 {font-size:14px; font-weight:500; color:#333; float:left; margin:0.2em 0.5em 0 1em !important; padding:0;}
+.bbTopBox002 h4 {font-size:14px; font-weight:normal; color:#333; float:left; margin:0em 0.5em 0 0em !important; padding:0; width:55%;}
+.bbTopBox002 h4 input { float:left; margin:0; padding:2px 5px; outline:none;}
+
+
+.bbTopBox003 { float:left; margin:0.2em 0 0.4em 1em; padding:0 0 0 0em; width:42%;}
+.bbTopBox003 h2 {font-size:14px; font-weight:normal; color:#333; float:left; margin:0.4em 0.2em 0 0 !important; padding:0;}
+.bbTopBox003 h3 {font-size:14px; font-weight:500; color:#333; margin:0.2em 0.2em 0 1em !important; padding:0;}
+.bbTopBox003a { float:left; margin:0.2em 0 0.4em 0em; padding:0 0 0 0em; width:54%;}
+.bbTopBox003a h2 {font-size:14px; font-weight:normal; color:#333; float:left; margin:0.4em 0.2em 0 0 !important; padding:0;}
+.bbTopBox003a h3 {font-size:14px; font-weight:500; color:#333; margin:0.2em 0em 0 0.5em !important; padding:0;}
+
+
+
+
+.bBlockDiv { float:left; margin:0; padding:0; width:100%;}
+
+.FacilityInput { float:left; width:72%; margin:0; padding:0;}
+.FacilityInput01 { float:left !important; margin:0 !important; padding:0 !important; width:100% !important;}
+.bbTopBox01H2 {font-size:14px; font-weight:500; color:#333; float:left; margin:0.7em 0.5em 0 0 !important; padding:0;}
+
+.bbTopBox03 { float:left; margin:0em 0 0 0; padding:0 0 0 1.5em;}
+.bbTopBox03 h2 {font-size:14px; font-weight:normal; color:#333; float:left; margin:0.4em 2em 0 0 !important; padding:0;}
+
+.BBWhiteIcon { float:left; margin:1px 6px 0 0 !important; padding:0 !important;}
+.BBLabel01 { float:left; margin:0 0 0.5em 0px; padding:5px 8px;border:#ccc solid 1px; color:#999; font-size:12px; width:78%;}
+.BBLabel01 i { float:right; margin:3px 0 0 0; padding:0;}
+.BBLabel02 { float:left; margin:0 0 0.5em 5px; padding:5px 7px;border:#ccc solid 1px; color:#999; font-size:11px; width:61%;}
+.BBLabel02 i { float:right; margin:3px 0 0 0; padding:0;}
+.BBLabel03 { float:left; margin:0 0 0.5em 5px; padding:5px 7px;border:#ccc solid 1px; color:#999; font-size:11px; width:25%;}
+.BBLabel03 i { float:right; margin:3px 0 0 0; padding:0;}
+
+.BBlock-White { width:100%; float:left; margin:0 0 1% 0; padding:0.5em 0; background:#fff; border:solid 1px #ddd;}
+.BBlock-WhiteNone { width:100%; float:left; margin:0 0 1% 0; padding:0em 0; background:#fff;}
+
+#ctl00_ContentPlaceHolder1_updBlock { margin:0; padding:0; line-height:0px; width:100%;}
+#ctl00_ContentPlaceHolder1_lblMessage { margin:0px 0 5px; padding:0; width:100%; float:left; text-align:center; font-size:11px; line-height:1.4em;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RecurrencePanel { width:600px; float:left; margin:0; padding:0;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatFrequencyDaily { float:left; margin:4px 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatFrequencyWeekly { float:left; margin:4px 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatFrequencyMonthly { float:left; margin:4px 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatFrequencyYearly { float:left; margin:4px 5px 0 0; padding:0;}
+
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatEveryNthDay { float:left; margin:5px 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatEveryWeekday { float:left; margin:5px 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatEveryNthMonthOnDate { float:left; margin:5px 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatEveryNthMonthOnGivenDay  { float:left; margin:5px 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatEveryYearOnDate { float:left; margin:5px 5px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RepeatEveryYearOnGivenDay { float:left; margin:5px 5px 0 0; padding:0;}
+
+.RecurrenceEditor label {padding: 3px 6px 0 0;}
+
+#ctl00_ContentPlaceHolder1_RadSchedulerRecurrenceEditor1_RecurrencePatternWeeklyPanel {float:left; margin:0px 0 0 20px; padding:0;}
+#ctl00_ContentPlaceHolder1_updBlock { float:left !important; margin:0 !important; padding:0 !important;}
+.RecurrenceEditor .rsAdvDaily ul { float:left; margin:15px 0 0 0; padding:0;}
+.RecurrenceEditor .rsAdvDaily li { margin:0 0 5px 0;}
+.RecurrenceEditor .rsAdvWeekly ul { float:left; margin:0px 0 0 0; padding:0;}
+.RecurrenceEditor .rsAdvWeekly li { margin:0 0 5px 0;}
+.RecurrenceEditor .rsAdvMonthly ul { float:left; margin:15px 0 0 0; padding:0;}
+.RecurrenceEditor .rsAdvMonthly li { margin:0 0 10px 0;}
+.RecurrenceEditor .rsAdvYearly ul { float:left; margin:15px 0 0 0; padding:0;}
+.RecurrenceEditor .rsAdvYearly li { margin:0 0 10px 0;}
+
+.tableRecurrence { width:100%; float:left; margin:0; padding:0;}
+.tableHeader { background-color:#eee !important;}
+
+
+
+
+
+
+
+
+/***** List Appointment details Page ****/
+.ALP-Spacing { float:left; width:100%; margin:5px 0 0 0; padding:0;}
+.ALP-SpacingNew { float:left; width:100%; margin:1px 0 0 0; padding:0;}
+
+
+.ALPTop { width:100%; float:left; margin:0 0 0em; padding:0; background:#C1E5EF; border-top:solid 2px #e1e1e1; border-bottom:solid 2px #e1e1e1;}
+.ALPTop01 { width:100%; float:left; margin:0 0 0em; padding:0; background:#C1E5EF;}
+
+
+/*
+#btnCloseW { background:#0782be; float:right; color:#fff; font-size:12px; font-weight:bold; border:none; margin:3px 2px 3px 0px; padding:3px 10px; border-radius:3px; }
+#btnCloseW:hover { background:#056391;color:#fff;}
+*/
+
+
+.btnCloseW { background:#0782be; float:right; color:#fff; font-size:12px; font-weight:bold; border:none; margin:3px 2px 3px 0px !important; padding:4px 12px !important; border-radius:3px; }
+.btnCloseW:hover { background:#056391;color:#fff;}
+
+
+.AppointmentWhite { width:100%; float:left; margin:0 0 0.5em 0; padding:0.1em 0 0.5em; background:#fff; border:solid 1px #ddd;}
+.FacilityText  {float:left; margin:0; padding:2px 0 5px 22px; width:115px; font-size:14px; font-weight:600;}
+.AP-FacilityText  {float:left; margin:0; padding:2px 0 5px 0px; width:75px; font-size:12px; font-weight:500;}
+
+.FacilityText01  {float:left; margin:0; padding:2px 0 5px 22px; width:85px; font-size:14px; font-weight:600;}
+.borderColor { border:solid 1px #C1C1C1 !important;}
+
+.searchOnInput { float:left; margin:0; padding:0;}
+.searchOnInput01 { float:left; margin:0px 0 0px 10px; padding:0px 0 0px 0; border:solid 1px #C1C1C1;}
+
+#ddlLocation { float:left ; margin:0px 0 0px 10px ; padding:0px 0 0px 0  !important; border:solid 1px #FDFCFC !important;}
+#ddlName { float:left ; margin:0px 0 0px 10px ; padding:0px 0 0px 0  !important; border:solid 1px #FDFCFC !important;}
+
+
+#ddlrange { float:left; margin:0px 0 0px 10px; padding:0px 0 0px 0; border:solid 1px #FDFDFD;}
+#ddlSpecilization { float:left ; margin:0px 0 0px 10px ; padding:0px 0 0px 0; border:solid 1px #FDFCFC;}
+/*#ddlProvider { float:left ; margin:0px 0 0px 10px ; padding:0px 0 0px 0 ; border:solid 1px #FDFCFC;}*/
+/*#ddlAppointmentStatus { float:left ; margin:0px 0 0px 10px ; padding:0px 0 0px 0 ;}*/
+
+/*
+#btnRefresh { background:#0782be; float:left; color:#fff; font-size:12px; font-weight:bold; border:none; margin:0px 10px 5px 0px; padding:5px 12px; border-radius:3px; }
+#btnRefresh:hover { background:#056391;color:#fff;}
+#btnResetFilter { background:#0782be; float:left; color:#fff; font-size:12px; font-weight:bold; border:none; margin:0px 2px 5px 0px; padding:5px 12px; border-radius:3px; }
+#btnResetFilter:hover { background:#056391;color:#fff;}
+*/
+
+
+
+.AppointBtnLeft { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:0px 0px 5px 4px; padding:3px 9px; border-radius:3px; float:left;}
+.AppointBtnLeft:hover { background:#056391;color:#fff; text-decoration:none;}
+.AppointBtnRight { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:5px 0px 5px 4px; padding:3px 9px; border-radius:3px; float:right;}
+.AppointBtnRight:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.AppointBtnRight01 { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:5px 0px 5px 4px; padding:11px 9px; border-radius:3px; float:right;}
+.AppointBtnRight01:hover { background:#056391;color:#fff; text-decoration:none;}
+
+
+.ListDetailsText-TopRight { float:right; margin:0 0em 0em 0; padding:0; width:100%;}
+.ListDetailsText-TopRight span {float:left; margin:0px; padding:5px 0 0px 0px; font-size:12px; color:#333; text-align:left; font-weight:600; line-height:1.8em;}
+.ListDetailsText-TopRight h2 {float:left; margin:0px; padding:5px 0 0px 0px; font-size:11px; color:#333; text-align:left; font-weight:bold; line-height:1.8em;}
+.ListDetailsText-TopRight01 { float:right; margin:0 0em 0em 0; padding:0; width:100%;}
+.ListDetailsText-TopRight01 h2 {float:left; margin:0px; padding:5px 0 5px 0px; font-size:12px; color:#333; text-align:left; font-weight:bold; line-height:1.8em;}
+
+
+.AppointmentBox { width:100%; float:left; margin:0; padding:0;}
+.AppointmentBox h2 {float:left; margin:0px; padding:5px 0 0px 0px; font-size:11px; color:#333; text-align:left; font-weight:normal; line-height:1.6em; width:90px;}
+.AppointmentBox h3 { float:left; margin:0; padding:0;}
+.AppointmentBox h4 { float:left; margin:0; padding:0;}
+.AppointmentBox h5 { float:left; margin:0; padding:0;}
+.AppointmentBox h5 input { float:left; margin:0 0 0 5px; padding:2px 5px; outline:none; width:80px;}
+
+
+.AppointmentBox01 { width:100%; float:left; margin:0; padding:0;}
+.AppointmentBox01 h2 {float:left; margin:0px; padding:3px 0 0px 0px; font-size:11px; color:#333; text-align:left; font-weight:normal; line-height:1.6em; width:90px;}
+.AppointmentBox01 h3 { float:left; margin:0 10px 0 0; padding:0;}
+.AppointmentBox01 h4 {float:left; margin:0px; padding:3px 0 0px 0px; font-size:11px; color:#333; text-align:left; font-weight:normal; line-height:1.6em; width:70px;}
+.AppointmentBox01 h5 {float:left; margin:0px; padding:3px 0 0px 0px; font-size:11px; color:#333; text-align:left; font-weight:normal; line-height:1.6em;}
+
+.AppointmentBox01a { width:100%; float:left; margin:0; padding:0;}
+.AppointmentBox01a h2 {float:left; margin:0px; padding:3px 0 0px 0px; font-size:11px; color:#333; text-align:left; font-weight:normal; line-height:1.6em; width:70px;}
+.AppointmentBox01a h3 { float:left; margin:0 10px 0 0; padding:0;}
+
+.AppointmentBox02 { width:100%; float:left; margin:0; padding:0;}
+.AppointmentBox02 h2 {float:left; margin:0px; padding:0px 0 0px 0px; font-size:11px; color:#333; text-align:left; font-weight:normal; line-height:1.6em; width:90px;}
+.AppointmentBox02 h3 { float:left; margin:0; padding:0;}
+
+.findPatientInput-Mobile { width:75px !important; float:left !important; margin:-1px 0 0em 0px !important; padding:3px 5px !important; outline:none; color: #232323; vertical-align: middle; background: White; font-size: 11px; /*border:solid 1px #B7B7B7;*/}
+
+
+
+
+
+/*****  Online Appointment details Page ****/
+.ALPTop { width:100%; float:left; margin:0 0 0em; padding:0 0 0.2em 0; background:#C1E5EF; border-top:solid 2px #C0ECF9; border-bottom:solid 2px #AFDCE8;}
+
+.FromDateText  {float:left; margin:0; padding:2px 8px 5px 22px; font-size:13px; font-weight:500;}
+.ToDateText  {float:left; margin:0; padding:2px 8px 5px 8px; font-size:13px; font-weight:500;}
+#dtpFromDate_wrapper, #dtpToDate_wrapper { float:left; margin:0; padding:0;}
+#txtConfirm {background-color: #F1DCFF; border:solid 1px #333; height: 15px; width: 15px; float:left; margin:5px 0 0 0}
+/*
+#btnfilter { background:#0782be; float:right; color:#fff; font-size:12px; font-weight:bold; border:none; margin:7px 5px 0 15px; padding:6px 12px; border-radius:3px; }
+#btnfilter:hover { background:#056391;color:#fff;}
+*/
+
+.btnfilter { background:#0782be; float:right; color:#fff !important; font-size:12px; font-weight:bold; border:none; margin:4px 5px 4px 15px !important; padding:4px 12px !important; border-radius:3px; }
+.btnfilter:hover { background:#056391;color:#fff;}
+
+.RadGrid_Office2007 .rgHeader, .RadGrid_Office2007 th.rgResizeCol {text-align: center !important;}
+.NoRecordText  {float:left; width:100% !important; margin:0; padding:10px 8px 10px 8px; font-size:13px; font-weight:600; text-align:center !important;}
+
+
+/*****  Work Hours Page ****/
+/*
+#btnclose { background:#0782be; float:right; color:#fff; font-size:12px; font-weight:bold; border:none; margin:4px 2px 4px 0px; padding:5px 12px; border-radius:3px; }
+#btnclose:hover { background:#056391;color:#fff;}
+#PatientStatus { float:left; margin:0px; padding:4px 0 4px 0px; font-size:14px; color:#333; text-align:left; font-weight:bold;}
+*/
+
+#updProvider { float:left; margin:0; padding:0;}
+
+
+
+/*****  Appointment Page (Right Side) ****/
+.ALP-Spacing01 { float:left; width:100%; margin:0; padding:0;}
+
+/*#ddlProvider { float:left; margin:0px 0 0px 10px; padding:0;}*/
+.AppointmentlinkText { float:left; margin:0 0 0 68px; padding:0; border: solid 1px #E8E1E1;} 
+.clsGridheader th, .clsGridRowfooter td { cursor: default; font-size: 12px; text-align:center; font-style: normal; font-variant: normal; font-weight: bold; line-height: normal; padding: 6px 8px;}
+
+
+
+
+/*****  Find Next Page  ****/
+/*
+.ListDetailsText-TopRight span { float:left; margin:0px; padding:7px 0 0px 0px; font-size:13px; color:#333; text-align:left; font-weight:bold;}
+*/
+
+.findNextDivion { float:left; width:50%; margin:12px 0 0 0; padding:0;  font-weight:normal !important;}
+.findNextDiv01 { float:left; margin:0; padding:15px 0 0; width:100%;}
+.findNextDiv01 span { float:left; width:125px; padding:3px 8px 0 15px; margin:0; color:#292828; font-size: 13px; text-align:left; font-style: normal; font-weight: normal !important;} 
+
+.findNextDiv { float:left; margin:0; padding:0px 0 0; width:100%;}
+.findNextDiv span { float:left; width:125px; padding:3px 0px 0 15px; margin:0; color:#292828; font-size: 12px; text-align:left; font-style: normal; font-weight: normal !important;} 
+.ApptType { float:left; padding:3px 8px 0 15px; margin:0; color:#292828; font-size: 12px; text-align:left; font-style: normal; font-weight: normal !important;} 
+.findNextDiv h4 { float:left; margin:0 0 8px 0; padding:0;}
+.findNextDiv h4 input { float:left; margin:4px 4px 0 0; padding:0;}
+.findNextDiv h4 label { float:left; padding:3px 8px 0 0px; margin:0; color:#292828; font-size: 11px; text-align:left; font-style: normal; font-weight: normal !important;} 
+
+
+.findNextDiv02 { float:left; margin:0; padding:2px 0 0; width:100%;}
+.findNextDiv02 span { float:left; width:112px; padding:3px 8px 0 15px; margin:0; color:#292828; font-size: 12px; text-align:left; font-style: normal; font-weight: normal !important;} 
+.findNextDiv02 h4 { float:left; margin:6px 0 0 12px; padding:0;}
+.findNextDiv02 h4 input { float:left; margin:4px 4px 0 0; padding:0;}
+.findNextDiv02 h4 label { float:left; padding:3px 6px 0 0px; margin:0; color:#292828; font-size: 12px; text-align:center; font-style: normal; font-weight: normal !important;} 
+#cblWeekday { float:left; margin:0; padding:0;}
+#lblDoctor { /*float:left !important; padding:3px 8px 0 15px !important;*/ margin:0!important; color:#292828 !important; font-size: 12px; text-align:left; font-style: normal; font-weight: normal !important;} 
+#cblWeekday_0, #cblWeekday_1, #cblWeekday_2, #cblWeekday_3, #cblWeekday_4, #cblWeekday_5, #cblWeekday_6 { float:left; margin:2px 3px 0 0px; padding:0; text-align:left;}
+
+
+.findNextDiv03 { float:left; margin:0; padding:5px 0 0; width:100%;}
+.findNextDiv03 span { float:left; width:75px; padding:3px 8px 0 15px; margin:0; color:#292828; font-size: 14px; text-align:left; font-style: normal; font-weight: normal !important;} 
+.findNextDiv03 h4 { float:left; margin:6px 0 0 12px; padding:0; width:55%;}
+.RadComboBox .rcbInputCell .rcbInput { padding:0 0 0 1px !important;}
+#RadLstDoctor { float:left; margin:0; padding:0; width:100%;}
+
+#RadLstDoctor_i0 input { float:left; margin:0 5px; padding:0;}
+.RadListBox_Default .rlbText, .RadListBox_Default .rlbItem { float: left; width:100%; margin: 0; padding: 0;}
+.RadListBox_Default .rlbGroup { border: 1px solid #8e8e8e; background: #FFF; float: left; width: 100%; margin:0; padding:0;}    
+.RadListBox_Default .rlbText, .RadListBox_Default .rlbItem { float: left; width: 88%; margin: 2px 0; padding: 0;}
+.rlbCheck { float:left !important; margin:4px 5px 0 5px !important; padding:0 !important;}
+.rlbText { float:left; width:100%; margin:0; padding:0;}
+.RadListBox_Default .rlbGroup .rlbHovered { background: #DFDFDF; width: 100%; float: left;}
+.RadListBox_Default .rlbText, .RadListBox_Default .rlbItem, .RadListBox_Default .rlbButtonText, .RadListBox_Default .rlbEmptyMessage { font-size: 12px; color: #333; width: 88%; float: left; margin: 4px 0; padding: 0;}
+.RadListBox_Default .rlbText, .RadListBox_Default .rlbItem { /* line-height: 18px; */ margin: 0; float: left;}
+.rlbItem { float:left !important; margin:0 !important; padding:4px 0 !important; width:100% !important;}
+
+
+
+
+
+.findNextDiv h4 span { font-weight:normal; font-size:14px; }
+
+#rblDatePeriod { float:left; margin:5px 0 0 0;}
+#rblDatePeriod_1, #rblDatePeriod_0 { float:left; margin:2px 5px 0 0; padding:0;}
+#rblDatePeriod label { font-weight:600; font-size:11px; margin:0 10px 0 0}
+#trPeriod { float:left; margin:0; padding:0;}
+#txtPeriodTime_wrapper { float:left; margin:0; padding:0;}
+#ddlPeriodTime { float:left; margin:0 0 0 10px; padding:2px 0 2px 0;}
+#fromDate_dateInput_wrapper { float:left !important; margin:-2px 0 0 -5px  !important; padding:0 !important;}
+#fromDate_popupButton { float:left !important; margin:-2px 0 0 0px  !important; padding:0 !important;}
+
+#Radnoofslots_wrapper   { float:left; margin:0; padding:0; width:15%  !important;}
+.vacantProvider { width:80% !important; float:left !important; font-weight:bold !important; margin:4px 0 0 11px !important; padding:0 !important;font-size: 13px !important; text-align:left !important;}
+.BtnClose { background:##007bff; /*float:left;*/ color:#fff; font-size:12px; font-weight:500; border:none; /*margin:7px 0px 13px 0px;*/ padding:3px 6px!important; border-radius:3px; }
+.BtnClose:hover { background:#056391;color:#fff;}
+
+
+
+
+
+
+
+
+
+
+/*****  Cancel/Move Appointment Page  ****/
+.cancelDiv { width:100%; float:left; margin:0; padding:0;}
+.cancelDiv h2 { float:left !important; font-weight:500 !important; margin:4px 0px 0 0px !important; padding:0 !important;font-size: 12px !important; text-align:left !important; width:85px;}
+.cancelDiv h3 { float:left; margin:0; padding:0;}
+.cancelDiv h3 input { float:left; margin:0; padding:2px 5px; font-size:12px; width:160px; outline:none;}
+.cancelDiv h3 select { float:left; margin:0; padding:0; font-size:12px; width:150px;}
+
+.cancelDiv01a { float:left; margin:0; padding:0;}
+.cancelDiv01a h2 { float:left !important; font-weight:500 !important; margin:4px 0px 0 0px !important; padding:0 !important;font-size: 12px !important; text-align:left !important; width:93px;}
+.cancelDiv01a h3 { float:left; margin:0 15px 0 0; padding:0;}
+
+.cancelDiv01b { float:left; margin:0; padding:0;}
+.cancelDiv01b h2 { float:left !important; font-weight:500 !important; margin:4px 0px 0 0px !important; padding:0 !important;font-size: 12px !important; text-align:left !important; width:125px;}
+.cancelDiv01b h3 { float:left; margin:0; padding:0;}
+
+.cancelDiv02 { width:100%; float:left; margin:0.3em 0 0 0; padding:0;}
+.cancelDiv02 h2 { float:left !important; font-weight:500 !important; margin:4px 0px 0 0px !important; padding:0 !important;font-size: 12px !important; text-align:left !important; width:85px;}
+.cancelDiv02 h3 { float:left; margin:0; padding:0;}
+.cancelDiv02 h3 input { float:left; margin:0; padding:2px 5px; font-size:12px; width:160px; outline:none;}
+
+.cancelDiv02a { float:left; margin:0.3em 0 0 0; padding:0;}
+.cancelDiv02a h2 { float:left !important; font-weight:500 !important; margin:4px 0px 0 0px !important; padding:0 !important;font-size: 12px !important; text-align:left !important; width:95px;}
+.cancelDiv02a h2 input { float:left; margin:4px 4px 0 0; padding:0;}
+.cancelDiv02a h2 label { float:left; padding:4px 8px 0 0px; margin:0; color:#292828; font-size: 11px; text-align:left; font-style: normal !important; font-weight:500  !important;} 
+.cancelDiv02a h3 { float:left !important; font-weight:500 !important; margin:7px 4px 0 0px !important; padding:0 !important;font-size: 12px !important; text-align:left !important;}
+.cancelDiv02a h3 input { float:left; margin:0; padding:2px 5px; font-size:12px; width:160px; outline:none;}
+.cancelDiv02a h4 { float:left; margin:3px 4px 0 0; padding:0;}
+
+.cancelDiv02b { float:left; margin:0.3em 0 0 0; padding:0;}
+.cancelDiv02b h2 { float:left !important; font-weight:500 !important; margin:4px 0px 0 0px !important; padding:0 !important;font-size: 12px !important; text-align:left !important; width:92px;}
+.cancelDiv02b h3 { float:left; margin:0; padding:0;}
+.cancelDiv02b h4 { float:left !important; font-weight:500 !important; margin:4px 5px 0 5px !important; padding:0 !important;font-size: 12px !important; text-align:left !important;}
+
+.cancelDiv03 { float:left; margin:0 0 2px; padding:2px 5px; font-size:12px; width:160px; outline:none; height:22px; border:solid 1px #CECECE;}
+.cancelDiv03a { float:left; margin:0 0 0 10px; padding:2px 5px; font-size:12px; font-weight:600;}
+
+
+
+/*
+#ctl00_ContentPlaceHolder1_lblProvider { float:left !important; font-weight:normal !important; margin:0px 0px 0 0px !important; padding:0 !important;font-size: 12.5px !important; text-align:left !important;}
+#ctl00_ContentPlaceHolder1_ddlMoveProvider { float:left !important; margin:0 !important; padding:0 !important; width:62% !important;}
+#ctl00_ContentPlaceHolder1_ddlOptions { float:left !important; margin:0 0 0 4px !important; padding:0 !important; width:70% !important; border:#ccc;}
+#ctl00_ContentPlaceHolder1_Label1 { float:left !important; font-weight:600 !important; margin:2px 14px 0 0px !important; padding:0 !important;font-size: 12.5px !important; text-align:left !important;}
+#ctl00_ContentPlaceHolder1_ddlProvider  { float:left !important; margin:0 !important; padding:0 !important; width:49% !important;}
+#ctl00_ContentPlaceHolder1_txtCancelRemarks { border:solid 1px #BEDAFF; width:69%;}
+#ctl00_ContentPlaceHolder1_chkMoveDate { float:left; margin:3px 9px 0 11px; padding:0;}
+*/
+
+
+#ctl00_ContentPlaceHolder1_dtpFromDate_wrapper { float:left; margin:0; padding:0;}
+#ctl00_ContentPlaceHolder1_dtpToDate_wrapper { float:left; margin:0; padding:0;}
+
+.cancelDiv-left { width:40%; float:left; margin:2px 0 0 0; padding:0;}
+.cancelDiv-left label { float:left; margin:0; padding:0; font-weight:500; font-size:12.5px;}
+.cancelDiv-right { width:60%; float:left; margin:0; padding:0;}
+.cancelDiv-right h3 { float:left !important; font-weight:600 !important; margin:4px 15px 0 11px !important; padding:0 !important;font-size: 12.5px !important; text-align:left !important;}
+
+
+
+
+.cancelDiv01 { width:100%; float:right; margin:0; padding:0;}
+.cancelDiv01 h3 { float:left; margin:0 5px; padding:0;} 
+
+.AppointmentNewBtn { background:#0782be; float:right; color:#fff; font-size:12px; font-weight:bold; border:none; margin:7px 2px 0 0px; padding:9px 12px; border-radius:3px; }
+.AppointmentNewBtn:hover { background:#056391;color:#fff;}
+
+
+
+
+
+#ctl00_ContentPlaceHolder1_Label3 { float:left; width:100%; text-align:center;}
+.Appt-popupBg{width: 250px; z-index: 100; background-color: White; border: 3px solid #949494; position: absolute; padding:0.5em 1%; left: 45%; top: 45%}
+.AppointmentNewBtn01 { background:#0782be; float:right; color:#fff; font-size:11px; font-weight:bold; border:none; margin:7px 7px 0 0px; padding:4px 12px; border-radius:3px; }
+.AppointmentNewBtn01:hover { background:#056391;color:#fff;}
+.ApptBtn{ width:93%; float:left; margin:0; padding:0;}
+
+.DoctorProfile{margin: 10px 15px 20px 15px; float:left; width:96%}
+.DoctorFirstTD { width:15%; margin:0; padding:4px 8px !important; font-weight:normal; font-size:12px; line-height:1.2em; border-bottom:none; border-top:none;}
+.DoctorSecondTD { width:30%; margin:0; padding:4px 8px !important;font-weight:normal; font-size:12px; line-height:1.2em; border-bottom:none; border-top:none; }
+
+
+
+
+
+
+
+
+/***** Appointment List ****/
+.AppointList { width:100%; float:left; margin:0; padding:3px 0 0 0;}
+.AppointList h2 { float:left; margin:0; padding:0.2em 0.3em 0 0.3em; font-size:18px; color:#333; font-weight:600; text-align:center;}
+.AppointList select { width:150px; float:left; margin:3px 0 0 7px !important; padding:0; outline:none; border:solid 1px #B1B1B1;}
+.VisitHistoryBorder { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 0 0; width:100%; background-color:#fff;border-bottom: solid 1px #ccc;}
+.GeneralDiv01 { float:left; margin:1em 0 0 0; padding:0; width:100%; font-weight:normal;}
+
+.CloseBtn { background:#0782be; color:#fff; font-size:13px; font-weight:bold; border:none; margin:0px 0px 0 5px; padding:4px 14px; border-radius:3px; float:left;}
+.CloseBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***** New Appointment Page  ****/
+.AppointmentPageDiv { float:left; padding:0.5em 0; margin:0em 0% 0 0%; width:100%; background-color:#C1E5EF;}
+.AppointmentPageDiv h2 { font-size:15px; color:#232323; float:left; margin:0; padding:0 0 3px; font-weight:bold;}
+
+.AppointmentPage { float:left; padding:0; margin:0em 0 0 0; width:100%;}
+.AppointmentPage-Center { float:left; padding:0.5em 0 0.5em 0; margin:1em 1% 0 1%; width:98%; border:solid 1px #C5C4C4;}
+.AppointmentFacility { /*float:left;*/ margin:0; padding:0; font-size:13px;color:#232323;}
+.AppointFacilitySelect { margin:0 0 0 10px; padding:0; width:80% !important;} 
+.AppointmentUHID { float:left; margin:0; padding:0; font-size:13px;color:#232323; width:100%;}
+.AppointmentUHID input { float:left; margin:0; padding:2px 5px 2px 5px; width:21% !important; height:23px; font-size:12px; color:#232323; outline:none;}
+
+.AppointmentUHIDBtn { /*background:#0782be;*/ color:#0074AD; font-size:12px; font-weight:normal; border:none; margin:0px 0px 0 5px; padding:4px 11px; border-top-left-radius:3px; border-bottom-left-radius:3px; float:left;}
+.AppointmentUHIDBtn:hover { /*background:#056391;*/ color:#0074AD; text-decoration:none;}
+.AppointmentListBtn { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:0px 0px 0 0px; padding:4px 11px; border-radius:3px; float:left;}
+.AppointmentListBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.AppointmentMakeBtn { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:7px 9px 5px 5px !important; padding:5px 11px !important; border-radius:3px; float:right;}
+.AppointmentMakeBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.AppointmentPage001 { float:left; padding:0; margin:0.1em 0 0 0; width:100%;}
+
+
+.AppointmentPage02 { float:left; padding:0; margin:0em 0 0em 0; width:100%;}
+
+
+.AppointmentPage01 { float:left; padding:0; margin:0.4em 0 0.3em 0; width:100%;}
+.NewAppointText { float:left; margin:6px 0 0 0; padding:0; width:32%; font-size:12px; line-height:1.4em; font-weight:500; color:#232323;}
+.NewAppointTextNew { float:left; margin:9px 0 0 0; padding:0; width:32%; font-size:12px; line-height:1.4em; font-weight:500; color:#232323;}
+.NewAppointred { color:#f00 !important;}
+.NewAppointInput { float:left; margin:0; padding:0; width:68%;}
+.NewAppointInputMidle { float:left; margin:0; padding:0; width:68%;}
+.NewAppointInputMidle input{ float:left; margin:0; padding:2px 5px; width:100%; border:solid 1px #A5A5A5 !important;}
+
+.NewAppointInput03 { float:left; margin:0; padding:0; width:68%;}
+.NewAppointInput03 input { width:100%; float:left; margin:0; padding:0; text-align:center; color:#232323 !important; border: solid 1px #A5A5A5 !important;}
+
+.NewAppointText01 { float:left; margin:6px 0 0 0; padding:0; width:32%; font-size:12px; line-height:1.4em; font-weight:500; color:#232323;}
+.NewAppointInput01 { float:left; margin:0; padding:0; width:68%;}
+.NewAppointInput02 { float:left; margin:0; padding:0; width:68%;}
+.NewAppointInput02 input { float:left !important; margin:0 !important; padding:3px 4px !important; outline:none !important; width:92% !important;}
+
+.AppointStatus {float: left !important; margin: 0px 0 0px 0px !important; padding: 0px 0 0px 0 !important; border: solid 1px #FDFCFC !important;}
+.NewAppointInputFull { width:100%; float:left; margin:0;  padding:2px 7px; font-size:12px; outline:none;}
+
+.NewAppointInputFullNew { width:100%; float:left; margin:5px 0 0;  padding:2px 7px; font-size:12px; outline:none;}
+.NewAppointInputFullUHID { width:74.8%; float:left; margin:0 5px 0 0;  padding:2px 7px; font-size:12px; outline:none;}
+.NewAppointTextarea { width:100% !important; float:left !important; border: solid 1px #B3B3B3 !important; margin:0; padding:2px 7px !important; outline:none; height:30px;}
+.AppointDOB {float: left !important; width:32%; margin: 0px 0.5em 0px 0em !important; padding: 3px 5px 3px 5px !important; border: solid 1px #ABABAB !important;outline:none;}
+.AppointDOB01 {float: left !important; width:32%; margin: 0 !important; padding: 3px 5px 3px 5px !important; border: solid 1px #ABABAB !important;outline:none;}
+.AppointWalk {float: left !important; margin: 3px 0 0px 0px !important; padding: 0px 0 0px 0 !important;}
+
+.AppointmentPage-BGColor { float:left; padding:0em 0 0em 0; margin:1em 1% 0 1%; width:98%; background-color:#C1E5EF;}
+.AppointmentPage-BGColor h2 { font-size:13px; color:#232323; float:left; margin:0; padding:8px 0; font-weight:500; width:100%;}
+.AppointmentPage-BGColor h2 span { margin:0; padding:0; font-size:11px; color:#F30A0A; font-weight:500;}
+.AppointmentPage-Border { float:left; padding:0.5em 0 1em 0; margin:0em 1% 0 1%; width:98%; border:solid 1px #C5C4C4; border-top:none;}
+.AppointmentPage-BGColor01 { float:left; padding:0.5em 1% 0.5em 1%; margin:0em 0 0 0; width:100%; background-color:#C1E5EF;}
+.AppointmentPage-BGColor01 span { font-size:13px; color:#232323; float:left; margin:0; padding:4px 0; font-weight:500;}
+.AppointmentPage-BGColor01 select  { width:150px; font-size:12px; color:#232323; float:left !important; margin:2px 0 0 8px !important; outline:none; padding:3px 0 !important; font-weight:500;}
+.AppointmentPage-Border01 { float:left; padding:0em 0 0em 0; margin:0 0 1em; width:100%; border:solid 1px #DCDCDC; border-top:none; border-top:none;}
+
+
+.MobileSearch { float:left; margin:0; padding:0; width:54%;}
+.MobileSearch input { float:left; width:50% !important; margin:0; padding:3px 5px; border-radius:0;}
+
+.textSpan {color: Red; font-size:11px; font-weight:bold; float:left; margin:0 3.45em 0 0;}
+
+@-moz-document url-prefix() {
+	* {margin:0; padding:0;}
+	
+	#trPeriod { float:left; margin:0 0 0 27px; padding:0;}
+	#trPeriod span { float:left; margin:2px 0 0 -33px; padding:0;}
+	
+	#Radnoofslots_wrapper { float:left; margin:0 0 0 0px; padding:0;}
+	#Radnoofslots_wrapper span { float:left; margin:2px 0 0 -33px; padding:0;}
+	
+	.textSpan {color: Red; font-size:11px; font-weight:bold; float:left; margin:0 3.85em 0 0;}
+
+}	

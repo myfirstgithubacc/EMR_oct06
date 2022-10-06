@@ -1,0 +1,58 @@
+body{font-family: 'Roboto', sans-serif; font-size:14px;position:absolute: top:0px; z-index:1;}
+.bg1{ background:#005a9f; margin-bottom:20px; }
+.head_main{padding:10px 0px;  overflow:hidden;}
+.logo_client img,.logo_main img, .left_image img{width:100%}
+.logo_main{max-width:250px;}
+.logo_client { background:#FFF;}
+.cl_white{color:#fff!important;}
+.relativ{position:relative;}
+.licence{ color:#fff; right:0px; font-size:12px; display:block; background:#005A9F;}
+.body_main{ height:100vh;
+	
+	
+background: #f0f9ff; /* Old browsers */
+background: -moz-linear-gradient(top, #f0f9ff 0%, #d3d8e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f0f9ff 0%,#d3d8e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f0f9ff 0%,#d3d8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#d3d8e8',GradientType=0 ); /* IE6-9 */
+}
+
+.body_main .btn {
+    border-radius: 0;
+    padding: 8px 0;
+}
+.body_main h1{ margin-top:0px;}
+.form_main{ width:100%;}
+.form_main .form-group,.form_main .form-group1{ margin-bottom:15px;}
+.form_main .form-group input[type=text],.form_main .form-group input[type=password]{ background:#fff; border:1px solid #bdc7d8; padding:7px; color:#9197a3; width:100%; font-size:17px; font-weight:500; }
+.form-group1 input[type=text],.form_main .form-group1 input[type=password]{  padding:7px!important; color:#9197a3; width:100%; font-size:17px; font-weight:500; }
+footer{padding:10px 0px; font-size:12px; background:#fff; position:fixed; bottom:0px; width:100%;}
+div.RadComboBox_Simple table td.rcbInputCellLeft {
+    border-width:0px!important;
+}
+.form_main .RadComboBox_Simple .rcbInputCell .rcbEmptyMessage{color:#9197a3!important; font-style:normal!important; opacity:.9}
+.form_main div.RadComboBox_Simple table td.rcbInputCell {
+    height: 18px;
+    line-height: 18px;
+    border-top: 1px solid #bdc7d8!important;
+    border-left: 1px solid #bdc7d8!important;
+    border-bottom: 1px solid #bdc7d8!important;
+    background: #fff;
+}
+.form_main div.RadComboBox_Simple table td.rcbArrowCell
+{		border:1px solid #bdc7d8 !important;
+		 border-top: 1px solid #bdc7d8 !important;
+		 
+		 border-bottom: 1px solid #bdc7d8 !important;
+		 border-right: 1px solid #bdc7d8 important;
+	}
+.right_bx_padding{ padding:20px; border:1px solid #ccc; overflow:hidden; margin-bottom:20px;}
+
+@media only screen and (min-width:320px){
+	.body_main{ height:100%;}
+	footer{ bottom:0;}
+}
+@media only screen and (min-width:992px){
+	.body_main{ height:100vh;}
+	footer{ bottom:0px;}
+}

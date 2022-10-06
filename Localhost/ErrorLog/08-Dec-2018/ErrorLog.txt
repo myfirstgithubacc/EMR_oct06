@@ -1,0 +1,1696 @@
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:14:42 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:15:12 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:15:44 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:16:14 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:38:09 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:38:40 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:47:36 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:48:06 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:48:38 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:49:08 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:52:43 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:53:13 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:55:41 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 12:56:11 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 1:04:15 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 1:04:45 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 1:07:48 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 1:08:19 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 1:10:34 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 1:11:05 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:39:05 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoRepository.MongoRepository`2.Delete(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:39:36 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:40:07 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:40:37 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:43:40 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:44:10 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:45:13 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:45:43 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:46:15 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:46:45 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:48:30 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoRepository.MongoRepository`2.Delete(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:49:00 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:49:31 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:50:01 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:50:33 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:51:03 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:51:34 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:52:04 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:54:00 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoRepository.MongoRepository`2.Delete(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:54:30 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:55:02 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCursor.Size()
+   at MongoDB.Driver.Linq.SelectQuery.<>c.<TranslateAny>b__35_0(IEnumerable source)
+   at MongoDB.Driver.Linq.SelectQuery.Execute()
+   at MongoDB.Driver.Linq.MongoQueryProvider.Execute[TResult](Expression expression)
+   at MongoRepository.MongoRepository`2.Exists(Expression`1 predicate)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88
+
+
+  **********************************************************  
+ Time Of Error            : 12/8/2018 3:55:32 PM
+ Error Message            : A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:27017
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<ConnectAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.<CreateStreamAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.<OpenHelperAsync>d__48.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.<HeartbeatAsync>d__27.MoveNext()" }] }.
+ Error Exeption            : 
+ Error Place              :    at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollection.UsingImplicitSession[TResult](Func`2 func)
+   at MongoDB.Driver.MongoCollection.Insert[TNominalType](TNominalType document, MongoInsertOptions options)
+   at MongoRepository.MongoRepository`2.Add(T entity)
+ Error On Machine         : ASPL12
+ Error Machine IP Address : 172.16.10.88

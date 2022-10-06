@@ -1,0 +1,19 @@
+﻿html[style="overflow: hidden;"] .RadEditor {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:149999;
+}
+
+div#skin-chooser {
+	z-index:2900;
+}
+
+div#header,
+div#sidebar {
+	z-index:2901;
+}
+
+table.reSpinBox td {
+    vertical-align:middle;
+}

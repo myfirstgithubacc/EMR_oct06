@@ -1,0 +1,254 @@
+﻿* { margin:0; padding:0;}
+.clr { clear:both;}
+body{font-family: 'Open Sans', sans-serif;}
+
+/****** Button *******/
+.EmployeeBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:1px 0px 0 5px; padding:4px 8px; border-radius:3px; float:right;}
+.EmployeeBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.EmployeeBtn01 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 0 5px; padding:4px 8px; border-radius:3px; float:left;}
+.EmployeeBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+.EmployeeBtn02 { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 0 5px; padding:4px 8px; border-radius:3px; float:left;}
+.EmployeeBtn02:hover { background:#056391;color:#fff; text-decoration:none;}
+
+
+/****** Employee Page *******/
+.VisitHistoryDiv { float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%; background-color:#C1E5EF;}
+
+.EmployeeDiv { float:left; padding:0; margin:0em 0 0 0; width:100%;}
+.EmployeeColorDiv { float:left; padding:0.2em 0; margin:0em 0; width:100%; background-color:#C1E5EF;}
+.EmployeePhotoDiv { float:left; padding:0; margin:0em 0 0 0; width:100%;}
+.EmployeePhotoDiv h2{ margin:0 auto; padding:0; border:solid 1px #C5C4C4; width:65%; text-align:center;}
+.EmployeePhotoDiv h3 { float:left; margin:0.2em 0 0 0; padding:0; }
+.popupBg{background:rgba(0,0,0,.5);display:none;float:none;position:absolute;z-index:99991;top:0;right:0;bottom:0;left:0}
+.popWrap{background:#fff;display:none;width:320px;height:100px;float:none;margin:-50px 0 0 -160px;padding:0 0 0 0px;border:4 px solid #258A6D;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;position:fixed;z-index:99999;top:50%;left:50%}
+.popWrap h2 { font-size:18px; text-align:center; float:left; color:#fff; width:100%; background:#0B8C67; font-weight:bold; margin:0; padding:8px 0; position:absolute; top:0; z-index:-99999;}
+.popWrap h3 {  float:left; color:#fff; width:100%; margin:0; padding:10px 0;}
+.chooseFile { float:left; margin:0 0 0 2%; padding:0; width:70%; font-size:13px; text-align:left; color:#000;}
+.UploadText { float:left; margin:0; padding:0; width:25%; font-size:13px; text-align:left; color:#000;}
+.MenuClose{float:right;margin:0;padding:4px 10px 5px 10px;font-size:11px;color:#fff;cursor:pointer;font-family:Verdana,Helvetica,sans-serif;font-weight:700;background-color:#02523C;display:inline-block; z-index:99999;}
+.MenuClose:hover{background-color:#034331;}
+
+.EmployeeDivText {float:left; padding:0em 0 0 0; margin:0em 0 0 0;}
+.EmployeeDivText h2 { font-size:13px; color:#232323; font-weight:normal; float:left; line-height:2.2em; margin:0 11px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_Literal1 { font-size:13px; color:#232323; font-weight:normal; float:left; line-height:2.2em; margin:0 11px 0 0; padding:0;}
+#ctl00_ContentPlaceHolder1_ComboEmployeeSearch_RadCmbEmployeeSearch { float:left; margin:3px 19px 0 0; padding:0; width:325px !important;}
+#ctl00_ContentPlaceHolder1_ComboEmployeeSearch_RadCmbEmployeeSearch_Input { float:left; margin:-4px 0px 0 4px; padding:0;}
+#ctl00_ContentPlaceHolder1_txtemployeeno { width:150px; float:left; height:22px; margin:3px 0 0 0; padding:2px 8px; outline:none; font-size:12px;}
+.EmployeeBorderDiv-Top { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 0.2em 0; width:100%; background-color:#fff; border:solid 1px #C5C4C4; border-top:none;}
+.EmployeeBorderDiv { float:left; padding:0.8em 0 0.5em 0; margin:0em 0 0.2em 0; width:100%; background-color:#fff; border:solid 1px #C5C4C4; border-top:none;}
+.EmployeeBorderDiv01 { float:left; padding:0.8em 0 0.5em 0; margin:0em 0 0.2em 0; width:100%; background-color:#fff; border:solid 1px #C5C4C4; border-top:none;}
+.EmployeeBorderDiv02 { float:left; padding:0em 0 0em 0; margin:0em 1.25% 0 1.25%; width:97.5%; background-color:#fff; border:none;}
+
+.EmployeeBox { width:100%; float:left; margin:0 0 0.5em; padding:0;}
+.EmployeeBox h2 { font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.4em; margin:0 11px 0 0; padding:0;}
+.SpecializationSpanText { float:left; margin:0 10px 0 0; padding:0; font-size:13px; line-height:1.7em;}
+.SpecializationSpan { float:left; margin:0; padding:0; width:72%;}
+
+
+.red { color:#f00 !important;}
+.EmployeeTitle { float:left; margin:0; padding:0; width:47%; font-size:12px; line-height:1.6em; font-weight:600;color:#616161;}
+.EmployeeTitleDropDown { float:left; margin:0; padding:0; width:53%; outline:none; height:28px;}
+.EmployeeTitleInput { float:left; margin:0; padding:0; width:53%; outline:none;}
+#ctl00_ContentPlaceHolder1_txtfirstname { width:100%; float:left; margin:0; padding:2px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_txtmiddlename { width:100%; float:left; margin:0; padding:2px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_txtlastname { width:100%; float:left; margin:0; padding:2px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_ddlEmploymentstatus { width:100%; float:left; margin:0; padding:2px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_txtEducation { width:100%; float:left; margin:0; padding:2px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_ddlstatus { width:100%; float:left; margin:0; padding:2px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_txtDesignation { width:100%; float:left; margin:0; padding:2px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_ddlemployeetype_Input { width:100%; float:left; margin:-4px 0px 0 3px; padding:0; line-height:2.5em;  outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_ddlemployeetype  { width:100% !important; float:left; margin:0; padding:0; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_ddlemployeetype_Input { width:100%; float:left; margin:-4px 0px -4px 3px; padding:0;}
+#ctl00_ContentPlaceHolder1_ddldepartment { width:100% !important; float:left; margin:0; padding:0; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_ddldepartment_chosen { float:left; width:100% !important; margin:0; padding:0;}
+
+
+.EmployeeBox01 { width:100%; float:left; margin:0 0 0.6em; padding:0;}
+.EmployeeMailDivText {float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%; background-color:#C1E5EF;}
+.EmployeeMailDivText h2 { font-size:13px; color:#232323; font-weight:600; float:left; line-height:1.8em; margin:0 0px 0 0; padding:0.1em 0px 0.1em 1em;}
+.EmployeeMailText { float:left; margin:0; padding:0; width:20%; font-size:12px; line-height:1.8em; font-weight:600; color:#424242;}
+.EmployeeMailInput { float:left; margin:0; padding:0; width:80%; outline:none;}
+#ctl00_ContentPlaceHolder1_txtLAddress { width:100%; float:left; margin:0; padding:3px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_txtLAddress2 { width:100%; float:left; margin:0; padding:3px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_ddlcountry_chosen { float:left; width:100% !important; margin:0; padding:0;}
+#ctl00_ContentPlaceHolder1_ddlstate_chosen { float:left; width:100% !important; margin:0; padding:0; outline:none;}
+#ctl00_ContentPlaceHolder1_ddlcountry { float:left; width:100% !important; margin:0; padding:0; outline:none;}
+#ctl00_ContentPlaceHolder1_ddlstate { float:left; width:100% !important; margin:0; padding:0; outline:none;}
+#ctl00_ContentPlaceHolder1_ddlcity { float:left; width:100% !important; margin:0; padding:0; outline:none;}
+#ctl00_ContentPlaceHolder1_txtPin { float:left; width:69% !important; margin:0; padding:3px 8px; outline:none;font-size:12px; }
+#ctl00_ContentPlaceHolder1_txtPhoneHome { float:left; width:100% !important; margin:0; padding:3px 8px; outline:none;font-size:12px;}
+#ctl00_ContentPlaceHolder1_txtMobile { float:left; width:100% !important; margin:0; padding:3px 8px; outline:none;font-size:12px;}
+#ctl00_ContentPlaceHolder1_txtEmailID { float:left; width:100% !important; margin:0; padding:3px 8px; outline:none;font-size:12px;}
+.EmployeeMailText01 { float:right; margin:0; padding:0; font-size:12px; line-height:1.2em; font-weight:600;}
+#ctl00_ContentPlaceHolder1_chkLocked {float: left; margin:0px 10px 0 39px; padding: 0;}
+.EmployeeMailText01 label { float:right; margin:0; padding:0; font-weight:600;}
+#ctl00_ContentPlaceHolder1_REV1 { display:none;}
+
+.EmployeeMailText02 { float:left; margin:0.5em 0 0 0; padding:0; width:100%; font-size:12px; line-height:1.8em; font-weight:600;}
+.EmployeeMailText02 input { float:left; margin:0.3em 0.5em 0 0; padding:0;}
+.EmployeeMailText02 label { float:left; margin:0em 1.5em 0 0; padding:0;}
+
+
+.EmployeeLoginText { float:left; margin:0; padding:0; width:36%; font-size:12px; line-height:1.8em; font-weight:600;}
+.EmployeeLoginInput { float:left; margin:0; padding:0; width:64%; outline:none;}
+#ctl00_ContentPlaceHolder1_txtUserName { width:45%; float:left; margin:0 3px 0 0; padding:3px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_txtPassword { width:45%; float:left; margin:0; padding:3px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_txtConfirmPassword { width:45%; float:left; margin:0; padding:3px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_txtExpiryPeriod { width:45%; float:left; margin:0 3px 0 0; padding:3px 8px; outline:none; font-size:12px; font-weight:600;}
+#ctl00_ContentPlaceHolder1_txtExpirynotification { width:45%; float:left; margin:0 3px 0 0; padding:3px 8px; outline:none; font-size:12px; font-weight:600;}
+.EmployeeLoginText01 { float:left; margin:0; padding:0; width:100%; font-size:13px; line-height:1.8em; font-weight:600;}
+#ctl00_ContentPlaceHolder1_UpdatePanel5 {float:left; margin:0; padding:0; }
+
+#ctl00_ContentPlaceHolder1_UpdatePanel5 input { /*float:left; margin:0.5em 0 0 0em; padding:0;*/}
+#ctl00_ContentPlaceHolder1_UpdatePanel5 label { float:left; margin:0.1em 0 0 0.5em; padding:0;/**/}
+
+.EmployeeLoginUserText01 { float:left; margin:0 1.25%; padding:0 0 0 1.2%; width:97.7%; font-size:13px; line-height:0em; font-weight:600; border-left: solid 1px #C5C4C4; border-right: solid 1px #C5C4C4;}
+.EmployeeLoginUserText01 input { float:left; margin:1em 1em 0 0; padding:0;}
+.EmployeeLoginUserText01 label { float:left; margin:1.4em 0 0 0; padding:0;}
+.EmployeeLoginUserText { float:left; margin:0; padding:0; width:100%; font-size:14px; line-height:1.8em; font-weight:600;}
+.EmployeeLoginUserInput { float:left; margin:0; padding:5px 0 5px 0; width:100%; outline:none; height: 145px; overflow: auto; border: solid 1px #C5C4C4;}
+.EmployeeLoginUserInput01 { float:left; margin:0; padding:5px 0 5px 0; width:100%; outline:none; height: 145px; overflow: auto; border: solid 1px #C5C4C4;}
+.EmployeeLoginUserInput input { float:left; margin:3px 0.5em 0 0.5em; padding:0;}
+.EmployeeLoginUserInput label { float:left; margin:0px 0 0 0; padding:0; font-size:13px; font-weight:600;}
+.EmployeeLoginUserInput01 input { float:left; margin:3px 0.5em 0 0.5em; padding:0;}
+.EmployeeLoginUserInput01 label { float:left; margin:0px 0 0 0; padding:0; font-size:13px; font-weight:600;}
+
+.SpecializationSelect { width:250px; margin:0; padding:0; outline:none; border:solid 1px #DCD8D8;}
+.EmployeeScheduleInput { float:left; margin:0 5px; padding:0; outline:none;}
+.EmployeeScheduleInput input { float:left; margin:4px 5px 0 0;}
+.EmployeeScheduleInput label { float:left; margin:0 10px 0 0; font-weight: 500; font-size: 13px;}
+.ItemOfServiceActive {font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.4em; margin:0; padding:0;}
+.ItemOfServiceActive input { float:left; margin:4px 5px 0 0;}
+.ItemOfServiceActive label { float:left; margin:0 10px 0 0; font-weight:normal;}
+
+
+
+/****** Change Password	 Page *******/
+.ChangePassword-Div { float:left; padding:6em 0 0 0; margin:0em 0 0 0; width:100%;}
+.ChangePassword { float:left; margin:0; padding:0.8em 0 0em 0; width:100%;}
+.ChangePassword h2 {font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.4em; margin:0; padding:0; width:38%;}
+.ChangePassword h3 { float:left; margin:0; padding:0; width:62%;font-size:13px; color:#232323; outline:none;}
+.ChangePassword h3 input { float:left; margin:0; padding:4px 5px; width:100% !important; outline:none;}
+.ChangePassword h4 { float:left; margin:0; padding:0; width:60%;font-size:13px; color:#232323; outline:none;}
+.ChangePassword h4 input { float:left; margin:0 0px 0 0; padding:2px 5px; width:87%; outline:none;}
+
+.QuestionBtn { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:0px -6px 0 0px !important; padding:6px 15px !important; border-radius:3px; float:right !important;}
+.QuestionBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.AdminBtn { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:0px 0px 0 5px; padding:3px 14px; border-radius:3px; float:left;}
+.AdminBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.AdminBtn01 { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:3px 0px 3px 5px; padding:3px 14px; border-radius:3px; float:right;}
+.AdminBtn01:hover { background:#056391;color:#fff; text-decoration:none;}
+.AdminBtn02 { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:0px 0px 0 5px; padding:3px 14px; border-radius:3px; float:right;}
+.AdminBtn02:hover { background:#056391;color:#fff; text-decoration:none;}
+.AdminBtn03 { background:#0782be; color:#fff; font-size:12px; font-weight:normal; border:none; margin:0.8em 0px 0 5px; padding:2px 12px; border-radius:3px; float:left;}
+.AdminBtn03:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.VitalHistory-Div { float:left; padding:1em 0 0 0; margin:0em 0 0 0; width:100%;}
+.VisitHistoryDiv01 { float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%; background-color:#C1E5EF;}
+.VisitHistoryDiv01a { float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%; background-color:#C1E5EF;}
+.VisitHistoryBorder { float:left; padding:0.5em 0 0.5em 0; margin:0em 0 0 0; width:100%; background-color:#fff;border-bottom: solid 1px #ccc;}
+.VisitHistoryDivText {float:left; padding:0em 0 0 0; margin:0em 0 0 0; width:100%;}
+.VisitHistoryDivText h2 { font-size:13px; color:#232323; font-weight:500; float:left; line-height:2.2em; margin:0 0 0; padding:0;}
+
+.MedicationSetsText-Div { float:left; padding:0em 0 0 0; margin:1em 0 0 0; width:100%; font-size:12px;}
+.MedicationSets-Div { float:left; padding:0em 0 0 0; margin:0.4em 0 0 0; width:100%;}
+.MedicationDuration-Div { float:left; padding:0em 0 0 0; margin:0.8em 0 0 0;}
+.MedicationDuration-Div input { margin:0 0 0 0em !important; padding:0 5px !important; float:left !important;  width:40px;}
+.MedicationDay {float:left !important; padding:0em 0 0 0 !important; margin:0.8em 0 0 0.5em !important;}
+.MedicationDIv { float:left; padding:0em 0 0 0; margin:0.4em 0.5em 0 0; font-size:12px;}
+
+
+
+
+
+/****** Change Password	Page *******/
+.AuditMessage {color: green; font-size: 13px; font-weight: bold; text-align:center; float:left; width:100%; margin:0.1em 0; padding:0;}
+.AuditMessage01 {color: green; font-size: 13px; font-weight: bold; text-align:center; float:left; margin:0.5em 0; padding:0;}
+.AuditMessage02 {color: green; font-size: 13px; font-weight: bold; text-align:center; float:left; margin:0.1em 0; padding:0;}
+.AuditTrailDiv { float:left; padding:0.2em 0 0 0; margin:0em 0 0 0; width:100%;}
+
+
+/****** Order Sets Page *******/
+.OrderSearchBtn { background:#0782be; color:#fff; font-size:12px; font-weight:500; border:none; margin:0px 0px 0 5px; padding:4px 8px; border-radius:3px; float:right;}
+.OrderSearchBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.OrderSearchLeftBtn { background:#0782be; color:#fff; font-size:12px; font-weight:bold; border:none; margin:0px 0px 0 10px; padding:4px 8px; border-radius:3px; float:left;}
+.OrderSearchLeftBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+.OrderSelectBtn { background:#0782be; color:#fff !important; font-size:12px; font-weight:none; text-decoration:none !important; border:none; margin:0px 0px 0 5px; padding:4px 8px; border-radius:3px; float:right;}
+.OrderSelectBtn:hover { background:#056391;color:#fff; text-decoration:none;}
+
+.DepartmentText { font-size:14px; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0; padding:0; width:100%;}
+.orderDepartment { width:100%; float:left; margin:0 !important; padding:0 !important;}
+.orderDepartment01 { width:100%; float:left; margin:0.7em 0 0 !important; padding:0 !important;}
+.orderDepartmentDropdown { width:50% !important; float:left; margin:0; padding:0;}
+.orderDepartmentInput { width:20%; float:left; margin:0 0 0 1em; padding:0 5px; height:22px; outline:none;}
+
+.Order-ASText { font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 0.5em 0 0; padding:0;}
+.Order-ASInput { width:40% !important; float:left; margin:0 0 0 1em; padding:0 5px; height:22px; outline:none;}
+.Order-ASIcon { float:left; margin:3px 0 0 0; padding:0;}
+.orderDepartment-SS { width:100%; float:left; margin:2.3em 0 0.2em !important; padding:0 !important;font-size:13px; color:#232323; font-weight:normal; }
+.OrderSetDiv { float:left; margin:0 !important; padding:0 !important;}
+.OrderSetDiv span { font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0;}
+.OrderSetDiv input {float:left; margin:0 0 0 1em; padding:0 5px; height:22px; outline:none;}
+.OrderSetDiv01 { float:left; margin:0 20px 0 0 !important; padding:0 !important;}
+.OrderSetDiv01 span { font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 2em; padding:0;}
+.OrderSetDiv01 table { width:100% !important; float:left; margin:0 0 0 1em; padding:0 5px; height:22px; outline:none;}
+.OrderSetDivText {float:left; padding:0em 0 0 0; margin:0em 0 0 0;}
+.OrderSetDivText h2 { font-size:13px; color:#232323; font-weight:500; float:left; line-height:2.1em; margin:0; padding:0;}
+.OrderSetMessageDiv { float:left; margin:9px 20px 0 10px !important; padding:0 !important; font-size:12px;}
+
+
+
+
+/****** Appointment Template Page *******/
+.AppointmentTemplate-NoneBorder { width:100%; margin:0 !important; padding:0 !important;}
+.AppointmentTemplateBorder { width:100%; float:left; margin:0 !important; padding:0 !important; border:solid 1px #999999;}
+
+.ATemplate-Div01 { float:left; margin:0 0 0.8em 0 !important; padding:0 !important;}
+.ATemplate-Div01 h2{font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0;}
+.ATemplate-Div01 h3 { float:left; padding:0; margin:0;}
+
+.ATemplate-Table { float:left; margin:0.5em 0 0.8em 0 !important; padding:0 !important; width:87.5% !important;}
+.ATemplate-TableRight { float:left; margin:0.1em 0 0.8em 0 !important; padding:0 !important; width:100% !important;}
+
+.ATemplate-Div { float:left; margin:0 0 0.8em 0 !important; padding:0 !important;}
+.ATemplate-Div h2{font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 1em 0 0; padding:0; width:50px;}
+.ATemplate-Div h3 { float:left; padding:0; margin:0;}
+.ATemplate-Div h4 {font-size:13px; color:#232323; font-weight:normal; float:left; line-height:1.6em; margin:0em 0.5em 0 0.2em; padding:0;}
+.AT-Provider { width:248px !important; float:left; margin:0; padding:0;}
+.AT-ProviderSelect { width:220px !important; float:left; margin:0; padding:0;}
+.AT-Minutes { width:100px !important; float:left; margin:0; padding:0; font-size:13px; outline:none;}
+.AT-ToDateDiv { margin:0; padding:0 0 0 15px; float:left;}
+.AT-ToDate { margin:0; padding:0;float:left;}
+.AT-check { margin:0; padding:4px 0 0; font-size:13px; float:left;}
+.AT-check input { float:left; margin:0; padding:0;}
+.AT-check label { font-size:13px; margin:0 0px 0 6px; padding:0; font-weight:normal; float:left;}
+.AT-SlotsTiming { margin:0; padding:0 5px; width:45px; text-align:center; outline:none;}
+.ajax__tab_xp .ajax__tab_tab { height:21px !important;}
+.AT-OPDCardText { font-size:13px; float:left; margin:0 10px; 0 0; padding:0; font-weight:normal;}
+.AT-OPDCardTextarea { float:left; margin:0 0 10px; padding:2px 5px; width:72%; height:50px; outline:none; border:solid 1px #C5C4C4;font-size:12px;} 
+.AT-FromInput { width:36%; text-align:center; outline:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

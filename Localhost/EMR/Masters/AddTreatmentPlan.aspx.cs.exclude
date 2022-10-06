@@ -1,0 +1,262 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Text;
+
+public partial class EMR_Masters_AddTreatmentPlan : System.Web.UI.Page
+{
+    private string sConString = ConfigurationManager.ConnectionStrings["akl"].ConnectionString;
+    clsExceptionLog objException = new clsExceptionLog();
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["UserID"] == null)
+        {
+            Response.Redirect("/login.aspx?Logout=1", false);
+        }
+        if (!IsPostBack)
+        {
+
+            //string pagesource = common.myStr(Request.QueryString["Source"]);
+            //if (pagesource == "pd" || pagesource == "COMPLAINT")
+            //{
+            //    ltrName.Text = "Search keyword";
+            //}
+
+            BindSpecilisation();
+            bindgridview();
+        }
+    }
+
+
+    protected void BindSpecilisation()
+    {
+        StringBuilder sb = new StringBuilder();
+        DL_Funs fun = new DL_Funs();
+        sb.Append("Select Id, Name from SpecialisationMaster Where Active = 1 Order By Name");
+        DataSet dsSpecialisation = new DataSet();
+        if (Cache["Specialisation"] != null)
+            dsSpecialisation = Cache["Specialisation"] as DataSet;
+        else
+        {
+            dsSpecialisation = fun.ExecuteSql(sb);
+            Cache.Insert("Specialisation", dsSpecialisation, null, System.DateTime.Now.AddMinutes(15), System.Web.Caching.Cache.NoSlidingExpiration);
+        }
+        ddlSpecialisation.DataSource = dsSpecialisation;
+        ddlSpecialisation.DataBind();
+    }
+
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        string  strMsg=string.Empty;
+        try
+        {
+            DAL.DAL obj = new DAL.DAL(DAL.DAL.DBType.SqlServer, sConString);
+            Hashtable hsinput = new Hashtable();         
+            BaseC.Hospital bHos = new BaseC.Hospital(sConString);
+
+            strMsg = bHos.SaveEMRTreatmentPlanName(common.myInt(Session["FacilityId"]), common.myStr(txtstatus.Text.Trim()), common.myInt(ddlSpecialisation.SelectedValue), common.myInt(Session["UserId"]));
+            lblMsg.Text = strMsg;
+          
+           
+            lblMsg.ForeColor = System.Drawing.Color.Green;
+            bindgridview();
+            txtstatus.Text = "";
+            ddlSpecialisation.SelectedValue = "0";
+        }
+        catch (Exception Ex)
+        {
+            lblMsg.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMsg.Text = "Error: " + Ex.Message;
+            objException.HandleException(Ex);
+        }
+    }
+
+    protected void lstTypeList_RowUpdating(object sender, GridViewUpdateEventArgs e)
+    {
+         int TemplateId=0;
+          TextBox Templatename = new TextBox();
+          Hashtable hsOut = new Hashtable();
+          string strResponse = string.Empty;
+         
+        try
+        {
+           
+          
+            TextBox txtdatvisit = new TextBox();
+
+            TemplateId = Convert.ToInt32(lstTypeList.DataKeys[e.RowIndex].Value);
+            Templatename.Text = ((TextBox)lstTypeList.Rows[e.RowIndex].Cells[0].FindControl("txtTemplateName")).Text.Trim();
+
+            if (TemplateId == 0)
+            {
+                lblMsg.Text = "No data found!";
+                return;
+            }
+            else if (Templatename.Text == "")
+            {
+                lblMsg.Text = "Please enter Template Name!";
+                return;
+            }
+
+            string pagesource = common.myStr(Request.QueryString["source"]);
+            string strsave = "";
+            BaseC.Hospital bHos = new BaseC.Hospital(sConString);
+
+            strResponse = bHos.UpdateEMRTreatmentPlanName(common.myInt(TemplateId), common.myStr(Templatename.Text), common.myInt(Session["UserId"]));
+          
+            lstTypeList.EditIndex = -1;
+            bindgridview();
+
+            lblMsg.Text = strResponse;
+        }
+        catch (Exception Ex)
+        {
+            lblMsg.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMsg.Text = "Error: " + Ex.Message;
+            objException.HandleException(Ex);
+        }
+    }
+
+    protected void lstTypeList_RowEditing(object sender, GridViewEditEventArgs e)
+    {
+        lstTypeList.EditIndex = e.NewEditIndex;
+        bindgridview();
+    }
+
+    protected void lstTypeList_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        int TemplateId;
+        string strsave = string.Empty;
+        BaseC.Hospital bHos = new BaseC.Hospital(sConString);
+        try
+        {
+            TemplateId = Convert.ToInt32(lstTypeList.DataKeys[e.RowIndex].Value);
+
+            if (TemplateId == 0)
+            {
+                lblMsg.Text = "No data found!";
+                return;
+            }
+                    
+            strsave= bHos.DeletEMRTreatmentPlanName(common.myInt(TemplateId),common.myInt(Session["UserId"]));
+            lblMsg.Text = strsave;                  
+
+            bindgridview();
+        }
+        catch (Exception Ex)
+        {
+            lblMsg.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMsg.Text = "Error: " + Ex.Message;
+            objException.HandleException(Ex);
+        }
+    }
+
+    protected void lstTypeList_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+
+    }
+
+    protected void lstTypeList_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+    {
+        lstTypeList.EditIndex = -1;
+        bindgridview();
+    }
+
+    protected void lstTypeList_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        lstTypeList.PageIndex = e.NewPageIndex;
+        bindgridview();
+    }
+
+    private void bindgridview()
+    {
+        try
+        {
+            DAL.DAL dl = new DAL.DAL(DAL.DAL.DBType.SqlServer, sConString);
+            DataSet objDs;
+            objDs = new DataSet();
+            string pagesource = common.myStr(Request.QueryString["source"]);
+
+            BaseC.Hospital bHos = new BaseC.Hospital(sConString);
+
+           DataSet ds = bHos.GetEMRTreatmentPlanName();
+           if (ds.Tables.Count > 0)
+           {
+
+               lstTypeList.DataSource = ds.Tables[0];
+               lstTypeList.DataBind();
+           
+           }
+
+              //  BindBlankGrid();
+            
+        }
+        catch (Exception Ex)
+        {
+            lblMsg.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMsg.Text = "Error: " + Ex.Message;
+            objException.HandleException(Ex);
+        }
+    }
+
+    private void BindBlankGrid()
+    {
+        try
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("StatusId");
+            dt.Columns.Add("Description");
+
+            for (int i = 0; i < 1; i++)
+            {
+                DataRow dr = dt.NewRow();
+                dr["StatusId"] = 0;
+                dr["Description"] = "";
+                dt.Rows.Add(dr);
+            }
+            lstTypeList.DataSource = dt;
+            lstTypeList.DataBind();
+        }
+        catch (Exception Ex)
+        {
+            lblMsg.ForeColor = System.Drawing.Color.FromName(commonLabelSetting.cErrorColor);
+            lblMsg.Text = "Error: " + Ex.Message;
+            objException.HandleException(Ex);
+        }
+    }
+
+
+    protected void chkIsApplicableForAllSpecialities_CheckChanged(object sender, System.EventArgs e)
+    {
+        if (chkIsApplicableForAllSpecialities.Checked)
+        {
+            ddlSpecialisation.Enabled = false;
+            ddlSpecialisation.SelectedValue = "0";
+        }
+        else
+        {
+
+            ddlSpecialisation.Enabled = true;
+        }
+    
+    }
+
+    protected void btnClose_Click(object sender, EventArgs e)
+    {
+        string strPopup = "<script language='javascript' ID='script1'>" + "window.close();" + "</script>";
+
+        ScriptManager.RegisterStartupScript((Page)HttpContext.Current.Handler, typeof(Page), "Script1", strPopup, false);
+        return;
+    }
+}
